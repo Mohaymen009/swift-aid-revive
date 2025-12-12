@@ -32,7 +32,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-up" style={{ animationDelay: "0.3s" }}>
             <Button 
               size="lg"
-              className="bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-6 text-lg rounded-xl shadow-elevated hover:shadow-green-glow transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+              className="bg-accent hover:bg-orange-light text-white font-semibold px-8 py-6 text-lg rounded-xl shadow-elevated hover:shadow-glow transition-all duration-300 hover:scale-105 w-full sm:w-auto"
               asChild
             >
               <a href="tel:+971554728133" className="flex items-center gap-2">
@@ -43,7 +43,7 @@ const Hero = () => {
             
             <Button 
               size="lg"
-              className="bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold px-8 py-6 text-lg rounded-xl shadow-elevated hover:shadow-green-glow transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+              className="bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold px-8 py-6 text-lg rounded-xl shadow-elevated hover:shadow-glow transition-all duration-300 hover:scale-105 w-full sm:w-auto"
               asChild
             >
               <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
