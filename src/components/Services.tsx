@@ -32,7 +32,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-20 bg-background">
+    <section id="services" className="py-28 lg:py-32 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
@@ -51,10 +51,10 @@ const Services = () => {
             {services.map((service, index) => (
               <Card 
                 key={index}
-                className="p-6 gradient-card border-0 shadow-card hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 group"
+                className="p-8 bg-white border border-gray-100 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-103 group"
               >
-                <div className="mb-4 inline-flex items-center justify-center w-14 h-14 bg-accent/10 rounded-xl group-hover:bg-accent/20 transition-colors">
-                  <service.icon className="w-7 h-7 text-accent" />
+                <div className="mb-6 inline-flex items-center justify-center w-16 h-16 bg-[#FF6200]/10 rounded-2xl group-hover:bg-[#FF6200]/20 transition-colors">
+                  <service.icon className="w-8 h-8 text-[#FF6200]" />
                 </div>
                 
                 <h3 className="text-xl font-bold text-primary mb-3">

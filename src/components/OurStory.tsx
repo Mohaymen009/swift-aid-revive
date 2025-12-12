@@ -1,6 +1,6 @@
 const OurStory = () => {
   return (
-    <section id="story" className="py-20 bg-gradient-to-b from-background to-blue-light">
+    <section id="story" className="py-28 lg:py-32 bg-gradient-to-b from-background to-blue-light">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">

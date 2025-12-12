@@ -31,13 +31,8 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo/Brand */}
           <a href="#home" className="flex items-center gap-2 group">
-            <div className={`flex items-center justify-center w-16 h-16 rounded-lg transition-colors ${
-              isScrolled ? "bg-white/20" : "bg-transparent"
-            }`}>
-              <img src={logo} alt="EMRS 24/7" className="w-12 h-12" />
-            </div>
             <div>
-              <span className={`font-bold text-lg transition-colors ${
+              <span className={`font-black text-2xl transition-colors ${
                 isScrolled ? "text-primary" : "text-white"
               }`}>
                 EMRS 24/7
@@ -62,10 +57,10 @@ const Navigation = () => {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-3">
-            <a href="tel:+971554728133" className={`flex items-center gap-2 font-medium ${
+            <a href="tel:+971554728133" className={`flex items-center gap-2 font-bold text-lg ${
               isScrolled ? "text-foreground" : "text-white"
             }`}>
-              <Phone className="w-4 h-4" />
+              <Phone className="w-4 h-4 text-[#FF6200]" />
               <span className="hidden xl:inline">+971 55 472 8133</span>
             </a>
             <Button 
