@@ -25,7 +25,7 @@ const FloatingContact = () => {
         className="flex items-center justify-center w-14 h-14 bg-[#25D366] hover:bg-[#20BD5A] text-white rounded-full shadow-glow hover:shadow-elevated transition-all duration-300 hover:scale-110"
         aria-label="Chat on WhatsApp"
       >
-        <MessageCircle className="w-6 h-6" />
+        <img src="/whatsapp.png" alt="WhatsApp" className="w-6 h-6" />
       </a>
       <a
         href="tel:+971554728133"

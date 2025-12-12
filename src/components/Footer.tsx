@@ -79,7 +79,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-blue-100/60">
-            <p>2025 © E M R S AMBULANCE TRANSFER SERVICES L.L.C</p>
+            <p>2025 © E M R S AMBULANCE SERVICES L.L.C</p>
             <p>Licensed healthcare provider in the United Arab Emirates</p>
           </div>
         </div>

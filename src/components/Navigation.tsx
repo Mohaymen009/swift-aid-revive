@@ -74,7 +74,7 @@ const Navigation = () => {
               asChild
             >
               <a href="https://wa.me/971554728133" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                <MessageCircle className="w-4 h-4" />
+                <img src="/whatsapp.png" alt="WhatsApp" className="w-4 h-4" />
                 <span className="hidden xl:inline">WhatsApp</span>
               </a>
             </Button>
@@ -129,7 +129,7 @@ const Navigation = () => {
                   asChild
                 >
                   <a href="https://wa.me/971554728133" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
-                    <MessageCircle className="w-4 h-4" />
+                    <img src="/whatsapp.png" alt="WhatsApp" className="w-4 h-4" />
                     WhatsApp
                   </a>
                 </Button>

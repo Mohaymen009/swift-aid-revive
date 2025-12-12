@@ -56,7 +56,11 @@ const Contact = () => {
                 className="p-6 gradient-card border-0 shadow-card hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 text-center group"
               >
                 <div className="mb-4 inline-flex items-center justify-center w-14 h-14 bg-accent/10 rounded-xl group-hover:bg-accent/20 transition-colors">
-                  <method.icon className="w-7 h-7 text-accent" />
+                  {method.title === 'WhatsApp' ? (
+                    <img src="/whatsapp.png" alt="WhatsApp" className="w-7 h-7" />
+                  ) : (
+                    <method.icon className="w-7 h-7 text-accent" />
+                  )}
                 </div>
                 
                 <h3 className="text-lg font-bold text-primary mb-2">
@@ -118,7 +122,7 @@ const Contact = () => {
                     asChild
                   >
                     <a href="https://wa.me/971554728133" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                      <MessageCircle className="w-5 h-5" />
+                      <img src="/whatsapp.png" alt="WhatsApp" className="w-5 h-5" />
                       WhatsApp Us
                     </a>
                   </Button>

@@ -21,7 +21,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-lg sm:text-xl lg:text-2xl text-blue-100 font-semibold mb-4 animate-fade-up" style={{ animationDelay: "0.1s" }}>
-            Professional ambulance services available 24/7 in Dubai, Abu Dhabi, Sharjah, and all seven emirates
+            Professional ambulance services available 24/7 across all seven Emirates.
           </p>
 
           <p className="text-base sm:text-lg lg:text-xl text-blue-100/90 max-w-3xl mx-auto mb-10 animate-fade-up" style={{ animationDelay: "0.2s" }}>
@@ -43,11 +43,11 @@ const Hero = () => {
             
             <Button 
               size="lg"
-              className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white border-2 border-white/40 font-semibold px-8 py-6 text-lg rounded-xl shadow-elevated transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+              className="bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold px-8 py-6 text-lg rounded-xl shadow-elevated hover:shadow-glow transition-all duration-300 hover:scale-105 w-full sm:w-auto"
               asChild
             >
               <a href="https://wa.me/971554728133" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                <MessageCircle className="w-5 h-5" />
+                <img src="/whatsapp.png" alt="WhatsApp" className="w-5 h-5" />
                 WhatsApp
               </a>
             </Button>
