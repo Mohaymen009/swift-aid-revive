@@ -10,8 +10,8 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center">
           {/* Logo/Icon */}
           <div className="mb-8 animate-fade-in">
-            <div className="inline-flex items-center justify-center w-24 h-24 rounded-2xl">
-              <img src={logo} alt="EMRS 24/7" className="w-20 h-20" />
+            <div className="inline-flex items-center justify-center w-36 h-36 rounded-2xl">
+              <img src={logo} alt="EMRS 24/7" className="w-32 h-32" />
             </div>
           </div>
 
