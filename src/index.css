@@ -58,6 +58,7 @@ All colors MUST be HSL.
     --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     --shadow-elevated: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     --shadow-glow: 0 0 40px hsl(25 95% 53% / 0.3);
+    --shadow-green-glow: 0 0 40px hsl(142 76% 36% / 0.4);
   }
 }
 
@@ -99,6 +100,10 @@ All colors MUST be HSL.
 
   .shadow-glow {
     box-shadow: var(--shadow-glow);
+  }
+
+  .shadow-green-glow {
+    box-shadow: var(--shadow-green-glow);
   }
 
   .logo-pulse {

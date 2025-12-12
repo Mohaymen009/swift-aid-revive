@@ -4,19 +4,19 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-slate-900">
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-slate-900 px-4 sm:px-6 lg:px-8">
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Logo/Icon */}
           <div className="mb-8 animate-fade-in">
-            <div className="inline-flex items-center justify-center w-36 h-36 rounded-2xl">
-              <img src={logo} alt="EMRS 24/7" className="w-32 h-32" />
+            <div className="inline-flex items-center justify-center w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-2xl">
+              <img src={logo} alt="EMRS 24/7" className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32" />
             </div>
           </div>
 
           {/* Main heading */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 animate-fade-up leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 animate-fade-up leading-tight">
             Reliable Ambulance Services<br className="hidden sm:block" /> Across All Emirates
           </h1>
           
@@ -32,7 +32,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-up" style={{ animationDelay: "0.3s" }}>
             <Button 
               size="lg"
-              className="bg-accent hover:bg-orange-light text-white font-semibold px-8 py-6 text-lg rounded-xl shadow-elevated hover:shadow-glow transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+              className="bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-6 text-lg rounded-xl shadow-elevated hover:shadow-green-glow transition-all duration-300 hover:scale-105 w-full sm:w-auto"
               asChild
             >
               <a href="tel:+971554728133" className="flex items-center gap-2">
@@ -43,7 +43,7 @@ const Hero = () => {
             
             <Button 
               size="lg"
-              className="bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold px-8 py-6 text-lg rounded-xl shadow-elevated hover:shadow-glow transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+              className="bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold px-8 py-6 text-lg rounded-xl shadow-elevated hover:shadow-green-glow transition-all duration-300 hover:scale-105 w-full sm:w-auto"
               asChild
             >
               <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
