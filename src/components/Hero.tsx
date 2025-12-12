@@ -17,7 +17,7 @@ const Hero = () => {
 
           {/* Main heading */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 animate-fade-up leading-tight">
-            Reliable Ambulance Services<br className="hidden sm:block" /> Across All UAE Emirates
+            Reliable Ambulance Services<br className="hidden sm:block" /> Across All Emirates
           </h1>
           
           <p className="text-lg sm:text-xl lg:text-2xl text-blue-100 font-semibold mb-4 animate-fade-up" style={{ animationDelay: "0.1s" }}>

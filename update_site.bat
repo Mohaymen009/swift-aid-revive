@@ -1,19 +1,21 @@
 @echo off
-:: EMRS Site Auto-Update Script
+REM ===============================
+REM Git Quick Push Script
+REM ===============================
 
-:: Ask for commit message
+REM Ask for commit message
 set /p msg="Enter commit message: "
 
-:: Make sure branch is main
-git branch -M main
+REM Navigate to your project folder
+cd /d "C:\Users\mohaymen\Desktop\emrs site source"
 
-:: Add all changes, including untracked files
-git add -A
+REM Stage all changes
+git add .
 
-:: Commit changes
+REM Commit with your message
 git commit -m "%msg%"
 
-:: Force push to main
-git push -u origin main --force
+REM Push to GitHub
+git push
 
 pause
