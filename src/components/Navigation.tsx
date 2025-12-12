@@ -73,7 +73,7 @@ const Navigation = () => {
               className="bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold shadow-md"
               asChild
             >
-              <a href="https://wa.me/971554728133" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+              <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                 <img src="/whatsapp.png" alt="WhatsApp" className="w-4 h-4" />
                 <span className="hidden xl:inline">WhatsApp</span>
               </a>
@@ -128,7 +128,7 @@ const Navigation = () => {
                   className="bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold w-full"
                   asChild
                 >
-                  <a href="https://wa.me/971554728133" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
+                  <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
                     <img src="/whatsapp.png" alt="WhatsApp" className="w-4 h-4" />
                     WhatsApp
                   </a>

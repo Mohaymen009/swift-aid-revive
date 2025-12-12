@@ -14,7 +14,7 @@ const contactMethods = [
     icon: MessageCircle,
     title: "WhatsApp",
     detail: "Chat with us",
-    link: "https://wa.me/971554728133",
+    link: "https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services.",
     description: "Quick messaging support",
   },
   {
@@ -121,7 +121,7 @@ const Contact = () => {
                     className="bg-white/20 hover:bg-white/30 text-white border-2 border-white/40 font-semibold px-8"
                     asChild
                   >
-                    <a href="https://wa.me/971554728133" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                    <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                       <img src="/whatsapp.png" alt="WhatsApp" className="w-5 h-5" />
                       WhatsApp Us
                     </a>
