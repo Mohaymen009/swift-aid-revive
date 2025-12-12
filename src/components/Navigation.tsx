@@ -31,10 +31,10 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo/Brand */}
           <a href="#home" className="flex items-center gap-2 group">
-            <div className={`flex items-center justify-center w-10 h-10 rounded-lg transition-colors ${
+            <div className={`flex items-center justify-center w-14 h-14 rounded-lg transition-colors ${
               isScrolled ? "bg-white/20" : "bg-transparent"
             }`}>
-              <img src={logo} alt="EMRS 24/7" className="w-6 h-6" />
+              <img src={logo} alt="EMRS 24/7" className="w-10 h-10" />
             </div>
             <div>
               <span className={`font-bold text-lg transition-colors ${
