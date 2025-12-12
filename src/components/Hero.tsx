@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-slate-900 px-4 sm:px-6 lg:px-8">
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-slate-900 px-4 sm:px-6 lg:px-8 pt-20">
       {/* Background gradient and pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-950 to-black"></div>
       <div className="absolute inset-0 opacity-20">
@@ -24,12 +24,9 @@ const Hero = () => {
           </div>
 
           {/* Main heading */}
-          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[110px] font-black text-white mb-4 animate-fade-up leading-tight">
-            Reliable Ambulance Services
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-8 animate-fade-up leading-tight">
+            Reliable Ambulance Services<br />Across All Emirates
           </h1>
-          <h2 className="text-7xl sm:text-8xl md:text-9xl lg:text-[120px] xl:text-[140px] font-black text-white mb-8 animate-fade-up leading-tight" style={{ animationDelay: "0.1s" }}>
-            Across All Emirates
-          </h2>
           
           <p className="text-xl sm:text-2xl lg:text-3xl text-white font-semibold mb-6 animate-fade-up" style={{ animationDelay: "0.2s" }}>
             Professional ambulance services available 24/7 across all seven Emirates.
@@ -43,23 +40,23 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-up" style={{ animationDelay: "0.3s" }}>
             <Button 
               size="lg"
-              className="bg-[#FF4D00] hover:bg-[#FF6200] text-white font-bold px-10 py-8 text-xl rounded-xl shadow-elevated hover:shadow-glow transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+              className="bg-[#FF4D00] hover:bg-[#FF6200] text-white font-bold px-6 py-4 text-lg sm:text-xl sm:px-8 sm:py-6 rounded-xl shadow-elevated hover:shadow-glow transition-all duration-300 hover:scale-105 w-full sm:w-auto"
               asChild
             >
-              <a href="tel:+971554728133" className="flex items-center gap-2">
-                <Phone className="w-5 h-5" />
-                Call Now
+              <a href="tel:+971554728133" className="flex items-center justify-center gap-3">
+                <Phone className="w-5 h-5 flex-shrink-0" />
+                <span>Call Now</span>
               </a>
             </Button>
             
             <Button 
               size="lg"
-              className="bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold px-8 py-6 text-lg rounded-xl shadow-elevated hover:shadow-glow transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+              className="bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold px-6 py-4 text-lg sm:text-xl sm:px-8 sm:py-6 rounded-xl shadow-elevated hover:shadow-glow transition-all duration-300 hover:scale-105 w-full sm:w-auto"
               asChild
             >
-              <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                <img src="/whatsapp.png" alt="WhatsApp" className="w-5 h-5" />
-                WhatsApp
+              <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3">
+                <img src="/whatsapp.png" alt="WhatsApp" className="w-5 h-5 flex-shrink-0" />
+                <span>WhatsApp</span>
               </a>
             </Button>
           </div>
