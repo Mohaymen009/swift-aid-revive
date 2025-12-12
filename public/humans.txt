@@ -1,0 +1,51 @@
+
+
+	This is example credits file.
+	More info at https://humanstxt.org
+
+
+	/* TEAM */
+
+	Position   : Developer
+	Person     : John Doe
+	Site       : example.com
+	Twitter    : @twitter
+	Location   : City, Country
+
+
+
+	/* THANKS */
+
+	Person     : John Smith
+	Comment    : Appreciation for something useful.
+	Site       : example.com
+
+
+
+	/* COMPONENTS */
+
+	Name       : Settler
+	Site       : https://kiriniy.github.io/settler
+
+	Name       : jQuery
+	Site       : https://jquery.com
+
+	Name       : Bootstrap
+	Site       : https://getbootstrap.com
+
+	Name       : Font Awesome
+	Site       : https://fontawesome.io
+
+	Name       : Animate.css
+	Site       : https://animate.style
+
+	Name       : Cookies
+	Site       : https://github.com/studio24/cookie-message
+
+
+	/* SITE */
+
+	Updated    : DD/MM/YYYY
+	Languages  : English
+	Technology : 
+	Software   : 

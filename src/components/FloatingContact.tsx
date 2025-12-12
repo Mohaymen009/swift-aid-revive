@@ -1,0 +1,41 @@
+import { Phone, MessageCircle } from "lucide-react";
+import { useState, useEffect } from "react";
+
+const FloatingContact = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Show buttons after scrolling down 300px
+      setIsVisible(window.scrollY > 300);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <div className={`fixed bottom-6 right-6 z-40 flex flex-col gap-3 transition-all duration-300 ${
+      isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
+    }`}>
+      <a
+        href="https://wa.me/971554728133"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center justify-center w-14 h-14 bg-[#25D366] hover:bg-[#20BD5A] text-white rounded-full shadow-glow hover:shadow-elevated transition-all duration-300 hover:scale-110"
+        aria-label="Chat on WhatsApp"
+      >
+        <MessageCircle className="w-6 h-6" />
+      </a>
+      <a
+        href="tel:+971554728133"
+        className="flex items-center justify-center w-14 h-14 bg-accent hover:bg-orange-light text-white rounded-full shadow-glow hover:shadow-elevated transition-all duration-300 hover:scale-110"
+        aria-label="Call Us"
+      >
+        <Phone className="w-6 h-6" />
+      </a>
+    </div>
+  );
+};
+
+export default FloatingContact;
