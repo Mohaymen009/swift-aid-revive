@@ -1,7 +1,6 @@
 import { Phone, Mail, MapPin, MessageCircle, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import "@/types/global";
 
 const contactMethods = [
   {

@@ -1,6 +1,5 @@
 import { Phone, MessageCircle } from "lucide-react";
 import { useState, useEffect } from "react";
-import "@/types/global";
 
 const FloatingContact = () => {
   const [isVisible, setIsVisible] = useState(false);
