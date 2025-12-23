@@ -1,8 +1,16 @@
 import { Phone, MessageCircle } from "lucide-react";
 import { useState, useEffect } from "react";
+import "@/types/global";
 
 const FloatingContact = () => {
   const [isVisible, setIsVisible] = useState(false);
+
+  const trackConversion = () => {
+    // Call the global function defined in index.html
+    if (typeof window !== 'undefined' && window.trackContactConversion) {
+      window.trackContactConversion();
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +32,7 @@ const FloatingContact = () => {
         rel="noopener noreferrer"
         className="flex items-center justify-center w-[60px] h-[60px] bg-[#25D366] hover:bg-[#20BD5A] text-white rounded-full shadow-green-glow hover:shadow-elevated transition-all duration-300 hover:scale-110 animate-pulse-subtle"
         aria-label="Chat on WhatsApp"
+        onClick={trackConversion}
       >
         <img src="/whatsapp.png" alt="WhatsApp" className="w-6 h-6" />
       </a>
@@ -31,6 +40,7 @@ const FloatingContact = () => {
         href="tel:+971554728133"
         className="flex items-center justify-center w-[60px] h-[60px] bg-green-500 hover:bg-green-600 text-white rounded-full shadow-green-glow hover:shadow-elevated transition-all duration-300 hover:scale-110"
         aria-label="Call Us"
+        onClick={trackConversion}
       >
         <Phone className="w-6 h-6" />
       </a>

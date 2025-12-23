@@ -1,6 +1,7 @@
 import { Phone, Mail, MapPin, MessageCircle, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import "@/types/global";
 
 const contactMethods = [
   {
@@ -33,6 +34,13 @@ const contactMethods = [
 ];
 
 const Contact = () => {
+  const trackConversion = () => {
+    // Call the global function defined in index.html
+    if (typeof window !== 'undefined' && window.trackContactConversion) {
+      window.trackContactConversion();
+    }
+  };
+
   return (
     <section id="contact" className="py-20 bg-gradient-to-b from-background to-blue-light">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -73,6 +81,7 @@ const Contact = () => {
                     className="text-accent font-semibold hover:underline block mb-1"
                     target={method.link.startsWith('http') ? '_blank' : undefined}
                     rel={method.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    onClick={trackConversion}
                   >
                     {method.detail}
                   </a>
@@ -110,7 +119,7 @@ const Contact = () => {
                     className="bg-white hover:bg-white/90 text-accent font-semibold px-8 shadow-lg"
                     asChild
                   >
-                    <a href="tel:+971554728133" className="flex items-center gap-2">
+                    <a href="tel:+971554728133" className="flex items-center gap-2" onClick={trackConversion}>
                       <Phone className="w-5 h-5" />
                       Call +971 55 472 8133
                     </a>
@@ -121,7 +130,7 @@ const Contact = () => {
                     className="bg-white/20 hover:bg-white/30 text-white border-2 border-white/40 font-semibold px-8"
                     asChild
                   >
-                    <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                    <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2" onClick={trackConversion}>
                       <img src="/whatsapp.png" alt="WhatsApp" className="w-5 h-5" />
                       WhatsApp Us
                     </a>
