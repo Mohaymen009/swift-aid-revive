@@ -28,36 +28,6 @@ const AbuDhabiAmbulanceServices = () => {
             EMRS provides professional ambulance services in Abu Dhabi with trained paramedics and modern equipment. 
             We offer patient transport services throughout Abu Dhabi.
           </p>
-        <div className="mt-8 bg-white rounded-xl shadow-lg p-6 sm:p-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-blue-900 mb-6">Abu Dhabi Ambulance Coverage Areas</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-lg font-semibold text-blue-800 mb-3">Main Areas Covered:</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-center"><span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Abu Dhabi City</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Al Ain</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Al Dhafra</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Madinat Zayed</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Khalifa City</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-blue-800 mb-3">Hospital Transfers:</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-center"><span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>Sheikh Khalifa Medical City</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>Cleveland Clinic Abu Dhabi</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>Burjeel Medical City</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>Al Ain Hospital</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>Tawam Hospital</li>
-                </ul>
-              </div>
-            </div>
-            <div className="mt-6 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-600">
-              <p className="text-sm text-blue-900">
-                <strong>24/7 Abu Dhabi Ambulance Services:</strong> Our dedicated Abu Dhabi ambulance fleet ensures rapid response times across all areas of Abu Dhabi emirate, including emergency medical services and non-emergency patient transfers.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
       <OurStory />

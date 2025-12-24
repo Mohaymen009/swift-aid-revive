@@ -28,39 +28,6 @@ const DubaiAmbulanceServices = () => {
             EMRS provides professional ambulance services in Dubai with trained paramedics and modern equipment. 
             We offer patient transport services throughout Dubai.
           </p>
-        <div className="mt-8 bg-white rounded-xl shadow-lg p-6 sm:p-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-blue-900 mb-6">Dubai Ambulance Coverage Areas</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-lg font-semibold text-blue-800 mb-3">Main Areas Covered:</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-center"><span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Dubai Marina</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Downtown Dubai</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Jumeirah</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Business Bay</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Deira</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Bur Dubai</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Dubai Healthcare City</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-blue-800 mb-3">Major Hospital Transfers:</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-center"><span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>Dubai Hospital</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>Rashid Hospital</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>Latifa Hospital</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>Mediclinic Dubai</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>American Hospital Dubai</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>Saudi German Hospital</li>
-                </ul>
-              </div>
-            </div>
-            <div className="mt-6 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-600">
-              <p className="text-sm text-blue-900">
-                <strong>EMRS Dubai Headquarters:</strong> Our main office and fleet are based in Dubai, providing the fastest response times and comprehensive ambulance services across all Dubai areas.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
       <OurStory />

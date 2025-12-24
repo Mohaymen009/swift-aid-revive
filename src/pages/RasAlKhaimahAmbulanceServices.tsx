@@ -30,38 +30,6 @@ const RasAlKhaimahAmbulanceServices = () => {
           </p>
         </div>
       </section>
-      <section>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mt-8 bg-white rounded-xl shadow-lg p-6 sm:p-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-blue-900 mb-6">RAK Ambulance Coverage Areas</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-lg font-semibold text-blue-800 mb-3">Main Areas Covered:</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-center"><span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Ras Al Khaimah City</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Al Jazirah Al Hamra</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Al Dhait</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Khawr Khuwayr</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-blue-800 mb-3">Hospital Transfers:</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-center"><span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>RAK Hospital</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>Saqr Hospital</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>Red Crescent Hospital</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>Sheikh Khalifa Hospital RAK</li>
-                </ul>
-              </div>
-            </div>
-            <div className="mt-6 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-600">
-              <p className="text-sm text-blue-900">
-                <strong>24/7 RAK Ambulance Services:</strong> EMRS provides comprehensive ambulance services across Ras Al Khaimah emirate with rapid response times and professional medical care.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
       <OurStory />
       <Services />
       <EmirateServices />

@@ -28,36 +28,6 @@ const SharjahAmbulanceServices = () => {
             EMRS provides professional ambulance services in Sharjah with trained paramedics and modern equipment. 
             We offer patient transport services throughout Sharjah.
           </p>
-        <div className="mt-8 bg-white rounded-xl shadow-lg p-6 sm:p-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-blue-900 mb-6">Sharjah Ambulance Coverage Areas</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-lg font-semibold text-blue-800 mb-3">Main Areas Covered:</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-center"><span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Sharjah City</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Al Dhaid</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Khor Fakkan</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Kalba</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Dibba Al-Hisn</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-blue-800 mb-3">Hospital Transfers:</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-center"><span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>Al Qasimi Hospital</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>University Hospital Sharjah</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>Kuwaiti Hospital Sharjah</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>Zahra Hospital</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>Al Dhaid Hospital</li>
-                </ul>
-              </div>
-            </div>
-            <div className="mt-6 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-600">
-              <p className="text-sm text-blue-900">
-                <strong>24/7 Sharjah Ambulance Services:</strong> EMRS provides comprehensive ambulance services across Sharjah emirate with rapid response times and professional medical care.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
       <OurStory />

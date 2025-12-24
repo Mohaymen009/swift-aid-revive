@@ -28,34 +28,6 @@ const FujairahAmbulanceServices = () => {
             EMRS provides professional ambulance services in Fujairah with trained paramedics and modern equipment. 
             We offer patient transport services throughout Fujairah.
           </p>
-        <div className="mt-8 bg-white rounded-xl shadow-lg p-6 sm:p-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-blue-900 mb-6">Fujairah Ambulance Coverage Areas</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-lg font-semibold text-blue-800 mb-3">Main Areas Covered:</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-center"><span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Fujairah City</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Dibba</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Al Aqah</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Al Bithnah</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-blue-800 mb-3">Hospital Transfers:</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-center"><span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>Fujairah Hospital</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>Dibba Hospital</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>Al Bidiya Hospital</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>Wasit Hospital</li>
-                </ul>
-              </div>
-            </div>
-            <div className="mt-6 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-600">
-              <p className="text-sm text-blue-900">
-                <strong>24/7 Fujairah Ambulance Services:</strong> EMRS provides comprehensive ambulance services across Fujairah emirate with rapid response times and professional medical care.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
       <OurStory />
