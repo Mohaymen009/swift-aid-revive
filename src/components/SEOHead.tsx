@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 
 interface SEOHeadProps {
   title?: string;
@@ -9,7 +9,7 @@ interface SEOHeadProps {
 }
 
 const SEOHead = ({ 
-  title = "EMRS 24/7 - Professional Medical Transport Services Across UAE",
+  title = "EMRS | 24/7 Ambulance & Home Healthcare in the UAE",
   description = "EMRS offers licensed 24/7 ambulance services across all UAE emirates including Dubai, Abu Dhabi, Sharjah, Ajman, RAK, Fujairah & UAQ. Call now for emergency or patient transfers.",
   canonical = "https://emrs.ae",
   type = "website",
@@ -20,7 +20,7 @@ const SEOHead = ({
     document.title = title;
     
     // Update or create meta description
-    let metaDesc = document.querySelector('meta[name="description"]');
+    let metaDesc = document.querySelector('meta[name="description"]') as HTMLMetaElement | null;
     if (!metaDesc) {
       metaDesc = document.createElement('meta');
       metaDesc.name = 'description';
@@ -29,7 +29,7 @@ const SEOHead = ({
     metaDesc.content = description;
     
     // Update canonical URL
-    let canonicalLink = document.querySelector('link[rel="canonical"]');
+    let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
     if (!canonicalLink) {
       canonicalLink = document.createElement('link');
       canonicalLink.rel = 'canonical';
@@ -78,7 +78,7 @@ const SEOHead = ({
     }
 
     // Update or create structured data script
-    let structuredDataScript = document.querySelector('script[type="application/ld+json"]');
+    let structuredDataScript = document.querySelector('script[type="application/ld+json"]') as HTMLScriptElement | null;
     if (!structuredDataScript) {
       structuredDataScript = document.createElement('script');
       structuredDataScript.type = 'application/ld+json';
