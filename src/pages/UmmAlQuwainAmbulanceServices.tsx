@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import OurStory from "@/components/OurStory";
@@ -11,48 +10,6 @@ import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
 
 const UmmAlQuwainAmbulanceServices = () => {
-  // Umm Al Quwain specific structured data
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
-    "name": "EMRS 24/7 - Umm Al Quwain Ambulance Services",
-    "description": "Professional ambulance services in Umm Al Quwain, UAE. EMRS provides reliable patient transport and emergency medical services across Umm Al Quwain.",
-    "url": "https://emrs.ae/umm-al-quwain-ambulance-services",
-    "logo": "https://emrs.ae/assets/logo-IoYxzFod.png",
-    "telephone": "+971554728133",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "AE",
-      "addressRegion": "Umm Al Quwain",
-      "addressLocality": "Umm Al Quwain"
-    },
-    "serviceType": ["Ambulance Service", "Emergency Medical Transport", "Patient Transfer"],
-    "areaServed": ["Umm Al Quwain City", "Salmi", "Al Labnah", "Al Khabbah"],
-    "availableChannel": {
-      "@type": "ServiceChannel",
-      "servicePhone": "+971554728133",
-      "availableLanguage": ["English", "Arabic"]
-    },
-    "hoursAvailable": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-      "opens": "00:00",
-      "closes": "23:59"
-    }
-  };
-
-  // Inject structured data
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(structuredData);
-    document.head.appendChild(script);
-    
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, []);
-
   return (
     <div className="min-h-screen" id="home">
       <SEOHead 

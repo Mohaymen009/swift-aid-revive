@@ -8,51 +8,8 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
-import { useEffect } from "react";
 
 const AbuDhabiAmbulanceServices = () => {
-  // Abu Dhabi specific structured data
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
-    "name": "EMRS 24/7 - Abu Dhabi Ambulance Services",
-    "description": "Professional ambulance services in Abu Dhabi, UAE. EMRS provides reliable patient transport and emergency medical services across Abu Dhabi.",
-    "url": "https://emrs.ae/abu-dhabi-ambulance-services",
-    "logo": "https://emrs.ae/assets/logo-IoYxzFod.png",
-    "telephone": "+971554728133",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "AE",
-      "addressRegion": "Abu Dhabi",
-      "addressLocality": "Abu Dhabi"
-    },
-    "serviceType": ["Ambulance Service", "Emergency Medical Transport", "Patient Transfer"],
-    "areaServed": ["Abu Dhabi", "Al Ain", "Al Dhafra", "Madinat Zayed", "Khalifa City"],
-    "availableChannel": {
-      "@type": "ServiceChannel",
-      "servicePhone": "+971554728133",
-      "availableLanguage": ["English", "Arabic"]
-    },
-    "hoursAvailable": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-      "opens": "00:00",
-      "closes": "23:59"
-    }
-  };
-
-  // Inject structured data
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(structuredData);
-    document.head.appendChild(script);
-    
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, []);
-
   return (
     <div className="min-h-screen" id="home">
       <SEOHead 
