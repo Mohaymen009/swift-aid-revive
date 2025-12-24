@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 interface SEOHeadProps {
   title?: string;
@@ -36,6 +36,24 @@ const SEOHead = ({
       document.head.appendChild(canonicalLink);
     }
     canonicalLink.href = canonical;
+    
+    // Add logo meta tag for proper display
+    let logoMeta = document.querySelector('meta[property="og:image"]') as HTMLMetaElement | null;
+    if (!logoMeta) {
+      logoMeta = document.createElement('meta') as HTMLMetaElement;
+      (logoMeta as any).property = 'og:image';
+      document.head.appendChild(logoMeta);
+    }
+    (logoMeta as any).content = "https://emrs.ae/assets/logo-IoYxzFod.png";
+    
+    // Add favicon meta tag
+    let faviconLink = document.querySelector('link[rel="icon"]') as HTMLLinkElement | null;
+    if (!faviconLink) {
+      faviconLink = document.createElement('link');
+      faviconLink.rel = 'icon';
+      document.head.appendChild(faviconLink);
+    }
+    faviconLink.href = "https://emrs.ae/assets/logo-IoYxzFod.png";
     
     // Update structured data
     const structuredData = {
