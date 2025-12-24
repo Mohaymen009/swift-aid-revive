@@ -16,11 +16,11 @@ const Navigation = () => {
   }, []);
 
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "Our Story", href: "#story" },
-    { name: "Services", href: "#services" },
-    { name: "Why Choose Us", href: "#why-choose" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/#home" },
+    { name: "Our Story", href: "/#story" },
+    { name: "Services", href: "/#services" },
+    { name: "Why Choose Us", href: "/#why-choose" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   return (
@@ -30,7 +30,7 @@ const Navigation = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo/Brand */}
-          <a href="#home" className="flex items-center gap-2 group">
+          <a href="/#home" className="flex items-center gap-2 group">
             <div>
               <span className={`font-black text-2xl transition-colors ${
                 isScrolled ? "text-primary" : "text-white"
@@ -78,7 +78,7 @@ const Navigation = () => {
               className="bg-accent hover:bg-orange-light text-white font-semibold shadow-md"
               asChild
             >
-              <a href="#contact">Contact</a>
+              <a href="/#contact">Contact</a>
             </Button>
           </div>
 
@@ -132,7 +132,7 @@ const Navigation = () => {
                   className="bg-accent hover:bg-orange-light text-white font-semibold w-full"
                   asChild
                 >
-                  <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</a>
+                  <a href="/#contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</a>
                 </Button>
               </div>
             </div>

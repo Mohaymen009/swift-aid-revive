@@ -83,7 +83,7 @@ const Services = () => {
                 className="bg-white hover:bg-white/90 text-accent font-semibold w-full group"
                 asChild
               >
-                <a href="#contact" className="flex items-center justify-center gap-2">
+                <a href="/#contact" className="flex items-center justify-center gap-2">
                   Get in Touch
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </a>
