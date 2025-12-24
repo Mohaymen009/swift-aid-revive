@@ -15,7 +15,7 @@ const SharjahAmbulanceServices = () => {
       <SEOHead 
         title="Professional Ambulance Services in Sharjah | EMRS"
         description="EMRS provides professional ambulance services in Sharjah. Ambulance Sharjah, patient transfer Sharjah, 24/7 ambulance Sharjah."
-        canonical="https://emrs.ae/sharjah-ambulance-services"
+        canonical="https://emrs.ae/#/sharjah-ambulance-services"
         emirate="Sharjah"
       />
       <Navigation />

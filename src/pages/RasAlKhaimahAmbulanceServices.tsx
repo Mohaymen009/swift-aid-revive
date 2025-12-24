@@ -15,7 +15,7 @@ const RasAlKhaimahAmbulanceServices = () => {
       <SEOHead 
         title="Professional Ambulance Service in Ras Al Khaimah | EMRS"
         description="EMRS provides professional ambulance services in Ras Al Khaimah. Ambulance RAK, hospital transport RAK for patient transfers."
-        canonical="https://emrs.ae/ras-al-khaimah-ambulance-services"
+        canonical="https://emrs.ae/#/ras-al-khaimah-ambulance-services"
         emirate="Ras Al Khaimah"
       />
       <Navigation />

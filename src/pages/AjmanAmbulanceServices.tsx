@@ -15,7 +15,7 @@ const AjmanAmbulanceServices = () => {
       <SEOHead 
         title="Private Ambulance Transfers in Ajman, UAE | EMRS"
         description="EMRS provides private ambulance transfers in Ajman. Professional ambulance service Ajman, inter-hospital transfer Ajman for patient transport."
-        canonical="https://emrs.ae/ajman-ambulance-services"
+        canonical="https://emrs.ae/#/ajman-ambulance-services"
         emirate="Ajman"
       />
       <Navigation />

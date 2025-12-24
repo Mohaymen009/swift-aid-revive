@@ -15,7 +15,7 @@ const FujairahAmbulanceServices = () => {
       <SEOHead 
         title="Professional Ambulance Services in Fujairah | EMRS"
         description="EMRS provides professional ambulance services in Fujairah. 24/7 ambulance Fujairah, hospital transport Fujairah for patient transfers."
-        canonical="https://emrs.ae/fujairah-ambulance-services"
+        canonical="https://emrs.ae/#/fujairah-ambulance-services"
         emirate="Fujairah"
       />
       <Navigation />

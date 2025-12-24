@@ -15,7 +15,7 @@ const AbuDhabiAmbulanceServices = () => {
       <SEOHead 
         title="Reliable Ambulance Services in Abu Dhabi, UAE | EMRS"
         description="EMRS offers reliable ambulance services in Abu Dhabi. Professional ambulance service Abu Dhabi, hospital transport Abu Dhabi for patient transfers."
-        canonical="https://emrs.ae/abu-dhabi-ambulance-services"
+        canonical="https://emrs.ae/#/abu-dhabi-ambulance-services"
         emirate="Abu Dhabi"
       />
       <Navigation />

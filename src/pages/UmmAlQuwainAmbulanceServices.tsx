@@ -15,7 +15,7 @@ const UmmAlQuwainAmbulanceServices = () => {
       <SEOHead 
         title="Professional Ambulance Services in Umm Al Quwain | EMRS"
         description="EMRS provides professional ambulance services in Umm Al Quwain. Ambulance UAQ, patient transport UAQ for medical transfers."
-        canonical="https://emrs.ae/umm-al-quwain-ambulance-services"
+        canonical="https://emrs.ae/#/umm-al-quwain-ambulance-services"
         emirate="Umm Al Quwain"
       />
       <Navigation />

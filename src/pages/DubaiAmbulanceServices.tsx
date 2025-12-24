@@ -15,7 +15,7 @@ const DubaiAmbulanceServices = () => {
       <SEOHead 
         title="24/7 Ambulance Transfer Services in Dubai, UAE | EMRS"
         description="EMRS provides 24/7 ambulance services in Dubai. Professional ambulance service Dubai, private ambulance Dubai for patient transfers."
-        canonical="https://emrs.ae/dubai-ambulance-services"
+        canonical="https://emrs.ae/#/dubai-ambulance-services"
         emirate="Dubai"
       />
       <Navigation />
