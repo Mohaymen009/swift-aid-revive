@@ -51,9 +51,29 @@ const SEOHead = ({
     if (!faviconLink) {
       faviconLink = document.createElement('link');
       faviconLink.rel = 'icon';
+      faviconLink.type = 'image/png';
       document.head.appendChild(faviconLink);
     }
-    faviconLink.href = "https://emrs.ae/assets/logo-IoYxzFod.png";
+    faviconLink.href = "https://emrs.ae/favicon.ico";
+    
+    // Add additional favicon sizes for better compatibility
+    let favicon32 = document.querySelector('link[rel="icon"][sizes="32x32"]') as HTMLLinkElement | null;
+    if (!favicon32) {
+      favicon32 = document.createElement('link');
+      favicon32.rel = 'icon';
+      favicon32.sizes = '32x32';
+      document.head.appendChild(favicon32);
+    }
+    favicon32.href = "https://emrs.ae/favicon.ico";
+    
+    let favicon16 = document.querySelector('link[rel="icon"][sizes="16x16"]') as HTMLLinkElement | null;
+    if (!favicon16) {
+      favicon16 = document.createElement('link');
+      favicon16.rel = 'icon';
+      favicon16.sizes = '16x16';
+      document.head.appendChild(favicon16);
+    }
+    favicon16.href = "https://emrs.ae/favicon.ico";
     
     // Update structured data
     const structuredData = {
