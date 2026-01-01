@@ -130,13 +130,12 @@ const NonEmergencyMedicalTransport = () => {
               </Button>
               <Button 
                 size="lg" 
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-primary font-bold text-lg px-8 py-6"
+                className="bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold text-lg px-8 py-6"
                 asChild
               >
-                <a href="https://wa.me/971554728133" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                  <MessageCircle className="w-5 h-5" />
-                  WhatsApp Us
+                <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                  <img src="/whatsapp.png" alt="WhatsApp" className="w-5 h-5" />
+                  WhatsApp
                 </a>
               </Button>
             </div>

@@ -80,10 +80,6 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
       <Navigation />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
-        <div className="mb-6">
-          <Breadcrumbs items={crumbsUi} />
-        </div>
-
         {updates.length > 0 && (
           <ContentUpdate date={lastUpdated} updates={updates} className="mb-8" />
         )}
@@ -102,7 +98,7 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
           <aside className="space-y-6">
             <div className="bg-blue-50 p-6 rounded-lg">
               <h3 className="text-lg font-medium text-gray-900 mb-4">Need Help?</h3>
-              <p className="text-gray-600 mb-4">Our team is available 24/7 to assist you with emergencies and patient transfers.</p>
+              <p className="text-gray-600 mb-4">Our team is available 24/7 to assist you with urgent medical needs and patient transfers.</p>
               <CallButton phoneNumber={phoneNumber} className="w-full justify-center">
                 Call Now
               </CallButton>
