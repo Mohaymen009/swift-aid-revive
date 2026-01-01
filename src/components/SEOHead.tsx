@@ -78,7 +78,11 @@ const SEOHead = ({
       "addressCountry": "AE"
     },
     "openingHours": "Mo,Tu,We,Th,Fr,Sa,Su 00:00-23:59",
+<<<<<<< HEAD
     "telephone": "+971501234567",
+=======
+    "telephone": "+971 55 472 8133",
+>>>>>>> b46613a (done)
     "priceRange": "$$",
     "hasOfferCatalog": {
       "@type": "OfferCatalog",

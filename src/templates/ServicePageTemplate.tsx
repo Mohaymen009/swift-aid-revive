@@ -40,7 +40,11 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
   faqs = [],
   breadcrumbs,
   canonical,
+<<<<<<< HEAD
   phoneNumber = "+971501234567",
+=======
+  phoneNumber = "+971 55 472 8133",
+>>>>>>> b46613a (done)
   relatedLinks,
   children,
 }) => {

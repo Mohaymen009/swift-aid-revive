@@ -85,13 +85,21 @@ const AmbulanceServicesUAE = () => {
       <Navigation />
       <ServicePageTemplate
         title="24/7 Private Ambulance Services in UAE | ICU & BLS Ambulance | EMRS"
+<<<<<<< HEAD
         description="EMRS provides 24/7 private ambulance services across UAE. ICU ambulance, inter-hospital transfers, airport medical transport. Licensed paramedics. Call +971 4 576 8237"
+=======
+        description="EMRS provides 24/7 private ambulance services across UAE. ICU ambulance, inter-hospital transfers, airport medical transport. Licensed paramedics. Call +971 55 472 8133"
+>>>>>>> b46613a (done)
         canonical="https://emrs.ae/ambulance-services-uae"
         imageUrl="/images/og/ambulance-services-uae.jpg"
         imageAlt="Private Ambulance Services in UAE by EMRS"
         lastUpdated="2026-01-01"
         faqs={faqs}
+<<<<<<< HEAD
         phoneNumber={"+97145768237"}
+=======
+        phoneNumber={"+971 55 472 8133"}
+>>>>>>> b46613a (done)
         relatedLinks={[
           { label: 'Patient Transport (NEMT)', to: '/non-emergency-medical-transport-uae' },
           { label: 'Doctor on Call', to: '/doctor-on-call-uae' },
@@ -118,9 +126,9 @@ const AmbulanceServicesUAE = () => {
                 className="bg-accent hover:bg-accent/90 text-white font-bold text-lg px-8 py-6"
                 asChild
               >
-                <a href="tel:+97145768237" className="flex items-center gap-2">
+                <a href="tel:+971554728133" className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />
-                  Call +971 4 576 8237
+                  Call +971 55 472 8133
                 </a>
               </Button>
               <Button 

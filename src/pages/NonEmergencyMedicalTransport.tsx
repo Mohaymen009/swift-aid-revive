@@ -86,13 +86,26 @@ const NonEmergencyMedicalTransport = () => {
       <Navigation />
       <ServicePageTemplate
         title="Non-Emergency Medical Transport UAE | Patient Transport Dubai | EMRS"
+<<<<<<< HEAD
         description="NEMT services in UAE. Dialysis transport, stretcher transport, wheelchair transport, hospital transfers. Scheduled medical transport across Dubai, Abu Dhabi, Sharjah. Call +971 4 576 8237"
+=======
+        description="NEMT services in UAE. Dialysis transport, stretcher transport, wheelchair transport, hospital transfers. Scheduled medical transport across Dubai, Abu Dhabi, Sharjah. Call +971 55 472 8133"
+>>>>>>> b46613a (done)
         canonical="https://emrs.ae/non-emergency-medical-transport-uae"
         imageUrl="/images/og/non-emergency-medical-transport-uae.jpg"
         imageAlt="Non-Emergency Medical Transport in UAE by EMRS"
         lastUpdated="2026-01-01"
         faqs={faqs}
+<<<<<<< HEAD
         phoneNumber={"+97145768237"}
+=======
+        phoneNumber={"+971 55 472 8133"}
+        relatedLinks={[
+          { label: 'Ambulance Services', to: '/ambulance-services-uae' },
+          { label: 'Home Healthcare', to: '/home-healthcare-services-uae' },
+          { label: 'Doctor on Call', to: '/doctor-on-call-uae' }
+        ]}
+>>>>>>> b46613a (done)
       >
       {/* Hero Section */}
       <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-white relative overflow-hidden">
@@ -114,9 +127,9 @@ const NonEmergencyMedicalTransport = () => {
                 className="bg-accent hover:bg-accent/90 text-white font-bold text-lg px-8 py-6"
                 asChild
               >
-                <a href="tel:+97145768237" className="flex items-center gap-2">
+                <a href="tel:+971554728133" className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />
-                  Call +971 4 576 8237
+                  Call +971 55 472 8133
                 </a>
               </Button>
               <Button 
@@ -217,7 +230,7 @@ const NonEmergencyMedicalTransport = () => {
               className="bg-accent hover:bg-accent/90 text-white font-bold"
               asChild
             >
-              <a href="tel:+97145768237" className="flex items-center gap-2">
+              <a href="tel:+971554728133" className="flex items-center gap-2">
                 <Phone className="w-5 h-5" />
                 Book Dialysis Transport
               </a>

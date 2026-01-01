@@ -109,13 +109,26 @@ const HomeHealthcareServicesUAE = () => {
       <Navigation />
       <ServicePageTemplate
         title="Home Healthcare Services Dubai | Home Nursing UAE | EMRS"
+<<<<<<< HEAD
         description="Professional home healthcare in UAE. Home nursing care, elderly care, physiotherapy at home, post-operative care. Licensed nurses in Dubai, Abu Dhabi, Sharjah. Call +971 4 576 8237"
+=======
+        description="Professional home healthcare in UAE. Home nursing care, elderly care, physiotherapy at home, post-operative care. Licensed nurses in Dubai, Abu Dhabi, Sharjah. Call +971 55 472 8133"
+>>>>>>> b46613a (done)
         canonical="https://emrs.ae/home-healthcare-services-uae"
         imageUrl="/images/og/home-healthcare-services-uae.jpg"
         imageAlt="Home Healthcare Services in UAE by EMRS"
         lastUpdated="2026-01-01"
         faqs={faqs}
+<<<<<<< HEAD
         phoneNumber={"+97145768237"}
+=======
+        phoneNumber={"+971 55 472 8133"}
+        relatedLinks={[
+          { label: 'Doctor on Call', to: '/doctor-on-call-uae' },
+          { label: 'Wellness & Diagnostics', to: '/wellness-diagnostic-services-uae' },
+          { label: 'Patient Transport (NEMT)', to: '/non-emergency-medical-transport-uae' }
+        ]}
+>>>>>>> b46613a (done)
       >
       {/* Hero Section */}
       <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-white relative overflow-hidden">
@@ -137,9 +150,9 @@ const HomeHealthcareServicesUAE = () => {
                 className="bg-accent hover:bg-accent/90 text-white font-bold text-lg px-8 py-6"
                 asChild
               >
-                <a href="tel:+97145768237" className="flex items-center gap-2">
+                <a href="tel:+971554728133" className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />
-                  Call +971 4 576 8237
+                  Call +971 55 472 8133
                 </a>
               </Button>
               <Button 
@@ -253,7 +266,7 @@ const HomeHealthcareServicesUAE = () => {
               className="bg-accent hover:bg-accent/90 text-white font-bold"
               asChild
             >
-              <a href="tel:+97145768237" className="flex items-center gap-2">
+              <a href="tel:+971554728133" className="flex items-center gap-2">
                 <Phone className="w-5 h-5" />
                 Inquire About Elderly Care
               </a>

@@ -6,6 +6,7 @@ const { Readable } = require('stream');
 // Define your site URL
 const siteUrl = 'https://emrs.ae';
 
+<<<<<<< HEAD
 // Define your routes
 const routes = [
   { url: '/', changefreq: 'daily', priority: 1.0 },
@@ -13,6 +14,33 @@ const routes = [
   { url: '/services', changefreq: 'weekly', priority: 0.9 },
   { url: '/contact', changefreq: 'monthly', priority: 0.7 },
   // Add more routes as needed
+=======
+// Define your routes (keep in sync with src/App.tsx)
+const today = new Date().toISOString().split('T')[0];
+const routes = [
+  // Homepage
+  { url: '/', lastmod: today, changefreq: 'weekly', priority: 1.0 },
+  // Hub
+  { url: '/services', lastmod: today, changefreq: 'weekly', priority: 0.9 },
+  // Main Service Pages
+  { url: '/ambulance-services-uae', lastmod: today, changefreq: 'weekly', priority: 0.95 },
+  { url: '/non-emergency-medical-transport-uae', lastmod: today, changefreq: 'weekly', priority: 0.95 },
+  { url: '/doctor-on-call-uae', lastmod: today, changefreq: 'weekly', priority: 0.95 },
+  { url: '/home-healthcare-services-uae', lastmod: today, changefreq: 'weekly', priority: 0.95 },
+  { url: '/wellness-diagnostic-services-uae', lastmod: today, changefreq: 'weekly', priority: 0.95 },
+  // Emirate Pages
+  { url: '/dubai-ambulance-services', lastmod: today, changefreq: 'monthly', priority: 0.9 },
+  { url: '/abu-dhabi-ambulance-services', lastmod: today, changefreq: 'monthly', priority: 0.9 },
+  { url: '/sharjah-ambulance-services', lastmod: today, changefreq: 'monthly', priority: 0.9 },
+  { url: '/ajman-ambulance-services', lastmod: today, changefreq: 'monthly', priority: 0.9 },
+  { url: '/ras-al-khaimah-ambulance-services', lastmod: today, changefreq: 'monthly', priority: 0.9 },
+  { url: '/fujairah-ambulance-services', lastmod: today, changefreq: 'monthly', priority: 0.9 },
+  { url: '/umm-al-quwain-ambulance-services', lastmod: today, changefreq: 'monthly', priority: 0.9 },
+  // Blog Posts
+  { url: '/blog/how-to-choose-ambulance-service', lastmod: today, changefreq: 'monthly', priority: 0.8 },
+  { url: '/blog/private-ambulance-services-across-uae', lastmod: today, changefreq: 'monthly', priority: 0.8 },
+  { url: '/blog/emergency-patient-transfers-uae', lastmod: today, changefreq: 'monthly', priority: 0.8 },
+>>>>>>> b46613a (done)
 ];
 
 // Create a stream to write to
