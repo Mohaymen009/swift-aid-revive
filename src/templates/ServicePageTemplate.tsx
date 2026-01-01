@@ -89,45 +89,45 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">{description}</p>
         </header>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <article className="lg:col-span-2 prose max-w-none">
-            {children}
-            <LastUpdated date={lastUpdated} className="mt-8 text-sm text-gray-500" />
-          </article>
+        {/* Main page content */}
+        <article className="prose max-w-none">
+          {children}
+          <LastUpdated date={lastUpdated} className="mt-8 text-sm text-gray-500" />
+        </article>
 
-          <aside className="space-y-6">
-            <div className="bg-blue-50 p-6 rounded-lg">
-              <h3 className="text-lg font-medium text-gray-900 mb-4">Need Help?</h3>
-              <p className="text-gray-600 mb-4">Our team is available 24/7 to assist you with urgent medical needs and patient transfers.</p>
-              <CallButton phoneNumber={phoneNumber} className="w-full justify-center">
-                Call Now
-              </CallButton>
-            </div>
+        {/* Sidebar content moved below to keep hero sections centered */}
+        <aside className="mt-12 space-y-6 max-w-3xl mx-auto">
+          <div className="bg-blue-50 p-6 rounded-lg">
+            <h3 className="text-lg font-medium text-gray-900 mb-4">Need Help?</h3>
+            <p className="text-gray-600 mb-4">Our team is available 24/7 to assist you with urgent medical needs and patient transfers.</p>
+            <CallButton phoneNumber={phoneNumber} className="w-full justify-center">
+              Call Now
+            </CallButton>
+          </div>
 
-            <div className="overflow-hidden rounded-lg">
-              <OptimizedImage
-                src={imageUrl}
-                alt={imageAlt}
-                width={400}
-                height={300}
-                className="w-full h-auto"
-              />
-            </div>
+          <div className="overflow-hidden rounded-lg">
+            <OptimizedImage
+              src={imageUrl}
+              alt={imageAlt}
+              width={400}
+              height={300}
+              className="w-full h-auto"
+            />
+          </div>
 
-            <div className="bg-white p-6 rounded-lg border border-gray-100">
-              <h4 className="text-md font-semibold text-gray-900 mb-3">Related Services</h4>
-              <ul className="space-y-2">
-                {links.map((l) => (
-                  <li key={l.to}>
-                    <Link to={l.to} className="text-blue-600 hover:text-blue-800">
-                      {l.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </aside>
-        </div>
+          <div className="bg-white p-6 rounded-lg border border-gray-100">
+            <h4 className="text-md font-semibold text-gray-900 mb-3">Related Services</h4>
+            <ul className="space-y-2">
+              {links.map((l) => (
+                <li key={l.to}>
+                  <Link to={l.to} className="text-blue-600 hover:text-blue-800">
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </aside>
 
         {faqs.length > 0 && (
           <section className="mt-16">
