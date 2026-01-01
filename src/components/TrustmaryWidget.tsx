@@ -23,8 +23,7 @@ const TrustmaryWidget = () => {
             Real reviews from people who trust EMRS across the UAE.
           </p>
         </div>
-        <div className="mt-6">
-          {/* Trustmary widget container is handled by the injected script */}
+        <div className="mt-6" data-trustmary-widget="D4dP0Hk22">
         </div>
       </div>
     </section>
