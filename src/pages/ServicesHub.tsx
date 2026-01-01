@@ -23,7 +23,7 @@ const ServicesHub = () => {
       />
       <Navigation />
 
-      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12">
         <header className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-3">Our Services</h1>
           <p className="text-lg text-gray-600">Find the right care and transport services anywhere in the UAE.</p>

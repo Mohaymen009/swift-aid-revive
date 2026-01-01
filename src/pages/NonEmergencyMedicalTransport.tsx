@@ -48,6 +48,15 @@ const NonEmergencyMedicalTransport = () => {
     "Al Ain", "Ruwais", "Liwa", "Dibba", "Khorfakkan", "Kalba", "Dhaid", "Hatta"
   ];
 
+  const benefits = [
+    "Door-to-door pickup and drop-off",
+    "Professional drivers trained in patient handling",
+    "Wheelchair and stretcher-capable vehicles",
+    "Coordinated timing with hospitals and clinics",
+    "Support for elderly and mobility-challenged patients",
+    "Coverage across all UAE emirates"
+  ];
+
   const faqs = [
     {
       question: "What types of non-emergency transport do you provide?",

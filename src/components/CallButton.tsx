@@ -13,7 +13,7 @@ const CallButton = ({ phoneNumber, children, className = '' }: CallButtonProps) 
   return (
     <a 
       href={telNumber}
-      className={`inline-flex items-center justify-center px-6 py-3 bg-red-600 text-white font-medium rounded-lg hover:bg-red-700 transition-colors ${className}`}
+      className={`inline-flex items-center justify-center px-6 py-3 bg-accent text-white font-medium rounded-lg hover:bg-accent/90 transition-colors ${className}`}
     >
       <svg 
         className="w-5 h-5 mr-2" 

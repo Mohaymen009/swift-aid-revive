@@ -2,6 +2,8 @@ import { Stethoscope, Clock, Home, Hotel, Briefcase, Baby, Phone, MessageCircle,
 import { Button } from "@/components/ui/button";
 import ServicePageTemplate from "@/templates/ServicePageTemplate";
 import { Link } from "react-router-dom";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 const DoctorOnCallUAE = () => {
   const services = [
