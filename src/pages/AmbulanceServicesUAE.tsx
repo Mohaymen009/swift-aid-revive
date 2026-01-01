@@ -7,109 +7,106 @@ import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
 import ServicePageTemplate from "@/templates/ServicePageTemplate";
-import { Check, Clock, Shield, Heart, Truck, Users, Phone, MessageCircle } from "lucide-react";
+import { Ambulance, Clock, MapPin, ShieldCheck, Users, HeartPulse, Phone, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const AmbulanceServicesUAE = () => {
-  const features = [
-    { icon: Clock, title: "24/7 Availability", description: "Round-the-clock ambulance services across all UAE emirates" },
-    { icon: Shield, title: "Licensed & Certified", description: "DHA, DOH, and MOH licensed medical transport services" },
-    { icon: Heart, title: "Advanced Life Support", description: "ICU ambulances with cardiac monitors and ventilators" },
-    { icon: Truck, title: "Modern Fleet", description: "Latest ambulance vehicles with advanced medical equipment" },
-    { icon: Users, title: "Expert Paramedics", description: "Trained EMTs and paramedics for all medical situations" },
-    { icon: Check, title: "Insurance Accepted", description: "We work with all major insurance providers in UAE" }
+  const services = [
+    {
+      title: "Patient Transport",
+      description: "Safe and comfortable transportation for patients requiring medical supervision during transit.",
+      icon: Ambulance
+    },
+    {
+      title: "24/7 Availability",
+      description: "Round-the-clock medical transport services across all emirates, including weekends and holidays.",
+      icon: Clock
+    },
+    {
+      title: "Inter-Hospital Transfer",
+      description: "Seamless transfer between medical facilities with continuous medical monitoring and care.",
+      icon: MapPin
+    },
+    {
+      title: "Specialized Medical Team",
+      description: "Experienced paramedics and medical professionals ensuring patient safety and comfort.",
+      icon: ShieldCheck
+    },
+    {
+      title: "Multi-Patient Transport",
+      description: "Capability to transport multiple patients simultaneously with dedicated medical attention.",
+      icon: Users
+    },
+    {
+      title: "Medical Escort",
+      description: "Trained medical personnel accompanying patients requiring continuous care during transit.",
+      icon: HeartPulse
+    }
   ];
 
-  const serviceTypes = [
-    {
-      title: "ICU Ambulance Services",
-      description: "Critical care ambulances equipped with ventilators, cardiac monitors, defibrillators, and advanced life support equipment. Ideal for patients requiring intensive monitoring during transport.",
-      keywords: ["ICU ambulance Dubai", "critical care ambulance UAE", "ventilator ambulance"]
-    },
-    {
-      title: "Basic Life Support (BLS) Ambulance",
-      description: "Standard ambulance services for non-critical patients. Equipped with essential medical supplies, oxygen, stretcher, and basic monitoring equipment.",
-      keywords: ["basic ambulance UAE", "patient transport ambulance", "stretcher ambulance Dubai"]
-    },
-    {
-      title: "Inter-Hospital Transfers",
-      description: "Safe and efficient patient transfers between hospitals, clinics, and medical facilities across UAE. We coordinate with both facilities for seamless handover.",
-      keywords: ["hospital transfer ambulance", "inter-hospital transport UAE", "medical facility transfer"]
-    },
-    {
-      title: "Airport Medical Transfers",
-      description: "Specialized ambulance services for airport pickups and medical repatriation. We handle all logistics for international patient transfers.",
-      keywords: ["airport ambulance Dubai", "medical repatriation UAE", "air ambulance ground transport"]
-    },
-    {
-      title: "Event Medical Coverage",
-      description: "On-site ambulance and paramedic services for corporate events, sports events, concerts, and private gatherings across UAE.",
-      keywords: ["event ambulance UAE", "standby ambulance services", "medical coverage events"]
-    },
-    {
-      title: "Long-Distance Medical Transport",
-      description: "Cross-emirate and long-distance patient transport with comfort and medical monitoring. Perfect for patients traveling between distant medical facilities.",
-      keywords: ["long distance ambulance UAE", "cross emirate transport", "patient travel services"]
-    }
+  const areas = [
+    "Dubai", "Abu Dhabi", "Sharjah", "Ajman", "Ras Al Khaimah", "Fujairah", "Umm Al Quwain",
+    "Al Ain", "Ruwais", "Liwa", "Dibba", "Khorfakkan", "Kalba", "Dhaid", "Hatta"
   ];
 
   const faqs = [
     {
-      question: "How quickly can an ambulance reach me in Dubai?",
-      answer: "Our average response time in Dubai is 15-30 minutes depending on traffic conditions and your location. We have strategically positioned ambulances across the city for faster response."
+      question: "What types of medical transport do you provide?",
+      answer: "We offer various transport options including basic life support, advanced life support, and critical care transport, all equipped with necessary medical equipment and staffed by qualified professionals."
     },
     {
-      question: "Do you accept insurance for ambulance services?",
-      answer: "Yes, we work with all major insurance providers in the UAE including Daman, AXA, Oman Insurance, and more. We can directly bill your insurance company in most cases."
+      question: "How quickly can you respond to a transport request?",
+      answer: "Our average response time is under 30 minutes in urban areas. We prioritize cases based on medical necessity to ensure timely assistance."
     },
     {
-      question: "What is the difference between ICU and BLS ambulance?",
-      answer: "ICU ambulances are equipped with advanced life support including ventilators, cardiac monitors, and medications for critical patients. BLS ambulances provide basic medical support for stable patients."
+      question: "Do you provide transport for patients with special needs?",
+      answer: "Yes, our fleet includes vehicles equipped to handle patients with mobility challenges, including wheelchair accessibility and specialized bariatric transport solutions."
     },
     {
-      question: "Can you transport patients between hospitals?",
-      answer: "Yes, inter-hospital transfers are one of our primary services. We coordinate with both hospitals to ensure seamless patient handover and maintain medical records throughout."
+      question: "What medical equipment is available during transport?",
+      answer: "Our ambulances are equipped with cardiac monitors, ventilators, infusion pumps, and other essential medical equipment to ensure patient stability during transit."
     },
     {
-      question: "Do you provide ambulance services across all UAE emirates?",
-      answer: "Yes, we provide ambulance services in Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Fujairah, and Umm Al Quwain. We also handle cross-emirate transfers."
+      question: "Can family members accompany the patient?",
+      answer: "Yes, in most cases, one family member can accompany the patient, subject to space availability and medical considerations."
     },
     {
-      question: "What medical equipment is available in your ambulances?",
-      answer: "Our ambulances are equipped with cardiac monitors, defibrillators, oxygen supply, stretchers, first aid supplies, medications, and in ICU ambulances: ventilators and infusion pumps."
+      question: "Do you provide international patient transfers?",
+      answer: "Yes, we coordinate with international medical transport providers to facilitate seamless cross-border patient transfers when needed."
     }
   ];
 
   return (
-    <>
-      <Navigation />
-      <ServicePageTemplate
-        title="24/7 Private Ambulance Services in UAE | ICU & BLS Ambulance | EMRS"
-        description="EMRS provides 24/7 private ambulance services across UAE. ICU ambulance, inter-hospital transfers, airport medical transport. Licensed paramedics. Call +971 55 472 8133"
-        canonical="https://emrs.ae/ambulance-services-uae"
-        imageUrl="/images/og/ambulance-services-uae.jpg"
-        imageAlt="Private Ambulance Services in UAE by EMRS"
-        lastUpdated="2026-01-01"
-        faqs={faqs}
-        phoneNumber={"+971 55 472 8133"}
-        relatedLinks={[
-          { label: 'Patient Transport (NEMT)', to: '/non-emergency-medical-transport-uae' },
-          { label: 'Doctor on Call', to: '/doctor-on-call-uae' },
-          { label: 'Home Healthcare', to: '/home-healthcare-services-uae' }
-        ]}
-      >
+    <ServicePageTemplate
+      title="24/7 Ambulance Services in UAE | Medical Transport | EMRS"
+      description="Professional ambulance services across all UAE emirates. Reliable medical transport with trained paramedics. Available 24/7 for all your medical transport needs."
+      canonical="https://emrs.ae/ambulance-services-uae"
+      imageUrl="/images/og/ambulance-services-uae.jpg"
+      imageAlt="Ambulance Services in UAE by EMRS"
+      lastUpdated="2026-01-01"
+      faqs={faqs}
+      phoneNumber={"+971 55 472 8133"}
+      relatedLinks={[
+        { label: 'Non-Emergency Transport', to: '/non-emergency-medical-transport-uae' },
+        { label: 'Doctor on Call', to: '/doctor-on-call-uae' },
+        { label: 'Home Healthcare', to: '/home-healthcare-services-uae' }
+      ]}
+    >
       {/* Hero Section */}
       <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djZoNnYtNmgtNnptMCAwdi02aC02djZoNnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-50"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto text-center">
             <span className="inline-block px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-semibold mb-6">
-              Licensed by DHA, DOH & MOH
+              24/7 Medical Transport Services
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              24/7 Private Ambulance Services in UAE
+              Professional Ambulance Services Across UAE
             </h1>
             <p className="text-xl sm:text-2xl text-white/90 mb-8 leading-relaxed">
+              Safe and reliable medical transportation with trained professionals. 
+              Serving all emirates with a fleet of fully-equipped ambulances and experienced medical teams.
               Professional ambulance and medical transport services across Dubai, Abu Dhabi, Sharjah, and all UAE emirates. ICU ambulances, patient transfers, and event medical coverage.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

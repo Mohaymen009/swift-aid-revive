@@ -5,79 +5,73 @@ import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
 import ServicePageTemplate from "@/templates/ServicePageTemplate";
-import { Check, Clock, Calendar, Heart, Accessibility, Users, Phone, MessageCircle, ArrowRight } from "lucide-react";
+import { Ambulance, Wheelchair, UserPlus, Calendar, MapPin, Clock, Phone, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const NonEmergencyMedicalTransport = () => {
   const services = [
     {
-      title: "Dialysis Transport",
-      description: "Regular scheduled transport for dialysis patients. We ensure timely pickup and drop-off for all dialysis appointments, providing comfortable and safe travel.",
-      icon: Heart
-    },
-    {
-      title: "Hospital Discharge Transport",
-      description: "Safe transport home after hospital discharge. Our trained staff assists with mobility and ensures patients reach home comfortably.",
-      icon: Accessibility
-    },
-    {
-      title: "Scheduled Medical Appointments",
-      description: "Transport for doctor visits, therapy sessions, and routine medical check-ups. Book in advance for hassle-free medical travel.",
-      icon: Calendar
+      title: "Wheelchair Transport",
+      description: "Specialized vehicles equipped with wheelchair lifts and securements for safe patient transport.",
+      icon: Wheelchair
     },
     {
       title: "Stretcher Transport",
-      description: "For patients who cannot sit during transport. Our stretcher-equipped vehicles ensure comfortable lying position during travel.",
-      icon: Users
+      description: "Comfortable stretcher transport for patients who need to remain in a reclined position.",
+      icon: UserPlus
     },
     {
-      title: "Wheelchair Transport",
-      description: "Wheelchair-accessible vehicles for mobility-impaired patients. We handle wheelchair loading and secure positioning.",
-      icon: Accessibility
+      title: "Scheduled Appointments",
+      description: "Pre-arranged transport for medical appointments, treatments, and follow-up visits.",
+      icon: Calendar
     },
     {
-      title: "Elderly Care Transport",
-      description: "Specialized transport for senior citizens with trained attendants who provide assistance and care throughout the journey.",
-      icon: Heart
+      title: "Long-Distance Transport",
+      description: "Comfortable transport between cities or emirates for medical treatment or returning home.",
+      icon: MapPin
+    },
+    {
+      title: "24/7 Availability",
+      description: "Round-the-clock service for non-urgent medical transport needs.",
+      icon: Clock
+    },
+    {
+      title: "Medical Escort",
+      description: "Trained medical personnel to accompany patients requiring monitoring during transport.",
+      icon: UserPlus
     }
   ];
 
-  const benefits = [
-    "Scheduled pickup times that work for you",
-    "Trained attendants for patient assistance",
-    "Comfortable, air-conditioned vehicles",
-    "Wheelchair and stretcher accessible",
-    "Insurance billing available",
-    "Cross-emirate transport available",
-    "24/7 booking availability",
-    "Real-time tracking for family members"
+  const areas = [
+    "Dubai", "Abu Dhabi", "Sharjah", "Ajman", "Ras Al Khaimah", "Fujairah", "Umm Al Quwain",
+    "Al Ain", "Ruwais", "Liwa", "Dibba", "Khorfakkan", "Kalba", "Dhaid", "Hatta"
   ];
 
   const faqs = [
     {
-      question: "What is Non-Emergency Medical Transport (NEMT)?",
-      answer: "Non-Emergency Medical Transport refers to transportation services for patients who need medical transport but don't require emergency services. This includes transport for dialysis, doctor appointments, hospital discharge, and scheduled medical visits."
+      question: "What types of non-emergency transport do you provide?",
+      answer: "We offer wheelchair transport, stretcher transport, and ambulatory transport for patients who need assistance getting to medical appointments."
     },
     {
-      question: "How do I book NEMT services in Dubai?",
-      answer: "You can book our NEMT services by calling +971 4 576 8237 or WhatsApp at +971 55 472 8133. We recommend booking at least 24 hours in advance for scheduled appointments."
-    },
-    {
-      question: "Do you provide regular transport for dialysis patients?",
-      answer: "Yes, we specialize in dialysis transport. We can set up recurring schedules for your dialysis sessions, ensuring you never miss an appointment. Our vehicles are equipped for patient comfort during the journey."
+      question: "How far in advance should I book transport?",
+      answer: "We recommend booking at least 24 hours in advance to ensure vehicle availability, though we do our best to accommodate same-day requests."
     },
     {
       question: "Can family members accompany the patient?",
-      answer: "Yes, one family member or caregiver can accompany the patient during transport at no additional charge."
+      answer: "Yes, in most cases one family member can accompany the patient, depending on the vehicle's capacity and the patient's needs."
     },
     {
-      question: "What areas do you cover for NEMT services?",
-      answer: "We provide non-emergency medical transport across all UAE emirates including Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Fujairah, and Umm Al Quwain."
+      question: "What if I need to cancel or reschedule?",
+      answer: "Please notify us at least 2 hours before the scheduled pickup time to avoid cancellation fees. We understand that medical needs can change."
     },
     {
-      question: "Is NEMT covered by insurance?",
-      answer: "Many insurance plans cover non-emergency medical transport. We can check your coverage and handle direct billing with your insurance provider."
+      question: "Do you provide transport for patients with special needs?",
+      answer: "Yes, our vehicles are equipped to handle various special needs, including mobility devices and medical equipment."
+    },
+    {
+      question: "What safety measures are in place?",
+      answer: "All our drivers are trained in patient handling, and our vehicles are regularly maintained and sanitized to the highest standards."
     }
   ];
 
@@ -85,8 +79,8 @@ const NonEmergencyMedicalTransport = () => {
     <>
       <Navigation />
       <ServicePageTemplate
-        title="Non-Emergency Medical Transport UAE | Patient Transport Dubai | EMRS"
-        description="NEMT services in UAE. Dialysis transport, stretcher transport, wheelchair transport, hospital transfers. Scheduled medical transport across Dubai, Abu Dhabi, Sharjah. Call +971 55 472 8133"
+        title="Non-Emergency Medical Transport UAE | Patient Transport | EMRS"
+        description="Reliable non-emergency medical transport services across UAE. Professional patient transport for medical appointments, treatments, and hospital discharges."
         canonical="https://emrs.ae/non-emergency-medical-transport-uae"
         imageUrl="/images/og/non-emergency-medical-transport-uae.jpg"
         imageAlt="Non-Emergency Medical Transport in UAE by EMRS"
@@ -99,18 +93,19 @@ const NonEmergencyMedicalTransport = () => {
           { label: 'Doctor on Call', to: '/doctor-on-call-uae' }
         ]}
       >
-      {/* Hero Section */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djZoNnYtNmgtNnptMCAwdi02aC02djZoNnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-50"></div>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="max-w-4xl mx-auto text-center">
-            <span className="inline-block px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-semibold mb-6">
-              Scheduled Medical Transport
-            </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Non-Emergency Medical Transport in UAE
-            </h1>
-            <p className="text-xl sm:text-2xl text-white/90 mb-8 leading-relaxed">
+        {/* Hero Section */}
+        <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djZoNnYtNmgtNnptMCAwdi02aC02djZoNnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-50"></div>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div className="max-w-4xl mx-auto text-center">
+              <span className="inline-block px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-semibold mb-6">
+                Comfortable & Reliable Transport
+              </span>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                Non-Emergency Medical Transport
+              </h1>
+              <p className="text-xl sm:text-2xl text-white/90 mb-8 leading-relaxed">
+                Safe and comfortable transportation for medical appointments, treatments, and hospital discharges across all UAE emirates.
               Comfortable, reliable patient transport for dialysis, hospital appointments, and scheduled medical visits. Wheelchair and stretcher accessible vehicles available.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

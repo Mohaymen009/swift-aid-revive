@@ -1,11 +1,6 @@
-import Navigation from "@/components/Navigation";
-import WhyChooseUs from "@/components/WhyChooseUs";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
-import FloatingContact from "@/components/FloatingContact";
-import ServicePageTemplate from "@/templates/ServicePageTemplate";
-import { Stethoscope, Clock, Home, Hotel, Briefcase, Baby, Phone, MessageCircle, Check, MapPin } from "lucide-react";
+import { Stethoscope, Clock, Home, Hotel, Briefcase, Baby, Phone, MessageCircle, Check, MapPin, User, Calendar, HeartPulse, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ServicePageTemplate from "@/templates/ServicePageTemplate";
 import { Link } from "react-router-dom";
 
 const DoctorOnCallUAE = () => {
@@ -92,9 +87,7 @@ const DoctorOnCallUAE = () => {
   ];
 
   return (
-    <>
-      <Navigation />
-      <ServicePageTemplate
+    <ServicePageTemplate
         title="Doctor on Call Dubai | 24/7 Home Doctor Visit UAE | EMRS"
         description="24/7 Doctor on Call in Dubai & UAE. Home doctor visits, hotel doctor service, VIP medical care. Licensed physicians available anytime. Call +971 55 472 8133"
         canonical="https://emrs.ae/doctor-on-call-uae"
@@ -341,9 +334,7 @@ const DoctorOnCallUAE = () => {
 
         <Contact />
         <Footer />
-        <FloatingContact />
       </ServicePageTemplate>
-    </>
   );
 };
 
