@@ -6,15 +6,6 @@ const { Readable } = require('stream');
 // Define your site URL
 const siteUrl = 'https://emrs.ae';
 
-<<<<<<< HEAD
-// Define your routes
-const routes = [
-  { url: '/', changefreq: 'daily', priority: 1.0 },
-  { url: '/about', changefreq: 'monthly', priority: 0.8 },
-  { url: '/services', changefreq: 'weekly', priority: 0.9 },
-  { url: '/contact', changefreq: 'monthly', priority: 0.7 },
-  // Add more routes as needed
-=======
 // Define your routes (keep in sync with src/App.tsx)
 const today = new Date().toISOString().split('T')[0];
 const routes = [
@@ -39,8 +30,7 @@ const routes = [
   // Blog Posts
   { url: '/blog/how-to-choose-ambulance-service', lastmod: today, changefreq: 'monthly', priority: 0.8 },
   { url: '/blog/private-ambulance-services-across-uae', lastmod: today, changefreq: 'monthly', priority: 0.8 },
-  { url: '/blog/emergency-patient-transfers-uae', lastmod: today, changefreq: 'monthly', priority: 0.8 },
->>>>>>> b46613a (done)
+  { url: '/blog/emergency-patient-transfers-uae', lastmod: today, changefreq: 'monthly', priority: 0.8 }
 ];
 
 // Create a stream to write to

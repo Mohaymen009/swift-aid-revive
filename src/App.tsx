@@ -32,14 +32,7 @@ const App = () => (
       <Router>
         <Routes>
           <Route path="/" element={<Index />} />
-<<<<<<< HEAD
           <Route path="/services" element={<ServicesHub />} />
-=======
-<<<<<<< HEAD
-=======
-          <Route path="/services" element={<ServicesHub />} />
->>>>>>> da8c317 (seo fix)
->>>>>>> b46613a (done)
           {/* Service Pages */}
           <Route path="/ambulance-services-uae" element={<AmbulanceServicesUAE />} />
           <Route path="/non-emergency-medical-transport-uae" element={<NonEmergencyMedicalTransport />} />

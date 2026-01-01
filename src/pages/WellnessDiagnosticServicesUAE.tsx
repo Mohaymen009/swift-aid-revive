@@ -117,26 +117,18 @@ const WellnessDiagnosticServicesUAE = () => {
       <Navigation />
       <ServicePageTemplate
         title="Blood Test at Home Dubai | IV Therapy UAE | Wellness Services | EMRS"
-<<<<<<< HEAD
-        description="Home blood tests, IV therapy, health check-ups in Dubai & UAE. Lab tests at home, vitamin drips, vaccination services. Licensed healthcare at your doorstep. Call +971 4 576 8237"
-=======
         description="Home blood tests, IV therapy, health check-ups in Dubai & UAE. Lab tests at home, vitamin drips, vaccination services. Licensed healthcare at your doorstep. Call +971 55 472 8133"
->>>>>>> b46613a (done)
         canonical="https://emrs.ae/wellness-diagnostic-services-uae"
         imageUrl="/images/og/wellness-diagnostic-services-uae.jpg"
         imageAlt="Wellness and Diagnostic Services in UAE by EMRS"
         lastUpdated="2026-01-01"
         faqs={faqs}
-<<<<<<< HEAD
-        phoneNumber={"+97145768237"}
-=======
         phoneNumber={"+971 55 472 8133"}
         relatedLinks={[
           { label: 'Doctor on Call', to: '/doctor-on-call-uae' },
           { label: 'Home Healthcare', to: '/home-healthcare-services-uae' },
           { label: 'Ambulance Services', to: '/ambulance-services-uae' }
         ]}
->>>>>>> b46613a (done)
       >
       {/* Hero Section */}
       <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-white relative overflow-hidden">
