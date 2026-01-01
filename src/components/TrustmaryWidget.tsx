@@ -9,7 +9,7 @@ const TrustmaryWidget = () => {
     script.id = scriptId;
     script.src = "https://widget.trustmary.com/D4dP0Hk22";
     script.async = true;
-    document.body.appendChild(script);
+    document.head.appendChild(script);
   }, []);
 
   return (
