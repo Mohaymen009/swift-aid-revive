@@ -33,11 +33,11 @@ const SEOHead = ({
   keywords = [
     "ambulance service UAE",
     "home healthcare Dubai",
-    "emergency medical services",
+    "medical services UAE",
     "patient transfer UAE",
     "24/7 ambulance Dubai",
     "medical transport UAE",
-    "non-emergency ambulance",
+    "patient transport services",
     "medical escort service",
     "home nursing Dubai",
     "doctor on call UAE"
@@ -59,11 +59,12 @@ const SEOHead = ({
   // Default structured data if not provided
   const defaultStructuredData = {
     "@context": "https://schema.org",
-    "@type": ["MedicalBusiness", "Organization"],
+    "@type": "Organization",
     "name": siteName,
-    "url": currentUrl,
+    "url": baseUrl,
     "logo": "https://emrs.ae/emrslogo.png",
-    "description": description,
+    "image": "https://emrs.ae/emrslogo.png",
+    "description": "EMRS provides licensed 24/7 ambulance and home healthcare services across all UAE emirates.",
     "sameAs": [
       "https://www.facebook.com/emrsuae",
       "https://www.instagram.com/emrsuae",
@@ -78,21 +79,37 @@ const SEOHead = ({
       "addressCountry": "AE"
     },
     "openingHours": "Mo,Tu,We,Th,Fr,Sa,Su 00:00-23:59",
-    "telephone": "+971 55 472 8133",
+    "telephone": "+971554728133",
+    "email": "info@emrs.ae",
     "priceRange": "$$",
+    "areaServed": [
+      "Dubai",
+      "Abu Dhabi",
+      "Sharjah",
+      "Ajman",
+      "Umm Al Quwain",
+      "Ras Al Khaimah",
+      "Fujairah"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+971554728133",
+      "contactType": "customer service",
+      "availableLanguage": ["English", "Arabic"]
+    },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Medical Services",
       "itemListElement": [
         {
           "@type": "OfferCatalog",
-          "name": "Emergency Ambulance Services",
+          "name": "Ambulance Transfer Services",
           "itemListElement": [
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "24/7 Emergency Ambulance"
+                "name": "24/7 Ambulance Transfer"
               }
             }
           ]
