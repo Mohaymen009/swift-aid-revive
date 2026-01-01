@@ -44,14 +44,33 @@ const SEOHead = ({
       (logoMeta as any).property = 'og:image';
       document.head.appendChild(logoMeta);
     }
-    (logoMeta as any).content = "https://emrs.ae/assets/logo-IoYxzFod.png";
+    // Set Open Graph meta tags with dynamic values
+    const ogTags = [
+      { property: 'og:title', content: title },
+      { property: 'og:description', content: description },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: canonical },
+      { property: 'og:image', content: 'https://emrs.ae/emrslogo.png' },
+      { property: 'og:site_name', content: 'EMRS 24/7' },
+      { property: 'og:locale', content: 'en_AE' }
+    ];
+
+    ogTags.forEach(tag => {
+      let meta = document.querySelector(`meta[property="${tag.property}"]`) as HTMLMetaElement | null;
+      if (!meta) {
+        meta = document.createElement('meta');
+        (meta as any).property = tag.property;
+        document.head.appendChild(meta);
+      }
+      meta.content = tag.content;
+    });
     
     // Add favicon meta tag
     let faviconLink = document.querySelector('link[rel="icon"]') as HTMLLinkElement | null;
     if (!faviconLink) {
       faviconLink = document.createElement('link');
       faviconLink.rel = 'icon';
-      faviconLink.type = 'image/png';
+      faviconLink.type = 'image/x-icon';
       document.head.appendChild(faviconLink);
     }
     faviconLink.href = "https://emrs.ae/favicon.ico";
@@ -82,7 +101,18 @@ const SEOHead = ({
       "name": "EMRS 24/7",
       "description": "Professional ambulance and medical transport services across UAE",
       "url": "https://emrs.ae",
-      "logo": "https://emrs.ae/assets/logo-IoYxzFod.png",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://emrs.ae/emrslogo.png",
+        "width": 720,
+        "height": 720
+      },
+      "image": "https://emrs.ae/emrslogo.png",
+      "sameAs": [
+        "https://www.instagram.com/emrs",
+        "https://www.linkedin.com/company/emrs",
+        "https://www.facebook.com/emrs"
+      ],
       "telephone": "+971554728133",
       "address": {
         "@type": "PostalAddress",
