@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import Hero from "@/components/Hero";
 import OurStory from "@/components/OurStory";
 import Services from "@/components/Services";
@@ -15,10 +16,14 @@ const UmmAlQuwainAmbulanceServices = () => {
       <SEOHead 
         title="Professional Ambulance Services in Umm Al Quwain | EMRS"
         description="EMRS provides professional ambulance services in Umm Al Quwain. Ambulance UAQ, patient transport UAQ for medical transfers."
-        canonical="https://emrs.ae/#/umm-al-quwain-ambulance-services"
+        canonical="https://emrs.ae/umm-al-quwain-ambulance-services"
+        image="/images/og/umm-al-quwain-ambulance-services.jpg"
         emirate="Umm Al Quwain"
       />
       <Navigation />
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-4">
+        <Breadcrumbs />
+      </div>
       <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-r from-blue-50 to-blue-100">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-blue-900 mb-4 sm:mb-6 leading-tight">

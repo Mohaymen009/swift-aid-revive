@@ -1,0 +1,288 @@
+import Navigation from "@/components/Navigation";
+import WhyChooseUs from "@/components/WhyChooseUs";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
+import FloatingContact from "@/components/FloatingContact";
+import SEOHead from "@/components/SEOHead";
+import ServicePageTemplate from "@/templates/ServicePageTemplate";
+import { Check, Clock, Calendar, Heart, Accessibility, Users, Phone, MessageCircle, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+
+const NonEmergencyMedicalTransport = () => {
+  const services = [
+    {
+      title: "Dialysis Transport",
+      description: "Regular scheduled transport for dialysis patients. We ensure timely pickup and drop-off for all dialysis appointments, providing comfortable and safe travel.",
+      icon: Heart
+    },
+    {
+      title: "Hospital Discharge Transport",
+      description: "Safe transport home after hospital discharge. Our trained staff assists with mobility and ensures patients reach home comfortably.",
+      icon: Accessibility
+    },
+    {
+      title: "Scheduled Medical Appointments",
+      description: "Transport for doctor visits, therapy sessions, and routine medical check-ups. Book in advance for hassle-free medical travel.",
+      icon: Calendar
+    },
+    {
+      title: "Stretcher Transport",
+      description: "For patients who cannot sit during transport. Our stretcher-equipped vehicles ensure comfortable lying position during travel.",
+      icon: Users
+    },
+    {
+      title: "Wheelchair Transport",
+      description: "Wheelchair-accessible vehicles for mobility-impaired patients. We handle wheelchair loading and secure positioning.",
+      icon: Accessibility
+    },
+    {
+      title: "Elderly Care Transport",
+      description: "Specialized transport for senior citizens with trained attendants who provide assistance and care throughout the journey.",
+      icon: Heart
+    }
+  ];
+
+  const benefits = [
+    "Scheduled pickup times that work for you",
+    "Trained attendants for patient assistance",
+    "Comfortable, air-conditioned vehicles",
+    "Wheelchair and stretcher accessible",
+    "Insurance billing available",
+    "Cross-emirate transport available",
+    "24/7 booking availability",
+    "Real-time tracking for family members"
+  ];
+
+  const faqs = [
+    {
+      question: "What is Non-Emergency Medical Transport (NEMT)?",
+      answer: "Non-Emergency Medical Transport refers to transportation services for patients who need medical transport but don't require emergency services. This includes transport for dialysis, doctor appointments, hospital discharge, and scheduled medical visits."
+    },
+    {
+      question: "How do I book NEMT services in Dubai?",
+      answer: "You can book our NEMT services by calling +971 4 576 8237 or WhatsApp at +971 55 472 8133. We recommend booking at least 24 hours in advance for scheduled appointments."
+    },
+    {
+      question: "Do you provide regular transport for dialysis patients?",
+      answer: "Yes, we specialize in dialysis transport. We can set up recurring schedules for your dialysis sessions, ensuring you never miss an appointment. Our vehicles are equipped for patient comfort during the journey."
+    },
+    {
+      question: "Can family members accompany the patient?",
+      answer: "Yes, one family member or caregiver can accompany the patient during transport at no additional charge."
+    },
+    {
+      question: "What areas do you cover for NEMT services?",
+      answer: "We provide non-emergency medical transport across all UAE emirates including Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Fujairah, and Umm Al Quwain."
+    },
+    {
+      question: "Is NEMT covered by insurance?",
+      answer: "Many insurance plans cover non-emergency medical transport. We can check your coverage and handle direct billing with your insurance provider."
+    }
+  ];
+
+  return (
+    <>
+      <Navigation />
+      <ServicePageTemplate
+        title="Non-Emergency Medical Transport UAE | Patient Transport Dubai | EMRS"
+        description="NEMT services in UAE. Dialysis transport, stretcher transport, wheelchair transport, hospital transfers. Scheduled medical transport across Dubai, Abu Dhabi, Sharjah. Call +971 4 576 8237"
+        canonical="https://emrs.ae/non-emergency-medical-transport-uae"
+        imageUrl="/images/og/non-emergency-medical-transport-uae.jpg"
+        imageAlt="Non-Emergency Medical Transport in UAE by EMRS"
+        lastUpdated="2026-01-01"
+        faqs={faqs}
+        phoneNumber={"+97145768237"}
+      >
+      {/* Hero Section */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djZoNnYtNmgtNnptMCAwdi02aC02djZoNnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-50"></div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="max-w-4xl mx-auto text-center">
+            <span className="inline-block px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-semibold mb-6">
+              Scheduled Medical Transport
+            </span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              Non-Emergency Medical Transport in UAE
+            </h1>
+            <p className="text-xl sm:text-2xl text-white/90 mb-8 leading-relaxed">
+              Comfortable, reliable patient transport for dialysis, hospital appointments, and scheduled medical visits. Wheelchair and stretcher accessible vehicles available.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                size="lg" 
+                className="bg-accent hover:bg-accent/90 text-white font-bold text-lg px-8 py-6"
+                asChild
+              >
+                <a href="tel:+97145768237" className="flex items-center gap-2">
+                  <Phone className="w-5 h-5" />
+                  Call +971 4 576 8237
+                </a>
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="border-white text-white hover:bg-white hover:text-primary font-bold text-lg px-8 py-6"
+                asChild
+              >
+                <a href="https://wa.me/971554728133" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                  <MessageCircle className="w-5 h-5" />
+                  WhatsApp Us
+                </a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What is NEMT */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-6">
+                What is Non-Emergency Medical Transport?
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Non-Emergency Medical Transport (NEMT) provides scheduled transportation for patients who need medical transport but don't require emergency ambulance services. This includes transport for routine medical appointments, dialysis treatments, physical therapy, hospital discharges, and other planned medical visits.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed mt-4">
+                Unlike emergency ambulances, NEMT services are pre-scheduled and focus on patient comfort and convenience. Our vehicles are equipped with wheelchair accessibility, stretcher capability, and trained medical attendants to assist patients throughout their journey.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <span className="text-accent font-bold text-sm uppercase tracking-wide">Our NEMT Services</span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-primary mt-4 mb-4">
+                Patient Transport Services
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Comprehensive non-emergency medical transport solutions for all your healthcare needs
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {services.map((service, index) => (
+                <div key={index} className="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-shadow">
+                  <service.icon className="w-12 h-12 text-accent mb-4" />
+                  <h3 className="text-xl font-bold text-primary mb-3">{service.title}</h3>
+                  <p className="text-muted-foreground">{service.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
+                Benefits of Our NEMT Services
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg">
+                  <Check className="w-6 h-6 text-accent flex-shrink-0" />
+                  <span className="text-primary font-medium">{benefit}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Dialysis Transport Special Section */}
+      <section className="py-16 bg-accent/5">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <Heart className="w-16 h-16 text-accent mx-auto mb-6" />
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-6">
+              Specialized Dialysis Transport
+            </h2>
+            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+              Dialysis patients need reliable, punctual transport three or more times per week. Our dedicated dialysis transport service ensures you never miss an appointment. We offer recurring schedule bookings, comfortable vehicles with medical monitoring, and trained attendants who understand the unique needs of dialysis patients.
+            </p>
+            <Button 
+              size="lg" 
+              className="bg-accent hover:bg-accent/90 text-white font-bold"
+              asChild
+            >
+              <a href="tel:+97145768237" className="flex items-center gap-2">
+                <Phone className="w-5 h-5" />
+                Book Dialysis Transport
+              </a>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Common questions about non-emergency medical transport
+              </p>
+            </div>
+            <div className="space-y-4">
+              {faqs.map((faq, index) => (
+                <div key={index} className="bg-white p-6 rounded-xl shadow-sm">
+                  <h3 className="text-lg font-bold text-primary mb-2">{faq.question}</h3>
+                  <p className="text-muted-foreground">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Services */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-primary mb-8">Related Services</h2>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Button variant="outline" asChild>
+                <Link to="/ambulance-services-uae" className="flex items-center gap-2">
+                  Ambulance Services <ArrowRight className="w-4 h-4" />
+                </Link>
+              </Button>
+              <Button variant="outline" asChild>
+                <Link to="/home-healthcare-services-uae" className="flex items-center gap-2">
+                  Home Healthcare <ArrowRight className="w-4 h-4" />
+                </Link>
+              </Button>
+              <Button variant="outline" asChild>
+                <Link to="/doctor-on-call-uae" className="flex items-center gap-2">
+                  Doctor on Call <ArrowRight className="w-4 h-4" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <WhyChooseUs />
+      <Contact />
+      <Footer />
+      <FloatingContact />
+      </ServicePageTemplate>
+    </>
+  );
+};
+
+export default NonEmergencyMedicalTransport;
