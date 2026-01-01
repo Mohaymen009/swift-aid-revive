@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
 import ServicePageTemplate from "@/templates/ServicePageTemplate";
-import { Ambulance, Wheelchair, UserPlus, Calendar, MapPin, Clock, Phone, MessageCircle } from "lucide-react";
+import { Ambulance, UserPlus, Calendar, MapPin, Clock, Phone, MessageCircle, Check, Heart, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -14,7 +14,7 @@ const NonEmergencyMedicalTransport = () => {
     {
       title: "Wheelchair Transport",
       description: "Specialized vehicles equipped with wheelchair lifts and securements for safe patient transport.",
-      icon: Wheelchair
+      icon: UserPlus
     },
     {
       title: "Stretcher Transport",
