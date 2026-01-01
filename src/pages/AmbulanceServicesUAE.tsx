@@ -45,6 +45,62 @@ const AmbulanceServicesUAE = () => {
     }
   ];
 
+  const features = [
+    {
+      title: "24/7 Emergency Response",
+      description: "Immediate dispatch for urgent medical transport needs, any time of day or night.",
+      icon: Clock
+    },
+    {
+      title: "Fully Equipped Ambulances",
+      description: "Modern ambulances with advanced life support equipment and medications.",
+      icon: Ambulance
+    },
+    {
+      title: "Trained Medical Staff",
+      description: "Experienced paramedics and emergency medical technicians on every call.",
+      icon: Users
+    },
+    {
+      title: "Nationwide Coverage",
+      description: "Services available across all UAE emirates with a single phone call.",
+      icon: MapPin
+    },
+    {
+      title: "Advanced Life Support",
+      description: "Critical care transport with specialized equipment and trained personnel.",
+      icon: HeartPulse
+    },
+    {
+      title: "Patient Comfort",
+      description: "Smooth, comfortable transport with attention to patient needs and safety.",
+      icon: ShieldCheck
+    }
+  ];
+
+  const serviceTypes = [
+    {
+      title: "Emergency Ambulance Services",
+      description: "Immediate response for medical emergencies with advanced life support capabilities.",
+      keywords: ["24/7 Emergency", "ALS Support", "Rapid Response", "Critical Care"]
+    },
+    {
+      title: "Non-Emergency Patient Transport",
+      description: "Safe and comfortable transport for non-emergency medical appointments and procedures.",
+      keywords: ["Scheduled Transport", "Medical Appointments", "Dialysis", "Therapy"]
+    },
+    {
+      title: "Inter-Hospital Transfers",
+      description: "Seamless transfer between medical facilities with continuous medical monitoring.",
+      keywords: ["Hospital to Hospital", "Facility Transfer", "Specialized Care", "Continuity"]
+    },
+    {
+      title: "Event Medical Coverage",
+      description: "On-site medical support for events, concerts, and corporate functions.",
+      keywords: ["Event EMS", "First Aid", "Medical Standby", "Mass Gathering"]
+    }
+  ];
+
   const areas = [
     "Dubai", "Abu Dhabi", "Sharjah", "Ajman", "Ras Al Khaimah", "Fujairah", "Umm Al Quwain",
     "Al Ain", "Ruwais", "Liwa", "Dibba", "Khorfakkan", "Kalba", "Dhaid", "Hatta"
@@ -253,9 +309,7 @@ const AmbulanceServicesUAE = () => {
       <WhyChooseUs />
       <Contact />
       <Footer />
-      <FloatingContact />
-      </ServicePageTemplate>
-    </>
+    </ServicePageTemplate>
   );
 };
 
