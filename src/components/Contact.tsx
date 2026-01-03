@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, MessageCircle, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle, Clock, Shield, Users, Ambulance } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
@@ -46,12 +46,12 @@ const Contact = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-accent font-bold text-sm uppercase tracking-wide">Get in Touch</span>
+            <span className="text-accent font-bold text-sm uppercase tracking-wide">Contact EMRS</span>
             <h2 className="text-4xl sm:text-5xl font-bold text-primary mt-4 mb-6">
-              Contact Us
+              Get in Touch for Ambulance Services
             </h2>
             <p className="text-lg text-muted-foreground">
-              We're here to help 24/7. Reach out to us through any of these channels.
+              Need ambulance services, patient transport, or medical assistance in the UAE? Our professional team is available 24/7 to help. Contact us through any of these channels for immediate assistance.
             </p>
           </div>
 
@@ -95,21 +95,46 @@ const Contact = () => {
             ))}
           </div>
 
+          {/* Trust Signals Section */}
+          <div className="grid sm:grid-cols-3 gap-6 mb-12">
+            <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm">
+              <Shield className="w-10 h-10 text-accent flex-shrink-0" />
+              <div>
+                <h4 className="font-bold text-primary">Professional Team</h4>
+                <p className="text-sm text-muted-foreground">Trained paramedics & medical staff</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm">
+              <Ambulance className="w-10 h-10 text-accent flex-shrink-0" />
+              <div>
+                <h4 className="font-bold text-primary">Modern Fleet</h4>
+                <p className="text-sm text-muted-foreground">Well-equipped ambulances</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm">
+              <Users className="w-10 h-10 text-accent flex-shrink-0" />
+              <div>
+                <h4 className="font-bold text-primary">UAE Coverage</h4>
+                <p className="text-sm text-muted-foreground">All 7 emirates served</p>
+              </div>
+            </div>
+          </div>
+
           {/* Contact Banner */}
           <Card className="bg-gradient-to-r from-accent to-orange-light border-0 shadow-glow text-white overflow-hidden">
             <div className="p-8 sm:p-12 relative">
               <div className="relative z-10 max-w-3xl">
                 <div className="flex items-center gap-3 mb-4">
                   <Clock className="w-8 h-8" />
-                  <span className="text-lg font-semibold">24/7 Medical Services</span>
+                  <span className="text-lg font-semibold">24/7 Ambulance & Medical Services</span>
                 </div>
                 
                 <h3 className="text-3xl sm:text-4xl font-bold mb-4">
-                  Need medical assistance or transport?
+                  Need Ambulance or Medical Transport?
                 </h3>
                 
                 <p className="text-lg text-white/90 mb-6">
-                  Our medical team is ready to assist you anytime, anywhere in the UAE.
+                  Whether you need hospital transfers, patient transport, or medical assistance anywhere in the UAE — our professional team is ready to help around the clock.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4">
