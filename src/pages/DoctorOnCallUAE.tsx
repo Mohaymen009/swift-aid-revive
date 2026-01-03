@@ -247,34 +247,36 @@ const DoctorOnCallUAE = () => {
         </section>
 
         {/* Why Choose Us */}
-        <WhyChooseUs 
-          items={[
-            {
-              title: "24/7 Availability",
-              description: "Our doctors are available round the clock, 365 days a year, including weekends and public holidays."
-            },
-            {
-              title: "Licensed Professionals",
-              description: "All our doctors are DHA/HAAD/MOH licensed with extensive experience in emergency and general medicine."
-            },
-            {
-              title: "Quick Response",
-              description: "Average response time of 45-90 minutes in Dubai, depending on your location and traffic conditions."
-            },
-            {
-              title: "Multilingual Staff",
-              description: "Our medical team speaks multiple languages including English, Arabic, Hindi, Urdu, and Tagalog."
-            },
-            {
-              title: "Insurance Support",
-              description: "We work with most major insurance providers and can assist with direct billing where available."
-            },
-            {
-              title: "Comprehensive Care",
-              description: "From general consultations to specialized treatments, we provide a wide range of medical services at your location."
-            }
-          ]}
-        />
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
+                  Why Choose EMRS Doctor on Call
+                </h2>
+                <p className="text-lg text-muted-foreground">
+                  Professional medical care delivered to your doorstep
+                </p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {[
+                  { title: "24/7 Availability", description: "Our doctors are available round the clock, 365 days a year, including weekends and public holidays." },
+                  { title: "DHA/HAAD/MOH Licensed", description: "All our doctors are fully licensed with extensive experience in emergency and general medicine." },
+                  { title: "Quick Response", description: "Average response time of 45-90 minutes in Dubai, depending on your location and traffic conditions." },
+                  { title: "Multilingual Staff", description: "Our medical team speaks multiple languages including English, Arabic, Hindi, Urdu, and Tagalog." },
+                  { title: "Insurance Support", description: "We work with most major insurance providers and can assist with direct billing where available." },
+                  { title: "Comprehensive Care", description: "From general consultations to specialized treatments, we provide a wide range of medical services at your location." }
+                ].map((item, index) => (
+                  <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
+                    <ShieldCheck className="w-8 h-8 text-accent mb-3" />
+                    <h3 className="text-lg font-bold text-primary mb-2">{item.title}</h3>
+                    <p className="text-muted-foreground text-sm">{item.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* FAQ Section */}
         <section className="py-16 bg-gray-50">

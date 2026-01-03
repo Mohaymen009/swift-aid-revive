@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 
 export interface SEOHeadProps {
@@ -22,25 +22,25 @@ export interface SEOHeadProps {
 
 const SEOHead = ({ 
   title = "EMRS 24/7 | Ambulance & Home Healthcare Services UAE",
-  description = "EMRS provides licensed 24/7 ambulance & home healthcare services across all UAE emirates. Call now for fast, professional medical response!",
+  description = "EMRS provides 24/7 professional ambulance and home healthcare services across all UAE emirates including Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Fujairah, and Umm Al Quwain. Call now for fast medical response!",
   canonical: customCanonical,
   type = "website",
   emirate,
-  image = "https://emrs.ae/images/og/emrs-og-default.jpg",
+  image = "/emrslogo.png",
   imageAlt = "EMRS 24/7 Ambulance & Medical Services in UAE",
   imageWidth = 1200,
   imageHeight = 630,
   keywords = [
     "ambulance service UAE",
-    "home healthcare Dubai",
-    "medical services UAE",
-    "patient transfer UAE",
-    "24/7 ambulance Dubai",
-    "medical transport UAE",
-    "patient transport services",
-    "medical escort service",
-    "home nursing Dubai",
-    "doctor on call UAE"
+    "private ambulance Dubai",
+    "24/7 ambulance UAE",
+    "patient transport UAE",
+    "medical transport Dubai",
+    "home healthcare UAE",
+    "doctor on call Dubai",
+    "non-emergency ambulance UAE",
+    "hospital transfer ambulance",
+    "medical escort UAE"
   ],
   noIndex = false,
   structuredData: customStructuredData,
@@ -56,20 +56,41 @@ const SEOHead = ({
   const twitterHandle = "@EMRSUAE";
   const fullImageUrl = image.startsWith('http') ? image : `${baseUrl}${image.startsWith('/') ? '' : '/'}${image}`;
   
-  // Default structured data if not provided
+  // Emirate-specific keywords enhancement
+  const emirateKeywords = emirate ? [
+    `ambulance ${emirate}`,
+    `private ambulance ${emirate}`,
+    `medical transport ${emirate}`,
+    `patient transfer ${emirate}`,
+    `24/7 ambulance ${emirate}`,
+    ...keywords
+  ] : keywords;
+
+  // Default MedicalBusiness structured data
   const defaultStructuredData = {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": siteName,
+    "@type": ["MedicalBusiness", "LocalBusiness"],
+    "@id": `${baseUrl}/#organization`,
+    "name": "EMRS 24/7 - Medical Response Services",
+    "alternateName": "EMRS",
+    "description": description,
     "url": baseUrl,
-    "logo": "https://emrs.ae/emrslogo.png",
-    "image": "https://emrs.ae/emrslogo.png",
-    "description": "EMRS provides licensed 24/7 ambulance and home healthcare services across all UAE emirates.",
-    "sameAs": [
-      "https://www.facebook.com/emrsuae",
-      "https://www.instagram.com/emrsuae",
-      "https://www.linkedin.com/company/emrsuae"
-    ],
+    "logo": {
+      "@type": "ImageObject",
+      "url": `${baseUrl}/emrslogo.png`,
+      "width": 512,
+      "height": 512
+    },
+    "image": `${baseUrl}/emrslogo.png`,
+    "telephone": "+971554728133",
+    "email": "info@emrs.ae",
+    "priceRange": "$$",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Office 101, Al Nahda 1",
@@ -78,68 +99,32 @@ const SEOHead = ({
       "postalCode": "12345",
       "addressCountry": "AE"
     },
-    "openingHours": "Mo,Tu,We,Th,Fr,Sa,Su 00:00-23:59",
-    "telephone": "+971554728133",
-    "email": "info@emrs.ae",
-    "priceRange": "$$",
     "areaServed": [
-      "Dubai",
-      "Abu Dhabi",
-      "Sharjah",
-      "Ajman",
-      "Umm Al Quwain",
-      "Ras Al Khaimah",
-      "Fujairah"
+      {"@type": "City", "name": "Dubai"},
+      {"@type": "City", "name": "Abu Dhabi"},
+      {"@type": "City", "name": "Sharjah"},
+      {"@type": "City", "name": "Ajman"},
+      {"@type": "City", "name": "Ras Al Khaimah"},
+      {"@type": "City", "name": "Fujairah"},
+      {"@type": "City", "name": "Umm Al Quwain"}
     ],
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+971554728133",
       "contactType": "customer service",
-      "availableLanguage": ["English", "Arabic"]
-    },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Medical Services",
-      "itemListElement": [
-        {
-          "@type": "OfferCatalog",
-          "name": "Ambulance Transfer Services",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "24/7 Ambulance Transfer"
-              }
-            }
-          ]
-        },
-        {
-          "@type": "OfferCatalog",
-          "name": "Home Healthcare Services",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Skilled Nursing Care at Home"
-              }
-            }
-          ]
-        }
-      ]
+      "areaServed": "AE",
+      "availableLanguage": ["English", "Arabic", "Hindi", "Urdu"]
     }
   };
 
-  // Merge custom structured data with default
   const finalStructuredData = customStructuredData || defaultStructuredData;
   
-  // Build breadcrumb structured data from provided breadcrumbs or from URL segments
+  // Build breadcrumb structured data
   const derivedCrumbs = (breadcrumbs && breadcrumbs.length > 0)
     ? breadcrumbs
     : (() => {
         const parts = location.pathname.split('/').filter(Boolean);
-        const auto = [{ name: 'Home', item: '/' } as { name: string; item: string }];
+        const auto = [{ name: 'Home', item: '/' }];
         parts.forEach((seg, idx) => {
           const path = `/${parts.slice(0, idx + 1).join('/')}`;
           const name = seg.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
@@ -148,7 +133,7 @@ const SEOHead = ({
         return auto;
       })();
 
-  const breadcrumbStructuredData = derivedCrumbs.length > 0 ? {
+  const breadcrumbStructuredData = derivedCrumbs.length > 1 ? {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": derivedCrumbs.map((b, idx) => ({
@@ -159,113 +144,71 @@ const SEOHead = ({
     }))
   } : null;
 
-  useEffect(() => {
-    // Update document title
-    document.title = title;
-    
-    // Update or create meta tags
-    const metaTags = [
-      // Standard meta tags
-      { name: 'description', content: description },
-      { name: 'keywords', content: keywords.join(', ') },
+  return (
+    <Helmet>
+      {/* Primary Meta Tags */}
+      <title>{title}</title>
+      <meta name="title" content={title} />
+      <meta name="description" content={description} />
+      <meta name="keywords" content={emirateKeywords.join(', ')} />
+      <meta name="author" content={author} />
+      <meta name="robots" content={noIndex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'} />
+      <link rel="canonical" href={currentUrl} />
+
+      {/* Geographic Meta */}
+      <meta name="geo.region" content="AE" />
+      <meta name="geo.placename" content={emirate ? `${emirate}, United Arab Emirates` : "Dubai, United Arab Emirates"} />
+
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content={type} />
+      <meta property="og:url" content={currentUrl} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={fullImageUrl} />
+      <meta property="og:image:alt" content={imageAlt} />
+      <meta property="og:image:width" content={String(imageWidth)} />
+      <meta property="og:image:height" content={String(imageHeight)} />
+      <meta property="og:site_name" content={siteName} />
+      <meta property="og:locale" content="en_AE" />
+
+      {/* Twitter Card */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content={twitterHandle} />
+      <meta name="twitter:creator" content={twitterHandle} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={fullImageUrl} />
+      <meta name="twitter:image:alt" content={imageAlt} />
+
+      {/* Article-specific meta */}
+      {type === 'article' && publishedTime && (
+        <meta property="article:published_time" content={publishedTime} />
+      )}
+      {type === 'article' && modifiedTime && (
+        <meta property="article:modified_time" content={modifiedTime} />
+      )}
+      {type === 'article' && (
+        <meta property="article:author" content={author} />
+      )}
+
+      {/* Theme colors */}
+      <meta name="theme-color" content="#0066cc" />
+      <meta name="msapplication-TileColor" content="#0066cc" />
+      <meta name="apple-mobile-web-app-title" content={siteName} />
+      <meta name="application-name" content={siteName} />
+
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(finalStructuredData)}
+      </script>
       
-      // Open Graph / Facebook
-      { property: 'og:title', content: title },
-      { property: 'og:description', content: description },
-      { property: 'og:type', content: type },
-      { property: 'og:url', content: currentUrl },
-      { property: 'og:image', content: fullImageUrl },
-      { property: 'og:image:alt', content: imageAlt },
-      { property: 'og:image:width', content: String(imageWidth) },
-      { property: 'og:image:height', content: String(imageHeight) },
-      { property: 'og:site_name', content: siteName },
-      { property: 'og:locale', content: 'en_AE' },
-      
-      // Twitter Card
-      { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:site', content: twitterHandle },
-      { name: 'twitter:creator', content: twitterHandle },
-      { name: 'twitter:title', content: title },
-      { name: 'twitter:description', content: description },
-      { name: 'twitter:image', content: fullImageUrl },
-      { name: 'twitter:image:alt', content: imageAlt },
-      
-      // Additional recommended tags
-      { name: 'author', content: siteName },
-      { name: 'theme-color', content: '#0066cc' },
-      { name: 'apple-mobile-web-app-title', content: siteName },
-      { name: 'application-name', content: siteName },
-      { name: 'msapplication-TileColor', content: '#0066cc' }
-    ];
-
-    metaTags.forEach(tag => {
-      let meta: HTMLMetaElement | null = null;
-      
-      if ('property' in tag) {
-        meta = document.querySelector(`meta[property="${tag.property}"]`);
-      } else if ('name' in tag) {
-        meta = document.querySelector(`meta[name="${tag.name}"]`);
-      }
-      
-      if (!meta) {
-        meta = document.createElement('meta');
-        if ('property' in tag) {
-          (meta as any).property = tag.property;
-        } else if ('name' in tag) {
-          meta.name = tag.name as string;
-        }
-        document.head.appendChild(meta);
-      }
-      
-      meta.content = tag.content;
-    });
-
-    // Update canonical URL
-    let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-    if (!canonicalLink) {
-      canonicalLink = document.createElement('link');
-      canonicalLink.rel = 'canonical';
-      document.head.appendChild(canonicalLink);
-    }
-    canonicalLink.href = currentUrl;
-
-    // Handle robots meta tag
-    let robotsMeta = document.querySelector('meta[name="robots"]') as HTMLMetaElement | null;
-    if (!robotsMeta) {
-      robotsMeta = document.createElement('meta');
-      robotsMeta.name = 'robots';
-      document.head.appendChild(robotsMeta);
-    }
-    robotsMeta.content = noIndex ? 'noindex, nofollow' : 'index, follow';
-
-    // Favicon and manifest links are centralized in index.html
-
-    // Add structured data
-    const structuredDataScripts = [
-      { id: 'structured-data', data: finalStructuredData },
-      ...(breadcrumbStructuredData ? [{ id: 'breadcrumb-data', data: breadcrumbStructuredData }] : [])
-    ];
-
-    structuredDataScripts.forEach(({ id, data }) => {
-      let scriptEl = document.getElementById(id) as HTMLScriptElement | null;
-      if (!scriptEl) {
-        scriptEl = document.createElement('script');
-        scriptEl.id = id;
-        scriptEl.type = 'application/ld+json';
-        document.head.appendChild(scriptEl);
-      }
-      scriptEl.textContent = JSON.stringify(data, null, 2);
-    });
-
-    // Cleanup function to remove added elements when component unmounts
-    return () => {
-      // We don't remove meta tags as they might be used by other components
-    };
-  }, [title, description, customCanonical, type, emirate, image, imageAlt, imageWidth, imageHeight, keywords, noIndex, finalStructuredData, breadcrumbStructuredData, currentUrl, location.pathname]);
-
-  // Preconnect and preload are centralized in index.html
-
-  return null;
+      {breadcrumbStructuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbStructuredData)}
+        </script>
+      )}
+    </Helmet>
+  );
 };
 
 export default SEOHead;

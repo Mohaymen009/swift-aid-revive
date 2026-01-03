@@ -1,16 +1,32 @@
+# EMRS 24/7 - Medical Response Services
+# Professional Ambulance & Home Healthcare Services UAE
+# https://emrs.ae
 
-# EMRS - Emergency Medical Response Services
-# Robots.txt configuration
-
+# Sitemap location
 Sitemap: https://emrs.ae/sitemap.xml
 
+# Allow all legitimate crawlers
 User-agent: *
 Allow: /
 
+# Block internal/error pages
 Disallow: /assets/errors
 Disallow: /assets/inc
 Disallow: /extras
 
-# https://platform.openai.com/docs/gptbot
+# Block AI training bots (optional - remove if you want AI indexing)
 User-agent: GPTBot
 Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+# Crawl delay for respectful crawling
+User-agent: *
+Crawl-delay: 1

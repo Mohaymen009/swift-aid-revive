@@ -3,37 +3,141 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EMRS 24/7 | Ambulance &amp; Home Healthcare Services UAE</title>
+    <title>EMRS 24/7 | Ambulance & Home Healthcare Services UAE</title>
     <meta
       name="description"
-      content="EMRS provides licensed 24/7 ambulance and home healthcare services across all UAE emirates. Call now for fast, professional medical response!"
+      content="EMRS provides 24/7 professional ambulance and home healthcare services across all UAE emirates including Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Fujairah, and Umm Al Quwain. Call now for fast medical response!"
     />
     <link rel="canonical" href="https://emrs.ae/" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
-    <!-- Basic Organization JSON-LD fallback for crawlers -->
+    <!-- Primary Keywords -->
+    <meta name="keywords" content="ambulance service UAE, private ambulance Dubai, 24/7 ambulance UAE, patient transport UAE, medical transport Dubai, home healthcare UAE, doctor on call Dubai, non-emergency ambulance UAE, hospital transfer ambulance, medical escort UAE" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://emrs.ae/" />
+    <meta property="og:title" content="EMRS 24/7 | Professional Ambulance & Home Healthcare Services UAE" />
+    <meta property="og:description" content="24/7 professional ambulance services and home healthcare across all UAE emirates. Licensed medical transport, patient transfers, doctor on call, and nursing care." />
+    <meta property="og:image" content="https://emrs.ae/emrslogo.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="EMRS 24/7" />
+    <meta property="og:locale" content="en_AE" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://emrs.ae/" />
+    <meta name="twitter:title" content="EMRS 24/7 | Ambulance & Home Healthcare UAE" />
+    <meta name="twitter:description" content="24/7 professional ambulance services across UAE. Fast, reliable medical transport and home healthcare." />
+    <meta name="twitter:image" content="https://emrs.ae/emrslogo.png" />
+
+    <!-- LocalBusiness + MedicalBusiness JSON-LD Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "EMRS 24/7",
+      "@type": ["MedicalBusiness", "LocalBusiness"],
+      "@id": "https://emrs.ae/#organization",
+      "name": "EMRS 24/7 - Medical Response Services",
+      "alternateName": "EMRS",
+      "description": "EMRS provides professional 24/7 ambulance transfer services, non-emergency medical transport, home healthcare, and doctor on call services across all seven emirates of the UAE.",
       "url": "https://emrs.ae",
-      "logo": "https://emrs.ae/emrslogo.png",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://emrs.ae/emrslogo.png",
+        "width": 512,
+        "height": 512
+      },
+      "image": "https://emrs.ae/emrslogo.png",
       "telephone": "+971554728133",
       "email": "info@emrs.ae",
+      "priceRange": "$$",
+      "currenciesAccepted": "AED",
+      "paymentAccepted": "Cash, Credit Card, Insurance",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Office 101, Al Nahda 1",
         "addressLocality": "Dubai",
+        "addressRegion": "Dubai",
         "postalCode": "12345",
         "addressCountry": "AE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 25.2854,
+        "longitude": 55.3667
+      },
+      "areaServed": [
+        {"@type": "City", "name": "Dubai", "containedInPlace": {"@type": "Country", "name": "United Arab Emirates"}},
+        {"@type": "City", "name": "Abu Dhabi", "containedInPlace": {"@type": "Country", "name": "United Arab Emirates"}},
+        {"@type": "City", "name": "Sharjah", "containedInPlace": {"@type": "Country", "name": "United Arab Emirates"}},
+        {"@type": "City", "name": "Ajman", "containedInPlace": {"@type": "Country", "name": "United Arab Emirates"}},
+        {"@type": "City", "name": "Ras Al Khaimah", "containedInPlace": {"@type": "Country", "name": "United Arab Emirates"}},
+        {"@type": "City", "name": "Fujairah", "containedInPlace": {"@type": "Country", "name": "United Arab Emirates"}},
+        {"@type": "City", "name": "Umm Al Quwain", "containedInPlace": {"@type": "Country", "name": "United Arab Emirates"}}
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Medical Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "24/7 Ambulance Transfer Services",
+              "description": "Professional ambulance services for hospital transfers, patient transport, and medical escort across UAE"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Non-Emergency Medical Transport (NEMT)",
+              "description": "Scheduled patient transport for dialysis, medical appointments, and hospital discharges"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Doctor on Call",
+              "description": "24/7 doctor home visits and hotel doctor services across UAE"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Home Healthcare Services",
+              "description": "Professional nursing care, physiotherapy, and elderly care at home"
+            }
+          }
+        ]
+      },
+      "sameAs": [
+        "https://www.facebook.com/emrsuae",
+        "https://www.instagram.com/emrsuae"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+971554728133",
+        "contactType": "customer service",
+        "areaServed": "AE",
+        "availableLanguage": ["English", "Arabic", "Hindi", "Urdu"]
       }
     }
     </script>
 
     <meta name="author" content="EMRS 24/7" />
     <meta name="google-site-verification" content="googlee8125b76b37ca777.html" />
-    <meta name="yandex-verification" content="" />
+    <meta name="geo.region" content="AE" />
+    <meta name="geo.placename" content="Dubai, United Arab Emirates" />
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,6 +146,7 @@
     <!-- Favicon -->
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/emrslogo.png">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17821448268">
@@ -63,6 +168,23 @@
   </head>
 
   <body>
+    <!-- Critical SEO content for crawlers - visible text rendered by React -->
+    <noscript>
+      <div style="padding: 20px; font-family: Arial, sans-serif;">
+        <h1>EMRS 24/7 - Professional Ambulance & Home Healthcare Services UAE</h1>
+        <p>EMRS provides 24/7 professional ambulance services and home healthcare across all UAE emirates including Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Fujairah, and Umm Al Quwain.</p>
+        <h2>Our Services</h2>
+        <ul>
+          <li>24/7 Ambulance Transfer Services</li>
+          <li>Non-Emergency Medical Transport (NEMT)</li>
+          <li>Doctor on Call / Home Doctor Visits</li>
+          <li>Home Healthcare & Nursing Services</li>
+          <li>Wellness & Diagnostic Services</li>
+        </ul>
+        <p>Contact us: +971 55 472 8133 | Email: info@emrs.ae</p>
+        <p>Please enable JavaScript for the best experience.</p>
+      </div>
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
