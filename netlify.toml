@@ -2,25 +2,6 @@
   publish = "dist"
   command = "npm run build"
 
-# Enable Netlify's prerendering for SPA pages
-[[plugins]]
-  package = "@netlify/plugin-prerender"
-  [plugins.inputs]
-    # Explicitly define priority routes to ensure they are prerendered
-    routes = [
-      "/",
-      "/about-us",
-      "/licensing",
-      "/medical-oversight",
-      "/services",
-      "/ambulance-services-uae",
-      "/non-emergency-medical-transport-uae",
-      "/doctor-on-call-uae",
-      "/home-healthcare-services-uae",
-      "/wellness-diagnostic-services-uae",
-      "/dubai-ambulance-services",
-      "/abu-dhabi-ambulance-services"
-    ]
 
 # Redirect all SPA routes to index.html
 [[redirects]]
