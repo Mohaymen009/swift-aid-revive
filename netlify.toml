@@ -2,6 +2,16 @@
   publish = "dist"
   command = "npm run build"
 
+# Configure Checklinks plugin (installed via UI) to ignore false positives
+[[plugins]]
+  package = "netlify-plugin-checklinks"
+  [plugins.inputs]
+    skipPatterns = [
+      "https://fonts.gstatic.com",
+      "https://fonts.googleapis.com",
+      "https://www.googletagmanager.com"
+    ]
+
 
 # Redirect all SPA routes to index.html
 [[redirects]]
