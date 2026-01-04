@@ -49,10 +49,33 @@ const Licensing = () => {
               by the regulatory frameworks established by the Ministry of Health and Prevention (MOHAP), Dubai Health 
               Authority (DHA), and Department of Health Abu Dhabi (DOH).
             </p>
-            <p className="text-lg text-gray-700">
+            <p className="text-lg text-gray-700 mb-6">
               Every aspect of our service—from vehicle specifications to staff qualifications—adheres to the standards 
               set forth by these regulatory bodies, ensuring patient safety and quality of care remain our top priorities.
             </p>
+            
+            {/* Trust Amplifier Box */}
+            <div className="bg-green-50 border border-green-200 rounded-xl p-6 mt-6">
+              <h3 className="font-semibold text-green-800 mb-3">Verification & Transparency</h3>
+              <ul className="space-y-2 text-green-700">
+                <li className="flex items-start gap-2">
+                  <span className="text-green-600 mt-1">✓</span>
+                  <span>Licensing documents available upon request</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green-600 mt-1">✓</span>
+                  <span>Operating under UAE health authority regulations</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green-600 mt-1">✓</span>
+                  <span>Medical oversight provided by licensed healthcare professionals</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green-600 mt-1">✓</span>
+                  <span>Contact us directly to verify our credentials and compliance status</span>
+                </li>
+              </ul>
+            </div>
           </section>
 
           {/* Compliance Areas */}

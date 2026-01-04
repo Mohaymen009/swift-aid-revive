@@ -164,7 +164,12 @@ const Footer = () => {
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-blue-100/60">
             <p>{currentYear} © E M R S AMBULANCE SERVICES L.L.C — All rights reserved</p>
-            <p>Professional medical transport provider in the United Arab Emirates</p>
+            <p>Fully licensed ambulance & medical transport provider in the UAE</p>
+          </div>
+          <div className="mt-4 text-center text-xs text-blue-100/50">
+            <Link to="/licensing" className="hover:text-accent transition-colors" onClick={() => window.scrollTo(0, 0)}>
+              View our licensing & regulatory compliance
+            </Link>
           </div>
         </div>
       </div>

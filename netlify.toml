@@ -1,0 +1,43 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+# Enable Netlify's prerendering for SPAs (critical for SEO)
+# This tells Netlify to serve prerendered HTML to bots
+[[plugins]]
+  package = "@netlify/plugin-prerender"
+
+# Redirect all routes to index.html for SPA
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  conditions = {Role = ["admin", "user"]}
+
+# Bot-specific prerendering - Googlebot gets static HTML
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/prerender/:splat"
+  status = 200
+  conditions = {Cookie = ["__prerender_bypass"]}
+  force = true
+
+# Standard SPA fallback
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Headers for SEO
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml; charset=utf-8"
+    Cache-Control = "public, max-age=3600"
