@@ -131,20 +131,17 @@ const MedicalOversight = () => {
                                 DHA Compliant
                             </span>
                             <span className="bg-white border border-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">
-                                DOH Standards
-                            </span>
-                            <span className="bg-white border border-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">
                                 MOHAP Regulations
-                            </span>
-                        </div>
-                    </section>
-
+                            </span>             </span>
                 </div>
-            </main>
+            </section>
+
+        </div>
+            </main >
 
             <Footer />
             <FloatingContact />
-        </div>
+        </div >
     );
 };
 

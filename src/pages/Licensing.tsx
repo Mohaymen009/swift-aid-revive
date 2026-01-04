@@ -7,14 +7,14 @@ import { Shield, Award, FileCheck, Building2, Users, CheckCircle2 } from "lucide
 const Licensing = () => {
   return (
     <div className="min-h-screen" id="home">
-      <SEOHead 
+      <SEOHead
         title="Licensing & Regulatory Compliance | EMRS UAE"
-        description="EMRS is a fully licensed ambulance and medical transport provider in the UAE. Learn about our DHA, DOH, and MOH compliance, medical governance, and professional standards."
+        description="EMRS is a fully licensed ambulance and medical transport provider in the UAE. Learn about our DHA and MOH compliance, medical governance, and professional standards."
         canonical="https://emrs.ae/licensing"
         image="/emrslogo.png"
       />
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,7 +27,7 @@ const Licensing = () => {
               Licensing & Regulatory Compliance
             </h1>
             <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto">
-              EMRS operates under full regulatory compliance with UAE health authorities. 
+              EMRS operates under full regulatory compliance with UAE health authorities.
               Our commitment to legal and medical standards ensures the highest quality care for every patient.
             </p>
           </div>
@@ -37,23 +37,23 @@ const Licensing = () => {
       {/* Main Content */}
       <main className="py-16 sm:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           {/* Licensing Overview */}
           <section className="max-w-4xl mx-auto mb-16">
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
               Our Regulatory Framework
             </h2>
             <p className="text-lg text-gray-700 mb-6">
-              As a professional ambulance and medical transport provider operating across all seven emirates of the UAE, 
-              EMRS maintains strict compliance with all relevant health authority regulations. Our operations are governed 
-              by the regulatory frameworks established by the Ministry of Health and Prevention (MOHAP), Dubai Health 
-              Authority (DHA), and Department of Health Abu Dhabi (DOH).
+              As a professional ambulance and medical transport provider operating across all seven emirates of the UAE,
+              EMRS maintains strict compliance with all relevant health authority regulations. Our operations are governed
+              by the regulatory frameworks established by the Ministry of Health and Prevention (MOHAP), Dubai Health
+              Authority (DHA), and Ministry of Health and Prevention (MOHAP).
             </p>
             <p className="text-lg text-gray-700 mb-6">
-              Every aspect of our service—from vehicle specifications to staff qualifications—adheres to the standards 
+              Every aspect of our service—from vehicle specifications to staff qualifications—adheres to the standards
               set forth by these regulatory bodies, ensuring patient safety and quality of care remain our top priorities.
             </p>
-            
+
             {/* Trust Amplifier Box */}
             <div className="bg-green-50 border border-green-200 rounded-xl p-6 mt-6">
               <h3 className="font-semibold text-green-800 mb-3">Verification & Transparency</h3>
@@ -133,7 +133,7 @@ const Licensing = () => {
               Medical Staff Qualifications
             </h2>
             <p className="text-lg text-gray-700 mb-6">
-              Our medical team consists of qualified healthcare professionals who meet the stringent requirements 
+              Our medical team consists of qualified healthcare professionals who meet the stringent requirements
               of UAE health authorities:
             </p>
             <ul className="space-y-4">
@@ -159,7 +159,7 @@ const Licensing = () => {
               Ambulance Fleet Standards
             </h2>
             <p className="text-lg text-gray-700 mb-6">
-              Every vehicle in our fleet is maintained to the highest standards and equipped according to 
+              Every vehicle in our fleet is maintained to the highest standards and equipped according to
               regulatory specifications:
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -187,7 +187,7 @@ const Licensing = () => {
               Patient Rights & Privacy
             </h2>
             <p className="text-lg text-gray-700 mb-6">
-              EMRS is committed to upholding patient rights and maintaining strict confidentiality in 
+              EMRS is committed to upholding patient rights and maintaining strict confidentiality in
               accordance with UAE healthcare regulations:
             </p>
             <ul className="space-y-4">
@@ -213,18 +213,18 @@ const Licensing = () => {
               Verify Our Credentials
             </h2>
             <p className="text-lg text-gray-700 mb-6">
-              For verification of our licensing and regulatory compliance, or for any questions regarding 
+              For verification of our licensing and regulatory compliance, or for any questions regarding
               our operational standards, please contact us directly.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="tel:+97145768237" 
+              <a
+                href="tel:+971554728133"
                 className="inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
-                Call: +971 4 576 8237
+                Call: +971 55 472 8133
               </a>
-              <a 
-                href="mailto:info@emrs.ae" 
+              <a
+                href="mailto:info@emrs.ae"
                 className="inline-flex items-center justify-center gap-2 bg-white border border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
               >
                 Email: info@emrs.ae

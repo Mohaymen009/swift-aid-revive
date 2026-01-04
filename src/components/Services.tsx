@@ -55,23 +55,23 @@ const Services = () => {
           {/* Services Grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {services.map((service, index) => (
-              <Card 
+              <Card
                 key={index}
                 className="p-8 bg-white border border-gray-100 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-103 group"
               >
                 <div className="mb-6 inline-flex items-center justify-center w-16 h-16 bg-[#FF6200]/10 rounded-2xl group-hover:bg-[#FF6200]/20 transition-colors">
                   <service.icon className="w-8 h-8 text-[#FF6200]" />
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-primary mb-3">
                   {service.title}
                 </h3>
-                
+
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   {service.description}
                 </p>
 
-                <Link 
+                <Link
                   to={service.link}
                   className="text-accent font-semibold inline-flex items-center gap-1 hover:gap-2 transition-all"
                   onClick={() => window.scrollTo(0, 0)}
@@ -85,14 +85,14 @@ const Services = () => {
             <Card className="p-6 bg-gradient-to-br from-accent to-orange-light border-0 shadow-glow text-white flex flex-col justify-between">
               <div>
                 <h3 className="text-2xl font-bold mb-3">
-                  Need Medical Transport Now?
+                  Need Medical Services Now?
                 </h3>
                 <p className="text-white/90 mb-6">
                   Contact us 24/7 for ambulance services, patient transfers, or any medical transport needs across the UAE.
                 </p>
               </div>
-              
-              <Button 
+
+              <Button
                 variant="secondary"
                 className="bg-white hover:bg-white/90 text-accent font-semibold w-full group"
                 asChild

@@ -7,14 +7,14 @@ import { Heart, Clock, MapPin, Users, Award, Shield, Stethoscope, Truck } from "
 const AboutUs = () => {
   return (
     <div className="min-h-screen" id="home">
-      <SEOHead 
+      <SEOHead
         title="About EMRS | Professional Ambulance & Healthcare Services UAE"
         description="Learn about EMRS - UAE's trusted provider of professional ambulance services, patient transport, and home healthcare. Serving all seven emirates with licensed medical professionals."
         canonical="https://emrs.ae/about-us"
         image="/emrslogo.png"
       />
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -23,7 +23,7 @@ const AboutUs = () => {
               About EMRS
             </h1>
             <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto">
-              Providing professional ambulance and medical transport services across all seven emirates of the UAE. 
+              Providing professional ambulance and medical transport services across all seven emirates of the UAE.
               Your trusted partner for reliable healthcare logistics.
             </p>
           </div>
@@ -33,25 +33,23 @@ const AboutUs = () => {
       {/* Main Content */}
       <main className="py-16 sm:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           {/* Who We Are */}
           <section className="max-w-4xl mx-auto mb-16">
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
               Who We Are
             </h2>
             <p className="text-lg text-gray-700 mb-6">
-              EMRS (Emergency Medical Response Services) is a professional ambulance and healthcare services provider 
-              based in the United Arab Emirates. We specialize in non-emergency medical transport, patient transfers, 
-              doctor on call services, and comprehensive home healthcare solutions.
+              EMRS (Medical Response Services) is a professional ambulance and medical transport company serving all seven emirates of the United Arab Emirates. We specialize in providing reliable, safe, and timely patient transfer services for hospitals, clinics, and individual patients across Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Fujairah, and Umm Al Quwain.
             </p>
             <p className="text-lg text-gray-700 mb-6">
-              Our mission is to bridge the gap between patients and healthcare facilities with safe, comfortable, and 
-              professional transport services. Whether you need a scheduled hospital transfer, dialysis transport, 
-              or a doctor visit at your home or hotel, EMRS delivers reliable care when and where you need it.
+              Our team comprises experienced paramedics, nurses, and medical professionals with over 50 years of combined experience in the healthcare industry. We operate modern, fully-equipped ambulances designed for both emergency and non-emergency medical transport needs.
+            </p>
+            <p className="text-lg text-gray-700 mb-6">
+              Whether you need hospital-to-hospital transfers, patient discharge transport, dialysis transportation, or long-distance medical escorts, EMRS provides professional and compassionate service. Our ambulances are equipped with advanced medical equipment to ensure patient safety and comfort during transit.
             </p>
             <p className="text-lg text-gray-700">
-              We serve clients across Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Fujairah, and Umm Al Quwain, 
-              making quality medical transport accessible throughout the UAE.
+              We understand that medical transport situations can be stressful. That's why we focus on delivering prompt, courteous, and efficient service every time. Our 24/7 availability means you can count on us whenever you need medical transportation assistance in the UAE.
             </p>
           </section>
 
@@ -141,7 +139,7 @@ const AboutUs = () => {
               UAE-Wide Coverage
             </h2>
             <p className="text-lg text-gray-700 mb-6">
-              EMRS operates across all seven emirates of the United Arab Emirates, providing consistent, 
+              EMRS operates across all seven emirates of the United Arab Emirates, providing consistent,
               high-quality service whether you're in a major city or a more remote area:
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
@@ -168,7 +166,7 @@ const AboutUs = () => {
               Our Team
             </h2>
             <p className="text-lg text-gray-700 mb-6">
-              The strength of EMRS lies in our dedicated team of healthcare professionals. Every member 
+              The strength of EMRS lies in our dedicated team of healthcare professionals. Every member
               of our organization is committed to delivering compassionate, professional care:
             </p>
             <ul className="space-y-4">
@@ -218,18 +216,18 @@ const AboutUs = () => {
               Ready to Experience Professional Care?
             </h2>
             <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
-              Contact us today to discuss your medical transport or healthcare needs. 
+              Contact us today to discuss your medical transport or healthcare needs.
               Our team is available 24/7 to assist you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="tel:+97145768237" 
+              <a
+                href="tel:+971554728133"
                 className="inline-flex items-center justify-center gap-2 bg-white text-blue-700 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
               >
-                Call: +971 4 576 8237
+                Call: +971 55 472 8133
               </a>
-              <a 
-                href="https://wa.me/971554728133" 
+              <a
+                href="https://wa.me/971554728133"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors"
