@@ -2,9 +2,6 @@
   publish = "dist"
   command = "npm run build"
 
-
-
-
 # Redirect all SPA routes to index.html
 [[redirects]]
   from = "/*"
@@ -24,3 +21,15 @@
   [headers.values]
     Content-Type = "application/xml; charset=utf-8"
     Cache-Control = "public, max-age=3600"
+
+# Netlify Link Checker plugin - warn only
+[[plugins]]
+  package = "netlify-plugin-checklinks"
+
+  [plugins.inputs]
+    todo = true   # don't fail build on missing links/images
+    skipPatterns = [
+      "https://fonts.gstatic.com",
+      "https://fonts.googleapis.com",
+      "https://www.googletagmanager.com"
+    ]
