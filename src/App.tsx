@@ -20,6 +20,8 @@ import BlogHowToChooseAmbulance from "./pages/BlogHowToChooseAmbulance";
 import BlogPrivateAmbulanceAcrossUAE from "./pages/BlogPrivateAmbulanceAcrossUAE";
 import BlogEmergencyPatientTransfersUAE from "./pages/BlogEmergencyPatientTransfersUAE";
 import ServicesHub from "./pages/ServicesHub";
+import Licensing from "./pages/Licensing";
+import AboutUs from "./pages/AboutUs";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -33,6 +35,9 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<ServicesHub />} />
+          {/* Authority Pages - Critical for YMYL trust */}
+          <Route path="/licensing" element={<Licensing />} />
+          <Route path="/about-us" element={<AboutUs />} />
           {/* Service Pages */}
           <Route path="/ambulance-services-uae" element={<AmbulanceServicesUAE />} />
           <Route path="/non-emergency-medical-transport-uae" element={<NonEmergencyMedicalTransport />} />

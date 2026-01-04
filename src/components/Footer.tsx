@@ -109,16 +109,19 @@ const Footer = () => {
             <h3 className="font-bold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="/" className="text-blue-100/80 hover:text-accent transition-colors">Home</a>
+                <Link to="/" className="text-blue-100/80 hover:text-accent transition-colors" onClick={() => window.scrollTo(0, 0)}>Home</Link>
               </li>
               <li>
-                <a href="#story" className="text-blue-100/80 hover:text-accent transition-colors">About Us</a>
+                <Link to="/about-us" className="text-blue-100/80 hover:text-accent transition-colors" onClick={() => window.scrollTo(0, 0)}>About Us</Link>
               </li>
               <li>
-                <a href="#services" className="text-blue-100/80 hover:text-accent transition-colors">Services</a>
+                <Link to="/services" className="text-blue-100/80 hover:text-accent transition-colors" onClick={() => window.scrollTo(0, 0)}>Services</Link>
               </li>
               <li>
-                <a href="#contact" className="text-blue-100/80 hover:text-accent transition-colors">Contact</a>
+                <Link to="/licensing" className="text-blue-100/80 hover:text-accent transition-colors" onClick={() => window.scrollTo(0, 0)}>Licensing & Compliance</Link>
+              </li>
+              <li>
+                <a href="/#contact" className="text-blue-100/80 hover:text-accent transition-colors">Contact</a>
               </li>
               <li>
                 <Link 
