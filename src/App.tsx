@@ -21,6 +21,7 @@ import BlogPrivateAmbulanceAcrossUAE from "./pages/BlogPrivateAmbulanceAcrossUAE
 import BlogEmergencyPatientTransfersUAE from "./pages/BlogEmergencyPatientTransfersUAE";
 import ServicesHub from "./pages/ServicesHub";
 import Licensing from "./pages/Licensing";
+import MedicalOversight from "./pages/MedicalOversight";
 import AboutUs from "./pages/AboutUs";
 import NotFound from "./pages/NotFound";
 
@@ -37,6 +38,7 @@ const App = () => (
           <Route path="/services" element={<ServicesHub />} />
           {/* Authority Pages - Critical for YMYL trust */}
           <Route path="/licensing" element={<Licensing />} />
+          <Route path="/medical-oversight" element={<MedicalOversight />} />
           <Route path="/about-us" element={<AboutUs />} />
           {/* Service Pages */}
           <Route path="/ambulance-services-uae" element={<AmbulanceServicesUAE />} />
