@@ -111,7 +111,7 @@ const Navigation = () => {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`font-medium transition-colors ${isScrolled ? "text-foreground hover:text-accent" : "text-white hover:text-blue-100"
+                  className={`font-medium transition-colors ${isScrolled ? "text-foreground hover:text-accent" : "text-white hover:text-accent"
                     }`}
                 >
                   {link.name}
@@ -127,7 +127,7 @@ const Navigation = () => {
                   +971 55 472 8133
                 </a>
                 <Button
-                  className="bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold w-full"
+                  className="bg-[#1AA34A] hover:bg-[#168A3E] text-white font-semibold w-full"
                   asChild
                 >
                   <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>

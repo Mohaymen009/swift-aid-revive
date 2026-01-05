@@ -9,11 +9,11 @@
     content="EMRS provides 24/7 professional ambulance and home healthcare services across all UAE emirates including Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Fujairah, and Umm Al Quwain. Call now for fast medical response!" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://googleads.g.doubleclick.net">
   <link rel="preconnect" href="https://embed.trustmary.io" crossorigin>
   <link rel="dns-prefetch" href="https://d3qhsf9lmfcusu.cloudfront.net">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
   <link rel="dns-prefetch" href="https://trustmary.com">
-  <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net">
 
   <link rel="canonical" href="https://emrs.ae/" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -159,13 +159,22 @@
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" sizes="180x180" href="/emrslogo.png">
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17821448268"></script>
+  <!-- Google tag (gtag.js) - Deferred for performance -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'AW-17821448268');
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = "https://www.googletagmanager.com/gtag/js?id=AW-17821448268";
+        document.head.appendChild(script);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'AW-17821448268');
+        window.gtag = gtag;
+      }, 2000);
+    });
   </script>
 
   <!-- Event snippet for Contact conversion page -->

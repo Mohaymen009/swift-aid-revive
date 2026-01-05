@@ -113,19 +113,19 @@ const Footer = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-blue-100/60 text-sm">
+        <div className="mt-16 pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-center gap-4 text-blue-50/80 text-sm">
           <p>
             &copy; {currentYear} E M R S AMBULANCE SERVICES L.L.C &mdash; All rights reserved.
           </p>
           <div className="flex gap-6">
-            <Link to="/licensing" className="hover:text-accent transition-colors">Licensing</Link>
-            <Link to="/medical-oversight" className="hover:text-accent transition-colors">Medical Oversight</Link>
+            <Link to="/licensing" className="hover:text-accent transition-colors text-white font-medium">Licensing</Link>
+            <Link to="/medical-oversight" className="hover:text-accent transition-colors text-white font-medium">Medical Oversight</Link>
           </div>
         </div>
         <div className="mt-4 text-center">
-          <p className="text-xs text-blue-100/40 max-w-2xl mx-auto">
+          <p className="text-xs text-blue-50/70 max-w-2xl mx-auto">
             Fully licensed ambulance & medical transport provider in the UAE. Committed to clinical excellence and patient safety across all operations.
-            <Link to="/licensing" className="underline ml-1">View our licensing & regulatory compliance</Link>.
+            <Link to="/licensing" className="underline ml-1 font-medium text-white">View our licensing & regulatory compliance</Link>.
           </p>
         </div>
       </div>

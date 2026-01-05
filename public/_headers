@@ -1,6 +1,6 @@
 # Netlify headers for SEO and performance
 
-# Default security and caching headers
+# Root headers for all paths
 /*
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
@@ -21,24 +21,20 @@
   Content-Type: text/plain; charset=utf-8
   Cache-Control: public, max-age=3600
 
-# Static assets - long cache
-/assets/*
+# JavaScript and CSS - long cache with immutable
+/assets/*.js
+  Cache-Control: public, max-age=31536000, immutable
+/assets/*.css
   Cache-Control: public, max-age=31536000, immutable
 
 # Images - long cache
-/*.png
+*.png
   Cache-Control: public, max-age=31536000, immutable
-/*.jpg
+*.jpg
   Cache-Control: public, max-age=31536000, immutable
-/*.webp
+*.webp
   Cache-Control: public, max-age=31536000, immutable
-/*.ico
-  Cache-Control: public, max-age=31536000, immutable
-
-# JavaScript and CSS - long cache with immutable
-/*.js
-  Cache-Control: public, max-age=31536000, immutable
-/*.css
+*.ico
   Cache-Control: public, max-age=31536000, immutable
 
 # HTML - short cache for SEO updates
