@@ -13,13 +13,16 @@ const Hero = () => {
                            radial-gradient(circle at 75% 75%, hsl(215 45% 25% / 0.1) 0%, transparent 50%)`
         }}></div>
       </div>
-      
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Logo/Icon */}
           <div className="mb-8 animate-fade-in">
             <div className="inline-flex items-center justify-center w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-2xl">
-              <img src={logo} alt="EMRS 24/7 - Professional Ambulance Services UAE" className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32" />
+              <picture>
+                <source srcSet="/logo.webp" type="image/webp" />
+                <img src={logo} alt="EMRS 24/7 - Professional Ambulance Services UAE" className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32" />
+              </picture>
             </div>
           </div>
 
@@ -27,7 +30,7 @@ const Hero = () => {
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-8 animate-fade-up leading-tight">
             Professional Ambulance Services Across All UAE Emirates
           </h1>
-          
+
           <p className="text-xl sm:text-2xl lg:text-3xl text-white font-semibold mb-6 animate-fade-up" style={{ animationDelay: "0.2s" }}>
             24/7 Private Ambulance & Medical Transport Services
           </p>
@@ -54,7 +57,7 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-up" style={{ animationDelay: "0.3s" }}>
-            <Button 
+            <Button
               size="lg"
               className="bg-[#FF4D00] hover:bg-[#FF6200] text-white font-bold px-6 py-4 text-lg sm:text-xl sm:px-8 sm:py-6 rounded-xl shadow-elevated hover:shadow-glow transition-all duration-300 hover:scale-105 w-full sm:w-auto"
               asChild
@@ -64,8 +67,8 @@ const Hero = () => {
                 <span>Call +971 55 472 8133</span>
               </a>
             </Button>
-            
-            <Button 
+
+            <Button
               size="lg"
               className="bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold px-6 py-4 text-lg sm:text-xl sm:px-8 sm:py-6 rounded-xl shadow-elevated hover:shadow-glow transition-all duration-300 hover:scale-105 w-full sm:w-auto"
               asChild
