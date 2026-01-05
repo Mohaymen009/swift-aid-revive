@@ -1,5 +1,3 @@
-# Netlify headers for SEO and performance
-
 # Root headers for all paths
 /*
   X-Frame-Options: DENY
@@ -8,35 +6,30 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://embed.trustmary.io https://www.googletagmanager.com https://widget.trustmary.com https://d3qhsf9lmfcusu.cloudfront.net https://googleads.g.doubleclick.net https://www.googleadservices.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; frame-src 'self' https://embed.trustmary.io https://www.googletagmanager.com https://www.google.com https://td.doubleclick.net; connect-src 'self' https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://*.trustmary.io https://*.trustmary.com https://www.google.com https://www.google.ae https://www.google.nl https://googleads.g.doubleclick.net;
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-  Cross-Origin-Opener-Policy: same-origin-allow-popups
-  Cross-Origin-Embedder-Policy: unsafe-none
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Embedder-Policy: same-origin
 
-# Sitemap - ensure correct content type
+# Sitemap & Robots
 /sitemap.xml
   Content-Type: application/xml; charset=utf-8
   Cache-Control: public, max-age=3600
-
-# Robots.txt - ensure correct content type  
 /robots.txt
   Content-Type: text/plain; charset=utf-8
   Cache-Control: public, max-age=3600
 
-# JavaScript and CSS - long cache with immutable
-/assets/*.js
-  Cache-Control: public, max-age=31536000, immutable
-/assets/*.css
+# Assets and Static Files
+/assets/*
   Cache-Control: public, max-age=31536000, immutable
 
-# Images - long cache
-*.png
+/*.webp
   Cache-Control: public, max-age=31536000, immutable
-*.jpg
+/*.png
   Cache-Control: public, max-age=31536000, immutable
-*.webp
+/*.jpg
   Cache-Control: public, max-age=31536000, immutable
-*.ico
+/*.ico
   Cache-Control: public, max-age=31536000, immutable
 
-# HTML - short cache for SEO updates
+# HTML - revalidate
 /*.html
   Cache-Control: public, max-age=0, must-revalidate
