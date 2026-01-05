@@ -1,18 +1,18 @@
-/*
-  X-Frame-Options: DENY
-  X-XSS-Protection: 1; mode=block
+/* Global Cache-Control */
+/* Fallback for all routes */
+/* This ensures the initial HTML isn't cached too aggressively */
+/* But sub-assets ARE cached */
+
+/* Standard Caching for SPA dynamic routes (don't cache HTML) */
+/* No caching for HTML/Service Worker */
+/* Caching for static assets */
+
+# Asset Caching (JS, CSS)
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
   X-Content-Type-Options: nosniff
-  Referrer-Policy: strict-origin-when-cross-origin
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://embed.trustmary.io https://www.googletagmanager.com https://widget.trustmary.com https://d3qhsf9lmfcusu.cloudfront.net https://googleads.g.doubleclick.net https://www.googleadservices.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; frame-src 'self' https://embed.trustmary.io https://www.googletagmanager.com https://www.google.com https://td.doubleclick.net; connect-src 'self' https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://*.trustmary.io https://*.trustmary.com https://www.google.com https://www.google.ae https://www.google.nl https://googleads.g.doubleclick.net;
-  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-  Cross-Origin-Opener-Policy: same-origin
-  Cross-Origin-Embedder-Policy: same-origin
 
-/assets/*.js
-  Cache-Control: public, max-age=31536000, immutable
-/assets/*.css
-  Cache-Control: public, max-age=31536000, immutable
-
+# Image Caching
 /*.webp
   Cache-Control: public, max-age=31536000, immutable
 /*.png
@@ -22,12 +22,13 @@
 /*.ico
   Cache-Control: public, max-age=31536000, immutable
 
-/sitemap.xml
-  Content-Type: application/xml; charset=utf-8
-  Cache-Control: public, max-age=3600
-/robots.txt
-  Content-Type: text/plain; charset=utf-8
-  Cache-Control: public, max-age=3600
-
-/*.html
-  Cache-Control: public, max-age=0, must-revalidate
+# Security Headers (Global)
+/*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://embed.trustmary.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https://images.unsplash.com https://www.google-analytics.com https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://embed.trustmary.io; frame-src https://www.google.com https://embed.trustmary.io;
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Embedder-Policy: same-origin

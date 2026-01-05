@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
-import { Shield, Award, FileCheck, Building2, Users, CheckCircle2 } from "lucide-react";
+import { Shield, Award, FileCheck, Building2, Users, CheckCircle2, ShieldCheck } from "lucide-react";
 
 const Licensing = () => {
   return (
@@ -53,28 +53,68 @@ const Licensing = () => {
               Every aspect of our service—from vehicle specifications to staff qualifications—adheres to the standards
               set forth by these regulatory bodies, ensuring patient safety and quality of care remain our top priorities.
             </p>
+            {/* Professional Certifications & Licensing */}
+            <div className="bg-slate-50 p-8 rounded-2xl border border-slate-200 mb-12">
+              <h3 className="text-2xl font-bold text-primary mb-6 flex items-center gap-3">
+                <ShieldCheck className="w-8 h-8 text-accent" />
+                Professional Certifications & Licensing
+              </h3>
+              <div className="grid md:grid-cols-2 gap-8 text-slate-700">
+                <div>
+                  <h4 className="font-bold text-primary mb-3">Staff Licensing</h4>
+                  <p className="mb-4">
+                    Our medical team, including Paramedics, Medics, and EMTs, holds both <strong>UAE Professional Licenses</strong> (DHA/HAAD/MOH) and <strong>Home Country Licenses</strong>, ensuring international standards and local compliance.
+                  </p>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-5 h-5 text-accent mt-0.5" />
+                      <span>Dual-licensed professionals</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-5 h-5 text-accent mt-0.5" />
+                      <span>Continuous professional development</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-bold text-primary mb-3">Advanced Certifications</h4>
+                  <ul className="space-y-3">
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="w-5 h-5 text-accent" />
+                      <span><strong>PHTLS:</strong> Pre-Hospital Trauma Life Support</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="w-5 h-5 text-accent" />
+                      <span><strong>ACLS:</strong> Advanced Cardiac Life Support</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="w-5 h-5 text-accent" />
+                      <span><strong>PALS:</strong> Paediatric Advanced Life Support</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="w-5 h-5 text-accent" />
+                      <span><strong>BLS:</strong> Basic Life Support</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="w-5 h-5 text-accent" />
+                      <span><strong>Rescue Certified:</strong> Specialized Rescue Operations</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
 
-            {/* Trust Amplifier Box */}
-            <div className="bg-green-50 border border-green-200 rounded-xl p-6 mt-6">
-              <h3 className="font-semibold text-green-800 mb-3">Verification & Transparency</h3>
-              <ul className="space-y-2 text-green-700">
-                <li className="flex items-start gap-2">
-                  <span className="text-green-600 mt-1">✓</span>
-                  <span>Licensing documents available upon request</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-600 mt-1">✓</span>
-                  <span>Operating under UAE health authority regulations</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-600 mt-1">✓</span>
-                  <span>Medical oversight provided by licensed healthcare professionals</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-600 mt-1">✓</span>
-                  <span>Contact us directly to verify our credentials and compliance status</span>
-                </li>
-              </ul>
+            <div className="bg-primary text-white p-8 rounded-2xl shadow-lg relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-16 -mt-16"></div>
+              <div className="relative z-10 flex flex-col md:flex-row items-center gap-8">
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold mb-4 italic">"Quality medical care is not just about the equipment; it's about the standard of leadership and clinical competence."</h3>
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-1 bg-white/30"></div>
+                    <p className="font-semibold text-blue-100">EMRS Clinical Governance Team</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
 
