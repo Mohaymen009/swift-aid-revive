@@ -64,7 +64,7 @@ const Contact = () => {
               >
                 <div className="mb-4 inline-flex items-center justify-center w-14 h-14 bg-accent/10 rounded-xl group-hover:bg-accent/20 transition-colors">
                   {method.title === 'WhatsApp' ? (
-                    <img src="/whatsapp.png" alt="WhatsApp" className="w-7 h-7" />
+                    <img src="/whatsapp.png" alt="WhatsApp" className="w-7 h-7" loading="lazy" />
                   ) : (
                     <method.icon className="w-7 h-7 text-accent" />
                   )}

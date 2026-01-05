@@ -26,8 +26,16 @@
   Cache-Control: public, max-age=86400
 /*.jpg
   Cache-Control: public, max-age=86400
+/*.webp
+  Cache-Control: public, max-age=86400
 /*.ico
   Cache-Control: public, max-age=86400
+
+# JavaScript and CSS - long cache with immutable
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
 
 # HTML - short cache for SEO updates
 /*.html

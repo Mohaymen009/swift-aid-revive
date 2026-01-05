@@ -3,88 +3,134 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   
-  <!-- PHASE 1: Priority Pages (First 2-3 weeks) -->
-  
   <!-- Homepage - Highest Priority -->
   <url>
     <loc>https://emrs.ae/</loc>
-    <lastmod>2026-01-04</lastmod>
+    <lastmod>2026-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Authority Pages - Critical for YMYL Trust -->
+  <!-- Tier 1: Money Pages (Priority: 0.9) -->
+  <url>
+    <loc>https://emrs.ae/ambulance-services-uae</loc>
+    <lastmod>2026-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://emrs.ae/dubai-ambulance-services</loc>
+    <lastmod>2026-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://emrs.ae/abu-dhabi-ambulance-services</loc>
+    <lastmod>2026-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://emrs.ae/sharjah-ambulance-services</loc>
+    <lastmod>2026-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://emrs.ae/ajman-ambulance-services</loc>
+    <lastmod>2026-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://emrs.ae/doctor-on-call-uae</loc>
+    <lastmod>2026-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://emrs.ae/non-emergency-medical-transport-uae</loc>
+    <lastmod>2026-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://emrs.ae/home-healthcare-services-uae</loc>
+    <lastmod>2026-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://emrs.ae/wellness-diagnostic-services-uae</loc>
+    <lastmod>2026-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Tier 2: Authority Pages (Priority: 0.85) -->
   <url>
     <loc>https://emrs.ae/about-us</loc>
-    <lastmod>2026-01-04</lastmod>
+    <lastmod>2026-01-05</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://emrs.ae/licensing</loc>
-    <lastmod>2026-01-04</lastmod>
+    <lastmod>2026-01-05</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.85</priority>
   </url>
-
-  <!-- Services Hub -->
+  <url>
+    <loc>https://emrs.ae/medical-oversight</loc>
+    <lastmod>2026-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
   <url>
     <loc>https://emrs.ae/services</loc>
-    <lastmod>2026-01-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Main Service Page -->
-  <url>
-    <loc>https://emrs.ae/ambulance-services-uae</loc>
-    <lastmod>2026-01-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Priority Emirate (Dubai - highest search volume) -->
-  <url>
-    <loc>https://emrs.ae/dubai-ambulance-services</loc>
-    <lastmod>2026-01-04</lastmod>
+    <lastmod>2026-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
 
-  <!-- PHASE 2: Expand after initial ranking movement -->
-  
-  <!-- Additional Service Pages -->
+  <!-- Additional Emirates (Priority: 0.75) -->
   <url>
-    <loc>https://emrs.ae/non-emergency-medical-transport-uae</loc>
-    <lastmod>2026-01-04</lastmod>
+    <loc>https://emrs.ae/ras-al-khaimah-ambulance-services</loc>
+    <lastmod>2026-01-05</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://emrs.ae/doctor-on-call-uae</loc>
-    <lastmod>2026-01-04</lastmod>
+    <loc>https://emrs.ae/fujairah-ambulance-services</loc>
+    <lastmod>2026-01-05</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://emrs.ae/home-healthcare-services-uae</loc>
-    <lastmod>2026-01-04</lastmod>
+    <loc>https://emrs.ae/umm-al-quwain-ambulance-services</loc>
+    <lastmod>2026-01-05</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.75</priority>
   </url>
 
-  <!-- Other Emirates -->
+  <!-- Tier 3: Blog Posts (Priority: 0.7) -->
   <url>
-    <loc>https://emrs.ae/abu-dhabi-ambulance-services</loc>
-    <lastmod>2026-01-04</lastmod>
+    <loc>https://emrs.ae/blog/how-to-choose-ambulance-service</loc>
+    <lastmod>2026-01-05</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://emrs.ae/sharjah-ambulance-services</loc>
-    <lastmod>2026-01-04</lastmod>
+    <loc>https://emrs.ae/blog/private-ambulance-services-across-uae</loc>
+    <lastmod>2026-01-05</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://emrs.ae/blog/emergency-patient-transfers-uae</loc>
+    <lastmod>2026-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
 </urlset>

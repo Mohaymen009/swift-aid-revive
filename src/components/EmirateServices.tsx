@@ -13,7 +13,7 @@ const emirateServices = [
   {
     emirate: "Abu Dhabi",
     title: "Ambulance Services Abu Dhabi",
-    url: "/abu-dhabi-ambulance-services", 
+    url: "/abu-dhabi-ambulance-services",
     description: "Comprehensive medical transport in Abu Dhabi city, Yas Island, Saadiyat Island, Al Reem Island, Khalifa City, and surrounding areas. Hospital transfers and patient transport."
   },
   {
@@ -73,26 +73,26 @@ const EmirateServices = () => {
                     <MapPin className="w-5 h-5 text-accent" />
                     <span className="text-sm font-medium text-accent">{emirate.emirate}</span>
                   </div>
-                  
+
                   <h3 className="text-xl lg:text-2xl font-bold text-primary mb-3 lg:mb-4 group-hover:text-accent transition-colors">
                     {emirate.title}
                   </h3>
-                  
+
                   <p className="text-muted-foreground leading-relaxed mb-4 lg:mb-6 text-sm lg:text-base">
                     {emirate.description}
                   </p>
 
-                  <Button 
+                  <Button
                     variant="outline"
                     className="group hover:bg-accent hover:text-white border-accent/20 hover:border-accent font-semibold w-full sm:w-auto"
                     asChild
                   >
-                    <Link 
-                      to={emirate.url} 
+                    <Link
+                      to={emirate.url}
                       className="flex items-center justify-center gap-2"
                       onClick={() => window.scrollTo(0, 0)}
                     >
-                      Learn More
+                      {emirate.emirate} Services
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </Button>
@@ -106,7 +106,7 @@ const EmirateServices = () => {
             <p className="text-lg text-muted-foreground mb-6">
               Need medical transport between emirates? EMRS offers seamless inter-emirate transfers across all of the UAE.
             </p>
-            <Button 
+            <Button
               size="lg"
               className="bg-accent hover:bg-accent/90 text-white font-bold"
               asChild
