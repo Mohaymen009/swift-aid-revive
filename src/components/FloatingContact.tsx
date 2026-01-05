@@ -22,9 +22,8 @@ const FloatingContact = () => {
   }, []);
 
   return (
-    <div className={`fixed bottom-6 right-6 z-40 flex flex-col gap-3 transition-all duration-300 ${
-      isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
-    }`}>
+    <div className={`fixed bottom-6 right-6 z-40 flex flex-col gap-3 transition-all duration-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
+      }`}>
       <a
         href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services."
         target="_blank"
@@ -33,7 +32,7 @@ const FloatingContact = () => {
         aria-label="Chat on WhatsApp"
         onClick={trackConversion}
       >
-        <img src="/whatsapp.png" alt="WhatsApp" className="w-6 h-6" />
+        <img src="/whatsapp.png" alt="WhatsApp" className="w-6 h-6" loading="lazy" />
       </a>
       <a
         href="tel:+971554728133"
