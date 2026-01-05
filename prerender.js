@@ -43,20 +43,19 @@ async function prerender() {
     // Start Vite Preview Server programmatically
     console.log('🔌 Starting preview server...');
     const previewServer = await preview({
-        preview: { port: 4173, strictPort: true },
+        preview: { port: 0, strictPort: false },
         root: __dirname,
-        configFile: false, // Use default or load if needed, false prevents re-bundling issues
+        configFile: false,
         mode: 'production'
     });
 
-    const BASE_URL = 'http://localhost:4173';
-
-    // Wait for server? (preview returns promise resolving to server)
-    previewServer.printUrls();
+    const port = previewServer.httpServer.address().port;
+    const BASE_URL = `http://localhost:${port}`;
+    console.log(`📡 Preview server running at: ${BASE_URL}`);
 
     const browser = await puppeteer.launch({
         headless: "new",
-        args: ['--no-sandbox', '--disable-setuid-sandbox'] // Required for Netlify/CI
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
     });
     const page = await browser.newPage();
 
