@@ -66,7 +66,7 @@ const Contact = () => {
                   {method.title === 'WhatsApp' ? (
                     <picture className="flex items-center">
                       <source srcSet="/whatsapp.webp" type="image/webp" />
-                      <img src="/whatsapp.webp" alt="WhatsApp" width={28} height={28} className="w-7 h-7" loading="lazy" />
+                      <img src="/whatsapp.webp" alt="" width={28} height={28} className="w-7 h-7" loading="lazy" />
                     </picture>
                   ) : (
                     <method.icon className="w-7 h-7 text-accent" />
@@ -80,7 +80,7 @@ const Contact = () => {
                 {method.link ? (
                   <a
                     href={method.link}
-                    className="text-accent font-semibold hover:underline block mb-1"
+                    className="text-[#11632B] font-semibold hover:underline block mb-1"
                     target={method.link.startsWith('http') ? '_blank' : undefined}
                     rel={method.link.startsWith('http') ? 'noopener noreferrer' : undefined}
                     onClick={trackConversion}
@@ -91,7 +91,7 @@ const Contact = () => {
                   <p className="text-foreground font-semibold mb-1">{method.detail}</p>
                 )}
 
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-primary/70">
                   {method.description}
                 </p>
               </Card>
@@ -104,21 +104,21 @@ const Contact = () => {
               <Shield className="w-10 h-10 text-accent flex-shrink-0" />
               <div>
                 <h4 className="font-bold text-primary">Professional Team</h4>
-                <p className="text-sm text-muted-foreground">Trained paramedics & medical staff</p>
+                <p className="text-sm text-primary/70">Trained paramedics & medical staff</p>
               </div>
             </div>
             <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm">
               <Ambulance className="w-10 h-10 text-accent flex-shrink-0" />
               <div>
                 <h4 className="font-bold text-primary">Modern Fleet</h4>
-                <p className="text-sm text-muted-foreground">Well-equipped ambulances</p>
+                <p className="text-sm text-primary/70">Well-equipped ambulances</p>
               </div>
             </div>
             <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm">
               <Users className="w-10 h-10 text-accent flex-shrink-0" />
               <div>
                 <h4 className="font-bold text-primary">UAE Coverage</h4>
-                <p className="text-sm text-muted-foreground">All 7 emirates served</p>
+                <p className="text-sm text-primary/70">All 7 emirates served</p>
               </div>
             </div>
           </div>
@@ -136,14 +136,14 @@ const Contact = () => {
                   Need Ambulance or Medical Transport?
                 </h3>
 
-                <p className="text-lg text-white/90 mb-6">
+                <p className="text-lg text-white mb-6">
                   Whether you need hospital transfers, patient transport, or medical assistance anywhere in the UAE — our professional team is ready to help around the clock.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button
                     size="lg"
-                    className="bg-white hover:bg-white/90 text-accent font-semibold px-8 shadow-lg"
+                    className="bg-white hover:bg-white/90 text-[#A83300] font-bold px-8 shadow-lg"
                     asChild
                   >
                     <a href="tel:+971554728133" className="flex items-center gap-2" onClick={trackConversion}>
@@ -154,13 +154,13 @@ const Contact = () => {
 
                   <Button
                     size="lg"
-                    className="bg-white/20 hover:bg-white/30 text-white border-2 border-white/40 font-semibold px-8"
+                    className="bg-white/10 hover:bg-white/20 text-white border-2 border-white/40 font-bold px-8"
                     asChild
                   >
                     <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2" onClick={trackConversion}>
                       <picture className="flex items-center">
                         <source srcSet="/whatsapp.webp" type="image/webp" />
-                        <img src="/whatsapp.webp" alt="WhatsApp" width={20} height={20} className="w-5 h-5" />
+                        <img src="/whatsapp.webp" alt="" width={20} height={20} className="w-5 h-5" />
                       </picture>
                       WhatsApp Us
                     </a>

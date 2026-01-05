@@ -65,7 +65,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
               size="lg"
-              className="bg-[#C23B00] hover:bg-[#A33200] text-white font-bold px-6 py-4 text-lg sm:text-xl sm:px-8 sm:py-6 rounded-xl shadow-elevated transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+              className="bg-[#A83300] hover:bg-[#8A2A00] text-white font-bold px-6 py-4 text-lg sm:text-xl sm:px-8 sm:py-6 rounded-xl shadow-elevated transition-all duration-300 hover:scale-105 w-full sm:w-auto"
               asChild
             >
               <a href="tel:+971554728133" className="flex items-center justify-center gap-3">
@@ -76,7 +76,7 @@ const Hero = () => {
 
             <Button
               size="lg"
-              className="bg-[#1AA34A] hover:bg-[#168A3E] text-white font-bold px-6 py-4 text-lg sm:text-xl sm:px-8 sm:py-6 rounded-xl shadow-elevated transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+              className="bg-[#11632B] hover:bg-[#0D4D21] text-white font-bold px-6 py-4 text-lg sm:text-xl sm:px-8 sm:py-6 rounded-xl shadow-elevated transition-all duration-300 hover:scale-105 w-full sm:w-auto"
               asChild
             >
               <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3">
@@ -84,7 +84,7 @@ const Hero = () => {
                   <source srcSet="/whatsapp.webp" type="image/webp" />
                   <img
                     src="/whatsapp.webp"
-                    alt="WhatsApp"
+                    alt=""
                     width={20}
                     height={20}
                     className="w-5 h-5 flex-shrink-0"

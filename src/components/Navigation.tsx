@@ -127,13 +127,13 @@ const Navigation = () => {
                   +971 55 472 8133
                 </a>
                 <Button
-                  className="bg-[#1AA34A] hover:bg-[#168A3E] text-white font-semibold w-full"
+                  className="bg-[#11632B] hover:bg-[#0D4D21] text-white font-semibold w-full"
                   asChild
                 >
                   <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
                     <picture className="flex items-center">
                       <source srcSet="/whatsapp.webp" type="image/webp" />
-                      <img src="/whatsapp.webp" alt="WhatsApp" width={16} height={16} className="w-4 h-4" />
+                      <img src="/whatsapp.webp" alt="" width={16} height={16} className="w-4 h-4" />
                     </picture>
                     WhatsApp
                   </a>

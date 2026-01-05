@@ -53,10 +53,12 @@ const OurStory = () => {
             <div className="relative">
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-elevated">
                 <img
-                  src="https://plus.unsplash.com/premium_photo-1661775601929-8c775187bea6?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="EMRS Professional Ambulance Team in UAE"
+                  src="https://plus.unsplash.com/premium_photo-1661775601929-8c775187bea6?q=80&w=700&fm=webp&auto=format&fit=crop"
+                  alt="EMRS Professional Ambulance Team"
                   className="w-full h-full object-cover"
                   loading="lazy"
+                  width={600}
+                  height={450}
                 />
               </div>
               {/* Decorative element */}
