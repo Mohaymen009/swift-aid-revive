@@ -24,7 +24,7 @@ export interface SEOHeadProps {
 
 const SEOHead = ({
   title = "EMRS 24/7 | Ambulance & Home Healthcare Services UAE",
-  description = "Offering non-emergency ambulance, IV therapy, blood testing & 24/7 doctor on call service at home & hotels.",
+  description = "Professional 24/7 ambulance services and home healthcare across all UAE emirates. Licensed medical transport, doctor on call, and nursing care.",
   canonical: customCanonical,
   type = "website",
   emirate,
@@ -223,8 +223,8 @@ const SEOHead = ({
       )}
 
       {/* Theme colors */}
-      <meta name="theme-color" content="#0066cc" />
-      <meta name="msapplication-TileColor" content="#0066cc" />
+      <meta name="theme-color" content="#1a2e44" />
+      <meta name="msapplication-TileColor" content="#1a2e44" />
       <meta name="apple-mobile-web-app-title" content={siteName} />
       <meta name="application-name" content={siteName} />
 
