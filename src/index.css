@@ -29,8 +29,8 @@ All colors MUST be HSL.
     --muted: 210 40% 96%;
     --muted-foreground: 215 16% 47%;
 
-    /* Orange accent for action */
-    --accent: 25 95% 53%;
+    /* Orange accent for action - darkened for AA contrast */
+    --accent: 25 100% 41%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -38,7 +38,7 @@ All colors MUST be HSL.
 
     --border: 214 32% 91%;
     --input: 214 32% 91%;
-    --ring: 25 95% 53%;
+    --ring: 25 100% 41%;
 
     --radius: 0.75rem;
 
@@ -46,10 +46,10 @@ All colors MUST be HSL.
     --navy: 215 45% 25%;
     --navy-light: 215 40% 35%;
     --navy-dark: 215 50% 18%;
-    --orange: 25 95% 53%;
-    --orange-light: 25 95% 63%;
-    --orange-premium: 16 100% 50%; /* #FF4D00 */
-    --orange-premium-hover: 16 100% 51%; /* #FF6200 */
+    --orange: 25 100% 41%;
+    --orange-light: 25 95% 53%;
+    --orange-premium: 16 100% 45%; /* Darker orange */
+    --orange-premium-hover: 16 100% 48%;
     --blue-light: 210 100% 97%;
     
     /* Gradients */

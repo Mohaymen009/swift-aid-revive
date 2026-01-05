@@ -24,17 +24,15 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? "bg-white shadow-md py-3" : "bg-primary/95 backdrop-blur-sm py-4"
-    }`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white shadow-md py-3" : "bg-primary/95 backdrop-blur-sm py-4"
+      }`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo/Brand */}
           <a href="/" className="flex items-center gap-2 group">
             <div>
-              <span className={`font-black text-2xl transition-colors ${
-                isScrolled ? "text-primary" : "text-white"
-              }`}>
+              <span className={`font-black text-2xl transition-colors ${isScrolled ? "text-primary" : "text-white"
+                }`}>
                 EMRS 24/7
               </span>
             </div>
@@ -46,9 +44,8 @@ const Navigation = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className={`font-medium transition-colors hover:text-accent ${
-                  isScrolled ? "text-foreground" : "text-white"
-                }`}
+                className={`font-medium transition-colors hover:text-accent ${isScrolled ? "text-foreground" : "text-white"
+                  }`}
               >
                 {link.name}
               </a>
@@ -57,13 +54,12 @@ const Navigation = () => {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-3">
-            <a href="tel:+971554728133" className={`flex items-center gap-2 font-bold text-lg ${
-              isScrolled ? "text-foreground" : "text-white"
-            }`}>
+            <a href="tel:+971554728133" className={`flex items-center gap-2 font-bold text-lg ${isScrolled ? "text-foreground" : "text-white"
+              }`}>
               <Phone className="w-4 h-4 text-[#FF6200]" />
               <span className="hidden xl:inline">+971 55 472 8133</span>
             </a>
-            <Button 
+            <Button
               size="sm"
               className="bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold shadow-md"
               asChild
@@ -73,7 +69,7 @@ const Navigation = () => {
                 <span className="hidden xl:inline">WhatsApp</span>
               </a>
             </Button>
-            <Button 
+            <Button
               size="sm"
               className="bg-accent hover:bg-orange-light text-white font-semibold shadow-md"
               asChild
@@ -85,9 +81,9 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`lg:hidden p-2 rounded-lg transition-colors ${
-              isScrolled ? "text-primary hover:bg-secondary" : "text-white hover:bg-white/10"
-            }`}
+            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+            className={`lg:hidden p-2 rounded-lg transition-colors ${isScrolled ? "text-primary hover:bg-secondary" : "text-white hover:bg-white/10"
+              }`}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -102,24 +98,22 @@ const Navigation = () => {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`font-medium transition-colors ${
-                    isScrolled ? "text-foreground hover:text-accent" : "text-white hover:text-blue-100"
-                  }`}
+                  className={`font-medium transition-colors ${isScrolled ? "text-foreground hover:text-accent" : "text-white hover:text-blue-100"
+                    }`}
                 >
                   {link.name}
                 </a>
               ))}
               <div className="flex flex-col gap-3 mt-2 pt-4 border-t border-white/10">
-                <a 
-                  href="tel:+971554728133" 
-                  className={`flex items-center gap-2 font-medium ${
-                    isScrolled ? "text-foreground" : "text-white"
-                  }`}
+                <a
+                  href="tel:+971554728133"
+                  className={`flex items-center gap-2 font-medium ${isScrolled ? "text-foreground" : "text-white"
+                    }`}
                 >
                   <Phone className="w-4 h-4" />
                   +971 55 472 8133
                 </a>
-                <Button 
+                <Button
                   className="bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold w-full"
                   asChild
                 >
@@ -128,7 +122,7 @@ const Navigation = () => {
                     WhatsApp
                   </a>
                 </Button>
-                <Button 
+                <Button
                   className="bg-accent hover:bg-orange-light text-white font-semibold w-full"
                   asChild
                 >

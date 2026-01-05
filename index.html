@@ -142,6 +142,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://d3qhsf9lmfcusu.cloudfront.net">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Favicon -->
@@ -150,20 +152,18 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/emrslogo.png">
 
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17821448268">
-  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17821448268"></script>
   <script>
-      ow.dataLayer = window.dataLayer || [];
-        on gtag() { dat a Layer.push(arguments); }
-        'js', new Date());
-
-    g    onfig', 'AW-17821448268');
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'AW-17821448268');
   </script>
 
   <!-- Event snippet for Contact conversion page -->
   <script>
-    funct    ackContactConversion() {
-      gtag(       'conversion', { 'send_to': ' AW-17821448268/Y4U0CP7Y-tQbEMzw9rFC' });
+    function trackContactConversion() {
+      gtag('conversion', { 'send_to': 'AW-17821448268/Y4U0CP7Y-tQbEMzw9rFC' });
     }
   </script>
 </head>
