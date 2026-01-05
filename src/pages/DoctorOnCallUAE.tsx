@@ -136,21 +136,21 @@ const DoctorOnCallUAE = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
-                className="bg-accent hover:bg-accent/90 text-white font-bold text-lg px-8 py-6"
+                className="bg-[#A83300] hover:bg-[#8A2A00] text-white font-bold text-lg px-8 py-6"
                 asChild
               >
                 <a href="tel:+971554728133" className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />
-                  Call +971 55 472 8133
+                  Call Now
                 </a>
               </Button>
               <Button
                 size="lg"
-                className="bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold text-lg px-8 py-6"
+                className="bg-[#11632B] hover:bg-[#0D4D21] text-white font-bold text-lg px-8 py-6"
                 asChild
               >
-                <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                  <img src="/whatsapp.webp" alt="WhatsApp" className="w-5 h-5" />
+                <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20Doctor%20on%20Call%20service." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                  <img src="/whatsapp.webp" alt="" className="w-5 h-5" />
                   WhatsApp
                 </a>
               </Button>
