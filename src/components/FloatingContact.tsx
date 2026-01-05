@@ -32,7 +32,10 @@ const FloatingContact = () => {
         aria-label="Chat on WhatsApp"
         onClick={trackConversion}
       >
-        <img src="/whatsapp.png" alt="WhatsApp" className="w-6 h-6" loading="lazy" />
+        <picture className="flex items-center">
+          <source srcSet="/whatsapp.webp" type="image/webp" />
+          <img src="/whatsapp.webp" alt="WhatsApp" width={24} height={24} className="w-6 h-6" loading="lazy" />
+        </picture>
       </a>
       <a
         href="tel:+971554728133"
