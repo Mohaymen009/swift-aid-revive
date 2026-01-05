@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Phone, MessageCircle } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
@@ -31,7 +31,14 @@ const Navigation = () => {
           <a href="/" className="flex items-center gap-2 group">
             <picture>
               <source srcSet="/site-logo.webp" type="image/webp" />
-              <img src="/site-logo.png" alt="EMRS 24/7 Logo" className="w-8 h-8" />
+              <img
+                src="/site-logo.png"
+                alt="EMRS 24/7 Logo"
+                width={32}
+                height={32}
+                className="w-8 h-8"
+                loading="eager"
+              />
             </picture>
             <div>
               <span className={`font-black text-2xl transition-colors ${isScrolled ? "text-primary" : "text-white"
@@ -57,7 +64,7 @@ const Navigation = () => {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-3">
-            <a href="tel:+971554728133" className={`flex items-center gap-2 font-bold text-lg ${isScrolled ? "text-foreground" : "text-white"
+            <a href="tel:+971554728133" className={`flex items-center gap-2 font-bold text-lg transition-colors hover:text-accent ${isScrolled ? "text-foreground" : "text-white"
               }`}>
               <Phone className="w-4 h-4 text-[#FF6200]" />
               <span className="hidden xl:inline">+971 55 472 8133</span>
@@ -68,7 +75,7 @@ const Navigation = () => {
               asChild
             >
               <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                <img src="/whatsapp.png" alt="WhatsApp" className="w-4 h-4" />
+                <img src="/whatsapp.webp" alt="WhatsApp" width={24} height={24} className="w-4 h-4" />
                 <span className="hidden xl:inline">WhatsApp</span>
               </a>
             </Button>
@@ -121,7 +128,7 @@ const Navigation = () => {
                   asChild
                 >
                   <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
-                    <img src="/whatsapp.png" alt="WhatsApp" className="w-4 h-4" />
+                    <img src="/whatsapp.webp" alt="WhatsApp" width={24} height={24} className="w-4 h-4" />
                     WhatsApp
                   </a>
                 </Button>

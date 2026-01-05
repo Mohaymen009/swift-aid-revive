@@ -1,15 +1,30 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 const TrustmaryWidget = () => {
-  useEffect(() => {
-    const scriptId = "trustmary-widget-script-D4dP0Hk22";
-    if (document.getElementById(scriptId)) return;
+  const widgetRef = useRef<HTMLDivElement>(null);
 
-    const script = document.createElement("script");
-    script.id = scriptId;
-    script.src = "https://widget.trustmary.com/D4dP0Hk22";
-    script.async = true;
-    document.head.appendChild(script);
+  useEffect(() => {
+    if (!widgetRef.current) return;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const scriptId = "trustmary-widget-script-D4dP0Hk22";
+          if (!document.getElementById(scriptId)) {
+            const script = document.createElement("script");
+            script.id = scriptId;
+            script.src = "https://widget.trustmary.com/D4dP0Hk22";
+            script.async = true;
+            document.head.appendChild(script);
+          }
+          observer.disconnect();
+        }
+      });
+    }, { rootMargin: "200px" });
+
+    observer.observe(widgetRef.current);
+
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -23,7 +38,7 @@ const TrustmaryWidget = () => {
             Real reviews from people who trust EMRS across the UAE.
           </p>
         </div>
-        <div className="mt-6" data-trustmary-widget="D4dP0Hk22">
+        <div ref={widgetRef} className="mt-6 min-h-[400px]" data-trustmary-widget="D4dP0Hk22">
         </div>
       </div>
     </section>

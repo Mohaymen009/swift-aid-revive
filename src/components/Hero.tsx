@@ -20,7 +20,14 @@ const Hero = () => {
             <div className="inline-flex items-center justify-center w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-2xl">
               <picture>
                 <source srcSet="/site-logo.webp" type="image/webp" />
-                <img src="/site-logo.png" alt="EMRS 24/7 - Professional Ambulance Services UAE" className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32" />
+                <img
+                  src="/site-logo.png"
+                  alt="EMRS 24/7 - Professional Ambulance Services UAE"
+                  width={140}
+                  height={140}
+                  className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32"
+                  loading="eager"
+                />
               </picture>
             </div>
           </div>
@@ -73,7 +80,14 @@ const Hero = () => {
               asChild
             >
               <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3">
-                <img src="/whatsapp.png" alt="WhatsApp" className="w-5 h-5 flex-shrink-0" />
+                <img
+                  src="/whatsapp.webp"
+                  alt="WhatsApp"
+                  width={80}
+                  height={80}
+                  className="w-5 h-5 flex-shrink-0"
+                  loading="lazy"
+                />
                 <span>WhatsApp Us</span>
               </a>
             </Button>

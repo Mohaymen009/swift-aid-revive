@@ -29,8 +29,8 @@ All colors MUST be HSL.
     --muted: 210 40% 96%;
     --muted-foreground: 215 16% 47%;
 
-    /* Orange accent for action - darkened for AA contrast */
-    --accent: 25 100% 41%;
+    /* Orange accent for action - darkened for AA/AAA contrast */
+    --accent: 25 100% 35%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -38,7 +38,7 @@ All colors MUST be HSL.
 
     --border: 214 32% 91%;
     --input: 214 32% 91%;
-    --ring: 25 100% 41%;
+    --ring: 25 100% 35%;
 
     --radius: 0.75rem;
 
@@ -46,17 +46,18 @@ All colors MUST be HSL.
     --navy: 215 45% 25%;
     --navy-light: 215 40% 35%;
     --navy-dark: 215 50% 18%;
-    --orange: 25 100% 41%;
+    --orange: 25 100% 35%;
     --orange-light: 25 95% 53%;
-    --orange-premium: 16 100% 45%; /* Darker orange */
+    --orange-premium: 16 100% 45%;
+    /* Darker orange */
     --orange-premium-hover: 16 100% 48%;
     --blue-light: 210 100% 97%;
-    
+
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(215 45% 25%) 0%, hsl(215 50% 18%) 50%, hsl(215 55% 10%) 100%);
     --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 40% 98%) 100%);
     --gradient-hero-overlay: radial-gradient(circle at center, hsl(215 45% 25% / 0.1) 0%, transparent 70%);
-    
+
     /* Shadows */
     --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     --shadow-elevated: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -79,7 +80,12 @@ All colors MUST be HSL.
     scroll-behavior: smooth;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-bold;
   }
 }
@@ -114,10 +120,13 @@ All colors MUST be HSL.
   }
 
   @keyframes pulse {
-    0%, 100% {
+
+    0%,
+    100% {
       opacity: 1;
       transform: scale(1);
     }
+
     50% {
       opacity: 0.9;
       transform: scale(1.05);
@@ -125,10 +134,13 @@ All colors MUST be HSL.
   }
 
   @keyframes pulse-subtle {
-    0%, 100% {
+
+    0%,
+    100% {
       opacity: 1;
       transform: scale(1);
     }
+
     50% {
       opacity: 0.95;
       transform: scale(1.02);
