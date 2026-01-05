@@ -27,7 +27,7 @@ const contactMethods = [
   {
     icon: MapPin,
     title: "Location",
-    detail: "Dubai, UAE",
+    detail: "Al Qusais Industrial Area, Dubai",
     description: "Serving all seven Emirates",
   },
 ];
@@ -58,7 +58,7 @@ const Contact = () => {
           {/* Contact Cards */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {contactMethods.map((method, index) => (
-              <Card 
+              <Card
                 key={index}
                 className="p-6 gradient-card border-0 shadow-card hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 text-center group"
               >
@@ -69,13 +69,13 @@ const Contact = () => {
                     <method.icon className="w-7 h-7 text-accent" />
                   )}
                 </div>
-                
+
                 <h3 className="text-lg font-bold text-primary mb-2">
                   {method.title}
                 </h3>
-                
+
                 {method.link ? (
-                  <a 
+                  <a
                     href={method.link}
                     className="text-accent font-semibold hover:underline block mb-1"
                     target={method.link.startsWith('http') ? '_blank' : undefined}
@@ -87,7 +87,7 @@ const Contact = () => {
                 ) : (
                   <p className="text-foreground font-semibold mb-1">{method.detail}</p>
                 )}
-                
+
                 <p className="text-sm text-muted-foreground">
                   {method.description}
                 </p>
@@ -128,17 +128,17 @@ const Contact = () => {
                   <Clock className="w-8 h-8" />
                   <span className="text-lg font-semibold">24/7 Ambulance & Medical Services</span>
                 </div>
-                
+
                 <h3 className="text-3xl sm:text-4xl font-bold mb-4">
                   Need Ambulance or Medical Transport?
                 </h3>
-                
+
                 <p className="text-lg text-white/90 mb-6">
                   Whether you need hospital transfers, patient transport, or medical assistance anywhere in the UAE — our professional team is ready to help around the clock.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button 
+                  <Button
                     size="lg"
                     className="bg-white hover:bg-white/90 text-accent font-semibold px-8 shadow-lg"
                     asChild
@@ -148,8 +148,8 @@ const Contact = () => {
                       Call +971 55 472 8133
                     </a>
                   </Button>
-                  
-                  <Button 
+
+                  <Button
                     size="lg"
                     className="bg-white/20 hover:bg-white/30 text-white border-2 border-white/40 font-semibold px-8"
                     asChild

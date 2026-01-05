@@ -29,6 +29,7 @@ interface ServicePageTemplateProps {
   phoneNumber?: string;
   relatedLinks?: Array<{ label: string; to: string }>;
   children?: React.ReactNode;
+  hideHeader?: boolean;
 }
 
 const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
@@ -44,6 +45,7 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
   phoneNumber = "+971 55 472 8133",
   relatedLinks,
   children,
+  hideHeader = false,
 }) => {
   const location = useLocation();
   const pageUrl = `https://emrs.ae${location.pathname}`;
@@ -84,10 +86,12 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
           <ContentUpdate date={lastUpdated} updates={updates} className="mb-8" />
         )}
 
-        <header className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">{title}</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">{description}</p>
-        </header>
+        {!hideHeader && (
+          <header className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">{title}</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">{description}</p>
+          </header>
+        )}
 
         {/* Main page content */}
         <article className="prose max-w-none">

@@ -16,11 +16,13 @@ export interface SEOHeadProps {
   structuredData?: Record<string, any>;
   publishedTime?: string;
   modifiedTime?: string;
+  headline?: string;
   author?: string;
   breadcrumbs?: Array<{ name: string; item: string }>;
+  additionalStructuredData?: Record<string, any> | Record<string, any>[];
 }
 
-const SEOHead = ({ 
+const SEOHead = ({
   title = "EMRS 24/7 | Ambulance & Home Healthcare Services UAE",
   description = "EMRS provides 24/7 professional ambulance and home healthcare services across all UAE emirates including Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Fujairah, and Umm Al Quwain. Call now for fast medical response!",
   canonical: customCanonical,
@@ -44,8 +46,10 @@ const SEOHead = ({
   ],
   noIndex = false,
   structuredData: customStructuredData,
+  additionalStructuredData,
   publishedTime,
   modifiedTime,
+  headline,
   author = "EMRS Medical Team",
   breadcrumbs = []
 }: SEOHeadProps) => {
@@ -55,7 +59,7 @@ const SEOHead = ({
   const siteName = "EMRS 24/7";
   const twitterHandle = "@EMRSUAE";
   const fullImageUrl = image.startsWith('http') ? image : `${baseUrl}${image.startsWith('/') ? '' : '/'}${image}`;
-  
+
   // Emirate-specific keywords enhancement
   const emirateKeywords = emirate ? [
     `ambulance ${emirate}`,
@@ -93,20 +97,19 @@ const SEOHead = ({
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Office 101, Al Nahda 1",
+      "streetAddress": "Al Qusais Industrial Area",
       "addressLocality": "Dubai",
       "addressRegion": "Dubai",
-      "postalCode": "12345",
       "addressCountry": "AE"
     },
     "areaServed": [
-      {"@type": "City", "name": "Dubai"},
-      {"@type": "City", "name": "Abu Dhabi"},
-      {"@type": "City", "name": "Sharjah"},
-      {"@type": "City", "name": "Ajman"},
-      {"@type": "City", "name": "Ras Al Khaimah"},
-      {"@type": "City", "name": "Fujairah"},
-      {"@type": "City", "name": "Umm Al Quwain"}
+      { "@type": "City", "name": "Dubai" },
+      { "@type": "City", "name": "Abu Dhabi" },
+      { "@type": "City", "name": "Sharjah" },
+      { "@type": "City", "name": "Ajman" },
+      { "@type": "City", "name": "Ras Al Khaimah" },
+      { "@type": "City", "name": "Fujairah" },
+      { "@type": "City", "name": "Umm Al Quwain" }
     ],
     "contactPoint": {
       "@type": "ContactPoint",
@@ -118,20 +121,20 @@ const SEOHead = ({
   };
 
   const finalStructuredData = customStructuredData || defaultStructuredData;
-  
+
   // Build breadcrumb structured data
   const derivedCrumbs = (breadcrumbs && breadcrumbs.length > 0)
     ? breadcrumbs
     : (() => {
-        const parts = location.pathname.split('/').filter(Boolean);
-        const auto = [{ name: 'Home', item: '/' }];
-        parts.forEach((seg, idx) => {
-          const path = `/${parts.slice(0, idx + 1).join('/')}`;
-          const name = seg.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
-          auto.push({ name, item: path });
-        });
-        return auto;
-      })();
+      const parts = location.pathname.split('/').filter(Boolean);
+      const auto = [{ name: 'Home', item: '/' }];
+      parts.forEach((seg, idx) => {
+        const path = `/${parts.slice(0, idx + 1).join('/')}`;
+        const name = seg.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+        auto.push({ name, item: path });
+      });
+      return auto;
+    })();
 
   const breadcrumbStructuredData = derivedCrumbs.length > 1 ? {
     "@context": "https://schema.org",
@@ -142,6 +145,34 @@ const SEOHead = ({
       "name": b.name,
       "item": `${baseUrl}${b.item === '/' ? '' : b.item}`
     }))
+  } : null;
+
+  // Article Structured Data
+  const articleStructuredData = type === 'article' ? {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": headline || title,
+    "image": fullImageUrl,
+    "author": {
+      "@type": "Organization",
+      "name": author,
+      "url": baseUrl
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": siteName,
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${baseUrl}/emrslogo.png`
+      }
+    },
+    "datePublished": publishedTime,
+    "dateModified": modifiedTime || publishedTime,
+    "description": description,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": currentUrl
+    }
   } : null;
 
   return (
@@ -201,10 +232,22 @@ const SEOHead = ({
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
       </script>
-      
+
       {breadcrumbStructuredData && (
         <script type="application/ld+json">
           {JSON.stringify(breadcrumbStructuredData)}
+        </script>
+      )}
+
+      {articleStructuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify(articleStructuredData)}
+        </script>
+      )}
+
+      {additionalStructuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify(additionalStructuredData)}
         </script>
       )}
     </Helmet>

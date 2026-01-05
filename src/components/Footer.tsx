@@ -30,7 +30,7 @@ const Footer = () => {
           {/* Brand & NAP */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="flex items-center justify-center w-10 h-10 rounded-lg" style={{backgroundColor: 'transparent'}}>
+              <div className="flex items-center justify-center w-10 h-10 rounded-lg" style={{ backgroundColor: 'transparent' }}>
                 <img src={logo} alt="EMRS 24/7 Logo" className="w-6 h-6" itemProp="logo" />
               </div>
               <span className="font-bold text-xl" itemProp="name">EMRS 24/7</span>
@@ -38,7 +38,7 @@ const Footer = () => {
             <p className="text-blue-100/80 leading-relaxed mb-4" itemProp="description">
               Professional ambulance and medical transport services across all seven emirates of the UAE. Available 24/7 for patient transfers, medical escorts, and home healthcare.
             </p>
-            
+
             {/* NAP (Name, Address, Phone) for Local SEO */}
             <div className="space-y-2 text-sm">
               <div className="flex items-center gap-2">
@@ -48,8 +48,8 @@ const Footer = () => {
               <div className="flex items-start gap-2" itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
                 <MapPin className="w-4 h-4 text-accent mt-0.5" />
                 <span className="text-blue-100/80">
-                  <span itemProp="streetAddress">Office 101, Al Nahda 1</span>, 
-                  <span itemProp="addressLocality"> Dubai</span>, 
+                  <span itemProp="streetAddress">Al Qusais Industrial Area</span>,
+                  <span itemProp="addressLocality"> Dubai</span>,
                   <span itemProp="addressCountry"> UAE</span>
                 </span>
               </div>
@@ -74,8 +74,8 @@ const Footer = () => {
             <ul className="space-y-2">
               {serviceLinks.map((link, index) => (
                 <li key={index}>
-                  <Link 
-                    to={link.url} 
+                  <Link
+                    to={link.url}
                     className="text-blue-100/80 hover:text-accent transition-colors"
                     onClick={() => window.scrollTo(0, 0)}
                   >
@@ -92,8 +92,8 @@ const Footer = () => {
             <ul className="space-y-2">
               {emirateLinks.map((link, index) => (
                 <li key={index}>
-                  <Link 
-                    to={link.url} 
+                  <Link
+                    to={link.url}
                     className="text-blue-100/80 hover:text-accent transition-colors"
                     onClick={() => window.scrollTo(0, 0)}
                   >
@@ -124,8 +124,8 @@ const Footer = () => {
                 <a href="/#contact" className="text-blue-100/80 hover:text-accent transition-colors">Contact</a>
               </li>
               <li>
-                <Link 
-                  to="/blog/how-to-choose-ambulance-service" 
+                <Link
+                  to="/blog/how-to-choose-ambulance-service"
                   className="text-blue-100/80 hover:text-accent transition-colors"
                   onClick={() => window.scrollTo(0, 0)}
                 >
@@ -133,8 +133,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/blog/private-ambulance-services-across-uae" 
+                <Link
+                  to="/blog/private-ambulance-services-across-uae"
                   className="text-blue-100/80 hover:text-accent transition-colors"
                   onClick={() => window.scrollTo(0, 0)}
                 >

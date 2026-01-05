@@ -18,8 +18,8 @@ import { Link } from "react-router-dom";
 const AjmanAmbulanceServices = () => {
   const services = [
     {
-      title: "Emergency Ambulance",
-      description: "24/7 emergency response with advanced life support (ALS) and basic life support (BLS) units across Ajman.",
+      title: "Rapid Response Ambulance",
+      description: "24/7 rapid medical response with advanced life support (ALS) and basic life support (BLS) units across Ajman.",
       icon: Ambulance
     },
     {
@@ -58,7 +58,7 @@ const AjmanAmbulanceServices = () => {
   const faqs = [
     {
       question: "How quickly can an ambulance reach me in Ajman?",
-      answer: "Our average response time in Ajman is 15-30 minutes, depending on your location and traffic conditions. We prioritize emergency calls for the fastest response."
+      answer: "Our average response time in Ajman is 15-30 minutes, depending on your location and traffic conditions. We prioritize critical cases for the fastest response."
     },
     {
       question: "Do you provide ambulance services for events in Ajman?",
@@ -84,11 +84,11 @@ const AjmanAmbulanceServices = () => {
 
   return (
     <ServicePageTemplate
-      title="24/7 Ambulance Services in Ajman | Emergency & Patient Transport | EMRS"
-      description="Professional ambulance services in Ajman with trained paramedics. Emergency response, patient transport, and medical escorts across all areas of Ajman. Call +971 55 472 8133"
+      title="Non-Emergency Ambulance Service in Ajman | Trusted Private Ambulance"
+      description="Professional ambulance services in Ajman with trained paramedics. Rapid response, patient transport, and medical escorts across all areas of Ajman. Call +971 55 472 8133"
       canonical="https://emrs.ae/ajman-ambulance-services"
       imageUrl="/images/og/ajman-ambulance-services.jpg"
-      imageAlt="Ambulance Services in Ajman by EMRS"
+      imageAlt="Non-emergency ambulance service in Ajman"
       lastUpdated="2026-01-01"
       faqs={faqs}
       phoneNumber={"+971 55 472 8133"}
@@ -97,6 +97,7 @@ const AjmanAmbulanceServices = () => {
         { label: 'Sharjah Ambulance Services', to: '/sharjah-ambulance-services' },
         { label: 'Umm Al Quwain Ambulance Services', to: '/umm-al-quwain-ambulance-services' }
       ]}
+      hideHeader={true}
     >
       {/* Hero Section */}
       <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-white relative overflow-hidden">
@@ -104,17 +105,17 @@ const AjmanAmbulanceServices = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto text-center">
             <span className="inline-block px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-semibold mb-6">
-              24/7 Emergency Response in Ajman
+              24/7 Private Medical Transport in Ajman
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Reliable Ambulance Services in Ajman
+              Reliable Private Ambulance Services in Ajman
             </h1>
             <p className="text-xl sm:text-2xl text-white/90 mb-8 leading-relaxed">
-              Professional medical transport across all areas of Ajman. Emergency response, inter-hospital transfers, and non-emergency patient transport with trained paramedics and fully equipped ambulances.
+              Professional medical transport across all areas of Ajman. Urgent care support, inter-hospital transfers, and non-emergency patient transport. Our services operate under full <Link to="/licensing" className="underline hover:text-accent">MOH licensing</Link> with continuous <Link to="/medical-oversight" className="underline hover:text-accent">medical oversight</Link>.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-accent hover:bg-accent/90 text-white font-bold text-lg px-8 py-6"
                 asChild
               >
@@ -123,8 +124,8 @@ const AjmanAmbulanceServices = () => {
                   Call +971 55 472 8133
                 </a>
               </Button>
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-primary font-bold text-lg px-8 py-6"
                 asChild
@@ -215,7 +216,7 @@ const AjmanAmbulanceServices = () => {
                 <div className="w-full md:w-1/3">
                   <h3 className="text-xl font-bold text-primary mb-3">Trained Medical Professionals</h3>
                   <p className="text-muted-foreground">
-                    Our team includes certified paramedics, EMTs, and medical professionals trained to handle all types of medical emergencies.
+                    Our team includes certified paramedics, EMTs, and medical professionals trained to handle all types of urgent medical situations.
                   </p>
                 </div>
                 <div className="w-full md:w-1/3">
@@ -238,21 +239,21 @@ const AjmanAmbulanceServices = () => {
               Need an Ambulance in Ajman?
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Our emergency response team is available 24/7 to provide immediate assistance. Don't hesitate to call in case of any medical emergency.
+              Our medical response team is available 24/7 to provide immediate assistance. Don't hesitate to call in case of any medical need.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-accent hover:bg-accent/90 text-white font-bold text-lg px-8 py-6"
                 asChild
               >
                 <a href="tel:+971554728133" className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />
-                  Emergency: +971 55 472 8133
+                  Call: +971 55 472 8133
                 </a>
               </Button>
-              <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 size="lg"
                 className="border-white text-white hover:bg-white/10 font-bold text-lg px-8 py-6"
                 asChild

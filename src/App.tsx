@@ -56,7 +56,7 @@ const App = () => (
           <Route path="/umm-al-quwain-ambulance-services" element={<UmmAlQuwainAmbulanceServices />} />
           {/* Blog Posts */}
           <Route path="/blog/how-to-choose-ambulance-service" element={<BlogHowToChooseAmbulance />} />
-          <Route path="/blog/how-to-choose-ambance-service" element={<BlogHowToChooseAmbulance />} />
+
           <Route path="/blog/private-ambulance-services-across-uae" element={<BlogPrivateAmbulanceAcrossUAE />} />
           <Route path="/blog/emergency-patient-transfers-uae" element={<BlogEmergencyPatientTransfersUAE />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

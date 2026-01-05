@@ -112,6 +112,19 @@ const WellnessDiagnosticServicesUAE = () => {
     }
   ];
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
     <>
       <Navigation />
@@ -129,213 +142,214 @@ const WellnessDiagnosticServicesUAE = () => {
           { label: 'Home Healthcare', to: '/home-healthcare-services-uae' },
           { label: 'Ambulance Services', to: '/ambulance-services-uae' }
         ]}
+        additionalStructuredData={faqSchema}
       >
-      {/* Hero Section */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djZoNnYtNmgtNnptMCAwdi02aC02djZoNnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-50"></div>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="max-w-4xl mx-auto text-center">
-            <span className="inline-block px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-semibold mb-6">
-              Lab Tests & Wellness at Your Doorstep
-            </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Wellness & Diagnostic Services in UAE
-            </h1>
-            <p className="text-xl sm:text-2xl text-white/90 mb-8 leading-relaxed">
-              Blood tests at home, IV therapy, health check-ups, and vaccination services. Professional diagnostic care delivered to your home, office, or hotel across Dubai and UAE.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
-                className="bg-accent hover:bg-accent/90 text-white font-bold text-lg px-8 py-6"
-                asChild
-              >
-                <a href="tel:+971554728133" className="flex items-center gap-2">
-                  <Phone className="w-5 h-5" />
-                  Call +971 55 472 8133
-                </a>
-              </Button>
-              <Button 
-                size="lg" 
-                className="bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold text-lg px-8 py-6"
-                asChild
-              >
-                <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                  <img src="/whatsapp.png" alt="WhatsApp" className="w-5 h-5" />
-                  WhatsApp
-                </a>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Grid */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <span className="text-accent font-bold text-sm uppercase tracking-wide">Our Services</span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-primary mt-4 mb-4">
-                Diagnostic & Wellness Services
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Professional healthcare and diagnostic services in the comfort of your home
+        {/* Hero Section */}
+        <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djZoNnYtNmgtNnptMCAwdi02aC02djZoNnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-50"></div>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div className="max-w-4xl mx-auto text-center">
+              <span className="inline-block px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-semibold mb-6">
+                Lab Tests & Wellness at Your Doorstep
+              </span>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                Wellness & Diagnostic Services in UAE
+              </h1>
+              <p className="text-xl sm:text-2xl text-white/90 mb-8 leading-relaxed">
+                Blood tests at home, IV therapy, health check-ups, and vaccination services. Professional diagnostic care delivered to your home, office, or hotel across Dubai and UAE.
               </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {services.map((service, index) => (
-                <div key={index} className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-shadow">
-                  <service.icon className="w-12 h-12 text-accent mb-4" />
-                  <h3 className="text-xl font-bold text-primary mb-3">{service.title}</h3>
-                  <p className="text-muted-foreground">{service.description}</p>
-                </div>
-              ))}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button
+                  size="lg"
+                  className="bg-accent hover:bg-accent/90 text-white font-bold text-lg px-8 py-6"
+                  asChild
+                >
+                  <a href="tel:+971554728133" className="flex items-center gap-2">
+                    <Phone className="w-5 h-5" />
+                    Call +971 55 472 8133
+                  </a>
+                </Button>
+                <Button
+                  size="lg"
+                  className="bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold text-lg px-8 py-6"
+                  asChild
+                >
+                  <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                    <img src="/whatsapp.png" alt="WhatsApp" className="w-5 h-5" />
+                    WhatsApp
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Blood Tests */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <Droplet className="w-12 h-12 text-accent mx-auto mb-4" />
-              <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
-                Blood Tests at Home
+        {/* Services Grid */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-12">
+                <span className="text-accent font-bold text-sm uppercase tracking-wide">Our Services</span>
+                <h2 className="text-3xl sm:text-4xl font-bold text-primary mt-4 mb-4">
+                  Diagnostic & Wellness Services
+                </h2>
+                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                  Professional healthcare and diagnostic services in the comfort of your home
+                </p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {services.map((service, index) => (
+                  <div key={index} className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-shadow">
+                    <service.icon className="w-12 h-12 text-accent mb-4" />
+                    <h3 className="text-xl font-bold text-primary mb-3">{service.title}</h3>
+                    <p className="text-muted-foreground">{service.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Blood Tests */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-12">
+                <Droplet className="w-12 h-12 text-accent mx-auto mb-4" />
+                <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
+                  Blood Tests at Home
+                </h2>
+                <p className="text-lg text-muted-foreground">
+                  Complete range of laboratory tests available at your doorstep
+                </p>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                {bloodTests.map((test, index) => (
+                  <div key={index} className="flex items-center gap-3 p-4 bg-white rounded-lg">
+                    <Check className="w-5 h-5 text-accent flex-shrink-0" />
+                    <span className="text-primary">{test}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="text-center mt-8">
+                <Button size="lg" className="bg-accent hover:bg-accent/90" asChild>
+                  <a href="tel:+971554728133">Book Blood Test</a>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* IV Therapy */}
+        <section className="py-16 bg-accent/5">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-12">
+                <Syringe className="w-12 h-12 text-accent mx-auto mb-4" />
+                <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
+                  IV Therapy at Home
+                </h2>
+                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                  Revitalize your body with vitamin and hydration infusions. Popular among tourists, executives, and wellness enthusiasts in Dubai.
+                </p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {ivTherapyTypes.map((therapy, index) => (
+                  <div key={index} className="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 className="text-lg font-bold text-primary mb-2">{therapy.name}</h3>
+                    <p className="text-muted-foreground text-sm">{therapy.description}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="text-center mt-8">
+                <Button size="lg" className="bg-accent hover:bg-accent/90" asChild>
+                  <a href="https://wa.me/971554728133" target="_blank" rel="noopener noreferrer">
+                    Book IV Therapy
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Corporate Wellness */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-6">
+                Corporate Wellness Programs
               </h2>
-              <p className="text-lg text-muted-foreground">
-                Complete range of laboratory tests available at your doorstep
+              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                Keep your workforce healthy with our on-site corporate wellness services. We provide health screenings, flu vaccination drives, executive health check-ups, and wellness workshops at your office location.
               </p>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-              {bloodTests.map((test, index) => (
-                <div key={index} className="flex items-center gap-3 p-4 bg-white rounded-lg">
-                  <Check className="w-5 h-5 text-accent flex-shrink-0" />
-                  <span className="text-primary">{test}</span>
-                </div>
-              ))}
-            </div>
-            <div className="text-center mt-8">
-              <Button size="lg" className="bg-accent hover:bg-accent/90" asChild>
-                <a href="tel:+971554728133">Book Blood Test</a>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* IV Therapy */}
-      <section className="py-16 bg-accent/5">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <Syringe className="w-12 h-12 text-accent mx-auto mb-4" />
-              <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
-                IV Therapy at Home
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Revitalize your body with vitamin and hydration infusions. Popular among tourists, executives, and wellness enthusiasts in Dubai.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {ivTherapyTypes.map((therapy, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-sm">
-                  <h3 className="text-lg font-bold text-primary mb-2">{therapy.name}</h3>
-                  <p className="text-muted-foreground text-sm">{therapy.description}</p>
-                </div>
-              ))}
-            </div>
-            <div className="text-center mt-8">
-              <Button size="lg" className="bg-accent hover:bg-accent/90" asChild>
-                <a href="https://wa.me/971554728133" target="_blank" rel="noopener noreferrer">
-                  Book IV Therapy
-                </a>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Corporate Wellness */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-6">
-              Corporate Wellness Programs
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Keep your workforce healthy with our on-site corporate wellness services. We provide health screenings, flu vaccination drives, executive health check-ups, and wellness workshops at your office location.
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-              {["Health Screenings", "Flu Vaccination", "Executive Check-ups", "Wellness Workshops"].map((item, index) => (
-                <div key={index} className="bg-gray-50 p-4 rounded-lg">
-                  <span className="text-primary font-medium">{item}</span>
-                </div>
-              ))}
-            </div>
-            <Button variant="outline" asChild>
-              <a href="tel:+971554728133">Inquire About Corporate Programs</a>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
-                Frequently Asked Questions
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                Common questions about our wellness and diagnostic services
-              </p>
-            </div>
-            <div className="space-y-4">
-              {faqs.map((faq, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-sm">
-                  <h3 className="text-lg font-bold text-primary mb-2">{faq.question}</h3>
-                  <p className="text-muted-foreground">{faq.answer}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Related Services */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-primary mb-8">Related Services</h2>
-            <div className="flex flex-wrap gap-4 justify-center">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                {["Health Screenings", "Flu Vaccination", "Executive Check-ups", "Wellness Workshops"].map((item, index) => (
+                  <div key={index} className="bg-gray-50 p-4 rounded-lg">
+                    <span className="text-primary font-medium">{item}</span>
+                  </div>
+                ))}
+              </div>
               <Button variant="outline" asChild>
-                <Link to="/doctor-on-call-uae" className="flex items-center gap-2">
-                  Doctor on Call <ArrowRight className="w-4 h-4" />
-                </Link>
-              </Button>
-              <Button variant="outline" asChild>
-                <Link to="/home-healthcare-services-uae" className="flex items-center gap-2">
-                  Home Healthcare <ArrowRight className="w-4 h-4" />
-                </Link>
-              </Button>
-              <Button variant="outline" asChild>
-                <Link to="/ambulance-services-uae" className="flex items-center gap-2">
-                  Ambulance Services <ArrowRight className="w-4 h-4" />
-                </Link>
+                <a href="tel:+971554728133">Inquire About Corporate Programs</a>
               </Button>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <WhyChooseUs />
-      <Contact />
-      <Footer />
-      <FloatingContact />
+        {/* FAQ Section */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
+                  Frequently Asked Questions
+                </h2>
+                <p className="text-lg text-muted-foreground">
+                  Common questions about our wellness and diagnostic services
+                </p>
+              </div>
+              <div className="space-y-4">
+                {faqs.map((faq, index) => (
+                  <div key={index} className="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 className="text-lg font-bold text-primary mb-2">{faq.question}</h3>
+                    <p className="text-muted-foreground">{faq.answer}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Related Services */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl font-bold text-primary mb-8">Related Services</h2>
+              <div className="flex flex-wrap gap-4 justify-center">
+                <Button variant="outline" asChild>
+                  <Link to="/doctor-on-call-uae" className="flex items-center gap-2">
+                    Doctor on Call <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </Button>
+                <Button variant="outline" asChild>
+                  <Link to="/home-healthcare-services-uae" className="flex items-center gap-2">
+                    Home Healthcare <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </Button>
+                <Button variant="outline" asChild>
+                  <Link to="/ambulance-services-uae" className="flex items-center gap-2">
+                    Ambulance Services <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <WhyChooseUs />
+        <Contact />
+        <Footer />
+        <FloatingContact />
       </ServicePageTemplate>
     </>
   );

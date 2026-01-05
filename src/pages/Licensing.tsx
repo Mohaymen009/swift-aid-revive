@@ -44,7 +44,7 @@ const Licensing = () => {
               Our Regulatory Framework
             </h2>
             <p className="text-lg text-gray-700 mb-6">
-              As a professional ambulance and medical transport provider operating across all seven emirates of the UAE,
+              <a href="/ambulance-services-uae" className="text-blue-600 hover:underline">ambulance and medical transport provider</a> operating across all seven emirates of the UAE,
               EMRS maintains strict compliance with all relevant health authority regulations. Our operations are governed
               by the regulatory frameworks established by the Ministry of Health and Prevention (MOHAP), Dubai Health
               Authority (DHA), and Ministry of Health and Prevention (MOHAP).

@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 const AbuDhabiAmbulanceServices = () => {
   const services = [
     {
-      title: "Emergency Ambulance",
-      description: "24/7 emergency response with advanced life support (ALS) and basic life support (BLS) units across Abu Dhabi.",
+      title: "Rapid Response Ambulance",
+      description: "24/7 rapid medical response with advanced life support (ALS) and basic life support (BLS) units across Abu Dhabi.",
       icon: Ambulance
     },
     {
@@ -46,7 +46,7 @@ const AbuDhabiAmbulanceServices = () => {
   const faqs = [
     {
       question: "How quickly can an ambulance reach me in Abu Dhabi?",
-      answer: "Our average response time in Abu Dhabi is 20-35 minutes, depending on your location and traffic conditions. We prioritize emergency calls for the fastest response."
+      answer: "Our average response time in Abu Dhabi is 20-35 minutes, depending on your location and traffic conditions. We prioritize critical cases for the fastest response."
     },
     {
       question: "Do you provide ambulance services for events in Abu Dhabi?",
@@ -72,11 +72,11 @@ const AbuDhabiAmbulanceServices = () => {
 
   return (
     <ServicePageTemplate
-      title="24/7 Ambulance Services in Abu Dhabi | Emergency & Patient Transport | EMRS"
-      description="Professional ambulance services in Abu Dhabi with trained paramedics. Emergency response, patient transport, and medical escorts across all areas of Abu Dhabi. Call +971 55 472 8133"
+      title="Non-Emergency Ambulance Service in Abu Dhabi | Safe Private Medical Transport"
+      description="Professional ambulance services in Abu Dhabi with trained paramedics. Rapid response, patient transport, and medical escorts across all areas of Abu Dhabi. Call +971 55 472 8133"
       canonical="https://emrs.ae/abu-dhabi-ambulance-services"
       imageUrl="/images/og/abu-dhabi-ambulance-services.jpg"
-      imageAlt="Ambulance Services in Abu Dhabi by EMRS"
+      imageAlt="Non-emergency ambulance service in Abu Dhabi"
       lastUpdated="2026-01-01"
       faqs={faqs}
       phoneNumber={"+971 55 472 8133"}
@@ -85,6 +85,7 @@ const AbuDhabiAmbulanceServices = () => {
         { label: 'Sharjah Ambulance Services', to: '/sharjah-ambulance-services' },
         { label: 'Al Ain Ambulance Services', to: '/al-ain-ambulance-services' }
       ]}
+      hideHeader={true}
     >
       {/* Hero Section */}
       <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-white relative overflow-hidden">
@@ -92,17 +93,17 @@ const AbuDhabiAmbulanceServices = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto text-center">
             <span className="inline-block px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-semibold mb-6">
-              24/7 Emergency Response in Abu Dhabi
+              24/7 Private Medical Transport in Abu Dhabi
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Reliable Ambulance Services in Abu Dhabi
+              Reliable Private Ambulance Services in Abu Dhabi
             </h1>
             <p className="text-xl sm:text-2xl text-white/90 mb-8 leading-relaxed">
-              Professional medical transport across all areas of Abu Dhabi. Emergency response, inter-hospital transfers, and non-emergency patient transport with trained paramedics and fully equipped ambulances.
+              Professional medical transport across all areas of Abu Dhabi. Urgent care support, inter-hospital transfers, and non-emergency patient transport. Our services operate under full <Link to="/licensing" className="underline hover:text-accent">DOH licensing</Link> with continuous <Link to="/medical-oversight" className="underline hover:text-accent">medical oversight</Link>.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-accent hover:bg-accent/90 text-white font-bold text-lg px-8 py-6"
                 asChild
               >
@@ -111,8 +112,8 @@ const AbuDhabiAmbulanceServices = () => {
                   Call +971 55 472 8133
                 </a>
               </Button>
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-primary font-bold text-lg px-8 py-6"
                 asChild
@@ -203,7 +204,7 @@ const AbuDhabiAmbulanceServices = () => {
                 <div className="w-full md:w-1/3">
                   <h3 className="text-xl font-bold text-primary mb-3">Trained Medical Professionals</h3>
                   <p className="text-muted-foreground">
-                    Our team includes certified paramedics, EMTs, and medical professionals trained to handle all types of medical emergencies.
+                    Our team includes certified paramedics, EMTs, and medical professionals trained to handle all types of urgent medical situations.
                   </p>
                 </div>
                 <div className="w-full md:w-1/3">
@@ -226,21 +227,21 @@ const AbuDhabiAmbulanceServices = () => {
               Need an Ambulance in Abu Dhabi?
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Our emergency response team is available 24/7 to provide immediate assistance. Don't hesitate to call in case of any medical emergency.
+              Our medical response team is available 24/7 to provide immediate assistance. Don't hesitate to call in case of any medical need.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-accent hover:bg-accent/90 text-white font-bold text-lg px-8 py-6"
                 asChild
               >
                 <a href="tel:+971554728133" className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />
-                  Emergency: +971 55 472 8133
+                  Call: +971 55 472 8133
                 </a>
               </Button>
-              <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 size="lg"
                 className="border-white text-white hover:bg-white/10 font-bold text-lg px-8 py-6"
                 asChild

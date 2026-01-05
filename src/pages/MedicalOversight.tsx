@@ -28,7 +28,7 @@ const MedicalOversight = () => {
                             Medical Oversight & Clinical Governance
                         </h1>
                         <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto">
-                            At EMRS, patient safety is our absolute priority. Our operations are guided by strict clinical protocols
+                            At EMRS, patient safety is our absolute priority. Our <a href="/doctor-on-call-uae" className="text-white underline decoration-blue-300 hover:text-blue-200">Doctor on Call</a> and <a href="/ambulance-services-uae" className="text-white underline decoration-blue-300 hover:text-blue-200">Ambulance Services</a> are guided by strict clinical protocols
                             and overseen by qualified medical directors to ensure evidence-based pre-hospital care.
                         </p>
                     </div>

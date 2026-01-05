@@ -47,7 +47,7 @@ const AmbulanceServicesUAE = () => {
 
   const features = [
     {
-      title: "24/7 Emergency Response",
+      title: "24/7 Rapid Response",
       description: "Immediate dispatch for urgent medical transport needs, any time of day or night.",
       icon: Clock
     },
@@ -133,9 +133,22 @@ const AmbulanceServicesUAE = () => {
     }
   ];
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
     <ServicePageTemplate
-      title="24/7 Ambulance Services in UAE | Medical Transport | EMRS"
+      title="Non-Emergency Ambulance Services UAE | Licensed 24/7 Patient Transport"
       description="Professional ambulance services across all UAE emirates. Reliable medical transport with trained paramedics. Available 24/7 for all your medical transport needs."
       canonical="https://emrs.ae/ambulance-services-uae"
       imageUrl="/images/og/ambulance-services-uae.jpg"
@@ -148,6 +161,8 @@ const AmbulanceServicesUAE = () => {
         { label: 'Doctor on Call', to: '/doctor-on-call-uae' },
         { label: 'Home Healthcare', to: '/home-healthcare-services-uae' }
       ]}
+      hideHeader={true}
+      additionalStructuredData={faqSchema}
     >
       {/* Hero Section */}
       <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-white relative overflow-hidden">
@@ -161,13 +176,13 @@ const AmbulanceServicesUAE = () => {
               Professional Ambulance Services Across UAE
             </h1>
             <p className="text-xl sm:text-2xl text-white/90 mb-8 leading-relaxed">
-              Safe and reliable medical transportation with trained professionals. 
+              Safe and reliable medical transportation with trained professionals.
               Serving all emirates with a fleet of fully-equipped ambulances and experienced medical teams.
               Professional ambulance and medical transport services across Dubai, Abu Dhabi, Sharjah, and all UAE emirates. ICU ambulances, patient transfers, and event medical coverage.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-accent hover:bg-accent/90 text-white font-bold text-lg px-8 py-6"
                 asChild
               >
@@ -176,8 +191,8 @@ const AmbulanceServicesUAE = () => {
                   Call +971 55 472 8133
                 </a>
               </Button>
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold text-lg px-8 py-6"
                 asChild
               >
