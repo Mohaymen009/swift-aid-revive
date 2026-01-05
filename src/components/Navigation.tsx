@@ -30,8 +30,8 @@ const Navigation = () => {
           {/* Logo/Brand */}
           <a href="/" className="flex items-center gap-2 group">
             <picture>
-              <source srcSet="/logo.webp" type="image/webp" />
-              <img src="/logo.png" alt="EMRS 24/7 Logo" className="w-8 h-8" />
+              <source srcSet="/site-logo.webp" type="image/webp" />
+              <img src="/site-logo.png" alt="EMRS 24/7 Logo" className="w-8 h-8" />
             </picture>
             <div>
               <span className={`font-black text-2xl transition-colors ${isScrolled ? "text-primary" : "text-white"
