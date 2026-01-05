@@ -1,11 +1,21 @@
 {
-  "name": "Settler",
-  "short_name": "Settler",
+  "name": "EMRS 24/7",
+  "short_name": "EMRS",
+  "start_url": "/",
   "display": "standalone",
-  "background_color": "#fff",
-  "description": "A blank php-based template.",
+  "background_color": "#0F172A",
+  "theme_color": "#A83300",
+  "description": "Professional 24/7 Ambulance & Medical Response Services in UAE.",
   "icons": [
-    { "src": "assets/img/icons/icon-192.png", "type": "image/png", "sizes": "192x192" },
-    { "src": "assets/img/icons/icon-512.png", "type": "image/png", "sizes": "512x512" }
+    {
+      "src": "/favicon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/site-logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
   ]
 }

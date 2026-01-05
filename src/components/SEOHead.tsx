@@ -24,11 +24,11 @@ export interface SEOHeadProps {
 
 const SEOHead = ({
   title = "EMRS 24/7 | Ambulance & Home Healthcare Services UAE",
-  description = "EMRS provides professional 24/7 ambulance services, non-emergency medical transport, doctor on call, and home healthcare across all UAE emirates. Fast respond and expert care.",
+  description = "Offering non-emergency ambulance, IV therapy, blood testing & 24/7 doctor on call service at home & hotels.",
   canonical: customCanonical,
   type = "website",
   emirate,
-  image = "/emrslogo.png",
+  image = "/site-logo.png",
   imageAlt = "EMRS 24/7 Ambulance & Medical Services in UAE",
   imageWidth = 1200,
   imageHeight = 630,
@@ -89,6 +89,11 @@ const SEOHead = ({
     "telephone": "+971554728133",
     "email": "info@emrs.ae",
     "priceRange": "$$",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "13"
+    },
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
