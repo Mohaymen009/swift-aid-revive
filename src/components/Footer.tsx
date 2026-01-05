@@ -1,5 +1,4 @@
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
-import logo from "../images/logo.png";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -8,9 +7,8 @@ const Footer = () => {
   const serviceLinks = [
     { name: "Ambulance Services UAE", url: "/ambulance-services-uae" },
     { name: "Non-Emergency Transport", url: "/non-emergency-medical-transport-uae" },
-    { name: "Doctor on Call", url: "/doctor-on-call-uae" },
+    { name: "Doctor on Call UAE", url: "/doctor-on-call-uae" },
     { name: "Home Healthcare", url: "/home-healthcare-services-uae" },
-    { name: "Wellness & Diagnostics", url: "/wellness-diagnostic-services-uae" },
   ];
 
   const emirateLinks = [
@@ -18,22 +16,26 @@ const Footer = () => {
     { name: "Abu Dhabi", url: "/abu-dhabi-ambulance-services" },
     { name: "Sharjah", url: "/sharjah-ambulance-services" },
     { name: "Ajman", url: "/ajman-ambulance-services" },
-    { name: "Ras Al Khaimah", url: "/ras-al-khaimah-ambulance-services" },
-    { name: "Fujairah", url: "/fujairah-ambulance-services" },
-    { name: "Umm Al Quwain", url: "/umm-al-quwain-ambulance-services" },
+  ];
+
+  const companyLinks = [
+    { name: "About Us", url: "/about-us" },
+    { name: "Licensing", url: "/licensing" },
+    { name: "Medical Oversight", url: "/medical-oversight" },
+    { name: "Contact", url: "/#contact" },
   ];
 
   return (
-    <footer className="bg-primary text-white" itemScope itemType="https://schema.org/LocalBusiness">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+    <footer className="bg-primary text-white" itemscope itemtype="https://schema.org/LocalBusiness">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Brand & NAP */}
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="flex items-center justify-center w-10 h-10 rounded-lg" style={{ backgroundColor: 'transparent' }}>
                 <picture>
                   <source srcSet="/logo.webp" type="image/webp" />
-                  <img src={logo} alt="EMRS 24/7 Logo" className="w-6 h-6" itemProp="logo" loading="lazy" />
+                  <img src="/logo.png" alt="EMRS 24/7 Logo" className="w-6 h-6" itemProp="logo" loading="lazy" />
                 </picture>
               </div>
               <span className="font-bold text-xl" itemProp="name">EMRS 24/7</span>
@@ -41,47 +43,33 @@ const Footer = () => {
             <p className="text-blue-100/80 leading-relaxed mb-4" itemProp="description">
               Professional ambulance and medical transport services across all seven emirates of the UAE. Available 24/7 for patient transfers, medical escorts, and home healthcare.
             </p>
-
-            {/* NAP (Name, Address, Phone) for Local SEO */}
-            <div className="space-y-2 text-sm">
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-accent" />
-                <span className="text-blue-100/80">Open 24 hours, 7 days a week</span>
+            <div className="space-y-3">
+              <div className="flex items-start gap-3 text-blue-100/80" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <MapPin className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
+                <span itemProp="streetAddress">Al Qusais Industrial Area, Dubai, UAE</span>
               </div>
-              <div className="flex items-start gap-2" itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
-                <MapPin className="w-4 h-4 text-accent mt-0.5" />
-                <span className="text-blue-100/80">
-                  <span itemProp="streetAddress">Al Qusais Industrial Area</span>,
-                  <span itemProp="addressLocality"> Dubai</span>,
-                  <span itemProp="addressCountry"> UAE</span>
-                </span>
+              <div className="flex items-center gap-3 text-blue-100/80">
+                <Phone className="w-5 h-5 text-accent flex-shrink-0" />
+                <a href="tel:+971554728133" className="hover:text-accent transition-colors" itemProp="telephone">+971 55 472 8133</a>
               </div>
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-accent" />
-                <a href="tel:+971554728133" className="text-blue-100/80 hover:text-accent transition-colors" itemProp="telephone">
-                  +971 55 472 8133
-                </a>
+              <div className="flex items-center gap-3 text-blue-100/80">
+                <Mail className="w-5 h-5 text-accent flex-shrink-0" />
+                <a href="mailto:info@emrs.ae" className="hover:text-accent transition-colors" itemProp="email">info@emrs.ae</a>
               </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-accent" />
-                <a href="mailto:info@emrs.ae" className="text-blue-100/80 hover:text-accent transition-colors" itemProp="email">
-                  info@emrs.ae
-                </a>
+              <div className="flex items-center gap-3 text-blue-100/80">
+                <Clock className="w-5 h-5 text-accent flex-shrink-0" />
+                <span>24/7 Availability</span>
               </div>
             </div>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="font-bold text-lg mb-4">Our Services</h3>
-            <ul className="space-y-2">
-              {serviceLinks.map((link, index) => (
-                <li key={index}>
-                  <Link
-                    to={link.url}
-                    className="text-blue-100/80 hover:text-accent transition-colors"
-                    onClick={() => window.scrollTo(0, 0)}
-                  >
+            <h3 className="font-bold text-lg mb-6 pt-2">Our Services</h3>
+            <ul className="space-y-4">
+              {serviceLinks.map((link) => (
+                <li key={link.name}>
+                  <Link to={link.url} className="text-blue-100/70 hover:text-accent transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -89,91 +77,56 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Service Areas */}
+          {/* Emirates */}
           <div>
-            <h3 className="font-bold text-lg mb-4">Service Areas</h3>
-            <ul className="space-y-2">
-              {emirateLinks.map((link, index) => (
-                <li key={index}>
-                  <Link
-                    to={link.url}
-                    className="text-blue-100/80 hover:text-accent transition-colors"
-                    onClick={() => window.scrollTo(0, 0)}
-                  >
-                    Ambulance {link.name}
+            <h3 className="font-bold text-lg mb-6 pt-2">Locations</h3>
+            <ul className="space-y-4">
+              {emirateLinks.map((link) => (
+                <li key={link.name}>
+                  <Link to={link.url} className="text-blue-100/70 hover:text-accent transition-colors">
+                    {link.name} Ambulance
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Contact & Resources */}
+          {/* Company */}
           <div>
-            <h3 className="font-bold text-lg mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/" className="text-blue-100/80 hover:text-accent transition-colors" onClick={() => window.scrollTo(0, 0)}>Home</Link>
-              </li>
-              <li>
-                <Link to="/about-us" className="text-blue-100/80 hover:text-accent transition-colors" onClick={() => window.scrollTo(0, 0)}>About Us</Link>
-              </li>
-              <li>
-                <Link to="/services" className="text-blue-100/80 hover:text-accent transition-colors" onClick={() => window.scrollTo(0, 0)}>Services</Link>
-              </li>
-              <li>
-                <Link to="/licensing" className="text-blue-100/80 hover:text-accent transition-colors" onClick={() => window.scrollTo(0, 0)}>Licensing & Compliance</Link>
-              </li>
-              <li>
-                <a href="/#contact" className="text-blue-100/80 hover:text-accent transition-colors">Contact</a>
-              </li>
-              <li>
-                <Link
-                  to="/blog/how-to-choose-ambulance-service"
-                  className="text-blue-100/80 hover:text-accent transition-colors"
-                  onClick={() => window.scrollTo(0, 0)}
-                >
-                  Blog: Choosing an Ambulance
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/blog/private-ambulance-services-across-uae"
-                  className="text-blue-100/80 hover:text-accent transition-colors"
-                  onClick={() => window.scrollTo(0, 0)}
-                >
-                  Blog: Private Ambulance UAE
-                </Link>
-              </li>
+            <h3 className="font-bold text-lg mb-6 pt-2">Company</h3>
+            <ul className="space-y-4">
+              {companyLinks.map((link) => (
+                <li key={link.name}>
+                  {link.url.startsWith('/#') ? (
+                    <a href={link.url} className="text-blue-100/70 hover:text-accent transition-colors">
+                      {link.name}
+                    </a>
+                  ) : (
+                    <Link to={link.url} className="text-blue-100/70 hover:text-accent transition-colors">
+                      {link.name}
+                    </Link>
+                  )}
+                </li>
+              ))}
             </ul>
           </div>
         </div>
 
-        {/* Trust Signals */}
-        <div className="border-t border-white/10 pt-8 mb-8">
-          <div className="grid sm:grid-cols-3 gap-6 text-center text-sm">
-            <div className="text-blue-100/80">
-              <span className="font-semibold text-white">Professional Staff</span> — Trained paramedics & medical professionals
-            </div>
-            <div className="text-blue-100/80">
-              <span className="font-semibold text-white">UAE-Wide Coverage</span> — All 7 emirates served
-            </div>
-            <div className="text-blue-100/80">
-              <span className="font-semibold text-white">24/7 Availability</span> — Always ready when you need us
-            </div>
+        {/* Bottom bar */}
+        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-blue-100/60 text-sm">
+          <p>
+            &copy; {currentYear} E M R S AMBULANCE SERVICES L.L.C &mdash; All rights reserved.
+          </p>
+          <div className="flex gap-6">
+            <Link to="/licensing" className="hover:text-accent transition-colors">Licensing</Link>
+            <Link to="/medical-oversight" className="hover:text-accent transition-colors">Medical Oversight</Link>
           </div>
         </div>
-
-        {/* Bottom Bar */}
-        <div className="border-t border-white/10 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-blue-100/60">
-            <p>{currentYear} © E M R S AMBULANCE SERVICES L.L.C — All rights reserved</p>
-            <p>Fully licensed ambulance & medical transport provider in the UAE</p>
-          </div>
-          <div className="mt-4 text-center text-xs text-blue-100/50">
-            <Link to="/licensing" className="hover:text-accent transition-colors" onClick={() => window.scrollTo(0, 0)}>
-              View our licensing & regulatory compliance
-            </Link>
-          </div>
+        <div className="mt-4 text-center">
+          <p className="text-xs text-blue-100/40 max-w-2xl mx-auto">
+            Fully licensed ambulance & medical transport provider in the UAE. Committed to clinical excellence and patient safety across all operations.
+            <Link to="/licensing" className="underline ml-1">View our licensing & regulatory compliance</Link>.
+          </p>
         </div>
       </div>
     </footer>

@@ -1,4 +1,3 @@
-import logo from "../images/logo.png";
 import { Phone, MapPin, Clock, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -21,7 +20,7 @@ const Hero = () => {
             <div className="inline-flex items-center justify-center w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-2xl">
               <picture>
                 <source srcSet="/logo.webp" type="image/webp" />
-                <img src={logo} alt="EMRS 24/7 - Professional Ambulance Services UAE" className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32" />
+                <img src="/logo.png" alt="EMRS 24/7 - Professional Ambulance Services UAE" className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32" />
               </picture>
             </div>
           </div>

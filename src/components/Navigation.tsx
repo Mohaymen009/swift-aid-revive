@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Phone, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "../images/logo.png";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,6 +29,10 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo/Brand */}
           <a href="/" className="flex items-center gap-2 group">
+            <picture>
+              <source srcSet="/logo.webp" type="image/webp" />
+              <img src="/logo.png" alt="EMRS 24/7 Logo" className="w-8 h-8" />
+            </picture>
             <div>
               <span className={`font-black text-2xl transition-colors ${isScrolled ? "text-primary" : "text-white"
                 }`}>
