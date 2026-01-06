@@ -85,10 +85,12 @@ const SEOHead = ({
       "width": 512,
       "height": 512
     },
-    "image": `${baseUrl}/emrslogo.png`,
+    "image": `${baseUrl}/site-logo.png`,
     "telephone": "+971554728133",
     "email": "info@emrs.ae",
     "priceRange": "$$",
+    "currenciesAccepted": "AED",
+    "paymentAccepted": "Cash, Credit Card, Insurance",
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "5.0",
@@ -107,6 +109,11 @@ const SEOHead = ({
       "addressRegion": "Dubai",
       "addressCountry": "AE"
     },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 25.2854,
+      "longitude": 55.3667
+    },
     "areaServed": [
       { "@type": "City", "name": "Dubai" },
       { "@type": "City", "name": "Abu Dhabi" },
@@ -115,6 +122,48 @@ const SEOHead = ({
       { "@type": "City", "name": "Ras Al Khaimah" },
       { "@type": "City", "name": "Fujairah" },
       { "@type": "City", "name": "Umm Al Quwain" }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Medical Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "24/7 Ambulance Transfer Services",
+            "description": "Professional ambulance services for hospital transfers, patient transport, and medical escort across UAE"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Non-Emergency Medical Transport (NEMT)",
+            "description": "Scheduled patient transport for dialysis, medical appointments, and hospital discharges"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Doctor on Call",
+            "description": "24/7 doctor home visits and hotel doctor services across UAE"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Home Healthcare Services",
+            "description": "Professional nursing care, physiotherapy, and elderly care at home"
+          }
+        }
+      ]
+    },
+    "sameAs": [
+      "https://www.facebook.com/emrsuae",
+      "https://www.instagram.com/emrsuae"
     ],
     "contactPoint": {
       "@type": "ContactPoint",
