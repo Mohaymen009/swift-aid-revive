@@ -1,0 +1,62 @@
+server {
+    listen 80;
+    listen [::]:80;
+    server_name www.emrs.ae;
+    return 301 https://emrs.ae$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    server_name www.emrs.ae;
+    
+    # SSL config should go here (managed by Certbot usually)
+    
+    return 301 https://emrs.ae$request_uri;
+}
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name emrs.ae;
+    
+    # Redirect HTTP to HTTPS
+    location / {
+        return 301 https://$host$request_uri;
+    }
+}
+
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    server_name emrs.ae;
+
+    root /var/www/emrs/dist;
+    index index.html;
+
+    # SPA Routing
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    # Security Headers
+    add_header X-Frame-Options "DENY" always;
+    add_header X-XSS-Protection "1; mode=block" always;
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+    add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://widget.trustmary.com https://d3qhsf9lmfcusu.cloudfront.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://www.googletagmanager.com https://d3qhsf9lmfcusu.cloudfront.net; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://region1.analytics.google.com https://stats.g.doubleclick.net https://embed.trustmary.io; frame-src 'self' https://embed.trustmary.io; object-src 'none'; upgrade-insecure-requests;" always;
+    add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" always;
+    add_header Cross-Origin-Opener-Policy "same-origin" always;
+
+    # Caching Headers for Static Assets
+    location ~* \.(?:ico|css|js|gif|jpe?g|png|webp|svg|woff2?|eot|ttf|otf)$ {
+        expires 6M;
+        access_log off;
+        add_header Cache-Control "public, no-transform";
+    }
+
+    # Sitemap and Robots
+    location ~* \.(xml|txt)$ {
+        expires 1h;
+    }
+}

@@ -175,7 +175,7 @@ const WellnessDiagnosticServicesUAE = () => {
                   asChild
                 >
                   <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20Wellness%20and%20Diagnostic%20services." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                    <img src="/whatsapp.webp" alt="WhatsApp Support" className="w-5 h-5 mr-2" />
+                    <img src="/whatsapp.webp" alt="WhatsApp Support" width={90} height={90} className="w-5 h-5 mr-2" />
                     WhatsApp
                   </a>
                 </Button>

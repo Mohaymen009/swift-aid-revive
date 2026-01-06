@@ -151,3 +151,23 @@ All colors MUST be HSL.
     animation: pulse-subtle 2s ease-in-out infinite;
   }
 }
+
+/* Trustmary & Accessibility Contrast Overrides */
+.tm-overall-cta-button,
+.tm-card b,
+.tm-overall-cta-button span,
+[class*="tm-overall-cta-button"],
+[class*="tm-card"] b {
+  color: #000000 !important;
+}
+
+.tm-card p,
+.tm-card span,
+[class*="tm-card"] p {
+  color: #222222 !important;
+}
+
+[data-trustmary-widget] a {
+  text-decoration: underline !important;
+  color: #0044CC !important;
+}

@@ -86,8 +86,8 @@ const Hero = () => {
                   <img
                     src="/whatsapp.webp"
                     alt="Contact EMRS 24/7 on WhatsApp"
-                    width={20}
-                    height={20}
+                    width={90}
+                    height={90}
                     className="w-5 h-5 flex-shrink-0"
                     loading="lazy"
                   />
