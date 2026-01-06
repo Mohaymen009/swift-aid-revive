@@ -12,12 +12,12 @@ const SharjahAmbulanceServices = () => {
     },
     {
       title: "Patient Transport",
-      description: "Safe and comfortable transportation for non-emergency medical appointments and hospital discharges.",
+      description: "Direct and safe patient transportation for clinics and medical centers throughout the Sharjah emirate.",
       icon: Users
     },
     {
       title: "Inter-Hospital Transfer",
-      description: "Seamless transfer between medical facilities with continuous medical monitoring.",
+      description: "Professional medical transfers within Sharjah and to facilities in neighboring emirates with full care.",
       icon: MapPin
     },
     {

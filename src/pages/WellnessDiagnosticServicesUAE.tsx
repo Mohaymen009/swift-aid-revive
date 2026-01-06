@@ -175,7 +175,7 @@ const WellnessDiagnosticServicesUAE = () => {
                   asChild
                 >
                   <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20Wellness%20and%20Diagnostic%20services." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                    <img src="/whatsapp.webp" alt="" className="w-5 h-5" />
+                    <img src="/whatsapp.webp" alt="WhatsApp Support" className="w-5 h-5 mr-2" />
                     WhatsApp
                   </a>
                 </Button>
@@ -324,7 +324,7 @@ const WellnessDiagnosticServicesUAE = () => {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold text-primary mb-8">Related Services</h2>
+              <h2 className="text-3xl font-bold text-primary mb-8">More Medical Services in the UAE</h2>
               <div className="flex flex-wrap gap-4 justify-center">
                 <Button variant="outline" asChild>
                   <Link to="/doctor-on-call-uae" className="flex items-center gap-2">

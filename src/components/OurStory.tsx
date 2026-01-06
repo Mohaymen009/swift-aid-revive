@@ -11,12 +11,12 @@ const OurStory = () => {
               </div>
 
               <h2 className="text-4xl sm:text-5xl font-bold text-primary">
-                Your Trusted Partner for Medical Transport in the UAE
+                Why EMRS is Your Trusted Partner for Medical Transport in the UAE
               </h2>
 
               <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
                 <p>
-                  <strong className="text-primary">EMRS (Medical Response Services)</strong> is a professional ambulance and medical transport company serving all seven emirates of the United Arab Emirates. We specialize in providing reliable, safe, and timely patient transfer services for hospitals, clinics, and individual patients across Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Fujairah, and Umm Al Quwain.
+                  <span className="text-primary font-bold">EMRS (Medical Response Services)</span> is a professional ambulance and medical transport company serving all seven emirates of the United Arab Emirates. We specialize in providing reliable, safe, and timely patient transfer services for hospitals, clinics, and individual patients across Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Fujairah, and Umm Al Quwain.
                 </p>
 
                 <p>
@@ -24,7 +24,7 @@ const OurStory = () => {
                 </p>
 
                 <p>
-                  Whether you need <strong className="text-primary">hospital-to-hospital transfers</strong>, <strong className="text-primary">patient discharge transport</strong>, <strong className="text-primary">dialysis transportation</strong>, or <strong className="text-primary">long-distance medical escorts</strong>, EMRS provides professional and compassionate service. Our ambulances are equipped with advanced medical equipment to ensure patient safety and comfort during transit.
+                  Whether you need <span className="text-primary font-bold">hospital-to-hospital transfers</span>, <span className="text-primary font-bold">patient discharge transport</span>, <span className="text-primary font-bold">dialysis transportation</span>, or <span className="text-primary font-bold">long-distance medical escorts</span>, EMRS provides professional and compassionate service. Our ambulances are equipped with advanced medical equipment to ensure patient safety and comfort during transit.
                 </p>
 
                 <p>

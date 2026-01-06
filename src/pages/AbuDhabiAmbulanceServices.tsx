@@ -12,12 +12,12 @@ const AbuDhabiAmbulanceServices = () => {
     },
     {
       title: "Patient Transport",
-      description: "Safe and comfortable transportation for non-emergency medical appointments and hospital discharges.",
+      description: "Compassionate patient transport services for scheduled medical appointments and hospital visits across Abu Dhabi.",
       icon: Users
     },
     {
       title: "Inter-Hospital Transfer",
-      description: "Seamless transfer between medical facilities with continuous medical monitoring.",
+      description: "Efficient patient transfers between Abu Dhabi hospitals and clinics with expert medical supervision.",
       icon: MapPin
     },
     {

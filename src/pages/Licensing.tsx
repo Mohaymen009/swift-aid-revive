@@ -63,7 +63,7 @@ const Licensing = () => {
                 <div>
                   <h4 className="font-bold text-primary mb-3">Staff Licensing</h4>
                   <p className="mb-4">
-                    Our medical team, including Paramedics, Medics, and EMTs, holds both <strong>UAE Professional Licenses</strong> (DHA/HAAD/MOH) and <strong>Home Country Licenses</strong>, ensuring international standards and local compliance.
+                    Our medical team, including Paramedics, Medics, and EMTs, holds both <span className="font-bold">UAE Professional Licenses</span> (DHA/HAAD/MOH) and <span className="font-bold">Home Country Licenses</span>, ensuring international standards and local compliance.
                   </p>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-2">
@@ -81,23 +81,23 @@ const Licensing = () => {
                   <ul className="space-y-3">
                     <li className="flex items-center gap-2">
                       <CheckCircle2 className="w-5 h-5 text-accent" />
-                      <span><strong>PHTLS:</strong> Pre-Hospital Trauma Life Support</span>
+                      <span><span className="font-bold">PHTLS:</span> Pre-Hospital Trauma Life Support</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle2 className="w-5 h-5 text-accent" />
-                      <span><strong>ACLS:</strong> Advanced Cardiac Life Support</span>
+                      <span><span className="font-bold">ACLS:</span> Advanced Cardiac Life Support</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle2 className="w-5 h-5 text-accent" />
-                      <span><strong>PALS:</strong> Paediatric Advanced Life Support</span>
+                      <span><span className="font-bold">PALS:</span> Paediatric Advanced Life Support</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle2 className="w-5 h-5 text-accent" />
-                      <span><strong>BLS:</strong> Basic Life Support</span>
+                      <span><span className="font-bold">BLS:</span> Basic Life Support</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle2 className="w-5 h-5 text-accent" />
-                      <span><strong>Rescue Certified:</strong> Specialized Rescue Operations</span>
+                      <span><span className="font-bold">Rescue Certified:</span> Specialized Rescue Operations</span>
                     </li>
                   </ul>
                 </div>

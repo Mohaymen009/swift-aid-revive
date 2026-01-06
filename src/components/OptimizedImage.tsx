@@ -22,7 +22,18 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 }) => {
   // Extract image name for better alt text if not provided
   const imageName = alt || src.split('/').pop()?.split('.')[0] || 'EMRS Medical Services';
-  
+
+  // Generate source type for better browser compatibility
+  const getSourceType = (path: string) => {
+    const ext = path.split('.').pop()?.toLowerCase();
+    if (ext === 'jpg' || ext === 'jpeg') return 'image/jpeg';
+    if (ext === 'png') return 'image/png';
+    if (ext === 'webp') return 'image/webp';
+    return `image/${ext}`;
+  };
+
+  const sourceType = getSourceType(src);
+
   // Generate srcSet for responsive images
   const srcSet = `
     ${src} ${width}w,
@@ -32,9 +43,16 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   return (
     <picture>
-      <source 
+      {/* WebP fallback for non-webp images */}
+      {!src.endsWith('.webp') && (
+        <source
+          srcSet={src.replace(/\.(jpg|jpeg|png)/, '.webp')}
+          type="image/webp"
+        />
+      )}
+      <source
         srcSet={srcSet}
-        type={`image/${src.split('.').pop()?.toLowerCase() === 'jpg' ? 'jpeg' : 'png'}`}
+        type={sourceType}
       />
       <img
         src={src}

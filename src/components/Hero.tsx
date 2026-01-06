@@ -85,7 +85,7 @@ const Hero = () => {
                   <source srcSet="/whatsapp.webp" type="image/webp" />
                   <img
                     src="/whatsapp.webp"
-                    alt=""
+                    alt="Contact EMRS 24/7 on WhatsApp"
                     width={20}
                     height={20}
                     className="w-5 h-5 flex-shrink-0"

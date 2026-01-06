@@ -12,12 +12,12 @@ const DubaiAmbulanceServices = () => {
     },
     {
       title: "Patient Transport",
-      description: "Safe and comfortable transportation for non-emergency medical appointments and hospital discharges.",
+      description: "Safe, comfortable, and reliable medical transportation for patients visiting hospitals and clinics throughout Dubai.",
       icon: Users
     },
     {
       title: "Inter-Hospital Transfer",
-      description: "Seamless transfer between medical facilities with continuous medical monitoring.",
+      description: "Seamless medical transfers between Dubai's leading healthcare facilities with continuous monitoring.",
       icon: MapPin
     },
     {

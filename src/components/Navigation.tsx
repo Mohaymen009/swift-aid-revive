@@ -77,7 +77,7 @@ const Navigation = () => {
               <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                 <picture className="flex items-center">
                   <source srcSet="/whatsapp.webp" type="image/webp" />
-                  <img src="/whatsapp.webp" alt="" width={16} height={16} className="w-4 h-4" />
+                  <img src="/whatsapp.webp" alt="WhatsApp Contact" width={16} height={16} className="w-4 h-4" />
                 </picture>
                 <span className="hidden xl:inline">WhatsApp</span>
               </a>
@@ -133,9 +133,9 @@ const Navigation = () => {
                   <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
                     <picture className="flex items-center">
                       <source srcSet="/whatsapp.webp" type="image/webp" />
-                      <img src="/whatsapp.webp" alt="" width={16} height={16} className="w-4 h-4" />
+                      <img src="/whatsapp.webp" alt="WhatsApp Contact" width={16} height={16} className="w-4 h-4" />
                     </picture>
-                    WhatsApp
+                    Chat with EMRS 24/7 on WhatsApp
                   </a>
                 </Button>
                 <Button

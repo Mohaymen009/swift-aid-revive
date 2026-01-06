@@ -207,9 +207,7 @@ const NonEmergencyMedicalTransport = () => {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
-                  Benefits of Our NEMT Services
-                </h2>
+                <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-6">Explore Our Health & Transport Services</h2>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {benefits.map((benefit, index) => (
@@ -276,7 +274,7 @@ const NonEmergencyMedicalTransport = () => {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold text-primary mb-8">Related Services</h2>
+              <h2 className="text-3xl font-bold text-primary mb-8">Related Healthcare Services</h2>
               <div className="flex flex-wrap gap-4 justify-center">
                 <Button variant="outline" asChild>
                   <Link to="/ambulance-services-uae" className="flex items-center gap-2">

@@ -40,16 +40,16 @@ const AboutUs = () => {
               Who We Are
             </h2>
             <p className="text-lg text-gray-700 mb-6">
-              EMRS (Medical Response Services) is a professional ambulance and medical transport company serving all seven emirates of the United Arab Emirates. We specialize in providing reliable, safe, and timely patient transfer services for hospitals, clinics, and individual patients across Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Fujairah, and Umm Al Quwain.
+              Founded on the principles of medical excellence and rapid response, <span className="text-primary font-bold">EMRS</span> has grown into a leading provider of clinical transport solutions throughout the UAE. Our mission is to bridge the gap between medical facilities and patients by offering specialized ambulance transfers that prioritize safety and clinical care in every journey.
             </p>
             <p className="text-lg text-gray-700 mb-6">
-              Our team comprises experienced paramedics, nurses, and medical professionals with over 50 years of combined experience in the healthcare industry. We operate modern, fully-equipped ambulances designed for both emergency and non-emergency medical transport needs.
+              With a diverse team of international paramedics and nursing staff, we bring over half a century of shared expertise to the UAE's healthcare landscape. Our fleet represents the latest in medical transport technology, enabling us to handle everything from routine patient discharges to complex inter-hospital ICU transfers.
             </p>
             <p className="text-lg text-gray-700 mb-6">
-              Whether you need hospital-to-hospital transfers, patient discharge transport, dialysis transportation, or long-distance medical escorts, EMRS provides professional and compassionate service. Our ambulances are equipped with advanced medical equipment to ensure patient safety and comfort during transit.
+              We take pride in our ability to serve all seven emirates—Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Fujairah, and Umm Al Quwain—with consistent quality. Our services are tailored to meet the unique needs of hospitals, clinics, and individuals, ensuring that every patient receives compassionate care and professional medical escorting.
             </p>
             <p className="text-lg text-gray-700">
-              We understand that medical transport situations can be stressful. That's why we focus on delivering prompt, courteous, and efficient service every time. Our 24/7 availability means you can count on us whenever you need medical transportation assistance in the UAE.
+              Operating 24/7, EMRS stands as a pillar of reliability in the UAE's healthcare ecosystem. We are committed to reducing the stress of medical logistics through punctuality, transparency, and a steadfast dedication to patient well-being across all our operations.
             </p>
           </section>
 

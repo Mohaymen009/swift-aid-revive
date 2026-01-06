@@ -112,7 +112,7 @@ const EmirateServices = () => {
               asChild
             >
               <a href="tel:+971554728133" className="flex items-center gap-2">
-                Call Now for Immediate Assistance
+                24/7 Emergency Medical Response - Call Now
                 <ArrowRight className="w-5 h-5" />
               </a>
             </Button>

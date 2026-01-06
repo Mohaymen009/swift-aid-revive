@@ -1,3 +1,9 @@
+[[redirects]]
+  from = "https://www.emrs.ae/*"
+  to = "https://emrs.ae/:splat"
+  status = 301
+  force = true
+
 [build]
   publish = "dist"
   command = "npm run build"
@@ -15,6 +21,8 @@
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
+    Content-Type = "text/html; charset=UTF-8"
+
 
 [[headers]]
   for = "/sitemap.xml"

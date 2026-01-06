@@ -150,7 +150,7 @@ const DoctorOnCallUAE = () => {
                 asChild
               >
                 <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20Doctor%20on%20Call%20service." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                  <img src="/whatsapp.webp" alt="" className="w-5 h-5" />
+                  <img src="/whatsapp.webp" alt="Contact EMRS WhatsApp" className="w-5 h-5" />
                   WhatsApp
                 </a>
               </Button>
@@ -243,8 +243,8 @@ const DoctorOnCallUAE = () => {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <MapPin className="w-16 h-16 text-accent mx-auto mb-6" />
-              <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
-                Areas We Serve
+              <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-6">
+                Professional Doctor Home Visit Services
               </h2>
               <p className="text-lg text-muted-foreground">
                 Our doctor on call service is available across all emirates in the UAE

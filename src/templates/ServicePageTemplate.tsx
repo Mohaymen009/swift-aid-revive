@@ -30,6 +30,7 @@ interface ServicePageTemplateProps {
   relatedLinks?: Array<{ label: string; to: string }>;
   children?: React.ReactNode;
   hideHeader?: boolean;
+  emirate?: string; // Added emirate prop
 }
 
 const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
@@ -46,6 +47,7 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
   relatedLinks,
   children,
   hideHeader = false,
+  emirate = "Dubai", // Added emirate with a default value
 }) => {
   const location = useLocation();
   const pageUrl = `https://emrs.ae${location.pathname}`;
@@ -77,6 +79,11 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
         image={imageUrl}
         imageAlt={imageAlt}
         breadcrumbs={crumbsSeo}
+        serviceSchema={{
+          name: title,
+          description: description,
+          areaServed: emirate ? [emirate] : undefined
+        }}
       />
 
       <Navigation />
@@ -135,7 +142,7 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
 
         {faqs.length > 0 && (
           <section className="mt-16">
-            <h2 className="text-2xl font-bold text-gray-900 mb-8">Frequently Asked Questions</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-8">{emirate} Ambulance Service FAQs</h2>
             <FAQSection faqs={faqs} />
           </section>
         )}

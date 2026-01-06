@@ -167,7 +167,7 @@ const HomeHealthcareServicesUAE = () => {
                   asChild
                 >
                   <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20Home%20Healthcare%20services." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                    <img src="/whatsapp.webp" alt="" className="w-5 h-5" />
+                    <img src="/whatsapp.webp" alt="Contact EMRS WhatsApp" className="w-5 h-5" />
                     WhatsApp
                   </a>
                 </Button>
@@ -207,9 +207,7 @@ const HomeHealthcareServicesUAE = () => {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
-                  Skilled Nursing Services
-                </h2>
+                <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-6">Expert Healthcare Services at Home</h2>
                 <p className="text-lg text-muted-foreground">
                   Medical procedures and treatments our nurses can perform at your home
                 </p>
@@ -308,7 +306,7 @@ const HomeHealthcareServicesUAE = () => {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold text-primary mb-8">Related Services</h2>
+              <h2 className="text-3xl font-bold text-primary mb-8">View Other Medical Services</h2>
               <div className="flex flex-wrap gap-4 justify-center">
                 <Button variant="outline" asChild>
                   <Link to="/doctor-on-call-uae" className="flex items-center gap-2">

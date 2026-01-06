@@ -34,7 +34,7 @@ const FloatingContact = () => {
       >
         <picture className="flex items-center">
           <source srcSet="/whatsapp.webp" type="image/webp" />
-          <img src="/whatsapp.webp" alt="" width={32} height={32} className="w-8 h-8" />
+          <img src="/whatsapp.webp" alt="Quick WhatsApp Contact" className="w-full h-full" />
         </picture>
       </a>
       <a

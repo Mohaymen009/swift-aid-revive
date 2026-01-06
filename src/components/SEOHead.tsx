@@ -20,11 +20,17 @@ export interface SEOHeadProps {
   author?: string;
   breadcrumbs?: Array<{ name: string; item: string }>;
   additionalStructuredData?: Record<string, any> | Record<string, any>[];
+  serviceSchema?: {
+    name: string;
+    description: string;
+    provider?: string;
+    areaServed?: string | string[];
+  };
 }
 
 const SEOHead = ({
   title = "EMRS 24/7 | Ambulance & Home Healthcare Services UAE",
-  description = "Offering non-emergency ambulance, IV therapy, blood testing & 24/7 doctor on call service at home & hotels.",
+  description = "EMRS provides professional 24/7 ambulance services and home healthcare across all UAE emirates. Fast medical response, patient transfers, and expert medical care at your location.",
   canonical: customCanonical,
   type = "website",
   emirate,
@@ -51,7 +57,8 @@ const SEOHead = ({
   modifiedTime,
   headline,
   author = "EMRS Medical Team",
-  breadcrumbs = []
+  breadcrumbs = [],
+  serviceSchema
 }: SEOHeadProps) => {
   const location = useLocation();
   const baseUrl = 'https://emrs.ae';
@@ -229,6 +236,22 @@ const SEOHead = ({
     }
   } : null;
 
+  // Service Structured Data
+  const serviceStructuredData = serviceSchema ? {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Medical Service",
+    "name": serviceSchema.name,
+    "description": serviceSchema.description,
+    "provider": {
+      "@type": "MedicalBusiness",
+      "name": serviceSchema.provider || siteName,
+      "url": baseUrl,
+      "logo": `${baseUrl}/emrslogo.png`
+    },
+    "areaServed": serviceSchema.areaServed || ["Dubai", "Abu Dhabi", "Sharjah", "Ajman", "Ras Al Khaimah", "Fujairah", "Umm Al Quwain"]
+  } : null;
+
   return (
     <Helmet>
       {/* Primary Meta Tags */}
@@ -281,6 +304,9 @@ const SEOHead = ({
       <meta name="msapplication-TileColor" content="#0066cc" />
       <meta name="apple-mobile-web-app-title" content={siteName} />
       <meta name="application-name" content={siteName} />
+      <link rel="apple-touch-icon" href={`${baseUrl}/apple-touch-icon.png`} />
+      <link rel="icon" type="image/png" sizes="32x32" href={`${baseUrl}/favicon-32x32.png`} />
+      <link rel="icon" type="image/png" sizes="16x16" href={`${baseUrl}/favicon-16x16.png`} />
 
       {/* Structured Data */}
       <script type="application/ld+json">
@@ -290,6 +316,12 @@ const SEOHead = ({
       {breadcrumbStructuredData && (
         <script type="application/ld+json">
           {JSON.stringify(breadcrumbStructuredData)}
+        </script>
+      )}
+
+      {serviceStructuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify(serviceStructuredData)}
         </script>
       )}
 

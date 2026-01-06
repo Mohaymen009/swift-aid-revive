@@ -32,7 +32,7 @@ const WhyChooseUs = () => {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-accent font-bold text-sm uppercase tracking-wide">Why Choose EMRS</span>
             <h2 className="text-4xl sm:text-5xl font-bold text-primary mt-4 mb-6">
-              Your Trusted Healthcare Partner
+              Why EMRS is Your Trusted Healthcare Partner in UAE
             </h2>
             <p className="text-lg text-muted-foreground">
               We combine experience, technology, and dedication to deliver exceptional medical services across the UAE.
@@ -42,18 +42,18 @@ const WhyChooseUs = () => {
           {/* Features Grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div 
+              <div
                 key={index}
                 className="text-center group"
               >
                 <div className="mb-6 inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl group-hover:from-accent/20 group-hover:to-accent/10 transition-all duration-300 group-hover:scale-110">
                   <feature.icon className="w-10 h-10 text-accent" />
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-primary mb-3">
                   {feature.title}
                 </h3>
-                
+
                 <p className="text-muted-foreground">
                   {feature.description}
                 </p>

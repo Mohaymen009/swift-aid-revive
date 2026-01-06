@@ -19,32 +19,32 @@ const AjmanAmbulanceServices = () => {
   const services = [
     {
       title: "Rapid Response Ambulance",
-      description: "24/7 rapid medical response with advanced life support (ALS) and basic life support (BLS) units across Ajman.",
+      description: "Fast medical intervention and rapid response units serving all communities across Ajman 24/7.",
       icon: Ambulance
     },
     {
       title: "Patient Transport",
-      description: "Safe and comfortable transportation for non-emergency medical appointments and hospital discharges.",
+      description: "Dedicated patient transport for Al Nuaimiya, Al Rashidiya, and throughout Ajman with professional care.",
       icon: Users
     },
     {
       title: "Inter-Hospital Transfer",
-      description: "Seamless transfer between medical facilities with continuous medical monitoring.",
+      description: "Coordinated transfers between Ajman medical centers and hospitals in Dubai or Sharjah.",
       icon: MapPin
     },
     {
       title: "Specialized Medical Team",
-      description: "Experienced paramedics and emergency medical technicians for all types of medical transport.",
+      description: "A team of paramedics and EMTs specializing in patient handling and transport logistics in Ajman.",
       icon: ShieldCheck
     },
     {
       title: "24/7 Availability",
-      description: "Round-the-clock service, including weekends and public holidays.",
+      description: "Reliable around-the-clock medical transport service for the Ajman community.",
       icon: Clock
     },
     {
       title: "Medical Escort",
-      description: "Trained medical personnel accompanying patients requiring continuous care during transit.",
+      description: "Professional medical accompaniment for patients requiring specialized attention during transit in Ajman.",
       icon: HeartPulse
     }
   ];
@@ -57,28 +57,20 @@ const AjmanAmbulanceServices = () => {
 
   const faqs = [
     {
-      question: "How quickly can an ambulance reach me in Ajman?",
-      answer: "Our average response time in Ajman is 15-30 minutes, depending on your location and traffic conditions. We prioritize critical cases for the fastest response."
+      question: "What is the response time for an ambulance in Ajman?",
+      answer: "We typically reach most locations in Ajman within 15-30 minutes, ensuring fast medical assistance when you need it most."
     },
     {
-      question: "Do you provide ambulance services for events in Ajman?",
-      answer: "Yes, we provide medical coverage for events, conferences, and corporate functions throughout Ajman with fully equipped ambulances and trained medical staff."
+      question: "Are your services in Ajman licensed?",
+      answer: "Yes, our services comply with all MOH and UAE health authority regulations for private medical transport."
     },
     {
-      question: "Can I book an ambulance in advance for a non-emergency in Ajman?",
-      answer: "Absolutely. We recommend booking non-emergency transports at least 2-4 hours in advance to ensure vehicle and staff availability."
+      question: "Do you handle inter-emirate transfers from Ajman?",
+      answer: "Certainly. We specialized in transferring patients from Ajman to major hospitals in Dubai, Sharjah, and Abu Dhabi."
     },
     {
-      question: "What areas in Ajman do you cover?",
-      answer: "We cover all areas of Ajman including but not limited to Ajman City, Al Nuaimiya, Al Rashidiya, Al Zahra, and other communities across the emirate."
-    },
-    {
-      question: "Do you have female paramedics available?",
-      answer: "Yes, we can arrange for female paramedics upon request, subject to availability. Please mention this requirement when booking."
-    },
-    {
-      question: "Can family members accompany the patient in the ambulance?",
-      answer: "In most cases, one family member can accompany the patient, depending on the medical condition and available space in the ambulance."
+      question: "Can I schedule a discharge transport in Ajman?",
+      answer: "Yes, you can pre-book our transport for hospital discharges to any residential area in Ajman or other emirates."
     }
   ];
 

@@ -5,10 +5,10 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const serviceLinks = [
-    { name: "Ambulance Services UAE", url: "/ambulance-services-uae" },
-    { name: "Non-Emergency Transport", url: "/non-emergency-medical-transport-uae" },
-    { name: "Doctor on Call UAE", url: "/doctor-on-call-uae" },
-    { name: "Home Healthcare", url: "/home-healthcare-services-uae" },
+    { name: "Private Ambulance UAE", url: "/ambulance-services-uae" },
+    { name: "Patient Transport Services", url: "/non-emergency-medical-transport-uae" },
+    { name: "Doctor Home Visit UAE", url: "/doctor-on-call-uae" },
+    { name: "Nursing & Home Care", url: "/home-healthcare-services-uae" },
   ];
 
   const emirateLinks = [
