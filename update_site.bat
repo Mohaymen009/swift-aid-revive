@@ -16,6 +16,6 @@ REM Commit with your message
 git commit -m "%msg%"
 
 REM Push to GitHub
-git push
+git push --force
 
 pause
