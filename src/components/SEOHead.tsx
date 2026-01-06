@@ -20,12 +20,6 @@ export interface SEOHeadProps {
   author?: string;
   breadcrumbs?: Array<{ name: string; item: string }>;
   additionalStructuredData?: Record<string, any> | Record<string, any>[];
-  serviceSchema?: {
-    name: string;
-    description: string;
-    provider?: string;
-    areaServed?: string | string[];
-  };
 }
 
 const SEOHead = ({
@@ -57,8 +51,7 @@ const SEOHead = ({
   modifiedTime,
   headline,
   author = "EMRS Medical Team",
-  breadcrumbs = [],
-  serviceSchema
+  breadcrumbs = []
 }: SEOHeadProps) => {
   const location = useLocation();
   const baseUrl = 'https://emrs.ae';
@@ -236,22 +229,6 @@ const SEOHead = ({
     }
   } : null;
 
-  // Service Structured Data
-  const serviceStructuredData = serviceSchema ? {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Medical Service",
-    "name": serviceSchema.name,
-    "description": serviceSchema.description,
-    "provider": {
-      "@type": "MedicalBusiness",
-      "name": serviceSchema.provider || siteName,
-      "url": baseUrl,
-      "logo": `${baseUrl}/emrslogo.png`
-    },
-    "areaServed": serviceSchema.areaServed || ["Dubai", "Abu Dhabi", "Sharjah", "Ajman", "Ras Al Khaimah", "Fujairah", "Umm Al Quwain"]
-  } : null;
-
   return (
     <Helmet>
       {/* Primary Meta Tags */}
@@ -316,12 +293,6 @@ const SEOHead = ({
       {breadcrumbStructuredData && (
         <script type="application/ld+json">
           {JSON.stringify(breadcrumbStructuredData)}
-        </script>
-      )}
-
-      {serviceStructuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(serviceStructuredData)}
         </script>
       )}
 

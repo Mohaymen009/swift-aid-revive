@@ -79,11 +79,6 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
         image={imageUrl}
         imageAlt={imageAlt}
         breadcrumbs={crumbsSeo}
-        serviceSchema={{
-          name: title,
-          description: description,
-          areaServed: emirate ? [emirate] : undefined
-        }}
       />
 
       <Navigation />
