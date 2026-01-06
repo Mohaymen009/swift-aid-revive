@@ -64,10 +64,7 @@ const Contact = () => {
               >
                 <div className="mb-4 inline-flex items-center justify-center w-14 h-14 bg-accent/10 rounded-xl group-hover:bg-accent/20 transition-colors">
                   {method.title === 'WhatsApp' ? (
-                    <picture className="flex items-center">
-                      <source srcSet="/whatsapp.webp" type="image/webp" />
-                      <img src="/whatsapp.webp" alt="WhatsApp" width={90} height={90} className="w-7 h-7" loading="lazy" />
-                    </picture>
+                    <img src="/whatsapp.png" alt="WhatsApp" width={180} height={180} className="w-7 h-7" loading="lazy" />
                   ) : (
                     <method.icon className="w-7 h-7 text-accent" />
                   )}
@@ -158,10 +155,7 @@ const Contact = () => {
                     asChild
                   >
                     <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2" onClick={trackConversion}>
-                      <picture className="flex items-center">
-                        <source srcSet="/whatsapp.webp" type="image/webp" />
-                        <img src="/whatsapp.webp" alt="Contact EMRS WhatsApp" width={90} height={90} className="w-5 h-5" />
-                      </picture>
+                      <img src="/whatsapp.png" alt="Contact EMRS WhatsApp" width={180} height={180} className="w-5 h-5" />
                       WhatsApp Us
                     </a>
                   </Button>

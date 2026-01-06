@@ -18,7 +18,7 @@
   <link rel="preload" as="style"
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" crossorigin>
   <link rel="preload" as="image" href="/site-logo.webp" fetchpriority="high">
-  <link rel="preload" as="image" href="/whatsapp.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="/whatsapp.png" fetchpriority="high">
 
 
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -49,9 +49,15 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/site-logo.png">
   <link rel="manifest" href="/site.webmanifest">
 
+  <!-- Security Header Fallbacks (for browsers/tools before Nginx config is live) -->
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests;">
+
   <!-- Trustmary Widget Script - Pre-load check to prevent ReferenceErrors -->
-  <script>window.TrustmaryEmbed = window.TrustmaryEmbed || {};</script>
-  <script src="https://widget.trustmary.com/D4dP0Hk22" async crossorigin></script>
+  <script>
+    window.TrustmaryEmbed = window.TrustmaryEmbed || {
+      widgetTemplates: { 'review-widget': function () { console.log('Trustmary placeholder'); } }
+    };
+  </script>
 
   <!-- Google tag (gtag.js) - Deferred for performance -->
   <script>
@@ -82,6 +88,8 @@
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.tsx" defer></script>
+  <!-- Trustmary moved to end to ensure DOM and global objects are ready -->
+  <script src="https://widget.trustmary.com/D4dP0Hk22" async crossorigin></script>
 </body>
 
 </html>

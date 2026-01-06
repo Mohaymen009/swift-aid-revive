@@ -81,17 +81,14 @@ const Hero = () => {
               asChild
             >
               <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3">
-                <picture className="flex items-center">
-                  <source srcSet="/whatsapp.webp" type="image/webp" />
-                  <img
-                    src="/whatsapp.webp"
-                    alt="Contact EMRS 24/7 on WhatsApp"
-                    width={90}
-                    height={90}
-                    className="w-5 h-5 flex-shrink-0"
-                    loading="lazy"
-                  />
-                </picture>
+                <img
+                  src="/whatsapp.png"
+                  alt="Contact EMRS 24/7 on WhatsApp"
+                  width={180}
+                  height={180}
+                  className="w-5 h-5 flex-shrink-0"
+                  loading="lazy"
+                />
                 <span>WhatsApp Us</span>
               </a>
             </Button>
