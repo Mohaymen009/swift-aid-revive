@@ -33,10 +33,10 @@ const FloatingContact = () => {
         onClick={trackConversion}
       >
         <img
-          src="/whatsapp.png"
+          src="/whatsapp.svg"
           alt="Quick WhatsApp Contact"
-          width={180}
-          height={180}
+          width={35}
+          height={35}
           className="w-[30px] h-[30px] md:w-[35px] md:h-[35px] object-contain"
         />
       </a>
