@@ -53,12 +53,13 @@ const OurStory = () => {
             <div className="relative">
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-elevated">
                 <img
-                  src="https://plus.unsplash.com/premium_photo-1661775601929-8c775187bea6?q=80&w=1242&fm=webp&auto=format&fit=crop"
+                  src="/images/hero.webp"
+                  width="428"
+                  height="285"
+                  fetchpriority="high"
+                  loading="eager"
                   alt="EMRS Professional Ambulance Team"
                   className="w-full h-full object-cover"
-                  loading="lazy"
-                  width={621}
-                  height={414}
                 />
               </div>
               {/* Decorative element */}

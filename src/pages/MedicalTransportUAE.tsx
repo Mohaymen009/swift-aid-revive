@@ -1,290 +1,100 @@
-import { Ambulance, Clock, MapPin, ShieldCheck, Users, HeartPulse, Phone, Check, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import ServicePageTemplate from "@/templates/ServicePageTemplate";
-import { Link } from "react-router-dom";
+import Navigation from "@/components/Navigation";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
+import SEOHead from "@/components/SEOHead";
+import ServicePageTemplate from "@/templates/ServicePageTemplate";
+import { Ambulance, Clock, MapPin, ShieldCheck, Phone, HeartPulse, Shield } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const MedicalTransportUAE = () => {
-  const services = [
-    {
-      title: "ICU Medical Transport",
-      description: "Critical care transport with advanced life support equipment, ventilators, and trained ICU nurses for critically ill patients.",
-      icon: HeartPulse
-    },
-    {
-      title: "BLS Medical Transport",
-      description: "Basic Life Support transport for stable patients requiring medical supervision during transit.",
-      icon: Ambulance
-    },
-    {
-      title: "Inter-Hospital Transfers",
-      description: "Safe and efficient transfers between hospitals, clinics, and medical facilities across all UAE emirates.",
-      icon: MapPin
-    },
-    {
-      title: "Airport Medical Transport",
-      description: "Medical transport services to and from Dubai, Abu Dhabi, and Sharjah airports for incoming patients.",
-      icon: Users
-    },
-    {
-      title: "24/7 Availability",
-      description: "Round-the-clock medical transport services available any day, any time across the UAE.",
-      icon: Clock
-    },
-    {
-      title: "Trained Medical Staff",
-      description: "Every transport includes qualified paramedics, EMTs, or nurses based on patient acuity level.",
-      icon: ShieldCheck
-    }
-  ];
-
-  const transportTypes = [
-    "Critical Care ICU Transport",
-    "Advanced Life Support (ALS)",
-    "Basic Life Support (BLS)",
-    "Wheelchair Transport",
-    "Stretcher Transport",
-    "Bariatric Patient Transport",
-    "Neonatal Transport",
-    "Pediatric Transport",
-    "Psychiatric Patient Transport",
-    "Dialysis Transport",
-    "Chemotherapy Transport",
-    "Rehabilitation Transport"
-  ];
-
-  const areas = [
-    "Dubai", "Abu Dhabi", "Sharjah", "Ajman", "Ras Al Khaimah", "Fujairah", "Umm Al Quwain",
-    "Al Ain", "Ruwais", "Liwa", "Dibba", "Khorfakkan", "Kalba", "Dhaid", "Hatta"
-  ];
-
   const faqs = [
     {
-      question: "What is medical transport?",
-      answer: "Medical transport refers to the professional transportation of patients who require medical supervision during transit. This includes ICU ambulances, basic life support vehicles, and specialized transport for various patient needs."
+      question: "What is professional medical transport?",
+      answer: "Professional medical transport involves the safe movement of patients who require medical supervision or specialized equipment during transit, provided by licensed ambulance services."
     },
     {
-      question: "What types of medical transport do you offer in UAE?",
-      answer: "We offer ICU/Critical Care Transport, Advanced Life Support (ALS), Basic Life Support (BLS), wheelchair transport, stretcher transport, and specialized transport for dialysis, chemotherapy, and rehabilitation patients."
+      question: "Do you provide medical transport across all emirates?",
+      answer: "Yes, EMRS provides 24/7 medical transport services across Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Fujairah, and Umm Al Quwain."
     },
     {
-      question: "How do I book medical transport in Dubai or Abu Dhabi?",
-      answer: "Call us at +971 55 472 8133 or WhatsApp us. We can arrange both scheduled and urgent medical transport within 30-60 minutes depending on your location."
-    },
-    {
-      question: "Do you provide medical transport between emirates?",
-      answer: "Yes, we provide inter-emirate medical transport throughout the UAE. Whether you need transport from Dubai to Abu Dhabi, Sharjah to RAK, or any other route, we can help."
-    },
-    {
-      question: "What medical equipment is available during transport?",
-      answer: "Our vehicles are equipped with cardiac monitors, defibrillators, ventilators, oxygen therapy equipment, IV pumps, and all necessary emergency medications based on the transport type."
-    },
-    {
-      question: "Is medical transport covered by insurance?",
-      answer: "Many insurance plans cover medical transport. We work with most major insurance providers in UAE and can assist with pre-authorization and direct billing where available."
+      question: "What equipment is available in your transport vehicles?",
+      answer: "Our medical transport vehicles are equipped with cardiac monitors, oxygen systems, stretchers, automated external defibrillators (AED), and emergency medications."
     }
   ];
 
   return (
     <ServicePageTemplate
-      title="Medical Transport Services UAE | Professional Patient Transport | EMRS"
-      description="Professional medical transport services across UAE. ICU ambulances, patient transfers, and inter-hospital transport in Dubai, Abu Dhabi, Sharjah. 24/7 availability. Call +971 55 472 8133"
+      title="Medical Transport UAE | 24/7 Professional Patient Transfer Services"
+      description="Licensed medical transport services across the UAE. Specializing in inter-hospital transfers, patient discharges, and professional medical escorts 24/7."
       canonical="https://emrs.ae/medical-transport-uae"
-      imageUrl="/images/og/medical-transport-uae.jpg"
-      imageAlt="Medical Transport Services in UAE by EMRS"
-      lastUpdated="2026-01-01"
+      imageUrl="/images/og/medical-transport.jpg"
+      imageAlt="Medical Transport Services in UAE"
       faqs={faqs}
       phoneNumber="+971 55 472 8133"
-      relatedLinks={[
-        { label: 'Ambulance Services UAE', to: '/ambulance-services-uae' },
-        { label: 'Patient Transport', to: '/patient-transport' },
-        { label: 'Non-Emergency Transport', to: '/non-emergency-medical-transport-uae' }
-      ]}
-      hideHeader={true}
     >
       {/* Hero Section */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djZoNnYtNmgtNnptMCAwdi02aC02djZoNnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-50"></div>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="max-w-4xl mx-auto text-center">
-            <span className="inline-block px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-semibold mb-6">
-              Professional Medical Transport
-            </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Medical Transport Services in UAE
-            </h1>
-            <p className="text-xl sm:text-2xl text-white/90 mb-8 leading-relaxed">
-              Professional medical transport across Dubai, Abu Dhabi, Sharjah, and all UAE emirates. 
-              ICU ambulances, patient transfers, and inter-hospital transport available 24/7 with trained medical staff.
+      <section className="py-20 bg-primary text-white text-center relative overflow-hidden">
+        <div className="absolute inset-0 bg-blue-950/20"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-6">Medical Transport Services UAE</h1>
+          <p className="text-xl md:text-2xl mb-10 max-w-4xl mx-auto leading-relaxed">
+            Professional, reliable, and licensed medical transportation catering to every corner of the Seven Emirates.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <Button size="lg" className="bg-accent hover:bg-accent/90 text-white font-bold h-14 px-10 rounded-xl" asChild>
+              <a href="tel:+971554728133"><Phone className="mr-3 h-6 w-6" /> Call for Immediate Help</a>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Content Sections */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="prose prose-lg max-w-none text-muted-foreground">
+            <h2 className="text-3xl font-bold text-primary mb-6">Leading Provider of Medical Transport in the Middle East</h2>
+            <p className="mb-6">
+              When it comes to medical transport in the UAE, timing, safety, and professional care are the most critical factors. EMRS (Medical Response Services) has built a reputation as the most trusted name in patient transfer and specialized medical travel across Dubai, Abu Dhabi, and beyond.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                className="bg-[#A83300] hover:bg-[#8A2A00] text-white font-bold text-lg px-8 py-6"
-                asChild
-              >
-                <a href="tel:+971554728133" className="flex items-center gap-2">
-                  <Phone className="w-5 h-5" />
-                  Call +971 55 472 8133
-                </a>
-              </Button>
-              <Button
-                size="lg"
-                className="bg-[#11632B] hover:bg-[#0D4D21] text-white font-bold text-lg px-8 py-6"
-                asChild
-              >
-                <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20Medical%20Transport%20services." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                  <img src="/whatsapp.svg" alt="WhatsApp Support" width={20} height={20} className="w-5 h-5" />
-                  WhatsApp
-                </a>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* What is Medical Transport */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-6">
-                What is Medical Transport?
-              </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Medical transport is the safe and professional movement of patients who require medical care or supervision during transit. 
-                Unlike regular transportation, medical transport vehicles are equipped with life-saving equipment and staffed by trained 
-                medical professionals who can monitor and treat patients throughout the journey.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed mt-4">
-                EMRS provides comprehensive medical transport services across the UAE, from critical ICU transfers to routine 
-                patient transport for medical appointments. Our fleet includes fully-equipped ambulances, specialized stretcher vehicles, 
-                and wheelchair-accessible transport options.
-              </p>
+            <div className="grid md:grid-cols-2 gap-10 my-12">
+              <div className="bg-blue-50 p-8 rounded-2xl">
+                <HeartPulse className="w-12 h-12 text-accent mb-4" />
+                <h3 className="text-2xl font-bold text-primary mb-4">Inter-Hospital Transfers</h3>
+                <p>We facilitate seamless transfers between healthcare facilities for patients requiring higher levels of care or specialized diagnostic procedures. Our teams coordinate directly with hospital staff to ensure clinical continuity.</p>
+              </div>
+              <div className="bg-blue-50 p-8 rounded-2xl">
+                <Shield className="w-12 h-12 text-accent mb-4" />
+                <h3 className="text-2xl font-bold text-primary mb-4">Medical Escort Services</h3>
+                <p>For patients who are clinically stable but require medical monitoring during travel, our nurse and paramedic escort services provide peace of mind throughout the journey.</p>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Services Grid */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <span className="text-accent font-bold text-sm uppercase tracking-wide">Our Services</span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-primary mt-4 mb-4">
-                Medical Transport Services
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Comprehensive medical transport solutions for all patient needs
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {services.map((service, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-shadow">
-                  <service.icon className="w-12 h-12 text-accent mb-4" />
-                  <h3 className="text-xl font-bold text-primary mb-3">{service.title}</h3>
-                  <p className="text-muted-foreground">{service.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+            <h2 className="text-3xl font-bold text-primary mb-6">Comprehensive Fleet & Advanced Technology</h2>
+            <p className="mb-6">
+              Our medical transport fleet is designed to meet the rigorous standards set by UAE health authorities. Each vehicle is more than just a transport vessel; it is a mobile medical unit capable of maintaining patient stability across long distances between emirates.
+            </p>
+            <ul className="list-disc pl-6 space-y-3 mb-8">
+              <li><strong>Critical Care Ventilation:</strong> Advanced respiratory support for patients requiring ventilation.</li>
+              <li><strong>Real-time Monitoring:</strong> Continuous tracking of vital signs during the entire transport process.</li>
+              <li><strong>Bariatric Support:</strong> Specialized equipment for safely transporting bariatric patients.</li>
+              <li><strong>Advanced Life Support (ALS):</strong> Fully equipped for high-acuity medical interventions.</li>
+            </ul>
 
-      {/* Transport Types */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-6">
-                Types of Medical Transport We Provide
-              </h2>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-              {transportTypes.map((type, index) => (
-                <div key={index} className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg">
-                  <Check className="w-5 h-5 text-accent flex-shrink-0" />
-                  <span className="text-primary">{type}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+            <h2 className="text-3xl font-bold text-primary mb-6">Serving All 7 Emirates 24/7</h2>
+            <p className="mb-6">
+              Whether you are located in the bustling center of Dubai Marina, the outskirts of Al Ain, or the coastal areas of Fujairah, our medical transport dispatch team is available 24 hours a day, 7 days a week. We understand the geographical layout of the UAE better than anyone, ensuring the fastest possible routes and minimal transit times for our patients.
+            </p>
 
-      {/* Coverage Areas */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <MapPin className="w-16 h-16 text-accent mx-auto mb-6" />
-              <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-6">
-                Medical Transport Coverage Areas
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                We provide medical transport services across all UAE emirates
-              </p>
-            </div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-              {areas.map((area, index) => (
-                <div key={index} className="bg-white p-4 rounded-lg text-center shadow-sm">
-                  <span className="text-primary font-medium">{area}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+            <blockquote className="border-l-4 border-accent pl-6 py-4 my-8 bg-gray-50 italic text-primary font-medium">
+              "Our mission is to bridge the gap between healthcare facilities with professional, compassionate, and clinically excellent medical transport service."
+            </blockquote>
 
-      {/* FAQ Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
-                Frequently Asked Questions
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                Common questions about medical transport services in UAE
-              </p>
-            </div>
-            <div className="space-y-4">
-              {faqs.map((faq, index) => (
-                <div key={index} className="bg-gray-50 p-6 rounded-xl">
-                  <h3 className="text-lg font-bold text-primary mb-2">{faq.question}</h3>
-                  <p className="text-muted-foreground">{faq.answer}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Related Services */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-primary mb-8">Related Services</h2>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Button variant="outline" asChild>
-                <Link to="/ambulance-services-uae" className="flex items-center gap-2">
-                  Ambulance Services <ArrowRight className="w-4 h-4" />
-                </Link>
-              </Button>
-              <Button variant="outline" asChild>
-                <Link to="/patient-transport" className="flex items-center gap-2">
-                  Patient Transport <ArrowRight className="w-4 h-4" />
-                </Link>
-              </Button>
-              <Button variant="outline" asChild>
-                <Link to="/non-emergency-medical-transport-uae" className="flex items-center gap-2">
-                  Non-Emergency Transport <ArrowRight className="w-4 h-4" />
-                </Link>
-              </Button>
-            </div>
+            <h2 className="text-3xl font-bold text-primary mb-6">Why Choose EMRS for Your Medical Journey?</h2>
+            <p>
+              Choosing a medical transport provider is a decision based on trust. At EMRS, we go beyond standard transport protocols. Our staff undergo continuous clinical training, our vehicles are inspected daily, and our communication with families is transparent and reassuring.
+            </p>
           </div>
         </div>
       </section>

@@ -30,6 +30,13 @@ const contactMethods = [
     detail: "Al Qusais Industrial Area, Dubai",
     description: "Serving all seven Emirates",
   },
+  {
+    icon: Ambulance,
+    title: "LinkedIn",
+    detail: "Follow our updates",
+    link: "https://www.linkedin.com/in/emrs-ambulance-services-llc-9270011b5/",
+    description: "Professional networking",
+  },
 ];
 
 const Contact = () => {
