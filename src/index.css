@@ -169,11 +169,9 @@ All colors MUST be HSL.
   opacity: 1 !important;
 }
 
-[data-trustmary-widget] a,
-.tm-card a {
-  text-decoration: underline !important;
-  color: #0044CC !important;
-  font-weight: 600 !important;
+[data-trustmary-widget] {
+  max-height: 80vh;
+  overflow-y: auto;
 }
 
 /* Global Accessibility & Focus Visibility */
