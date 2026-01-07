@@ -49,11 +49,14 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/site-logo.png">
   <link rel="manifest" href="/site.webmanifest">
 
+  <!-- Security Header Fallbacks (for browsers/tools before Nginx config is live) -->
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests;">
 
   <!-- Trustmary Widget Script - Pre-load check to prevent ReferenceErrors -->
   <script>
     window.TrustmaryEmbed = window.TrustmaryEmbed || {
       widgetTemplates: { 'review-widget': function () { console.log('Trustmary placeholder'); } }
+    };
   </script>
 
   <!-- Google tag (gtag.js) - Deferred for performance -->
