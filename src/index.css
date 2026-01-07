@@ -162,3 +162,40 @@ button:focus-visible,
 a:focus-visible {
   @apply ring-2 ring-accent ring-offset-2;
 }
+
+/* Trustmary Widget Overrides & Accessibility */
+.trustmary-widget {
+  min-height: 600px;
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+#trustmary-widget-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* High Contrast Fixes for Trustmary */
+[data-trustmary-widget] .tm-overall-cta-button {
+  background-color: hsl(25, 100%, 25%) !important;
+  /* Darker orange for better contrast */
+  color: #fff !important;
+}
+
+[data-trustmary-widget] .tm-card b,
+[data-trustmary-widget] .tm-card .tm-reviewer-name {
+  color: hsl(215, 45%, 15%) !important;
+  /* Darker navy for names */
+}
+
+[data-trustmary-widget] .tm-card a,
+[data-trustmary-widget] .tm-show-more {
+  color: hsl(215, 100%, 20%) !important;
+  /* High contrast blue for links */
+  text-decoration: underline !important;
+}
+
+/* Ensure widget doesn't overlap header */
+.trustmary-widget-wrapper {
+  z-index: 10 !important;
+}

@@ -36,7 +36,6 @@ const TrustmaryWidget = () => {
                 </div>
 
                 <div
-                    style={{ minHeight: '600px' }}
                     className="max-w-6xl mx-auto trustmary-widget"
                     id="trustmary-widget-container"
                     ref={containerRef}
