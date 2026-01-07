@@ -27,7 +27,7 @@ const Hero = () => {
                   height={140}
                   className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32"
                   loading="eager"
-                  fetchpriority="high"
+                  fetchPriority="high"
                 />
               </picture>
             </div>
