@@ -54,8 +54,10 @@ const SEOHead = ({
   breadcrumbs = []
 }: SEOHeadProps) => {
   const location = useLocation();
-  const baseUrl = 'https://emrs.ae';
-  const currentUrl = customCanonical || `${baseUrl}${location.pathname}`;
+  const baseUrl = 'https://www.emrs.ae';
+  // Ensure pathname doesn't have double slashes
+  const cleanPath = location.pathname.replace(/\/+$/, ''); // Remove trailing slashes
+  const currentUrl = customCanonical || `${baseUrl}${cleanPath === '' ? '' : cleanPath}`;
   const siteName = "EMRS 24/7";
   const twitterHandle = "@EMRSUAE";
   const fullImageUrl = image.startsWith('http') ? image : `${baseUrl}${image.startsWith('/') ? '' : '/'}${image}`;
