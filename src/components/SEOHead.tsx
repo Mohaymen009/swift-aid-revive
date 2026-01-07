@@ -55,7 +55,8 @@ const SEOHead = ({
 }: SEOHeadProps) => {
   const location = useLocation();
   const baseUrl = 'https://emrs.ae';
-  const currentUrl = customCanonical || `${baseUrl}${location.pathname}`;
+  const pathname = location.pathname.endsWith('/') ? location.pathname : `${location.pathname}/`;
+  const currentUrl = customCanonical || `${baseUrl}${pathname}`;
   const siteName = "EMRS 24/7";
   const twitterHandle = "@EMRSUAE";
   const fullImageUrl = image.startsWith('http') ? image : `${baseUrl}${image.startsWith('/') ? '' : '/'}${image}`;
@@ -184,7 +185,7 @@ const SEOHead = ({
       const parts = location.pathname.split('/').filter(Boolean);
       const auto = [{ name: 'Home', item: '/' }];
       parts.forEach((seg, idx) => {
-        const path = `/${parts.slice(0, idx + 1).join('/')}`;
+        const path = `/${parts.slice(0, idx + 1).join('/')}/`;
         const name = seg.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
         auto.push({ name, item: path });
       });
@@ -198,7 +199,7 @@ const SEOHead = ({
       "@type": "ListItem",
       "position": idx + 1,
       "name": b.name,
-      "item": `${baseUrl}${b.item === '/' ? '' : b.item}`
+      "item": `${baseUrl}${b.item}`
     }))
   } : null;
 

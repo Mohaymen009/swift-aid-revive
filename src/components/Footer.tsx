@@ -5,23 +5,23 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const serviceLinks = [
-    { name: "Private Ambulance UAE", url: "/ambulance-services-uae" },
-    { name: "Patient Transport Services", url: "/non-emergency-medical-transport-uae" },
-    { name: "Doctor Home Visit UAE", url: "/doctor-on-call-uae" },
-    { name: "Nursing & Home Care", url: "/home-healthcare-services-uae" },
+    { name: "Private Ambulance UAE", url: "/ambulance-services-uae/" },
+    { name: "Patient Transport Services", url: "/non-emergency-medical-transport-uae/" },
+    { name: "Doctor Home Visit UAE", url: "/doctor-on-call-uae/" },
+    { name: "Nursing & Home Care", url: "/home-healthcare-services-uae/" },
   ];
 
   const emirateLinks = [
-    { name: "Dubai", url: "/dubai-ambulance-services" },
-    { name: "Abu Dhabi", url: "/abu-dhabi-ambulance-services" },
-    { name: "Sharjah", url: "/sharjah-ambulance-services" },
-    { name: "Ajman", url: "/ajman-ambulance-services" },
+    { name: "Dubai", url: "/dubai-ambulance-services/" },
+    { name: "Abu Dhabi", url: "/abu-dhabi-ambulance-services/" },
+    { name: "Sharjah", url: "/sharjah-ambulance-services/" },
+    { name: "Ajman", url: "/ajman-ambulance-services/" },
   ];
 
   const companyLinks = [
-    { name: "About Us", url: "/about-us" },
-    { name: "Licensing", url: "/licensing" },
-    { name: "Medical Oversight", url: "/medical-oversight" },
+    { name: "About Us", url: "/about-us/" },
+    { name: "Licensing", url: "/licensing/" },
+    { name: "Medical Oversight", url: "/medical-oversight/" },
     { name: "Contact", url: "/#contact" },
   ];
 
@@ -32,7 +32,7 @@ const Footer = () => {
           {/* Brand & NAP */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="flex items-center justify-center w-10 h-10 rounded-lg" style={{ backgroundColor: 'transparent' }}>
+              <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-transparent">
                 <picture>
                   <source srcSet="/site-logo.webp" type="image/webp" />
                   <img src="/site-logo.png" alt="EMRS 24/7 Logo" width={40} height={40} className="w-6 h-6" itemProp="logo" loading="lazy" />
@@ -118,14 +118,14 @@ const Footer = () => {
             &copy; {currentYear} E M R S AMBULANCE SERVICES L.L.C &mdash; All rights reserved.
           </p>
           <div className="flex gap-6">
-            <Link to="/licensing" className="hover:text-accent transition-colors text-white font-medium">Licensing</Link>
-            <Link to="/medical-oversight" className="hover:text-accent transition-colors text-white font-medium">Medical Oversight</Link>
+            <Link to="/licensing/" className="hover:text-accent transition-colors text-white font-medium">Licensing</Link>
+            <Link to="/medical-oversight/" className="hover:text-accent transition-colors text-white font-medium">Medical Oversight</Link>
           </div>
         </div>
         <div className="mt-4 text-center">
           <p className="text-xs text-white/80 max-w-2xl mx-auto">
             Fully licensed ambulance & medical transport provider in the UAE. Committed to clinical excellence and patient safety across all operations.
-            <Link to="/licensing" className="underline ml-1 font-medium text-white">View our licensing & regulatory compliance</Link>.
+            <Link to="/licensing/" className="underline ml-1 font-medium text-white">View our licensing & regulatory compliance</Link>.
           </p>
         </div>
       </div>

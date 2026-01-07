@@ -25,7 +25,7 @@ const SitemapGenerator = ({ routes }: SitemapGeneratorProps) => {
         .map(({ path, lastmod = new Date().toISOString().split('T')[0], changefreq = 'weekly', priority = 0.8 }) => {
           return `
   <url>
-    <loc>${baseUrl}${path}</loc>
+    <loc>${baseUrl}${path === '/' ? path : path + '/'}</loc>
     <lastmod>${lastmod}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
