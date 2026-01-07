@@ -1,6 +1,27 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 const TrustmaryWidget = () => {
+    const containerRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        if (!containerRef.current) return;
+
+        // Clean up previous instances if any
+        containerRef.current.innerHTML = '';
+
+        const script = document.createElement('script');
+        script.src = "https://widget.trustmary.com/D4dP0Hk22";
+        script.async = true;
+
+        containerRef.current.appendChild(script);
+
+        return () => {
+            if (containerRef.current) {
+                containerRef.current.innerHTML = '';
+            }
+        };
+    }, []);
+
     return (
         <section className="py-20 bg-background" aria-labelledby="reviews-heading">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,13 +35,13 @@ const TrustmaryWidget = () => {
                     </p>
                 </div>
 
-                {/* Trustmary Widget Placeholder */}
                 <div
                     style={{ minHeight: '600px' }}
                     className="max-w-6xl mx-auto trustmary-widget"
                     id="trustmary-widget-container"
+                    ref={containerRef}
                 >
-                    <div data-trustmary-widget="D4dP0Hk22"></div>
+                    {/* Script will be injected here */}
                 </div>
             </div>
         </section>
