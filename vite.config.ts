@@ -1,6 +1,5 @@
 import { defineConfig, type ConfigEnv } from "vite";
 import react from "@vitejs/plugin-react-swc";
-import { createHtmlPlugin } from 'vite-plugin-html';
 import { fileURLToPath } from 'url';
 import { componentTagger } from "lovable-tagger";
 import crypto from 'crypto';
@@ -31,15 +30,6 @@ export default defineConfig(({ mode }: ConfigEnv) => {
     plugins: [
       react(),
       mode === "development" && componentTagger(),
-      createHtmlPlugin({
-        minify: isProduction,
-        inject: {
-          data: {
-            nonce,
-            cspNonce: nonce,
-          },
-        },
-      }),
     ].filter(Boolean) as any[],
     resolve: {
       alias: {
