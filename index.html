@@ -49,8 +49,6 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/site-logo.png">
   <link rel="manifest" href="/site.webmanifest">
 
-  <!-- Security Header Fallbacks (for browsers/tools before Nginx config is live) -->
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests;">
 
   <!-- Trustmary Widget Script - Pre-load check to prevent ReferenceErrors -->
   <script>
@@ -86,7 +84,6 @@
 </head>
 
 <body>
-  <a href="#main-content" class="skip-to-content">Skip to content</a>
   <div id="root"></div>
   <script type="module" src="/src/main.tsx" defer></script>
   <!-- Trustmary moved to end to ensure DOM and global objects are ready -->
