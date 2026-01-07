@@ -209,6 +209,22 @@ a:focus-visible {
   font-weight: 600 !important;
 }
 
+/* Specific targeted fixes for failing elements reported in audit */
+[data-trustmary-widget] .tm-card .go3046547012,
+[data-trustmary-widget] div[class*="go"] {
+  color: #1a1a1a !important;
+}
+
+[data-trustmary-widget] .tm-card b {
+  color: #001a33 !important;
+  font-weight: 800 !important;
+}
+
+[data-trustmary-widget] .tm-time {
+  color: #4a4a4a !important;
+  /* Minimum contrast for timestamp */
+}
+
 /* Ensure widget doesn't overlap header */
 .trustmary-widget-wrapper {
   z-index: 10 !important;
