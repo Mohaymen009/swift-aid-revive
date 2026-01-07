@@ -7,6 +7,11 @@ All colors MUST be HSL.
 */
 
 @layer base {
+  /* Skip to content link for keyboard navigation */
+  .skip-to-content {
+    @apply absolute left-0 top-0 z-50 -translate-y-full bg-white px-4 py-2 font-medium text-black opacity-0 transition-transform duration-300 focus:translate-y-0 focus:opacity-100;
+  }
+
   :root {
     /* Medical theme colors */
     --background: 0 0% 100%;
