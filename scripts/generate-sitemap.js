@@ -1,7 +1,11 @@
-const fs = require('fs');
-const path = require('path');
-const { SitemapStream, streamToPromise } = require('sitemap');
-const { Readable } = require('stream');
+import fs from 'fs';
+import path from 'path';
+import { SitemapStream, streamToPromise } from 'sitemap';
+import { Readable } from 'stream';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Define your site URL
 const siteUrl = 'https://emrs.ae';

@@ -52,6 +52,13 @@ server {
         default_type application/javascript;
     }
 
+    # Serve XML correctly
+    location ~ \.xml$ {
+        include mime.types;
+        default_type application/xml;
+        add_header Cache-Control "no-cache, no-store, must-revalidate";
+    }
+
     gzip on;
     gzip_vary on;
     gzip_min_length 1024;
