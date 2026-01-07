@@ -30,8 +30,11 @@ interface ServicePageTemplateProps {
   relatedLinks?: Array<{ label: string; to: string }>;
   children?: React.ReactNode;
   hideHeader?: boolean;
-  emirate?: string; // Added emirate prop
+  emirate?: string;
+  additionalStructuredData?: Record<string, unknown>;
 }
+
+export type { ServicePageTemplateProps };
 
 const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
   title,
