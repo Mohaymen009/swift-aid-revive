@@ -4,6 +4,7 @@ import { createHtmlPlugin } from 'vite-plugin-html';
 import { fileURLToPath } from 'url';
 import { componentTagger } from "lovable-tagger";
 import crypto from 'crypto';
+import path from "path";
 
 // Generate a random nonce
 const generateNonce = (): string => crypto.randomBytes(16).toString('base64');
@@ -13,7 +14,7 @@ export default defineConfig(({ mode }: ConfigEnv) => {
   const isProduction = mode === 'production';
   const nonce = generateNonce();
   const __dirname = fileURLToPath(new URL('.', import.meta.url));
-  
+
   return {
     base: isProduction ? "/" : "/",
     server: {
