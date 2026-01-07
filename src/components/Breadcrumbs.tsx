@@ -25,9 +25,9 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
   const breadcrumbItems: BreadcrumbItem[] = items.length > 0
     ? items
     : [{ name: homeLabel, path: '/' }, ...pathnames.map((seg, idx) => ({
-        name: seg.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
-        path: `/${pathnames.slice(0, idx + 1).join('/')}`
-      }))];
+      name: seg.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
+      path: `/${pathnames.slice(0, idx + 1).join('/')}`
+    }))];
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -36,7 +36,7 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
       "@type": "ListItem",
       "position": index + 1,
       "name": item.name,
-      "item": `https://emrs.ae${item.path === '/' ? '' : item.path}`
+      "item": `https://www.emrs.ae${item.path === '/' ? '' : item.path}`
     }))
   };
 

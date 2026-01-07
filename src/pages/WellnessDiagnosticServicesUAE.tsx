@@ -131,7 +131,7 @@ const WellnessDiagnosticServicesUAE = () => {
       <ServicePageTemplate
         title="Blood Test at Home Dubai | IV Therapy UAE | Wellness Services | EMRS"
         description="Home blood tests, IV therapy, health check-ups in Dubai & UAE. Lab tests at home, vitamin drips, vaccination services. Licensed healthcare at your doorstep. Call +971 55 472 8133"
-        canonical="https://emrs.ae/wellness-diagnostic-services-uae"
+        canonical="https://www.emrs.ae/wellness-diagnostic-services-uae"
         imageUrl="/images/og/wellness-diagnostic-services-uae.jpg"
         imageAlt="Wellness and Diagnostic Services in UAE by EMRS"
         lastUpdated="2026-01-01"

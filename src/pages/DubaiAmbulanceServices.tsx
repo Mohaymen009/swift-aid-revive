@@ -75,7 +75,7 @@ const DubaiAmbulanceServices = () => {
     <ServicePageTemplate
       title="Non-Emergency Ambulance Service in Dubai | Licensed Private Patient Transport"
       description="Professional ambulance services in Dubai with trained paramedics. Emergency response, patient transport, and medical escorts across all areas of Dubai. Call +971 55 472 8133"
-      canonical="https://emrs.ae/dubai-ambulance-services"
+      canonical="https://www.emrs.ae/dubai-ambulance-services"
       imageUrl="/images/og/dubai-ambulance-services.jpg"
       imageAlt="Non-emergency ambulance service in Dubai"
       lastUpdated="2026-01-01"

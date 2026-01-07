@@ -54,8 +54,8 @@ const SEOHead = ({
   breadcrumbs = []
 }: SEOHeadProps) => {
   const location = useLocation();
-  const baseUrl = 'https://emrs.ae';
-  const currentUrl = customCanonical || `${baseUrl}${location.pathname}`;
+  const baseUrl = 'https://www.emrs.ae';
+  const currentUrl = customCanonical || `${baseUrl}${location.pathname === '/' ? '' : location.pathname}`;
   const siteName = "EMRS 24/7";
   const twitterHandle = "@EMRSUAE";
   const fullImageUrl = image.startsWith('http') ? image : `${baseUrl}${image.startsWith('/') ? '' : '/'}${image}`;
@@ -163,7 +163,8 @@ const SEOHead = ({
     },
     "sameAs": [
       "https://www.facebook.com/emrsuae",
-      "https://www.instagram.com/emrsuae"
+      "https://www.instagram.com/emrsuae",
+      "https://www.linkedin.com/in/emrs-ambulance-services-llc-9270011b5/"
     ],
     "contactPoint": {
       "@type": "ContactPoint",

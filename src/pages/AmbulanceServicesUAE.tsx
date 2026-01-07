@@ -150,7 +150,7 @@ const AmbulanceServicesUAE = () => {
     <ServicePageTemplate
       title="Non-Emergency Ambulance Services UAE | Licensed 24/7 Patient Transport"
       description="Professional ambulance services across all UAE emirates. Reliable medical transport with trained paramedics. Available 24/7 for all your medical transport needs."
-      canonical="https://emrs.ae/ambulance-services-uae"
+      canonical="https://www.emrs.ae/ambulance-services-uae"
       imageUrl="/images/og/ambulance-services-uae.jpg"
       imageAlt="Ambulance Services in UAE by EMRS"
       lastUpdated="2026-01-01"

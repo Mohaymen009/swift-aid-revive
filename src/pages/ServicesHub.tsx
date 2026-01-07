@@ -17,7 +17,7 @@ const ServicesHub = () => {
       <SEOHead
         title="Services Hub | EMRS UAE"
         description="Explore EMRS services: Ambulance, Doctor on Call, Home Healthcare, Patient Transport (NEMT), Wellness & Diagnostics."
-        canonical="https://emrs.ae/services"
+        canonical="https://www.emrs.ae/services"
         image="/images/og/services-hub.jpg"
         imageAlt="EMRS Services in UAE"
       />

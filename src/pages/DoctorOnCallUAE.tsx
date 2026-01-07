@@ -105,7 +105,7 @@ const DoctorOnCallUAE = () => {
     <ServicePageTemplate
       title="Doctor on Call UAE | Licensed Home & Hotel Doctor Visits 24/7"
       description="24/7 Doctor on Call in Dubai & UAE. Home doctor visits, hotel doctor service, VIP medical care. Licensed physicians available anytime. Call +971 55 472 8133"
-      canonical="https://emrs.ae/doctor-on-call-uae"
+      canonical="https://www.emrs.ae/doctor-on-call-uae"
       imageUrl="/images/og/doctor-on-call-uae.jpg"
       imageAlt="Doctor on Call in UAE by EMRS"
       lastUpdated="2026-01-01"

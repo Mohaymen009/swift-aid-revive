@@ -12,7 +12,7 @@ interface SitemapGeneratorProps {
 
 const SitemapGenerator = ({ routes }: SitemapGeneratorProps) => {
   const { pathname } = useLocation();
-  const baseUrl = 'https://emrs.ae';
+  const baseUrl = 'https://www.emrs.ae';
 
   useEffect(() => {
     // Generate sitemap
@@ -22,16 +22,16 @@ const SitemapGenerator = ({ routes }: SitemapGeneratorProps) => {
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   ${routes
-    .map(({ path, lastmod = new Date().toISOString().split('T')[0], changefreq = 'weekly', priority = 0.8 }) => {
-      return `
+        .map(({ path, lastmod = new Date().toISOString().split('T')[0], changefreq = 'weekly', priority = 0.8 }) => {
+          return `
   <url>
     <loc>${baseUrl}${path}</loc>
     <lastmod>${lastmod}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
   </url>`;
-    })
-    .join('')}
+        })
+        .join('')}
 </urlset>`;
 
     // Create a blob and download link for the sitemap
@@ -40,7 +40,7 @@ const SitemapGenerator = ({ routes }: SitemapGeneratorProps) => {
     const link = document.createElement('a');
     link.href = url;
     link.download = 'sitemap.xml';
-    
+
     // Only download on the homepage to prevent multiple downloads
     if (pathname === '/') {
       link.click();

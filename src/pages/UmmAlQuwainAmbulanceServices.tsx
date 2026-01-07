@@ -44,7 +44,7 @@ const UmmAlQuwainAmbulanceServices = () => {
     <ServicePageTemplate
       title="Professional Ambulance Services in Umm Al Quwain | EMRS"
       description="EMRS provides professional ambulance services in Umm Al Quwain. 24/7 patient transport and medical transfers in UAQ. Call +971 55 472 8133"
-      canonical="https://emrs.ae/umm-al-quwain-ambulance-services"
+      canonical="https://www.emrs.ae/umm-al-quwain-ambulance-services"
       imageUrl="/images/og/umm-al-quwain-ambulance-services.jpg"
       faqs={faqs}
       phoneNumber={"+971 55 472 8133"}

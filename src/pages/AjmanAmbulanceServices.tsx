@@ -78,7 +78,7 @@ const AjmanAmbulanceServices = () => {
     <ServicePageTemplate
       title="Non-Emergency Ambulance Service in Ajman | Trusted Private Ambulance"
       description="Professional ambulance services in Ajman with trained paramedics. Rapid response, patient transport, and medical escorts across all areas of Ajman. Call +971 55 472 8133"
-      canonical="https://emrs.ae/ajman-ambulance-services"
+      canonical="https://www.emrs.ae/ajman-ambulance-services"
       imageUrl="/images/og/ajman-ambulance-services.jpg"
       imageAlt="Non-emergency ambulance service in Ajman"
       lastUpdated="2026-01-01"

@@ -10,7 +10,7 @@ const AboutUs = () => {
       <SEOHead
         title="About EMRS | Professional Ambulance & Healthcare Services UAE"
         description="Learn about EMRS - UAE's trusted provider of professional ambulance services, patient transport, and home healthcare. Serving all seven emirates with licensed medical professionals."
-        canonical="https://emrs.ae/about-us"
+        canonical="https://www.emrs.ae/about-us"
         image="/site-logo.png"
       />
       <Navigation />

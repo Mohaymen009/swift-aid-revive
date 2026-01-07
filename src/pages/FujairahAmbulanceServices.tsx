@@ -44,7 +44,7 @@ const FujairahAmbulanceServices = () => {
     <ServicePageTemplate
       title="Professional Ambulance Services in Fujairah | EMRS"
       description="EMRS provides professional ambulance services in Fujairah. 24/7 medical transport and patient transfers across the Fujairah emirate. Call +971 55 472 8133"
-      canonical="https://emrs.ae/fujairah-ambulance-services"
+      canonical="https://www.emrs.ae/fujairah-ambulance-services"
       imageUrl="/images/og/fujairah-ambulance-services.jpg"
       faqs={faqs}
       phoneNumber={"+971 55 472 8133"}
