@@ -34,11 +34,10 @@ const FloatingContact = () => {
       >
         <img
           src="/whatsapp.svg"
-          alt=""
+          alt="Contact 24/7 Private Ambulance Service on WhatsApp UAE"
           width={35}
           height={35}
           className="w-[30px] h-[30px] md:w-[35px] md:h-[35px] object-contain"
-          aria-hidden="true"
         />
       </a>
       <a

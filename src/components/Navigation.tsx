@@ -33,12 +33,11 @@ const Navigation = () => {
               <source srcSet="/site-logo.webp" type="image/webp" />
               <img
                 src="/site-logo.png"
-                alt=""
+                alt="EMRS 24/7 Professional Ambulance and Home Healthcare UAE"
                 width={32}
                 height={32}
                 className="w-8 h-8"
                 loading="eager"
-                aria-hidden="true"
               />
             </picture>
             <div>
@@ -77,7 +76,7 @@ const Navigation = () => {
               asChild
             >
               <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                <img src="/whatsapp.svg" alt="" width={20} height={20} className="w-5 h-5" aria-hidden="true" />
+                <img src="/whatsapp.svg" alt="Instant Emergency WhatsApp Help UAE" width={20} height={20} className="w-5 h-5" />
                 <span className="hidden xl:inline">WhatsApp</span>
               </a>
             </Button>
@@ -133,7 +132,7 @@ const Navigation = () => {
                   asChild
                 >
                   <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
-                    <img src="/whatsapp.svg" alt="" width={20} height={20} className="w-5 h-5" aria-hidden="true" />
+                    <img src="/whatsapp.svg" alt="Instant Emergency WhatsApp Help UAE" width={20} height={20} className="w-5 h-5" />
                     Chat on WhatsApp
                   </a>
                 </Button>
