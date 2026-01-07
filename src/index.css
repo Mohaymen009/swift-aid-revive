@@ -153,21 +153,35 @@ All colors MUST be HSL.
 }
 
 /* Trustmary & Accessibility Contrast Overrides */
-.tm-overall-cta-button,
-.tm-card b,
-.tm-overall-cta-button span,
-[class*="tm-overall-cta-button"],
-[class*="tm-card"] b {
+.tm-card,
+[class*="tm-card"],
+.go3046547012 {
+  background-color: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+.tm-card *,
+[class*="tm-card"] *,
+.go3046547012 *,
+.tm-overall-cta-button span {
   color: #000000 !important;
+  opacity: 1 !important;
 }
 
-.tm-card p,
-.tm-card span,
-[class*="tm-card"] p {
-  color: #222222 !important;
-}
-
-[data-trustmary-widget] a {
+[data-trustmary-widget] a,
+.tm-card a {
   text-decoration: underline !important;
   color: #0044CC !important;
+  font-weight: 600 !important;
+}
+
+/* Global Accessibility & Focus Visibility */
+:focus-visible {
+  outline: 3px solid hsl(var(--accent)) !important;
+  outline-offset: 2px !important;
+}
+
+button:focus-visible,
+a:focus-visible {
+  @apply ring-2 ring-accent ring-offset-2;
 }
