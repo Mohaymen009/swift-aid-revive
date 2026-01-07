@@ -23,21 +23,22 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white shadow-md py-3" : "bg-primary/95 backdrop-blur-sm py-4"
+    <header role="banner" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white shadow-md py-3" : "bg-primary/95 backdrop-blur-sm py-4"
       }`}>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className="container mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main Navigation">
         <div className="flex items-center justify-between">
           {/* Logo/Brand */}
-          <a href="/" className="flex items-center gap-2 group">
+          <a href="/" className="flex items-center gap-2 group" aria-label="EMRS 24/7 Home">
             <picture>
               <source srcSet="/site-logo.webp" type="image/webp" />
               <img
                 src="/site-logo.png"
-                alt="EMRS 24/7 Logo"
+                alt=""
                 width={32}
                 height={32}
                 className="w-8 h-8"
                 loading="eager"
+                aria-hidden="true"
               />
             </picture>
             <div>
@@ -49,24 +50,25 @@ const Navigation = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
+          <ul className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className={`font-medium transition-colors hover:text-accent ${isScrolled ? "text-foreground" : "text-white"
-                  }`}
-              >
-                {link.name}
-              </a>
+              <li key={link.name}>
+                <a
+                  href={link.href}
+                  className={`font-medium transition-colors hover:text-accent ${isScrolled ? "text-foreground" : "text-white"
+                    }`}
+                >
+                  {link.name}
+                </a>
+              </li>
             ))}
-          </div>
+          </ul>
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-3">
             <a href="tel:+971554728133" className={`flex items-center gap-2 font-bold text-lg transition-colors hover:text-accent ${isScrolled ? "text-foreground" : "text-white"
               }`}>
-              <Phone className="w-4 h-4 text-[#FF6200]" />
+              <Phone className="w-4 h-4 text-[#FF6200]" aria-hidden="true" />
               <span className="hidden xl:inline">+971 55 472 8133</span>
             </a>
             <Button
@@ -75,7 +77,7 @@ const Navigation = () => {
               asChild
             >
               <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                <img src="/whatsapp.svg" alt="WhatsApp Contact" width={20} height={20} className="w-5 h-5" />
+                <img src="/whatsapp.svg" alt="" width={20} height={20} className="w-5 h-5" aria-hidden="true" />
                 <span className="hidden xl:inline">WhatsApp</span>
               </a>
             </Button>
@@ -92,35 +94,38 @@ const Navigation = () => {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMobileMenuOpen}
+            aria-haspopup="true"
             className={`lg:hidden p-2 rounded-lg transition-colors ${isScrolled ? "text-primary hover:bg-secondary" : "text-white hover:bg-white/10"
               }`}
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMobileMenuOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden mt-4 pb-4 border-t border-white/10">
-            <div className="flex flex-col gap-4 mt-4">
+          <div className="lg:hidden mt-4 pb-4 border-t border-white/10" id="mobile-menu">
+            <ul className="flex flex-col gap-4 mt-4">
               {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`font-medium transition-colors ${isScrolled ? "text-foreground hover:text-accent" : "text-white hover:text-accent"
-                    }`}
-                >
-                  {link.name}
-                </a>
+                <li key={link.name}>
+                  <a
+                    href={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={`font-medium transition-colors ${isScrolled ? "text-foreground hover:text-accent" : "text-white hover:text-accent"
+                      }`}
+                  >
+                    {link.name}
+                  </a>
+                </li>
               ))}
-              <div className="flex flex-col gap-3 mt-2 pt-4 border-t border-white/10">
+              <li className="flex flex-col gap-3 mt-2 pt-4 border-t border-white/10">
                 <a
                   href="tel:+971554728133"
                   className={`flex items-center gap-2 font-medium ${isScrolled ? "text-foreground" : "text-white"
                     }`}
                 >
-                  <Phone className="w-4 h-4" />
+                  <Phone className="w-4 h-4" aria-hidden="true" />
                   +971 55 472 8133
                 </a>
                 <Button
@@ -128,8 +133,8 @@ const Navigation = () => {
                   asChild
                 >
                   <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
-                    <img src="/whatsapp.svg" alt="WhatsApp Contact" width={20} height={20} className="w-5 h-5" />
-                    Chat with EMRS 24/7 on WhatsApp
+                    <img src="/whatsapp.svg" alt="" width={20} height={20} className="w-5 h-5" aria-hidden="true" />
+                    Chat on WhatsApp
                   </a>
                 </Button>
                 <Button
@@ -138,12 +143,12 @@ const Navigation = () => {
                 >
                   <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</a>
                 </Button>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         )}
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 };
 

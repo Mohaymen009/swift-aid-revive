@@ -11,10 +11,10 @@ interface FAQSectionProps {
   className?: string;
 }
 
-const FAQSection: React.FC<FAQSectionProps> = ({ 
-  faqs, 
+const FAQSection: React.FC<FAQSectionProps> = ({
+  faqs,
   title = 'Frequently Asked Questions',
-  className = '' 
+  className = ''
 }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
@@ -41,8 +41,8 @@ const FAQSection: React.FC<FAQSectionProps> = ({
         <h2 className="text-3xl font-bold text-center mb-8">{title}</h2>
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="bg-white rounded-lg shadow-sm overflow-hidden"
               itemScope
               itemType="https://schema.org/Question"
@@ -53,7 +53,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({
                 aria-expanded={openIndex === index}
                 aria-controls={`faq-${index}`}
               >
-                <h3 
+                <h3
                   className="text-lg font-semibold text-gray-900 flex justify-between items-center"
                   itemProp="name"
                 >
@@ -63,6 +63,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
+                    aria-hidden="true"
                   >
                     <path
                       strokeLinecap="round"
@@ -87,7 +88,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({
             </div>
           ))}
         </div>
-        
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}

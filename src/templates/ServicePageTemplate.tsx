@@ -83,7 +83,7 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
 
       <Navigation />
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
+      <main id="main-content" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
         {updates.length > 0 && (
           <ContentUpdate date={lastUpdated} updates={updates} className="mb-8" />
         )}

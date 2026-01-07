@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-slate-900 px-4 sm:px-6 lg:px-8 pt-20">
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-slate-900 px-4 sm:px-6 lg:px-8 pt-20" aria-labelledby="hero-heading">
       {/* Background gradient and pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-950 to-black"></div>
       <div className="absolute inset-0 opacity-20">
@@ -34,7 +34,7 @@ const Hero = () => {
           </div>
 
           {/* Main heading - Single H1 for SEO */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-8 leading-tight">
+          <h1 id="hero-heading" className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-8 leading-tight">
             Professional Ambulance Services Across All UAE Emirates
           </h1>
 
@@ -49,15 +49,15 @@ const Hero = () => {
           {/* Trust indicators */}
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-10">
             <div className="flex items-center gap-2 text-blue-100/90">
-              <Clock className="w-5 h-5 text-accent" />
+              <Clock className="w-5 h-5 text-accent" aria-hidden="true" />
               <span className="text-sm sm:text-base">24/7 Available</span>
             </div>
             <div className="flex items-center gap-2 text-blue-100/90">
-              <MapPin className="w-5 h-5 text-accent" />
+              <MapPin className="w-5 h-5 text-accent" aria-hidden="true" />
               <span className="text-sm sm:text-base">All 7 Emirates</span>
             </div>
             <div className="flex items-center gap-2 text-blue-100/90">
-              <Shield className="w-5 h-5 text-accent" />
+              <Shield className="w-5 h-5 text-accent" aria-hidden="true" />
               <span className="text-sm sm:text-base">Professional Staff</span>
             </div>
           </div>

@@ -34,10 +34,11 @@ const FloatingContact = () => {
       >
         <img
           src="/whatsapp.svg"
-          alt="Quick WhatsApp Contact"
+          alt=""
           width={35}
           height={35}
           className="w-[30px] h-[30px] md:w-[35px] md:h-[35px] object-contain"
+          aria-hidden="true"
         />
       </a>
       <a
@@ -46,7 +47,7 @@ const FloatingContact = () => {
         aria-label="Call Us"
         onClick={trackConversion}
       >
-        <Phone className="w-6 h-6" />
+        <Phone className="w-6 h-6" aria-hidden="true" />
       </a>
     </div>
   );
