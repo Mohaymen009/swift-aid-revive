@@ -9,12 +9,7 @@ Sitemap: https://emrs.ae/sitemap.xml
 User-agent: *
 Allow: /
 
-# Block internal/error pages
-Disallow: /assets/errors
-Disallow: /assets/inc
-Disallow: /extras
-
-# Block AI training bots (optional - remove if you want AI indexing)
+# Block AI training bots (optional)
 User-agent: GPTBot
 Disallow: /
 

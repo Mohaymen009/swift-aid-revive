@@ -6,16 +6,23 @@ const TrustmaryWidget = () => {
     useEffect(() => {
         if (!containerRef.current) return;
 
-        // Clean up previous instances if any
-        containerRef.current.innerHTML = '';
+        const loadWidget = () => {
+            if (!containerRef.current) return;
+            // Clean up previous instances if any
+            containerRef.current.innerHTML = '';
 
-        const script = document.createElement('script');
-        script.src = "https://widget.trustmary.com/D4dP0Hk22";
-        script.async = true;
+            const script = document.createElement('script');
+            script.src = "https://widget.trustmary.com/D4dP0Hk22";
+            script.async = true;
 
-        containerRef.current.appendChild(script);
+            containerRef.current.appendChild(script);
+        };
+
+        // Defer loading to prioritize LCP and main thread
+        const timer = setTimeout(loadWidget, 3000);
 
         return () => {
+            clearTimeout(timer);
             if (containerRef.current) {
                 containerRef.current.innerHTML = '';
             }

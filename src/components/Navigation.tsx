@@ -36,7 +36,7 @@ const Navigation = () => {
                 alt="EMRS 24/7 Professional Ambulance and Home Healthcare UAE"
                 width={32}
                 height={32}
-                className="w-8 h-8"
+                className="w-8 h-8 aspect-square object-contain"
                 loading="eager"
               />
             </picture>
