@@ -24,7 +24,7 @@ export interface SEOHeadProps {
 
 const SEOHead = ({
   title = "EMRS 24/7 | Ambulance & Home Healthcare Services UAE",
-  description = "EMRS 24/7 provides professional ambulance services, licensed medical transport, and home healthcare across the UAE. Fast medical response and compassionate patient transfers by experts.",
+  description = "EMRS 24/7 offers professional ambulance services & home healthcare across the UAE. Licensed medical transport with fast, compassionate response.",
   canonical: customCanonical,
   type = "website",
   emirate,

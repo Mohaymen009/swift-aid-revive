@@ -62,7 +62,7 @@ const UmmAlQuwainAmbulanceServices = () => {
               <a href="tel:+971554728133">Call +971 55 472 8133</a>
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 font-bold" asChild>
-              <a href="https://wa.me/971554728133">WhatsApp Us</a>
+              <a href="https://wa.me/971554728133" target="_blank" rel="noopener noreferrer nofollow" className="flex items-center gap-2">WhatsApp Us</a>
             </Button>
           </div>
         </div>

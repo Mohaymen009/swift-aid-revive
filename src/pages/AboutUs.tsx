@@ -229,7 +229,7 @@ const AboutUs = () => {
               <a
                 href="https://wa.me/971554728133"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
                 className="inline-flex items-center justify-center gap-2 bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors"
               >
                 WhatsApp Us

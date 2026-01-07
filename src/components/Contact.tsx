@@ -149,16 +149,16 @@ const Contact = () => {
                     </a>
                   </Button>
 
-                  <Button
-                    size="lg"
-                    className="bg-white/10 hover:bg-white/20 text-white border-2 border-white/40 font-bold px-8"
-                    asChild
+                  <a
+                    href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services."
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-3 bg-[#11632B] hover:bg-[#0D4D21] text-white font-bold rounded-xl transition-all duration-300 shadow-md hover:shadow-lg gap-2"
+                    onClick={trackConversion}
                   >
-                    <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2" onClick={trackConversion}>
-                      <img src="/whatsapp.svg" alt="Contact EMRS WhatsApp" width={20} height={20} className="w-5 h-5" />
-                      WhatsApp Us
-                    </a>
-                  </Button>
+                    <img src="/whatsapp.svg" alt="Contact EMRS WhatsApp" width={20} height={20} className="w-5 h-5" />
+                    WhatsApp Us
+                  </a>
                 </div>
               </div>
 

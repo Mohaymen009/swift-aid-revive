@@ -118,7 +118,7 @@ const AbuDhabiAmbulanceServices = () => {
                 className="border-white text-white hover:bg-white hover:text-primary font-bold text-lg px-8 py-6"
                 asChild
               >
-                <a href="https://wa.me/971554728133" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                <a href="https://wa.me/971554728133" target="_blank" rel="noopener noreferrer nofollow" className="flex items-center gap-2">
                   <MessageCircle className="w-5 h-5" />
                   WhatsApp Us
                 </a>
@@ -246,7 +246,7 @@ const AbuDhabiAmbulanceServices = () => {
                 className="border-white text-white hover:bg-white/10 font-bold text-lg px-8 py-6"
                 asChild
               >
-                <a href="https://wa.me/971554728133" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                <a href="https://wa.me/971554728133" target="_blank" rel="noopener noreferrer nofollow" className="flex items-center gap-2">
                   <MessageCircle className="w-5 h-5" />
                   Chat on WhatsApp
                 </a>

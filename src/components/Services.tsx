@@ -68,9 +68,9 @@ const Services = () => {
                   <service.icon className="w-8 h-8 text-[#FF6200]" />
                 </div>
 
-                <h3 className="text-xl font-bold text-primary mb-3">
+                <div className="text-xl font-bold text-primary mb-3">
                   {service.title}
-                </h3>
+                </div>
 
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   {service.description}
@@ -103,7 +103,7 @@ const Services = () => {
                 asChild
               >
                 <a href="tel:+971554728133" className="flex items-center justify-center gap-2">
-                  Call Now
+                  Call Dispatch
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>

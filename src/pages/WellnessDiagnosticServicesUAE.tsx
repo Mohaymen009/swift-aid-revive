@@ -263,7 +263,7 @@ const WellnessDiagnosticServicesUAE = () => {
               </div>
               <div className="text-center mt-8">
                 <Button size="lg" className="bg-accent hover:bg-accent/90" asChild>
-                  <a href="https://wa.me/971554728133" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/971554728133" target="_blank" rel="noopener noreferrer nofollow">
                     Book IV Therapy
                   </a>
                 </Button>

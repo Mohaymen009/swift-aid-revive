@@ -27,9 +27,9 @@ const FloatingContact = () => {
       <a
         href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services."
         target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center justify-center w-[60px] h-[60px] bg-[#1AA34A] hover:bg-[#168A3E] text-white rounded-full shadow-green-glow hover:shadow-elevated transition-all duration-300 hover:scale-110"
-        aria-label="Chat on WhatsApp"
+        rel="noopener noreferrer nofollow"
+        className="flex items-center justify-center w-14 h-14 bg-[#11632B] hover:bg-[#0D4D21] text-white rounded-full shadow-lg transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#11632B]"
+        aria-label="Contact us on WhatsApp"
         onClick={trackConversion}
       >
         <img

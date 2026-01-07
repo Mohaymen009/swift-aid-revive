@@ -74,9 +74,9 @@ const EmirateServices = () => {
                     <span className="text-sm font-medium text-accent">{emirate.emirate}</span>
                   </div>
 
-                  <h3 className="text-xl lg:text-2xl font-bold text-primary mb-3 lg:mb-4 group-hover:text-accent transition-colors">
+                  <div className="text-xl lg:text-2xl font-bold text-primary mb-3 lg:mb-4 group-hover:text-accent transition-colors">
                     {emirate.title}
-                  </h3>
+                  </div>
 
                   <p className="text-muted-foreground leading-relaxed mb-4 lg:mb-6 text-sm lg:text-base">
                     {emirate.description}

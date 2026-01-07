@@ -22,7 +22,7 @@ const Footer = () => {
     { name: "About Us", url: "/about-us/" },
     { name: "Licensing", url: "/licensing/" },
     { name: "Medical Oversight", url: "/medical-oversight/" },
-    { name: "Contact", url: "/#contact" },
+    { name: "Contact Us", url: "/#contact" },
   ];
 
   return (
