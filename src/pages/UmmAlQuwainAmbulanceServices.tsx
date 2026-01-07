@@ -46,8 +46,6 @@ const UmmAlQuwainAmbulanceServices = () => {
       description="EMRS provides professional ambulance services in Umm Al Quwain. 24/7 patient transport and medical transfers in UAQ. Call +971 55 472 8133"
       canonical="https://emrs.ae/umm-al-quwain-ambulance-services"
       imageUrl="/images/og/umm-al-quwain-ambulance-services.jpg"
-      imageAlt="EMRS Ambulance Services in Umm Al Quwain"
-      lastUpdated="2026-01-01"
       faqs={faqs}
       phoneNumber={"+971 55 472 8133"}
       hideHeader={true}

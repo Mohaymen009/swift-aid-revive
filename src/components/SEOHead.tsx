@@ -163,8 +163,7 @@ const SEOHead = ({
     },
     "sameAs": [
       "https://www.facebook.com/emrsuae",
-      "https://www.instagram.com/emrsuae",
-      "https://www.linkedin.com/in/emrs-ambulance-services-llc-9270011b5/"
+      "https://www.instagram.com/emrsuae"
     ],
     "contactPoint": {
       "@type": "ContactPoint",

@@ -73,8 +73,7 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    font-display: swap;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
 
   html {
@@ -187,15 +186,7 @@ a:focus-visible {
   @apply ring-2 ring-accent ring-offset-2;
 }
 
-/* Trustmary Widget Visibility Fix */
-[data-trustmary-widget] {
-  max-height: 85vh !important;
-  overflow-y: auto !important;
-  position: relative !important;
-  z-index: 10 !important;
-}
-
-[data-trustmary-widget] section,
-[data-trustmary-widget] div {
-  max-height: inherit;
+/* Skip to Content Link Styling */
+.skip-to-content {
+  @apply absolute left-4 -top-20 z-[100] bg-accent text-white px-4 py-2 rounded-md transition-all duration-300 focus:top-4 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2;
 }

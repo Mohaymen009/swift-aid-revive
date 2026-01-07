@@ -23,10 +23,6 @@ import ServicesHub from "./pages/ServicesHub";
 import Licensing from "./pages/Licensing";
 import MedicalOversight from "./pages/MedicalOversight";
 import AboutUs from "./pages/AboutUs";
-import MedicalTransportUAE from "./pages/MedicalTransportUAE";
-import PatientTransportUAE from "./pages/PatientTransportUAE";
-import AmbulanceServicesAbuDhabi from "./pages/AmbulanceServicesAbuDhabi";
-import AmbulanceServicesDubai from "./pages/AmbulanceServicesDubai";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -63,12 +59,6 @@ const App = () => (
 
           <Route path="/blog/private-ambulance-services-across-uae" element={<BlogPrivateAmbulanceAcrossUAE />} />
           <Route path="/blog/emergency-patient-transfers-uae" element={<BlogEmergencyPatientTransfersUAE />} />
-
-          {/* New SEO Pages */}
-          <Route path="/medical-transport-uae" element={<MedicalTransportUAE />} />
-          <Route path="/patient-transport" element={<PatientTransportUAE />} />
-          <Route path="/ambulance-services-abu-dhabi" element={<AmbulanceServicesAbuDhabi />} />
-          <Route path="/ambulance-services-dubai" element={<AmbulanceServicesDubai />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
