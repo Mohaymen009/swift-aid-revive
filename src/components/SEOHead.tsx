@@ -54,8 +54,8 @@ const SEOHead = ({
   breadcrumbs = []
 }: SEOHeadProps) => {
   const location = useLocation();
-  const baseUrl = 'https://www.emrs.ae';
-  const currentUrl = customCanonical || `${baseUrl}${location.pathname === '/' ? '' : location.pathname}`;
+  const baseUrl = 'https://emrs.ae';
+  const currentUrl = customCanonical || `${baseUrl}${location.pathname}`;
   const siteName = "EMRS 24/7";
   const twitterHandle = "@EMRSUAE";
   const fullImageUrl = image.startsWith('http') ? image : `${baseUrl}${image.startsWith('/') ? '' : '/'}${image}`;

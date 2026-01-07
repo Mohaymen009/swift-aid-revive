@@ -74,7 +74,7 @@ const SharjahAmbulanceServices = () => {
     <ServicePageTemplate
       title="Non-Emergency Ambulance Service in Sharjah | Professional Patient Transfers"
       description="Professional ambulance services in Sharjah with trained paramedics. Rapid response, patient transport, and medical escorts across all areas of Sharjah. Call +971 55 472 8133"
-      canonical="https://www.emrs.ae/sharjah-ambulance-services"
+      canonical="https://emrs.ae/sharjah-ambulance-services"
       imageUrl="/images/og/sharjah-ambulance-services.jpg"
       imageAlt="Non-emergency ambulance service in Sharjah"
       lastUpdated="2026-01-01"

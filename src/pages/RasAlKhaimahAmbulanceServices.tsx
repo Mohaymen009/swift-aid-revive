@@ -44,7 +44,7 @@ const RasAlKhaimahAmbulanceServices = () => {
     <ServicePageTemplate
       title="Professional Ambulance Service in Ras Al Khaimah | EMRS"
       description="EMRS provides professional ambulance services in Ras Al Khaimah. Reliable patient transport and inter-emirate medical transfers in RAK. Call +971 55 472 8133"
-      canonical="https://www.emrs.ae/ras-al-khaimah-ambulance-services"
+      canonical="https://emrs.ae/ras-al-khaimah-ambulance-services"
       imageUrl="/images/og/ras-al-khaimah-ambulance-services.jpg"
       faqs={faqs}
       phoneNumber={"+971 55 472 8133"}

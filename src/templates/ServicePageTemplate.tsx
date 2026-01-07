@@ -50,7 +50,7 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
   emirate = "Dubai", // Added emirate with a default value
 }) => {
   const location = useLocation();
-  const pageUrl = `https://www.emrs.ae${location.pathname}`;
+  const pageUrl = `https://emrs.ae${location.pathname}`;
 
   const defaultBreadcrumbsUi: CrumbUi[] = [
     { name: 'Home', path: '/' },

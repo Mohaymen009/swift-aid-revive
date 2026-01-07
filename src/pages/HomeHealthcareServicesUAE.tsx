@@ -123,7 +123,7 @@ const HomeHealthcareServicesUAE = () => {
       <ServicePageTemplate
         title="Home Healthcare Services Dubai | Home Nursing UAE | EMRS"
         description="Professional home healthcare in UAE. Home nursing care, elderly care, physiotherapy at home, post-operative care. Licensed nurses in Dubai, Abu Dhabi, Sharjah. Call +971 55 472 8133"
-        canonical="https://www.emrs.ae/home-healthcare-services-uae"
+        canonical="https://emrs.ae/home-healthcare-services-uae"
         imageUrl="/images/og/home-healthcare-services-uae.jpg"
         imageAlt="Home Healthcare Services in UAE by EMRS"
         lastUpdated="2026-01-01"

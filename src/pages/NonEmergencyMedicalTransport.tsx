@@ -103,7 +103,7 @@ const NonEmergencyMedicalTransport = () => {
       <ServicePageTemplate
         title="Non-Emergency Medical Transport UAE | Patient Transport | EMRS"
         description="Reliable non-emergency medical transport services across UAE. Professional patient transport for medical appointments, treatments, and hospital discharges."
-        canonical="https://www.emrs.ae/non-emergency-medical-transport-uae"
+        canonical="https://emrs.ae/non-emergency-medical-transport-uae"
         imageUrl="/images/og/non-emergency-medical-transport-uae.jpg"
         imageAlt="Non-Emergency Medical Transport in UAE by EMRS"
         lastUpdated="2026-01-01"

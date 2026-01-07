@@ -36,7 +36,7 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
       "@type": "ListItem",
       "position": index + 1,
       "name": item.name,
-      "item": `https://www.emrs.ae${item.path === '/' ? '' : item.path}`
+      "item": `https://emrs.ae${item.path === '/' ? '' : item.path}`
     }))
   };
 

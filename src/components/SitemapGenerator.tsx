@@ -12,7 +12,7 @@ interface SitemapGeneratorProps {
 
 const SitemapGenerator = ({ routes }: SitemapGeneratorProps) => {
   const { pathname } = useLocation();
-  const baseUrl = 'https://www.emrs.ae';
+  const baseUrl = 'https://emrs.ae';
 
   useEffect(() => {
     // Generate sitemap
