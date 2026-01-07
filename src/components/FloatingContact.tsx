@@ -6,8 +6,8 @@ const FloatingContact = () => {
 
   const trackConversion = () => {
     // Call the global function defined in index.html
-    if (typeof window !== 'undefined' && window.trackContactConversion) {
-      window.trackContactConversion();
+    if (typeof window !== 'undefined' && (window as any).trackContactConversion) {
+      (window as any).trackContactConversion();
     }
   };
 
