@@ -186,3 +186,16 @@ button:focus-visible,
 a:focus-visible {
   @apply ring-2 ring-accent ring-offset-2;
 }
+
+/* Trustmary Widget Visibility Fix */
+[data-trustmary-widget] {
+  max-height: 85vh !important;
+  overflow-y: auto !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+[data-trustmary-widget] section,
+[data-trustmary-widget] div {
+  max-height: inherit;
+}
