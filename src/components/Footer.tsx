@@ -19,8 +19,8 @@ const Footer = () => {
   ];
 
   const companyLinks = [
-    { name: "About Us", url: "/about-us/" },
-    { name: "Licensing", url: "/licensing/" },
+    { name: "About EMRS", url: "/about-us/" },
+    { name: "Regulatory Licensing", url: "/licensing/" },
     { name: "Medical Oversight", url: "/medical-oversight/" },
     { name: "Contact Us", url: "/#contact" },
   ];
@@ -118,7 +118,7 @@ const Footer = () => {
             &copy; {currentYear} E M R S AMBULANCE SERVICES L.L.C &mdash; All rights reserved.
           </p>
           <div className="flex gap-6">
-            <Link to="/licensing/" className="hover:text-accent transition-colors text-white font-medium">Licensing</Link>
+            <Link to="/licensing/" className="hover:text-accent transition-colors text-white font-medium">Regulatory Licensing</Link>
             <Link to="/medical-oversight/" className="hover:text-accent transition-colors text-white font-medium">Medical Oversight</Link>
           </div>
         </div>

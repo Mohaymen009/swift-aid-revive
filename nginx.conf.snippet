@@ -34,6 +34,7 @@ server {
     # Standard Vite build folder is 'dist'
     root /var/www/emrs/dist;
     index index.html index.htm;
+    charset utf-8;
 
     ssl_certificate /etc/letsencrypt/live/emrs.ae/fullchain.pem;
     ssl_certificate_key /etc/letsencrypt/live/emrs.ae/privkey.pem;
