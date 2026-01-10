@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 export interface SEOHeadProps {
   title?: string;
@@ -53,7 +54,23 @@ const SEOHead = ({
   author = "EMRS Medical Team",
   breadcrumbs = []
 }: SEOHeadProps) => {
-  const location = useLocation();
+  useEffect(() => {
+    // Clean up data-rh attribute from canonical link to satisfy SEO validators
+    const cleanupCanonical = () => {
+      const canonical = document.querySelector('link[rel="canonical"]');
+      if (canonical && canonical.hasAttribute('data-rh')) {
+        canonical.removeAttribute('data-rh');
+      }
+    };
+
+    // Run immediately and on updates
+    cleanupCanonical();
+    const observer = new MutationObserver(cleanupCanonical);
+    observer.observe(document.head, { childList: true, subtree: true, attributes: true });
+
+    return () => observer.disconnect();
+  }, [location]);
+
   const baseUrl = 'https://emrs.ae';
   const pathname = location.pathname.endsWith('/') ? location.pathname : `${location.pathname}/`;
   const currentUrl = customCanonical || `${baseUrl}${pathname}`;
