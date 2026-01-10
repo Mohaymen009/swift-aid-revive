@@ -1,7 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-import { SitemapStream, streamToPromise } from 'sitemap';
-import { Readable } from 'stream';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -10,7 +8,6 @@ const __dirname = path.dirname(__filename);
 // Define your site URL
 const siteUrl = 'https://emrs.ae';
 
-// Define your routes (keep in sync with src/App.tsx)
 const today = new Date().toISOString().split('T')[0];
 const routes = [
   // Homepage
@@ -37,17 +34,35 @@ const routes = [
   { url: '/blog/emergency-patient-transfers-uae', lastmod: today, changefreq: 'monthly', priority: 0.8 }
 ];
 
-// Create a stream to write to
-const sitemapStream = new SitemapStream({ hostname: siteUrl });
+const generateSitemap = () => {
+  const urls = routes.map(route => `
+  <url>
+    <loc>${siteUrl}${route.url}</loc>
+    <lastmod>${route.lastmod}</lastmod>
+    <changefreq>${route.changefreq}</changefreq>
+    <priority>${route.priority}</priority>
+  </url>`).join('');
 
-// Write the sitemap to a file
-const writeStream = fs.createWriteStream(path.resolve(__dirname, '../public/sitemap.xml'));
-sitemapStream.pipe(writeStream);
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls}
+</urlset>`;
 
-// Add your routes to the sitemap
-const stream = Readable.from(routes).pipe(sitemapStream);
+  const outputPath = path.resolve(__dirname, '../public/sitemap.xml');
 
-// Generate the sitemap
-streamToPromise(stream).then(() => {
-  console.log('Sitemap generated successfully!');
-}).catch(console.error);
+  // Ensure the public directory exists
+  const publicDir = path.dirname(outputPath);
+  if (!fs.existsSync(publicDir)) {
+    fs.mkdirSync(publicDir, { recursive: true });
+  }
+
+  fs.writeFileSync(outputPath, sitemap.trim());
+  console.log(`✅ Sitemap generated successfully at ${outputPath}`);
+};
+
+try {
+  generateSitemap();
+} catch (error) {
+  console.error('❌ Error generating sitemap:', error);
+  process.exit(1);
+}
