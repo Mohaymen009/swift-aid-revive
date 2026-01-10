@@ -32,7 +32,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer role="contentinfo" className="bg-primary text-white" itemscope itemtype="https://schema.org/LocalBusiness">
+    <footer role="contentinfo" className="bg-primary text-white" itemScope itemType="https://schema.org/LocalBusiness">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
           {/* Brand & NAP */}
@@ -50,7 +50,7 @@ const Footer = () => {
               Professional ambulance and medical transport services across all seven emirates of the UAE. Available 24/7 for patient transfers, medical escorts, and home healthcare.
             </p>
             <div className="space-y-3">
-              <div className="flex items-start gap-3 text-white/90" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+              <div className="flex items-start gap-3 text-white/90" itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
                 <MapPin className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
                 <span itemProp="streetAddress">Al Qusais Industrial Area, Dubai, UAE</span>
               </div>

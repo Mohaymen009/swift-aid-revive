@@ -69,7 +69,9 @@ const SEOHead = ({
     observer.observe(document.head, { childList: true, subtree: true, attributes: true });
 
     return () => observer.disconnect();
-  }, [location]);
+  }, []);
+
+  const location = useLocation();
 
   const baseUrl = 'https://emrs.ae';
   const pathname = location.pathname.endsWith('/') ? location.pathname : `${location.pathname}/`;

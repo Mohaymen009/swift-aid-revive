@@ -133,8 +133,6 @@ const HomeHealthcareServicesUAE = () => {
         { label: 'Wellness & Diagnostics', to: '/wellness-diagnostic-services-uae' },
         { label: 'Patient Transport (NEMT)', to: '/non-emergency-medical-transport-uae' }
       ]}
-
-      additionalStructuredData={faqSchema}
       hideHeader={true}
     >
       {/* Hero Section */}

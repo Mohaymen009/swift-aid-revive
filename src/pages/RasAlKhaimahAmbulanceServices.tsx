@@ -62,7 +62,8 @@ const RasAlKhaimahAmbulanceServices = () => {
       title="Professional Ambulance Service in Ras Al Khaimah | EMRS"
       description="EMRS provides professional ambulance services in Ras Al Khaimah. Reliable patient transport and inter-emirate medical transfers in RAK. Call +971 55 472 8133"
       canonical="https://emrs.ae/ras-al-khaimah-ambulance-services/"
-
+      imageAlt="Ambulance Services in Ras Al Khaimah by EMRS"
+      lastUpdated="2026-01-01"
       faqs={faqs}
       phoneNumber={"+971 55 472 8133"}
       hideHeader={true}

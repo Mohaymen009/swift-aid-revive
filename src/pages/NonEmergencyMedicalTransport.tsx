@@ -115,7 +115,6 @@ const NonEmergencyMedicalTransport = () => {
           { label: 'Home Healthcare', to: '/home-healthcare-services-uae' },
           { label: 'Doctor on Call', to: '/doctor-on-call-uae' }
         ]}
-        additionalStructuredData={faqSchema}
         hideHeader={true}
       >
         {/* Hero Section */}
