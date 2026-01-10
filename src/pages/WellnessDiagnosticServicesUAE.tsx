@@ -143,7 +143,6 @@ const WellnessDiagnosticServicesUAE = () => {
           { label: 'Home Healthcare', to: '/home-healthcare-services-uae' },
           { label: 'Ambulance Services', to: '/ambulance-services-uae' }
         ]}
-        additionalStructuredData={faqSchema}
         hideHeader={true}
       >
         {/* Hero Section */}

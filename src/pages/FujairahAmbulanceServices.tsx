@@ -62,7 +62,8 @@ const FujairahAmbulanceServices = () => {
       title="Professional Ambulance Services in Fujairah | EMRS"
       description="EMRS provides professional ambulance services in Fujairah. 24/7 medical transport and patient transfers across the Fujairah emirate. Call +971 55 472 8133"
       canonical="https://emrs.ae/fujairah-ambulance-services/"
-
+      imageAlt="Ambulance Services in Fujairah by EMRS"
+      lastUpdated="2026-01-01"
       faqs={faqs}
       phoneNumber={"+971 55 472 8133"}
       hideHeader={true}

@@ -162,7 +162,6 @@ const AmbulanceServicesUAE = () => {
         { label: 'Home Healthcare', to: '/home-healthcare-services-uae' }
       ]}
       hideHeader={true}
-      additionalStructuredData={faqSchema}
     >
       {/* Hero Section */}
       <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-white relative overflow-hidden">
