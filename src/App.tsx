@@ -12,6 +12,7 @@ const AjmanAmbulanceServices = lazy(() => import("./pages/AjmanAmbulanceServices
 const RasAlKhaimahAmbulanceServices = lazy(() => import("./pages/RasAlKhaimahAmbulanceServices"));
 const FujairahAmbulanceServices = lazy(() => import("./pages/FujairahAmbulanceServices"));
 const UmmAlQuwainAmbulanceServices = lazy(() => import("./pages/UmmAlQuwainAmbulanceServices"));
+const AlAinAmbulanceServices = lazy(() => import("./pages/AlAinAmbulanceServices"));
 const AmbulanceServicesUAE = lazy(() => import("./pages/AmbulanceServicesUAE"));
 const NonEmergencyMedicalTransport = lazy(() => import("./pages/NonEmergencyMedicalTransport"));
 const DoctorOnCallUAE = lazy(() => import("./pages/DoctorOnCallUAE"));
@@ -56,6 +57,7 @@ const App = () => (
             <Route path="/ras-al-khaimah-ambulance-services/" element={<RasAlKhaimahAmbulanceServices />} />
             <Route path="/fujairah-ambulance-services/" element={<FujairahAmbulanceServices />} />
             <Route path="/umm-al-quwain-ambulance-services/" element={<UmmAlQuwainAmbulanceServices />} />
+            <Route path="/al-ain-ambulance-services/" element={<AlAinAmbulanceServices />} />
             {/* Blog Posts */}
             <Route path="/blog/how-to-choose-ambulance-service/" element={<BlogHowToChooseAmbulance />} />
 

@@ -16,19 +16,33 @@ const OurStory = () => {
 
               <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
                 <p>
-                  <span className="text-primary font-bold">EMRS (Medical Response Services)</span> is a professional ambulance and medical transport company serving all seven emirates of the United Arab Emirates. We specialize in providing reliable, safe, and timely patient transfer services for hospitals, clinics, and individual patients across Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Fujairah, and Umm Al Quwain.
+                  <span className="text-primary font-bold">EMRS (Medical Response Services)</span> is a professional ambulance company. We serve all seven emirates of the UAE.
+                </p>
+                <p>
+                  We provide safe and timely patient transfers. Our services are available for:
+                </p>
+                <ul className="list-disc pl-5 space-y-2">
+                  <li>Hospitals and clinics</li>
+                  <li>Individual patients</li>
+                  <li>Events and corporate needs</li>
+                </ul>
+
+                <p className="pt-2">
+                  Our team has over <span className="text-primary font-semibold">50 years of combined experience</span>. We employ expert paramedics and nurses. Our ambulances are modern and fully equipped.
                 </p>
 
                 <p>
-                  Our team comprises experienced paramedics, nurses, and medical professionals with over <span className="text-primary font-semibold">50 years of combined experience</span> in the healthcare industry. We operate modern, fully-equipped ambulances designed for both emergency and non-emergency medical transport needs.
+                  We offer a wide range of services:
                 </p>
+                <ul className="list-disc pl-5 space-y-2">
+                  <li><strong>Hospital Transfers:</strong> Safe transport between facilities.</li>
+                  <li><strong>Patient Discharge:</strong> Comfortable rides home.</li>
+                  <li><strong>Dialysis Transport:</strong> Scheduled and reliable.</li>
+                  <li><strong>Medical Escorts:</strong> Professional care for long trips.</li>
+                </ul>
 
-                <p>
-                  Whether you need <span className="text-primary font-bold">hospital-to-hospital transfers</span>, <span className="text-primary font-bold">patient discharge transport</span>, <span className="text-primary font-bold">dialysis transportation</span>, or <span className="text-primary font-bold">long-distance medical escorts</span>, EMRS provides professional and compassionate service. Our ambulances are equipped with advanced medical equipment to ensure patient safety and comfort during transit.
-                </p>
-
-                <p>
-                  We understand that medical transport situations can be stressful. That's why we focus on delivering prompt, courteous, and efficient service every time. Our 24/7 availability means you can count on us whenever you need medical transportation assistance in the UAE.
+                <p className="pt-2">
+                  We know medical transport can be stressful. We make it simple and safe. Our team is polite and efficient. We are available 24/7 to help you.
                 </p>
               </div>
 

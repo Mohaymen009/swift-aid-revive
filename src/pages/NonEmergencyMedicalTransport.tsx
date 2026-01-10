@@ -101,11 +101,12 @@ const NonEmergencyMedicalTransport = () => {
     <>
       <Navigation />
       <ServicePageTemplate
-        title="Non-Emergency Medical Transport UAE | Patient Transport | EMRS"
-        description="Reliable non-emergency medical transport services across UAE. Professional patient transport for medical appointments, treatments, and hospital discharges."
-        canonical="https://emrs.ae/non-emergency-medical-transport-uae"
-        imageUrl="/images/og/non-emergency-medical-transport-uae.jpg"
-        imageAlt="Non-Emergency Medical Transport in UAE by EMRS"
+        title="Non-Emergency Medical Transport Services (NEMT)"
+        seoTitle="Non-Emergency Medical Transport UAE | Patient Transport | EMRS"
+        description="Safe and reliable non-emergency medical transport in UAE. Wheelchair transport, hospital discharge, dialysis transfer, and medical appointments."
+        canonical="https://emrs.ae/non-emergency-medical-transport-uae/"
+
+        imageAlt="Non-Emergency Medical Transport in UAE"
         lastUpdated="2026-01-01"
         faqs={faqs}
         phoneNumber={"+971 55 472 8133"}
@@ -115,6 +116,7 @@ const NonEmergencyMedicalTransport = () => {
           { label: 'Doctor on Call', to: '/doctor-on-call-uae' }
         ]}
         additionalStructuredData={faqSchema}
+        hideHeader={true}
       >
         {/* Hero Section */}
         <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-white relative overflow-hidden">

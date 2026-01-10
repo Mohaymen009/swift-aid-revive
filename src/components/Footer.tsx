@@ -25,10 +25,16 @@ const Footer = () => {
     { name: "Contact Us", url: "/#contact" },
   ];
 
+  const blogLinks = [
+    { name: "Choosing Ambulance Service", url: "/blog/how-to-choose-ambulance-service/" },
+    { name: "Private Ambulance in UAE", url: "/blog/private-ambulance-services-across-uae/" },
+    { name: "Emergency Transfers", url: "/blog/emergency-patient-transfers-uae/" },
+  ];
+
   return (
     <footer role="contentinfo" className="bg-primary text-white" itemscope itemtype="https://schema.org/LocalBusiness">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
           {/* Brand & NAP */}
           <div>
             <div className="flex items-center gap-2 mb-4">

@@ -7,43 +7,49 @@ const emirateServices = [
   {
     emirate: "Dubai",
     title: "Ambulance Services Dubai",
-    url: "/dubai-ambulance-services",
+    url: "/dubai-ambulance-services/",
     description: "Professional ambulance and patient transport services across Dubai including Dubai Marina, Downtown, JBR, Business Bay, Palm Jumeirah, and all areas. 24/7 availability."
   },
   {
     emirate: "Abu Dhabi",
     title: "Ambulance Services Abu Dhabi",
-    url: "/abu-dhabi-ambulance-services",
+    url: "/abu-dhabi-ambulance-services/",
     description: "Comprehensive medical transport in Abu Dhabi city, Yas Island, Saadiyat Island, Al Reem Island, Khalifa City, and surrounding areas. Hospital transfers and patient transport."
   },
   {
     emirate: "Sharjah",
     title: "Ambulance Services Sharjah",
-    url: "/sharjah-ambulance-services",
+    url: "/sharjah-ambulance-services/",
     description: "Reliable ambulance services throughout Sharjah including Al Nahda, Al Majaz, Al Qasimia, and industrial areas. Inter-emirate transfers to Dubai and other emirates available."
   },
   {
     emirate: "Ajman",
     title: "Ambulance Services Ajman",
-    url: "/ajman-ambulance-services",
+    url: "/ajman-ambulance-services/",
     description: "Medical transport services in Ajman covering Al Nuaimiya, Al Rashidiya, Al Jurf, and Ajman Industrial areas. Fast response times and professional care."
   },
   {
     emirate: "Ras Al Khaimah",
     title: "Ambulance Services Ras Al Khaimah",
-    url: "/ras-al-khaimah-ambulance-services",
+    url: "/ras-al-khaimah-ambulance-services/",
     description: "Patient transfer and ambulance services in RAK including Al Hamra, Khuzam, Al Nakheel, and northern areas. Long-distance medical escorts available."
   },
   {
     emirate: "Fujairah",
     title: "Ambulance Services Fujairah",
-    url: "/fujairah-ambulance-services",
+    url: "/fujairah-ambulance-services/",
     description: "Professional medical transport in Fujairah covering the city center, Dibba, Masafi, and coastal areas. Cross-emirate hospital transfers available."
+  },
+  {
+    emirate: "Al Ain",
+    title: "Ambulance Services Al Ain",
+    url: "/al-ain-ambulance-services/",
+    description: "24/7 ambulance and patient transport services throughout Al Ain city and surrounding regions. Fast response times for emergency and non-emergency needs."
   },
   {
     emirate: "Umm Al Quwain",
     title: "Ambulance Services Umm Al Quwain",
-    url: "/umm-al-quwain-ambulance-services",
+    url: "/umm-al-quwain-ambulance-services/",
     description: "Ambulance and patient transport services in UAQ covering the city, industrial zones, and surrounding areas. Seamless transfers to other emirates."
   }
 ];

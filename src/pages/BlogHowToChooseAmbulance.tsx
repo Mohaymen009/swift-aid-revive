@@ -14,7 +14,7 @@ const BlogHowToChooseAmbulance = () => {
       <SEOHead
         title="How to Choose an Ambulance Service in Dubai, Abu Dhabi & Sharjah | EMRS"
         description="Complete guide to choosing the right ambulance service in Dubai, Abu Dhabi, and Sharjah. Learn what to look for in emergency medical transport services."
-        canonical="https://emrs.ae/blog/how-to-choose-ambulance-service"
+        canonical="https://emrs.ae/blog/how-to-choose-ambulance-service/"
         type="article"
         publishedTime="2024-01-01T12:00:00Z"
         modifiedTime={new Date().toISOString()}

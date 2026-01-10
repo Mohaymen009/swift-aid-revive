@@ -72,10 +72,10 @@ const AbuDhabiAmbulanceServices = () => {
 
   return (
     <ServicePageTemplate
-      title="Non-Emergency Ambulance Service in Abu Dhabi | Safe Private Medical Transport"
-      description="Professional ambulance services in Abu Dhabi with trained paramedics. Rapid response, patient transport, and medical escorts across all areas of Abu Dhabi. Call +971 55 472 8133"
-      canonical="https://emrs.ae/abu-dhabi-ambulance-services"
-      imageUrl="/images/og/abu-dhabi-ambulance-services.jpg"
+      title="Non-Emergency Ambulance Service in Abu Dhabi"
+      seoTitle="Ambulance Service Abu Dhabi | Safe Private Transport"
+      description="Private ambulance service in Abu Dhabi for non-emergency patient transport. Hospital transfers, medical appointments, and discharge services."
+      canonical="https://emrs.ae/abu-dhabi-ambulance-services/"
       imageAlt="Non-emergency ambulance service in Abu Dhabi"
       lastUpdated="2026-01-01"
       faqs={faqs}

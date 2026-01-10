@@ -9,6 +9,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
+import BlogSection from "@/components/BlogSection";
 
 const Index = () => {
   return (
@@ -19,7 +20,9 @@ const Index = () => {
       <OurStory />
       <Services />
       <EmirateServices />
+
       <WhyChooseUs />
+      <BlogSection />
       <TrustmaryWidget />
       <Contact />
       <Footer />

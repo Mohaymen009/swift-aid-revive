@@ -9,7 +9,7 @@ const BlogPrivateAmbulanceAcrossUAE = () => {
       <SEOHead
         title="Private Ambulance Services Across the UAE | EMRS"
         description="Complete guide to private ambulance services across all UAE emirates. Professional medical transport for emergency and non-emergency patient transfers."
-        canonical="https://emrs.ae/blog/private-ambulance-services-across-uae"
+        canonical="https://emrs.ae/blog/private-ambulance-services-across-uae/"
         type="article"
         publishedTime="2024-01-01T12:00:00Z"
         modifiedTime={new Date().toISOString()}

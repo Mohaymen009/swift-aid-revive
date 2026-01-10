@@ -11,7 +11,7 @@ const MedicalOversight = () => {
             <SEOHead
                 title="Medical Oversight & Clinical Governance | EMRS UAE"
                 description="Our clinical operations are led by licensed medical directors ensuring the highest standards of pre-hospital care, compliance, and patient safety in the UAE."
-                canonical="https://emrs.ae/medical-oversight"
+                canonical="https://emrs.ae/medical-oversight/"
                 image="/site-logo.png"
             />
             <Navigation />

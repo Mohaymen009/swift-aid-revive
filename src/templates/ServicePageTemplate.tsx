@@ -18,8 +18,9 @@ interface CrumbUi { name: string; path: string }
 
 interface ServicePageTemplateProps {
   title: string;
+  seoTitle?: string; // Optional prop for distinct Meta Title
   description: string;
-  imageUrl: string;
+  imageUrl?: string;
   imageAlt: string;
   lastUpdated: string | Date;
   updates?: string[];
@@ -30,13 +31,14 @@ interface ServicePageTemplateProps {
   relatedLinks?: Array<{ label: string; to: string }>;
   children?: React.ReactNode;
   hideHeader?: boolean;
-  emirate?: string; // Added emirate prop
+  emirate?: string;
 }
 
 const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
   title,
+  seoTitle,
   description,
-  imageUrl,
+  imageUrl = "/site-logo.png",
   imageAlt,
   lastUpdated,
   updates = [],
@@ -47,14 +49,14 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
   relatedLinks,
   children,
   hideHeader = false,
-  emirate = "Dubai", // Added emirate with a default value
+  emirate = "Dubai",
 }) => {
   const location = useLocation();
   const pageUrl = `https://emrs.ae${location.pathname}`;
 
   const defaultBreadcrumbsUi: CrumbUi[] = [
     { name: 'Home', path: '/' },
-    { name: 'Services', path: '/services' },
+    { name: 'Services', path: '/services/' },
     { name: title, path: location.pathname },
   ];
 
@@ -62,18 +64,18 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
   const crumbsSeo = crumbsUi.map(c => ({ name: c.name, item: c.path }));
 
   const defaultRelated: Array<{ label: string; to: string }> = [
-    { label: 'Ambulance Services', to: '/ambulance-services-uae' },
-    { label: 'Doctor on Call', to: '/doctor-on-call-uae' },
-    { label: 'Home Healthcare', to: '/home-healthcare-services-uae' },
-    { label: 'Patient Transport (NEMT)', to: '/non-emergency-medical-transport-uae' },
-    { label: 'Wellness & Diagnostics', to: '/wellness-diagnostic-services-uae' },
+    { label: 'Ambulance Services', to: '/ambulance-services-uae/' },
+    { label: 'Doctor on Call', to: '/doctor-on-call-uae/' },
+    { label: 'Home Healthcare', to: '/home-healthcare-services-uae/' },
+    { label: 'Patient Transport (NEMT)', to: '/non-emergency-medical-transport-uae/' },
+    { label: 'Wellness & Diagnostics', to: '/wellness-diagnostic-services-uae/' },
   ];
   const links = (relatedLinks && relatedLinks.length > 0) ? relatedLinks : defaultRelated;
 
   return (
     <div className="min-h-screen bg-white">
       <SEOHead
-        title={title}
+        title={seoTitle || title}
         description={description}
         canonical={canonical || pageUrl}
         image={imageUrl}
