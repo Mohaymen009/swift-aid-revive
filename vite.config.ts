@@ -48,7 +48,7 @@ export default defineConfig(({ mode }: ConfigEnv) => {
         output: {
           manualChunks: {
             'react-vendor': ['react', 'react-dom', 'react-router-dom', 'react-helmet-async'],
-            'ui-vendor': ['lucide-react', 'clsx', 'tailwind-merge', 'class-variance-authority', 'framer-motion'],
+            'ui-vendor': ['lucide-react', 'clsx', 'tailwind-merge', 'class-variance-authority'],
             'chart-vendor': ['recharts'],
           },
         },
