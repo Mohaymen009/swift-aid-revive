@@ -35,15 +35,15 @@ const Hero = () => {
 
           {/* Main heading - Single H1 for SEO */}
           <h1 id="hero-heading" className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-8 leading-tight">
-            Professional Ambulance Services Across All UAE Emirates
+            Licensed Medical Transport You Can Trust
           </h1>
 
           <p className="text-xl sm:text-2xl lg:text-3xl text-white font-semibold mb-6">
-            24/7 Private Ambulance & Medical Transport Services
+            Available Around the Clock, Across All Seven Emirates
           </p>
 
           <p className="text-base sm:text-lg lg:text-xl text-blue-100/95 max-w-3xl mx-auto mb-10">
-            EMRS provides professional ambulance transfer and patient transport services across Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Fujairah, and Umm Al Quwain. Our trained paramedics ensure safe and reliable medical transport anywhere in the UAE.
+            Whether you need a scheduled hospital transfer, patient discharge transport, or urgent medical escort, our licensed paramedics are ready to help. We serve families, hospitals, and healthcare facilities throughout the UAE with compassion and professionalism.
           </p>
 
           {/* Trust indicators */}

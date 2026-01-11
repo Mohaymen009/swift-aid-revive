@@ -4,6 +4,7 @@ import OurStory from "@/components/OurStory";
 import Services from "@/components/Services";
 import EmirateServices from "@/components/EmirateServices";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import HomeFAQ from "@/components/HomeFAQ";
 import TrustmaryWidget from "@/components/TrustmaryWidget";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -22,6 +23,7 @@ const Index = () => {
       <EmirateServices />
 
       <WhyChooseUs />
+      <HomeFAQ />
       <BlogSection />
       <TrustmaryWidget />
       <Contact />
