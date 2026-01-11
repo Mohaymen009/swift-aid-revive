@@ -7,10 +7,7 @@ const Hero = () => {
       {/* Background gradient and pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-950 to-black"></div>
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 25% 25%, hsl(215 45% 25% / 0.1) 0%, transparent 50%), 
-                           radial-gradient(circle at 75% 75%, hsl(215 45% 25% / 0.1) 0%, transparent 50%)`
-        }}></div>
+        <div className="absolute inset-0 hero-radial-gradient"></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -35,11 +32,11 @@ const Hero = () => {
 
           {/* Main heading - Single H1 for SEO */}
           <h1 id="hero-heading" className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-8 leading-tight">
-            Licensed Medical Transport You Can Trust
+            Licensed Medical Transport & Patient Transfer Services
           </h1>
 
           <p className="text-xl sm:text-2xl lg:text-3xl text-white font-semibold mb-6">
-            Available Around the Clock, Across All Seven Emirates
+            EMRS 24/7: Professional Medical Transport Across All Seven Emirates
           </p>
 
           <p className="text-base sm:text-lg lg:text-xl text-blue-100/95 max-w-3xl mx-auto mb-10">

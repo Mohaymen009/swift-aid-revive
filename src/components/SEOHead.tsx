@@ -24,8 +24,8 @@ export interface SEOHeadProps {
 }
 
 const SEOHead = ({
-  title = "EMRS 24/7 | Ambulance & Home Healthcare Services UAE",
-  description = "EMRS 24/7 offers professional ambulance services & home healthcare across the UAE. Licensed medical transport with fast, compassionate response.",
+  title = "EMRS 24/7 | Medical Transport, Ambulance & Patient Transfer Services UAE",
+  description = "EMRS 24/7 provides licensed ambulance, patient transfer, and medical transport services across all seven UAE emirates. Fast, safe, and compassionate care.",
   canonical: customCanonical,
   type = "website",
   emirate,
@@ -56,23 +56,6 @@ const SEOHead = ({
   author = "EMRS Medical Team",
   breadcrumbs = []
 }: SEOHeadProps) => {
-  useEffect(() => {
-    // Clean up data-rh attribute from canonical link to satisfy SEO validators
-    const cleanupCanonical = () => {
-      const canonical = document.querySelector('link[rel="canonical"]');
-      if (canonical && canonical.hasAttribute('data-rh')) {
-        canonical.removeAttribute('data-rh');
-      }
-    };
-
-    // Run immediately and on updates
-    cleanupCanonical();
-    const observer = new MutationObserver(cleanupCanonical);
-    observer.observe(document.head, { childList: true, subtree: true, attributes: true });
-
-    return () => observer.disconnect();
-  }, []);
-
   const location = useLocation();
 
   const baseUrl = 'https://emrs.ae';
@@ -332,7 +315,6 @@ const SEOHead = ({
       <meta name="keywords" content={emirateKeywords.join(', ')} />
       <meta name="author" content={author} />
       <meta name="robots" content={noIndex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'} />
-      <link rel="canonical" href={currentUrl} />
 
       {/* Geographic Meta */}
       <meta name="geo.region" content="AE" />
