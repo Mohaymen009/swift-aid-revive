@@ -90,13 +90,91 @@ const SEOHead = ({
     ...keywords
   ] : keywords;
 
-  // Default MedicalBusiness structured data
+  // Organization Schema for entity recognition (CRITICAL for E-E-A-T)
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${baseUrl}/#organization`,
+    "name": "EMRS - Medical Response Services LLC",
+    "legalName": "EMRS - Medical Response Services LLC",
+    "alternateName": ["EMRS", "EMRS 24/7", "EMRS UAE"],
+    "description": "Licensed ambulance and medical transport provider serving all seven emirates of the UAE with 24/7 professional patient care.",
+    "url": baseUrl,
+    "logo": {
+      "@type": "ImageObject",
+      "url": `${baseUrl}/emrslogo.png`,
+      "width": 512,
+      "height": 512
+    },
+    "image": `${baseUrl}/site-logo.png`,
+    "telephone": "+971554728133",
+    "email": "info@emrs.ae",
+    "foundingDate": "2020",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "minValue": 10,
+      "maxValue": 50
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Al Qusais Industrial Area",
+      "addressLocality": "Dubai",
+      "addressRegion": "Dubai",
+      "postalCode": "00000",
+      "addressCountry": "AE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 25.2854,
+      "longitude": 55.3667
+    },
+    "areaServed": [
+      { "@type": "Country", "name": "United Arab Emirates" },
+      { "@type": "City", "name": "Dubai" },
+      { "@type": "City", "name": "Abu Dhabi" },
+      { "@type": "City", "name": "Sharjah" },
+      { "@type": "City", "name": "Ajman" },
+      { "@type": "City", "name": "Ras Al Khaimah" },
+      { "@type": "City", "name": "Fujairah" },
+      { "@type": "City", "name": "Umm Al Quwain" }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/emrsuae",
+      "https://www.instagram.com/emrsuae",
+      "https://www.linkedin.com/in/emrs-ambulance-services-llc-9270011b5/",
+      "https://g.co/kgs/emrs-uae"
+    ],
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+971554728133",
+        "contactType": "customer service",
+        "areaServed": "AE",
+        "availableLanguage": ["English", "Arabic", "Hindi", "Urdu"],
+        "hoursAvailable": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      },
+      {
+        "@type": "ContactPoint",
+        "telephone": "+971554728133",
+        "contactType": "emergency",
+        "areaServed": "AE",
+        "availableLanguage": ["English", "Arabic"]
+      }
+    ]
+  };
+
+  // MedicalBusiness structured data for local SEO
   const defaultStructuredData = {
     "@context": "https://schema.org",
-    "@type": ["MedicalBusiness", "LocalBusiness"],
-    "@id": `${baseUrl}/#organization`,
-    "name": "EMRS 24/7 - Medical Response Services",
-    "alternateName": "EMRS",
+    "@type": ["MedicalBusiness", "LocalBusiness", "EmergencyService"],
+    "@id": `${baseUrl}/#medicalbusiness`,
+    "name": "EMRS - Medical Response Services LLC",
+    "alternateName": "EMRS 24/7",
     "description": description,
     "url": baseUrl,
     "logo": {
@@ -114,7 +192,9 @@ const SEOHead = ({
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "5.0",
-      "reviewCount": "13"
+      "reviewCount": "13",
+      "bestRating": "5",
+      "worstRating": "1"
     },
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
@@ -151,16 +231,16 @@ const SEOHead = ({
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "24/7 Ambulance Transfer Services",
-            "description": "Professional ambulance services for hospital transfers, patient transport, and medical escort across UAE"
+            "name": "Private Ambulance Services",
+            "description": "Licensed medical transport for hospital transfers, patient discharge, and inter-facility transport"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Non-Emergency Medical Transport (NEMT)",
-            "description": "Scheduled patient transport for dialysis, medical appointments, and hospital discharges"
+            "name": "Non-Emergency Medical Transport",
+            "description": "Scheduled transport for dialysis, medical appointments, and routine hospital visits"
           }
         },
         {
@@ -168,30 +248,21 @@ const SEOHead = ({
           "itemOffered": {
             "@type": "Service",
             "name": "Doctor on Call",
-            "description": "24/7 doctor home visits and hotel doctor services across UAE"
+            "description": "Licensed physicians available for home and hotel visits across the UAE"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Home Healthcare Services",
+            "name": "Home Healthcare",
             "description": "Professional nursing care, physiotherapy, and elderly care at home"
           }
         }
       ]
     },
-    "sameAs": [
-      "https://www.facebook.com/emrsuae",
-      "https://www.instagram.com/emrsuae",
-      "https://www.linkedin.com/in/emrs-ambulance-services-llc-9270011b5/"
-    ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+971554728133",
-      "contactType": "customer service",
-      "areaServed": "AE",
-      "availableLanguage": ["English", "Arabic", "Hindi", "Urdu"]
+    "parentOrganization": {
+      "@id": `${baseUrl}/#organization`
     }
   };
 
@@ -306,7 +377,12 @@ const SEOHead = ({
       <link rel="icon" type="image/png" sizes="32x32" href={`${baseUrl}/favicon-32x32.png`} />
       <link rel="icon" type="image/png" sizes="16x16" href={`${baseUrl}/favicon-16x16.png`} />
 
-      {/* Structured Data */}
+      {/* Structured Data - Organization for entity recognition */}
+      <script type="application/ld+json">
+        {JSON.stringify(organizationSchema)}
+      </script>
+
+      {/* Structured Data - MedicalBusiness for local SEO */}
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
       </script>

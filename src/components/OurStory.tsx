@@ -11,38 +11,38 @@ const OurStory = () => {
               </div>
 
               <h2 className="text-4xl sm:text-5xl font-bold text-primary">
-                Why EMRS is Your Trusted Partner for Medical Transport in the UAE
+                A Team You Can Count On When It Matters Most
               </h2>
 
               <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
                 <p>
-                  <span className="text-primary font-bold">EMRS (Medical Response Services)</span> is a professional ambulance company. We serve all seven emirates of the UAE.
+                  <span className="text-primary font-bold">EMRS</span> was founded with a simple mission: to make medical transport less stressful for patients and their families. We understand that needing an ambulance—even for a routine hospital visit—can be overwhelming.
                 </p>
                 <p>
-                  We provide safe and timely patient transfers. Our services are available for:
+                  That's why we focus on what matters most: <strong>safety, comfort, and reliability</strong>. Our team includes:
                 </p>
                 <ul className="list-disc pl-5 space-y-2">
-                  <li>Hospitals and clinics</li>
-                  <li>Individual patients</li>
-                  <li>Events and corporate needs</li>
+                  <li>Licensed paramedics and EMTs with DHA/HAAD credentials</li>
+                  <li>Trained nurses for specialized patient care</li>
+                  <li>Experienced drivers who know the UAE inside and out</li>
                 </ul>
 
                 <p className="pt-2">
-                  Our team has over <span className="text-primary font-semibold">50 years of combined experience</span>. We employ expert paramedics and nurses. Our ambulances are modern and fully equipped.
+                  With over <span className="text-primary font-semibold">50 years of combined experience</span>, we've helped thousands of patients get where they need to be—whether that's a hospital transfer, dialysis appointment, or a comfortable ride home after surgery.
                 </p>
 
                 <p>
-                  We offer a wide range of services:
+                  What we do:
                 </p>
                 <ul className="list-disc pl-5 space-y-2">
-                  <li><strong>Hospital Transfers:</strong> Safe transport between facilities.</li>
-                  <li><strong>Patient Discharge:</strong> Comfortable rides home.</li>
-                  <li><strong>Dialysis Transport:</strong> Scheduled and reliable.</li>
-                  <li><strong>Medical Escorts:</strong> Professional care for long trips.</li>
+                  <li><strong>Hospital Transfers:</strong> Moving patients safely between facilities.</li>
+                  <li><strong>Discharge Transport:</strong> Taking patients home with care.</li>
+                  <li><strong>Scheduled Appointments:</strong> Dialysis, check-ups, and follow-ups.</li>
+                  <li><strong>Medical Escorts:</strong> Continuous care for long-distance trips.</li>
                 </ul>
 
                 <p className="pt-2">
-                  We know medical transport can be stressful. We make it simple and safe. Our team is polite and efficient. We are available 24/7 to help you.
+                  We're available 24/7 because medical needs don't follow a schedule. When you call EMRS, you're not just getting a ride—you're getting a team that genuinely cares.
                 </p>
               </div>
 

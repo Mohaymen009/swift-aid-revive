@@ -61,12 +61,12 @@ const EmirateServices = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-accent font-bold text-sm uppercase tracking-wide">UAE-Wide Coverage</span>
+            <span className="text-accent font-bold text-sm uppercase tracking-wide">Serving the Entire UAE</span>
             <h2 className="text-4xl sm:text-5xl font-bold text-primary mt-4 mb-6">
-              Ambulance Services Across All Seven Emirates
+              Find Your Local Service
             </h2>
             <p className="text-lg text-muted-foreground">
-              EMRS provides professional ambulance and medical transport services throughout the United Arab Emirates. Whether you need patient transfers in Dubai, medical transport in Abu Dhabi, or ambulance services in Sharjah, Ajman, Ras Al Khaimah, Fujairah, or Umm Al Quwain – our team is ready to assist 24/7.
+              We operate across all seven emirates. Select your location to learn more about local response times, coverage areas, and available services. Inter-emirate transfers are also available.
             </p>
           </div>
 

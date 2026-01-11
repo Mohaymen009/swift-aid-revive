@@ -48,12 +48,12 @@ const Services = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-accent font-bold text-sm uppercase tracking-wide">Our Services</span>
+            <span className="text-accent font-bold text-sm uppercase tracking-wide">What We Offer</span>
             <h2 className="text-4xl sm:text-5xl font-bold text-primary mt-4 mb-6">
-              Comprehensive Medical Transport & Healthcare Services in UAE
+              How Can We Help You Today?
             </h2>
             <p className="text-lg text-muted-foreground">
-              From ambulance transfers to home healthcare, EMRS provides a complete range of medical services across Dubai, Abu Dhabi, Sharjah, and all UAE emirates. Our professional team is available 24/7 to assist with your medical transport needs.
+              Whether you need to get to a hospital appointment, transfer between healthcare facilities, or require medical care at home—our team is here for you. We handle the logistics so you can focus on recovery.
             </p>
           </div>
 
