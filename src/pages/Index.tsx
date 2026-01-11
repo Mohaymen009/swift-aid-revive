@@ -5,13 +5,12 @@ import Services from "@/components/Services";
 import EmirateServices from "@/components/EmirateServices";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import HomeFAQ from "@/components/HomeFAQ";
-import TrustmaryWidget from "@/components/TrustmaryWidget";
+
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
 import BlogSection from "@/components/BlogSection";
-
 const Index = () => {
   return (
     <div className="min-h-screen" id="home">
@@ -25,7 +24,7 @@ const Index = () => {
       <WhyChooseUs />
       <HomeFAQ />
       <BlogSection />
-      <TrustmaryWidget />
+
       <Contact />
       <Footer />
       <FloatingContact />

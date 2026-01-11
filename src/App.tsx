@@ -25,6 +25,7 @@ const ServicesHub = lazy(() => import("./pages/ServicesHub"));
 const Licensing = lazy(() => import("./pages/Licensing"));
 const MedicalOversight = lazy(() => import("./pages/MedicalOversight"));
 const AboutUs = lazy(() => import("./pages/AboutUs"));
+const EventMedicalCoverage = lazy(() => import("./pages/EventMedicalCoverage"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -58,6 +59,7 @@ const App = () => (
             <Route path="/fujairah-ambulance-services/" element={<FujairahAmbulanceServices />} />
             <Route path="/umm-al-quwain-ambulance-services/" element={<UmmAlQuwainAmbulanceServices />} />
             <Route path="/al-ain-ambulance-services/" element={<AlAinAmbulanceServices />} />
+            <Route path="/event-medical-services-uae/" element={<EventMedicalCoverage />} />
             {/* Blog Posts */}
             <Route path="/blog/how-to-choose-ambulance-service/" element={<BlogHowToChooseAmbulance />} />
 

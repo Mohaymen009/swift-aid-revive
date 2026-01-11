@@ -17,7 +17,7 @@ const BlogSection = () => {
             title: "Private Ambulance Services Across UAE",
             excerpt: "Understanding the benefits of private ambulance services for non-emergency and inter-facility transfers.",
             date: "Jan 3, 2026",
-            author: "Dr. Sarah Ahmed",
+            author: "EMRS Team",
             slug: "/blog/private-ambulance-services-across-uae/"
         },
         {

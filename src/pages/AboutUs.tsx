@@ -97,36 +97,46 @@ const AboutUs = () => {
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8 text-center">
               What We Do
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 {
                   icon: Truck,
                   title: "Ambulance Transfer Services",
-                  description: "Professional ambulance transport for hospital-to-hospital transfers, airport pickups, and medical repatriations with ICU and BLS capabilities."
+                  description: "Professional patient transfer and medical transport with trained paramedics. Hospital-to-hospital transfers, patient discharge transport, and inter-facility transfers available 24/7 across all UAE emirates."
                 },
                 {
                   icon: MapPin,
                   title: "Non-Emergency Medical Transport",
-                  description: "Scheduled patient transport for dialysis appointments, hospital discharges, medical check-ups, and mobility-assisted transfers."
+                  description: "Scheduled medical transport for dialysis appointments, outpatient procedures, medical check-ups, and routine hospital visits. Wheelchair and stretcher transport available."
                 },
                 {
                   icon: Stethoscope,
                   title: "Doctor on Call",
-                  description: "Licensed physicians available for home and hotel visits across the UAE. Medical consultations, prescriptions, and basic treatments."
+                  description: "24/7 doctor home visits and hotel doctor services across Dubai and UAE. Licensed physicians available for consultations, IV therapy, minor treatments, and prescription services at your location."
                 },
                 {
                   icon: Heart,
-                  title: "Home Healthcare",
-                  description: "Professional nursing care, elderly care, physiotherapy, and post-operative care delivered in the comfort of your home."
+                  title: "Home Healthcare Services",
+                  description: "Professional nursing care, physiotherapy, and elderly care in the comfort of your home. Post-operative care, wound management, medication administration, and rehabilitation services."
+                },
+                {
+                  icon: Award, // Using Award as a placeholder for Repatriation if Plane is not available, or I can import Plane
+                  title: "Repatriation Services",
+                  description: "Specialized international patient transport services. We handle the complex logistics of moving patients across borders, including medical clearance, flight coordination, and bed-to-bed transfers."
+                },
+                {
+                  icon: Users,
+                  title: "Event Medical Coverage",
+                  description: "Comprehensive medical support for corporate events, sports events, concerts, exhibitions, and private functions. On-site paramedics and ambulance standby services."
                 }
               ].map((service, index) => (
-                <div key={index} className="flex gap-4 bg-white rounded-lg p-6">
+                <div key={index} className="flex flex-col gap-4 bg-white rounded-lg p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
                   <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0">
                     <service.icon className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">{service.title}</h3>
-                    <p className="text-gray-600">{service.description}</p>
+                    <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
                   </div>
                 </div>
               ))}

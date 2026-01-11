@@ -36,7 +36,7 @@ const services = [
     icon: Users,
     title: "Event Medical Coverage",
     description: "Comprehensive medical support for corporate events, sports events, concerts, exhibitions, and private functions. On-site paramedics and ambulance standby services for events of all sizes.",
-    link: "/ambulance-services-uae/",
+    link: "/event-medical-services-uae/",
     linkText: "Get Event Coverage"
   },
 ];

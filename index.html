@@ -21,7 +21,7 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" crossorigin
     fetchpriority="low">
   <link rel="preload" as="image" href="/site-logo.webp" fetchpriority="high">
-  <link rel="preload" as="image" href="/site-logo.webp" fetchpriority="high">
+
 
 
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -39,6 +39,33 @@
   <meta name="google-site-verification" content="Y4U0CP7Y-tQbEMzw9rFC" />
   <meta name="geo.region" content="AE" />
   <meta name="geo.placename" content="Dubai, United Arab Emirates" />
+
+  <!-- Identity Schema: Organization -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://emrs.ae/#organization",
+      "name": "EMRS - Medical Response Services LLC",
+      "legalName": "EMRS - Medical Response Services LLC",
+      "alternateName": ["EMRS", "EMRS 24/7", "EMRS UAE"],
+      "url": "https://emrs.ae",
+      "logo": "https://emrs.ae/site-logo.png",
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "+971554728133",
+        "contactType": "customer service",
+        "areaServed": "AE",
+        "availableLanguage": ["English", "Arabic", "Hindi", "Urdu"]
+      }],
+      "sameAs": [
+        "https://www.facebook.com/emrsuae",
+        "https://www.instagram.com/emrsuae",
+        "https://www.linkedin.com/in/emrs-ambulance-services-llc-9270011b5/",
+        "https://g.co/kgs/emrs-uae"
+      ]
+    }
+  </script>
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
     media="print" onload="this.media='all'">
@@ -80,7 +107,51 @@
 </head>
 
 <body>
-  <div id="root"></div>
+  <div id="root">
+    <!-- Static Content for SEO & LLM Readability (0% Rendering Lag) -->
+    <header>
+      <h1>Licensed Medical Transport You Can Trust | EMRS 24/7</h1>
+      <p>Available Around the Clock, Across All Seven Emirates. Professional Ambulance Services, Patient Transport, and
+        Home Healthcare in UAE.</p>
+    </header>
+
+    <section>
+      <h2>Our Medical Services</h2>
+      <ul>
+        <li><strong>Ambulance Transfer Services:</strong> Professional patient transfer and medical transport with
+          trained paramedics.</li>
+        <li><strong>Non-Emergency Medical Transport:</strong> Scheduled medical transport for dialysis, hospital
+          discharges, and check-ups.</li>
+        <li><strong>Doctor on Call:</strong> 24/7 doctor home visits and hotel services across Dubai and UAE.</li>
+        <li><strong>Home Healthcare Services:</strong> Professional nursing care, physiotherapy, and elderly care at
+          home.</li>
+        <li><strong>Event Medical Coverage:</strong> Ambulance standby and medical support for events of all sizes.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <div>
+        <h3>How do I book an ambulance with EMRS?</h3>
+        <p>Call +971 55 472 8133 or WhatsApp. For non-urgent transfers, book 2-4 hours in advance.</p>
+      </div>
+      <div>
+        <h3>What areas do you serve?</h3>
+        <p>All seven emirates: Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Fujairah, and Umm Al Quwain.</p>
+      </div>
+      <div>
+        <h3>Are your paramedics licensed?</h3>
+        <p>Yes, all staff hold valid DHA, HAAD, or MOH licenses and are BLS/ACLS certified.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>About EMRS</h2>
+      <p>EMRS was founded to make medical transport less stressful. We provide safety, comfort, and reliability with
+        over 50 years of combined team experience.</p>
+      <p>Contact Us: info@emrs.ae | +971 55 472 8133</p>
+    </section>
+  </div>
   <script type="module" src="/src/main.tsx" defer></script>
   <noscript>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
