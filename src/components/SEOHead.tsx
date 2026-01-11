@@ -375,9 +375,8 @@ const SEOHead = ({
       <meta name="msapplication-TileColor" content="#0066cc" />
       <meta name="apple-mobile-web-app-title" content={siteName} />
       <meta name="application-name" content={siteName} />
-      <link rel="apple-touch-icon" href={`${baseUrl}/apple-touch-icon.png`} />
-      <link rel="icon" type="image/png" sizes="32x32" href={`${baseUrl}/favicon-32x32.png`} />
-      <link rel="icon" type="image/png" sizes="16x16" href={`${baseUrl}/favicon-16x16.png`} />
+      <link rel="apple-touch-icon" href={`${baseUrl}/site-logo.png`} />
+      <link rel="icon" type="image/png" sizes="32x32" href={`${baseUrl}/favicon.png`} />
 
       {/* Structured Data - Organization for entity recognition */}
       <script type="application/ld+json">
