@@ -31,9 +31,9 @@ const OurStory = () => {
                   With over <span className="text-primary font-semibold">50 years of combined experience</span>, we've helped thousands of patients get where they need to be—whether that's a hospital transfer, dialysis appointment, or a comfortable ride home after surgery.
                 </p>
 
-                <h3 className="text-xl font-bold text-primary pt-2">
-                  Our Ambulance Services
-                </h3>
+                <p>
+                  What we do:
+                </p>
                 <ul className="list-disc pl-5 space-y-2">
                   <li><strong>Hospital Transfers:</strong> Moving patients safely between facilities.</li>
                   <li><strong>Discharge Transport:</strong> Taking patients home with care.</li>
@@ -68,7 +68,7 @@ const OurStory = () => {
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-elevated">
                 <img
                   src="https://plus.unsplash.com/premium_photo-1661775601929-8c775187bea6?q=80&w=800&auto=format&q=75"
-                  alt="EMRS Professional Ambulance Services Team - Medical Transport UAE"
+                  alt="EMRS Professional Ambulance Team"
                   className="w-full h-full object-cover"
                   loading="lazy"
                   width={621}

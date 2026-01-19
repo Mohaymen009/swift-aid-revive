@@ -50,9 +50,9 @@ const WhyChooseUs = () => {
                   <feature.icon className="w-10 h-10 text-accent" />
                 </div>
 
-                <h3 className="text-xl font-bold text-primary mb-3">
+                <div className="text-xl font-bold text-primary mb-3">
                   {feature.title}
-                </h3>
+                </div>
 
                 <p className="text-muted-foreground">
                   {feature.description}

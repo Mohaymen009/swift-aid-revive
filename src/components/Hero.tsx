@@ -19,7 +19,7 @@ const Hero = () => {
                 <source srcSet="/site-logo.webp" type="image/webp" />
                 <img
                   src="/site-logo.png"
-                  alt="EMRS 24/7 - Professional Ambulance Services UAE - Medical Transport"
+                  alt="EMRS 24/7 - Professional Ambulance Services UAE"
                   width={140}
                   height={140}
                   className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 aspect-square object-contain"
@@ -32,11 +32,11 @@ const Hero = () => {
 
           {/* Main heading - Single H1 for SEO */}
           <h1 id="hero-heading" className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-8 leading-tight">
-            Licensed <strong>Medical Transport</strong> & Patient Transfer <strong>Services</strong>
+            Licensed Medical Transport & Patient Transfer Services
           </h1>
 
           <p className="text-xl sm:text-2xl lg:text-3xl text-white font-semibold mb-6">
-            EMRS 24/7: Professional <strong>Medical Transport</strong> Across All Seven Emirates
+            EMRS 24/7: Professional Medical Transport Across All Seven Emirates
           </p>
 
           <p className="text-base sm:text-lg lg:text-xl text-blue-100/95 max-w-3xl mx-auto mb-10">
@@ -80,7 +80,7 @@ const Hero = () => {
               <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer nofollow" className="flex items-center justify-center gap-3">
                 <img
                   src="/whatsapp.svg"
-                  alt="Contact EMRS Ambulance Services on WhatsApp - Medical Transport UAE"
+                  alt="Contact EMRS 24/7 Professional Medical Transport on WhatsApp"
                   width={20}
                   height={20}
                   className="w-5 h-5 flex-shrink-0"

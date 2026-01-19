@@ -48,10 +48,10 @@ const Contact = () => {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-accent font-bold text-sm uppercase tracking-wide">Contact EMRS</span>
             <h2 className="text-4xl sm:text-5xl font-bold text-primary mt-4 mb-6">
-              Get in Touch for <strong>Ambulance Services</strong>
+              Get in Touch for Ambulance Services
             </h2>
             <p className="text-lg text-muted-foreground">
-              Need <strong>ambulance services</strong>, patient transport, or medical assistance in the UAE? Our professional team is available 24/7 to help. Contact us through any of these channels for immediate assistance.
+              Need ambulance services, patient transport, or medical assistance in the UAE? Our professional team is available 24/7 to help. Contact us through any of these channels for immediate assistance.
             </p>
           </div>
 
@@ -85,10 +85,10 @@ const Contact = () => {
                     {method.detail}
                   </a>
                 ) : (
-                  <p className="text-[#A83300] font-semibold mb-1">{method.detail}</p>
+                  <p className="text-foreground font-semibold mb-1">{method.detail}</p>
                 )}
 
-                <p className="text-sm text-[#A83300]">
+                <p className="text-sm text-primary/70">
                   {method.description}
                 </p>
               </Card>

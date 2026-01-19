@@ -24,8 +24,8 @@ export interface SEOHeadProps {
 }
 
 const SEOHead = ({
-  title = "EMRS Ambulance Services Dubai | Medical Transport & Coverage",
-  description = "Ambulance services across UAE - EMRS 24/7 provides licensed patient transfer and medical transport services across all seven emirates. Fast, safe, and compassionate care.",
+  title = "EMRS 24/7 | Medical Transport, Ambulance & Patient Transfer Services UAE",
+  description = "EMRS 24/7 provides licensed ambulance, patient transfer, and medical transport services across all seven UAE emirates. Fast, safe, and compassionate care.",
   canonical: customCanonical,
   type = "website",
   emirate,

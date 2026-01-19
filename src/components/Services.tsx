@@ -68,9 +68,9 @@ const Services = () => {
                   <service.icon className="w-8 h-8 text-[#FF6200]" />
                 </div>
 
-                <h3 className="text-xl font-bold text-primary mb-3">
+                <div className="text-xl font-bold text-primary mb-3">
                   {service.title}
-                </h3>
+                </div>
 
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   {service.description}
@@ -93,7 +93,7 @@ const Services = () => {
                   Need Medical Services Now?
                 </h3>
                 <p className="text-white/90 mb-6">
-                  Contact us 24/7 for <strong>ambulance services</strong>, patient transfers, or any medical transport needs across the UAE.
+                  Contact us 24/7 for ambulance services, patient transfers, or any medical transport needs across the UAE.
                 </p>
               </div>
 
