@@ -44,6 +44,6 @@
 /ads.txt
   Content-Type: text/plain; charset=utf-8
 
-# HTML Content Type Enforcement (Only for specific extensions if needed)
+# HTML Content Type Enforcement (Handled by Netlify defaults)
 /*.html
-  Content-Type: text/html; charset=utf-8
+  X-Content-Type-Options: nosniff
