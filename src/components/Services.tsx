@@ -35,7 +35,7 @@ const services = [
   {
     icon: Users,
     title: "Event Medical Coverage",
-    description: "Comprehensive <strong>medical support</strong> for corporate events, sports events, concerts, exhibitions, and private functions. On-site paramedics and <strong>ambulance standby services</strong> for events of all sizes.",
+    description: "Comprehensive <strong>medical support</strong> for corporate events, sports events, concerts, exhibitions, and private functions. On-site paramedics and <strong>ambulance services</strong> standby for events of all sizes.",
     link: "/event-medical-services-uae/",
     linkText: "Get Event Coverage"
   },
@@ -72,9 +72,7 @@ const Services = () => {
                   {service.title}
                 </div>
 
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  {service.description}
-                </p>
+                <p className="text-muted-foreground leading-relaxed mb-4" dangerouslySetInnerHTML={{ __html: service.description }} />
 
                 <Link
                   to={service.link}
@@ -89,9 +87,9 @@ const Services = () => {
             {/* CTA Card */}
             <Card className="p-6 bg-gradient-to-br from-accent to-orange-light border-0 shadow-glow text-white flex flex-col justify-between">
               <div>
-                <h3 className="text-2xl font-bold mb-3">
+                <div className="text-2xl font-bold mb-3">
                   Need Medical Services Now?
-                </h3>
+                </div>
                 <p className="text-white/90 mb-6">
                   Contact us 24/7 for ambulance services, patient transfers, or any medical transport needs across the UAE.
                 </p>

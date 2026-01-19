@@ -88,8 +88,14 @@ const Contact = () => {
                   <p className="text-[#A83300] font-semibold mb-1">{method.detail}</p>
                 )}
 
-                <p className="text-sm text-primary/70">
-                  {method.description}
+                <p className={`text-sm ${method.title === 'Location' ? 'text-[#A83300]' : 'text-primary/70'}`}>
+                  {method.description.toLowerCase().includes('ambulance') || method.description.toLowerCase().includes('emirates') ? (
+                    <span dangerouslySetInnerHTML={{
+                      __html: method.description
+                        .replace(/ambulance/i, '<strong>ambulance</strong>')
+                        .replace(/emirates/i, '<strong>Emirates</strong>')
+                    }} />
+                  ) : method.description}
                 </p>
               </Card>
             ))}
@@ -129,9 +135,9 @@ const Contact = () => {
                   <span className="text-lg font-semibold">24/7 Ambulance & Medical Services</span>
                 </div>
 
-                <h3 className="text-3xl sm:text-4xl font-bold mb-4">
+                <div className="text-3xl sm:text-4xl font-bold mb-4">
                   Need Ambulance or Medical Transport?
-                </h3>
+                </div>
 
                 <p className="text-lg text-white mb-6">
                   Whether you need hospital transfers, patient transport, or medical assistance anywhere in the UAE — our professional team is ready to help around the clock.

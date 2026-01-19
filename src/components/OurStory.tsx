@@ -16,7 +16,7 @@ const OurStory = () => {
 
               <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
                 <p>
-                  <span className="text-primary font-bold">EMRS</span> was founded with a simple mission: to make medical transport less stressful for patients and their families. We understand that needing an ambulance—even for a routine hospital visit—can be overwhelming.
+                  <span className="text-primary font-bold">EMRS</span> was founded with a simple <strong>mission</strong>: to make <strong>medical transport</strong> less stressful for patients and their families. We understand that needing an <strong>ambulance</strong>—even for a routine hospital visit—can be overwhelming.
                 </p>
                 <p>
                   That's why we focus on what matters most: <strong>safety, comfort, and reliability</strong>. Our team includes:

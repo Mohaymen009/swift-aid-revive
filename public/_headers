@@ -44,8 +44,6 @@
 /ads.txt
   Content-Type: text/plain; charset=utf-8
 
-# HTML Content Type Enforcement
-/*
-  Content-Type: text/html; charset=utf-8
+# HTML Content Type Enforcement (Only for specific extensions if needed)
 /*.html
   Content-Type: text/html; charset=utf-8
