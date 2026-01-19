@@ -48,10 +48,10 @@ const Contact = () => {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-accent font-bold text-sm uppercase tracking-wide">Contact EMRS</span>
             <h2 className="text-4xl sm:text-5xl font-bold text-primary mt-4 mb-6">
-              Get in Touch for Ambulance Services
+              Get in Touch for <strong>Ambulance Services</strong>
             </h2>
             <p className="text-lg text-muted-foreground">
-              Need ambulance services, patient transport, or medical assistance in the UAE? Our professional team is available 24/7 to help. Contact us through any of these channels for immediate assistance.
+              Need <strong>ambulance services</strong>, patient transport, or medical assistance in the UAE? Our professional team is available 24/7 to help. Contact us through any of these channels for immediate assistance.
             </p>
           </div>
 
@@ -70,9 +70,9 @@ const Contact = () => {
                   )}
                 </div>
 
-                <div className={`text-lg font-bold mb-2 ${method.title === 'Location' ? 'text-[#A83300]' : 'text-primary'}`}>
+                <h3 className="text-lg font-bold text-primary mb-2">
                   {method.title}
-                </div>
+                </h3>
 
                 {method.link ? (
                   <a
@@ -88,14 +88,8 @@ const Contact = () => {
                   <p className="text-[#A83300] font-semibold mb-1">{method.detail}</p>
                 )}
 
-                <p className={`text-sm ${method.title === 'Location' ? 'text-[#A83300]' : 'text-primary/70'}`}>
-                  {method.description.toLowerCase().includes('ambulance') || method.description.toLowerCase().includes('emirates') ? (
-                    <span dangerouslySetInnerHTML={{
-                      __html: method.description
-                        .replace(/ambulance/i, '<strong>ambulance</strong>')
-                        .replace(/emirates/i, '<strong>Emirates</strong>')
-                    }} />
-                  ) : method.description}
+                <p className="text-sm text-[#A83300]">
+                  {method.description}
                 </p>
               </Card>
             ))}
@@ -106,21 +100,21 @@ const Contact = () => {
             <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm">
               <Shield className="w-10 h-10 text-accent flex-shrink-0" />
               <div>
-                <div className="font-bold text-primary">Professional Team</div>
+                <h4 className="font-bold text-primary">Professional Team</h4>
                 <p className="text-sm text-primary/70">Trained paramedics & medical staff</p>
               </div>
             </div>
             <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm">
               <Ambulance className="w-10 h-10 text-accent flex-shrink-0" />
               <div>
-                <div className="font-bold text-primary">Modern Fleet</div>
+                <h4 className="font-bold text-primary">Modern Fleet</h4>
                 <p className="text-sm text-primary/70">Well-equipped ambulances</p>
               </div>
             </div>
             <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm">
               <Users className="w-10 h-10 text-accent flex-shrink-0" />
               <div>
-                <div className="font-bold text-primary">UAE Coverage</div>
+                <h4 className="font-bold text-primary">UAE Coverage</h4>
                 <p className="text-sm text-primary/70">All 7 emirates served</p>
               </div>
             </div>
@@ -135,9 +129,9 @@ const Contact = () => {
                   <span className="text-lg font-semibold">24/7 Ambulance & Medical Services</span>
                 </div>
 
-                <div className="text-3xl sm:text-4xl font-bold mb-4">
+                <h3 className="text-3xl sm:text-4xl font-bold mb-4">
                   Need Ambulance or Medical Transport?
-                </div>
+                </h3>
 
                 <p className="text-lg text-white mb-6">
                   Whether you need hospital transfers, patient transport, or medical assistance anywhere in the UAE — our professional team is ready to help around the clock.

@@ -8,16 +8,6 @@
 /* Caching for static assets */
 
 # Asset Caching (JS, CSS)
-/assets/*.js
-  Content-Type: application/javascript; charset=utf-8
-  Cache-Control: public, max-age=31536000, immutable
-  X-Content-Type-Options: nosniff
-
-/assets/*.css
-  Content-Type: text/css; charset=utf-8
-  Cache-Control: public, max-age=31536000, immutable
-  X-Content-Type-Options: nosniff
-
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
   X-Content-Type-Options: nosniff
@@ -54,6 +44,8 @@
 /ads.txt
   Content-Type: text/plain; charset=utf-8
 
-# HTML Content Type Enforcement (Handled by Netlify defaults)
+# HTML Content Type Enforcement
+/*
+  Content-Type: text/html; charset=utf-8
 /*.html
-  X-Content-Type-Options: nosniff
+  Content-Type: text/html; charset=utf-8

@@ -57,7 +57,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       <img
         src={src}
         alt={imageName}
-        title={imageName}
         width={width}
         height={height}
         loading={loading}

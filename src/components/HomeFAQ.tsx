@@ -70,9 +70,9 @@ const HomeFAQ = () => {
                   aria-expanded={openIndex === index}
                   aria-controls={`faq-answer-${index}`}
                 >
-                  <div className="text-lg font-semibold text-gray-900 text-left">
+                  <h3 className="text-lg font-semibold text-gray-900 text-left">
                     {faq.question}
-                  </div>
+                  </h3>
                   <ChevronDown
                     className={`w-5 h-5 text-gray-500 flex-shrink-0 transition-transform duration-200 ${openIndex === index ? 'rotate-180' : ''
                       }`}

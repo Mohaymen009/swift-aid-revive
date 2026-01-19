@@ -53,7 +53,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({
                 aria-expanded={openIndex === index}
                 aria-controls={`faq-${index}`}
               >
-                <div
+                <h3
                   className="text-lg font-semibold text-gray-900 flex justify-between items-center"
                   itemProp="name"
                 >
@@ -72,7 +72,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({
                       d="M19 9l-7 7-7-7"
                     />
                   </svg>
-                </div>
+                </h3>
               </button>
               <div
                 id={`faq-${index}`}

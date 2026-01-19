@@ -7,35 +7,35 @@ const services = [
   {
     icon: Ambulance,
     title: "Ambulance Transfer Services",
-    description: "Professional <strong>patient transfer</strong> and <strong>medical transport</strong> with trained paramedics. <strong>Hospital-to-hospital transfers</strong>, patient discharge transport, and inter-facility transfers available 24/7 across all UAE emirates.",
+    description: "Professional patient transfer and <strong>medical transport</strong> with trained paramedics. Hospital-to-hospital transfers, patient discharge transport, and inter-facility transfers available 24/7 across all UAE emirates.",
     link: "/ambulance-services-uae/",
     linkText: "Explore Ambulance Services"
   },
   {
     icon: Activity,
     title: "Non-Emergency Medical Transport",
-    description: "Scheduled <strong>medical transport</strong> for dialysis appointments, outpatient procedures, medical check-ups, and routine hospital visits. Wheelchair and stretcher transport available with trained medical attendants.",
+    description: "Scheduled medical transport for dialysis appointments, outpatient procedures, medical check-ups, and routine hospital visits. Wheelchair and stretcher transport available with trained medical attendants.",
     link: "/non-emergency-medical-transport-uae/",
     linkText: "View Transport Services"
   },
   {
     icon: Stethoscope,
     title: "Doctor on Call",
-    description: "24/7 <strong>doctor home visits</strong> and hotel doctor services across Dubai and UAE. Licensed physicians available for consultations, IV therapy, minor treatments, and prescription services at your location.",
+    description: "24/7 doctor home visits and hotel doctor services across Dubai and UAE. Licensed physicians available for consultations, IV therapy, minor treatments, and prescription services at your location.",
     link: "/doctor-on-call-uae/",
     linkText: "Book Doctor on Call"
   },
   {
     icon: Home,
     title: "Home Healthcare Services",
-    description: "Professional nursing care, physiotherapy, and <strong>home healthcare</strong> in the comfort of your home. Post-operative care, wound management, medication administration, and rehabilitation services.",
+    description: "Professional nursing care, physiotherapy, and elderly care in the comfort of your home. Post-operative care, wound management, medication administration, and rehabilitation services.",
     link: "/home-healthcare-services-uae/",
     linkText: "Explore Home Healthcare"
   },
   {
     icon: Users,
     title: "Event Medical Coverage",
-    description: "Comprehensive <strong>medical support</strong> for corporate events, sports events, concerts, exhibitions, and private functions. On-site paramedics and <strong>ambulance services</strong> standby for events of all sizes.",
+    description: "Comprehensive medical support for corporate events, sports events, concerts, exhibitions, and private functions. On-site paramedics and ambulance standby services for events of all sizes.",
     link: "/event-medical-services-uae/",
     linkText: "Get Event Coverage"
   },
@@ -68,11 +68,13 @@ const Services = () => {
                   <service.icon className="w-8 h-8 text-[#FF6200]" />
                 </div>
 
-                <div className="text-xl font-bold text-primary mb-3">
+                <h3 className="text-xl font-bold text-primary mb-3">
                   {service.title}
-                </div>
+                </h3>
 
-                <p className="text-muted-foreground leading-relaxed mb-4" dangerouslySetInnerHTML={{ __html: service.description }} />
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  {service.description}
+                </p>
 
                 <Link
                   to={service.link}
@@ -87,11 +89,11 @@ const Services = () => {
             {/* CTA Card */}
             <Card className="p-6 bg-gradient-to-br from-accent to-orange-light border-0 shadow-glow text-white flex flex-col justify-between">
               <div>
-                <div className="text-2xl font-bold mb-3">
+                <h3 className="text-2xl font-bold mb-3">
                   Need Medical Services Now?
-                </div>
+                </h3>
                 <p className="text-white/90 mb-6">
-                  Contact us 24/7 for ambulance services, patient transfers, or any medical transport needs across the UAE.
+                  Contact us 24/7 for <strong>ambulance services</strong>, patient transfers, or any medical transport needs across the UAE.
                 </p>
               </div>
 

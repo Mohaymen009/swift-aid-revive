@@ -66,24 +66,12 @@ const Footer = () => {
                 <Clock className="w-5 h-5 text-accent flex-shrink-0" />
                 <span>24/7 Availability</span>
               </div>
-              <div className="flex items-center gap-3 text-white/90">
-                <a href="https://wa.me/971554728133" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-accent transition-colors">
-                  <img
-                    src="/whatsapp.svg"
-                    alt="WhatsApp"
-                    width={24}
-                    height={24}
-                    className="w-6 h-6 object-contain"
-                  />
-                  <span>WhatsApp Us</span>
-                </a>
-              </div>
             </div>
           </div>
 
           {/* Services */}
           <div>
-            <div className="font-bold text-lg mb-6 pt-2">Our Services</div>
+            <h3 className="font-bold text-lg mb-6 pt-2">Our Services</h3>
             <ul className="space-y-4">
               {serviceLinks.map((link) => (
                 <li key={link.name}>
@@ -97,7 +85,7 @@ const Footer = () => {
 
           {/* Emirates */}
           <div>
-            <div className="font-bold text-lg mb-6 pt-2">Locations</div>
+            <h3 className="font-bold text-lg mb-6 pt-2">Locations</h3>
             <ul className="space-y-4">
               {emirateLinks.map((link) => (
                 <li key={link.name}>
@@ -111,7 +99,7 @@ const Footer = () => {
 
           {/* Company */}
           <div>
-            <div className="font-bold text-lg mb-6 pt-2">Company</div>
+            <h3 className="font-bold text-lg mb-6 pt-2">Company</h3>
             <ul className="space-y-4">
               {companyLinks.map((link) => (
                 <li key={link.name}>
