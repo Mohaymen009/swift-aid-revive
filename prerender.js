@@ -44,7 +44,7 @@ async function prerender() {
     console.log('🔌 Starting preview server...');
     const previewServer = await preview({
         preview: { port: 0, strictPort: false },
-        root: DIST_DIR,
+        root: __dirname,
         configFile: false,
         mode: 'production'
     });

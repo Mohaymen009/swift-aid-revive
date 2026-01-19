@@ -8,6 +8,16 @@
 /* Caching for static assets */
 
 # Asset Caching (JS, CSS)
+/assets/*.js
+  Content-Type: application/javascript; charset=utf-8
+  Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
+
+/assets/*.css
+  Content-Type: text/css; charset=utf-8
+  Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
+
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
   X-Content-Type-Options: nosniff
