@@ -24,12 +24,12 @@ export interface SEOHeadProps {
 }
 
 const SEOHead = ({
-  title = "EMRS 24/7 | Medical Transport, Ambulance & Patient Transfer Services UAE",
+  title = "EMRS Ambulance Services Dubai | Medical Transport & Coverage",
   description = "EMRS 24/7 provides licensed ambulance, patient transfer, and medical transport services across all seven UAE emirates. Fast, safe, and compassionate care.",
   canonical: customCanonical,
   type = "website",
   emirate,
-  image = "/site-logo.png",
+  image = "/emrs-ambulance-medical-services-dubai-logo.png",
   imageAlt = "EMRS 24/7 Ambulance & Medical Services in UAE",
   imageWidth = 1200,
   imageHeight = 630,
@@ -87,11 +87,11 @@ const SEOHead = ({
     "url": baseUrl,
     "logo": {
       "@type": "ImageObject",
-      "url": `${baseUrl}/emrslogo.png`,
+      "url": `${baseUrl}/emrs-licensed-medical-transport-logo.png`,
       "width": 512,
       "height": 512
     },
-    "image": `${baseUrl}/site-logo.png`,
+    "image": `${baseUrl}/emrs-ambulance-medical-services-dubai-logo.png`,
     "telephone": "+971554728133",
     "email": "info@emrs.ae",
     "foundingDate": "2020",
@@ -164,11 +164,11 @@ const SEOHead = ({
     "url": baseUrl,
     "logo": {
       "@type": "ImageObject",
-      "url": `${baseUrl}/emrslogo.png`,
+      "url": `${baseUrl}/emrs-licensed-medical-transport-logo.png`,
       "width": 512,
       "height": 512
     },
-    "image": `${baseUrl}/site-logo.png`,
+    "image": `${baseUrl}/emrs-ambulance-medical-services-dubai-logo.png`,
     "telephone": "+971554728133",
     "email": "info@emrs.ae",
     "priceRange": "$$",
@@ -294,7 +294,7 @@ const SEOHead = ({
       "name": siteName,
       "logo": {
         "@type": "ImageObject",
-        "url": `${baseUrl}/emrslogo.png`
+        "url": `${baseUrl}/emrs-licensed-medical-transport-logo.png`
       }
     },
     "datePublished": publishedTime,
@@ -357,7 +357,7 @@ const SEOHead = ({
       <meta name="msapplication-TileColor" content="#0066cc" />
       <meta name="apple-mobile-web-app-title" content={siteName} />
       <meta name="application-name" content={siteName} />
-      <link rel="apple-touch-icon" href={`${baseUrl}/site-logo.png`} />
+      <link rel="apple-touch-icon" href={`${baseUrl}/emrs-ambulance-medical-services-dubai-logo.png`} />
       <link rel="icon" type="image/png" sizes="32x32" href={`${baseUrl}/favicon.png`} />
 
       {/* Structured Data - Organization for entity recognition */}

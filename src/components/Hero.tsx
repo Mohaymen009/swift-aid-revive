@@ -16,10 +16,11 @@ const Hero = () => {
           <div className="mb-8">
             <div className="inline-flex items-center justify-center w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-2xl">
               <picture>
-                <source srcSet="/site-logo.webp" type="image/webp" />
+                <source srcSet="/emrs-ambulance-medical-services-dubai-logo.webp" type="image/webp" />
                 <img
-                  src="/site-logo.png"
+                  src="/emrs-ambulance-medical-services-dubai-logo.png"
                   alt="EMRS 24/7 - Professional Ambulance Services UAE"
+                  title="EMRS Ambulance Services & Medical Transport"
                   width={140}
                   height={140}
                   className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 aspect-square object-contain"
@@ -32,15 +33,15 @@ const Hero = () => {
 
           {/* Main heading - Single H1 for SEO */}
           <h1 id="hero-heading" className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-8 leading-tight">
-            Licensed Medical Transport & Patient Transfer Services
+            Licensed <strong>Medical Transport</strong> & <strong>Patient Transfer Services</strong>
           </h1>
 
           <p className="text-xl sm:text-2xl lg:text-3xl text-white font-semibold mb-6">
-            EMRS 24/7: Professional Medical Transport Across All Seven Emirates
+            EMRS 24/7: Professional <strong>Ambulance Services</strong> Across All Seven Emirates
           </p>
 
           <p className="text-base sm:text-lg lg:text-xl text-blue-100/95 max-w-3xl mx-auto mb-10">
-            Whether you need a scheduled hospital transfer, patient discharge transport, or urgent medical escort, our licensed paramedics are ready to help. We serve families, hospitals, and healthcare facilities throughout the UAE with compassion and professionalism.
+            Whether you need a scheduled <strong>hospital transfer</strong>, <strong>patient discharge transport</strong>, or urgent <strong>medical escort</strong>, our licensed paramedics are ready to help. We serve families, hospitals, and healthcare facilities throughout the UAE with compassion and professionalism.
           </p>
 
           {/* Trust indicators */}

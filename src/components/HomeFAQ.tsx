@@ -70,21 +70,19 @@ const HomeFAQ = () => {
                   aria-expanded={openIndex === index}
                   aria-controls={`faq-answer-${index}`}
                 >
-                  <h3 className="text-lg font-semibold text-gray-900 text-left">
+                  <div className="text-lg font-semibold text-gray-900 text-left">
                     {faq.question}
-                  </h3>
-                  <ChevronDown 
-                    className={`w-5 h-5 text-gray-500 flex-shrink-0 transition-transform duration-200 ${
-                      openIndex === index ? 'rotate-180' : ''
-                    }`}
+                  </div>
+                  <ChevronDown
+                    className={`w-5 h-5 text-gray-500 flex-shrink-0 transition-transform duration-200 ${openIndex === index ? 'rotate-180' : ''
+                      }`}
                     aria-hidden="true"
                   />
                 </button>
                 <div
                   id={`faq-answer-${index}`}
-                  className={`overflow-hidden transition-all duration-200 ${
-                    openIndex === index ? 'max-h-96' : 'max-h-0'
-                  }`}
+                  className={`overflow-hidden transition-all duration-200 ${openIndex === index ? 'max-h-96' : 'max-h-0'
+                    }`}
                 >
                   <p className="px-6 pb-5 text-gray-600 leading-relaxed">
                     {faq.answer}

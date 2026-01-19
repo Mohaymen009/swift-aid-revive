@@ -70,9 +70,9 @@ const Contact = () => {
                   )}
                 </div>
 
-                <h3 className="text-lg font-bold text-primary mb-2">
+                <div className={`text-lg font-bold mb-2 ${method.title === 'Location' ? 'text-[#A83300]' : 'text-primary'}`}>
                   {method.title}
-                </h3>
+                </div>
 
                 {method.link ? (
                   <a
@@ -85,11 +85,13 @@ const Contact = () => {
                     {method.detail}
                   </a>
                 ) : (
-                  <p className="text-foreground font-semibold mb-1">{method.detail}</p>
+                  <p className="text-[#A83300] font-semibold mb-1">{method.detail}</p>
                 )}
 
                 <p className="text-sm text-primary/70">
-                  {method.description}
+                  {method.description.includes('ambulance') ? (
+                    <span dangerouslySetInnerHTML={{ __html: method.description.replace(/ambulance/g, '<strong>ambulance</strong>') }} />
+                  ) : method.description}
                 </p>
               </Card>
             ))}
@@ -100,21 +102,21 @@ const Contact = () => {
             <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm">
               <Shield className="w-10 h-10 text-accent flex-shrink-0" />
               <div>
-                <h4 className="font-bold text-primary">Professional Team</h4>
+                <div className="font-bold text-primary">Professional Team</div>
                 <p className="text-sm text-primary/70">Trained paramedics & medical staff</p>
               </div>
             </div>
             <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm">
               <Ambulance className="w-10 h-10 text-accent flex-shrink-0" />
               <div>
-                <h4 className="font-bold text-primary">Modern Fleet</h4>
+                <div className="font-bold text-primary">Modern Fleet</div>
                 <p className="text-sm text-primary/70">Well-equipped ambulances</p>
               </div>
             </div>
             <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm">
               <Users className="w-10 h-10 text-accent flex-shrink-0" />
               <div>
-                <h4 className="font-bold text-primary">UAE Coverage</h4>
+                <div className="font-bold text-primary">UAE Coverage</div>
                 <p className="text-sm text-primary/70">All 7 emirates served</p>
               </div>
             </div>

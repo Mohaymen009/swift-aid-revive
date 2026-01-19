@@ -40,8 +40,8 @@ const Footer = () => {
             <div className="flex items-center gap-2 mb-4">
               <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-transparent">
                 <picture>
-                  <source srcSet="/site-logo.webp" type="image/webp" />
-                  <img src="/site-logo.png" alt="EMRS 24/7 Logo" width={40} height={40} className="w-6 h-6" itemProp="logo" loading="lazy" />
+                  <source srcSet="/emrs-ambulance-medical-services-dubai-logo.webp" type="image/webp" />
+                  <img src="/emrs-ambulance-medical-services-dubai-logo.png" alt="EMRS 24/7 Logo" width={40} height={40} className="w-6 h-6" itemProp="logo" loading="lazy" />
                 </picture>
               </div>
               <span className="font-bold text-xl" itemProp="name">EMRS 24/7</span>
@@ -71,7 +71,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="font-bold text-lg mb-6 pt-2">Our Services</h3>
+            <div className="font-bold text-lg mb-6 pt-2">Our Services</div>
             <ul className="space-y-4">
               {serviceLinks.map((link) => (
                 <li key={link.name}>
@@ -85,7 +85,7 @@ const Footer = () => {
 
           {/* Emirates */}
           <div>
-            <h3 className="font-bold text-lg mb-6 pt-2">Locations</h3>
+            <div className="font-bold text-lg mb-6 pt-2">Locations</div>
             <ul className="space-y-4">
               {emirateLinks.map((link) => (
                 <li key={link.name}>
@@ -99,7 +99,7 @@ const Footer = () => {
 
           {/* Company */}
           <div>
-            <h3 className="font-bold text-lg mb-6 pt-2">Company</h3>
+            <div className="font-bold text-lg mb-6 pt-2">Company</div>
             <ul className="space-y-4">
               {companyLinks.map((link) => (
                 <li key={link.name}>

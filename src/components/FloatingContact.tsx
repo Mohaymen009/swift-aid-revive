@@ -33,8 +33,9 @@ const FloatingContact = () => {
         onClick={trackConversion}
       >
         <img
-          src="/whatsapp.svg"
+          src="/contact-emrs-ambulance-service-whatsapp.svg"
           alt="Contact 24/7 Private Ambulance Service on WhatsApp UAE"
+          title="Contact EMRS Ambulance Service on WhatsApp"
           width={35}
           height={35}
           className="w-[30px] h-[30px] md:w-[35px] md:h-[35px] object-contain"
@@ -42,7 +43,7 @@ const FloatingContact = () => {
       </a>
       <a
         href="tel:+971554728133"
-        className="flex items-center justify-center w-[60px] h-[60px] bg-green-500 hover:bg-green-600 text-white rounded-full shadow-green-glow hover:shadow-elevated transition-all duration-300 hover:scale-110"
+        className="flex items-center justify-center w-14 h-14 md:w-[60px] md:h-[60px] bg-[#11632B] hover:bg-[#0D4D21] text-white rounded-full shadow-lg transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#11632B]"
         aria-label="Call Us"
         onClick={trackConversion}
       >

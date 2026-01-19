@@ -69,6 +69,7 @@ const OurStory = () => {
                 <img
                   src="https://plus.unsplash.com/premium_photo-1661775601929-8c775187bea6?q=80&w=800&auto=format&q=75"
                   alt="EMRS Professional Ambulance Team"
+                  title="EMRS Professional Ambulance & Medical Service Team UAE"
                   className="w-full h-full object-cover"
                   loading="lazy"
                   width={621}

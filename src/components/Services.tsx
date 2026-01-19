@@ -7,35 +7,35 @@ const services = [
   {
     icon: Ambulance,
     title: "Ambulance Transfer Services",
-    description: "Professional patient transfer and medical transport with trained paramedics. Hospital-to-hospital transfers, patient discharge transport, and inter-facility transfers available 24/7 across all UAE emirates.",
+    description: "Professional <strong>patient transfer</strong> and <strong>medical transport</strong> with trained paramedics. <strong>Hospital-to-hospital transfers</strong>, patient discharge transport, and inter-facility transfers available 24/7 across all UAE emirates.",
     link: "/ambulance-services-uae/",
     linkText: "Explore Ambulance Services"
   },
   {
     icon: Activity,
     title: "Non-Emergency Medical Transport",
-    description: "Scheduled medical transport for dialysis appointments, outpatient procedures, medical check-ups, and routine hospital visits. Wheelchair and stretcher transport available with trained medical attendants.",
+    description: "Scheduled <strong>medical transport</strong> for dialysis appointments, outpatient procedures, medical check-ups, and routine hospital visits. Wheelchair and stretcher transport available with trained medical attendants.",
     link: "/non-emergency-medical-transport-uae/",
     linkText: "View Transport Services"
   },
   {
     icon: Stethoscope,
     title: "Doctor on Call",
-    description: "24/7 doctor home visits and hotel doctor services across Dubai and UAE. Licensed physicians available for consultations, IV therapy, minor treatments, and prescription services at your location.",
+    description: "24/7 <strong>doctor home visits</strong> and hotel doctor services across Dubai and UAE. Licensed physicians available for consultations, IV therapy, minor treatments, and prescription services at your location.",
     link: "/doctor-on-call-uae/",
     linkText: "Book Doctor on Call"
   },
   {
     icon: Home,
     title: "Home Healthcare Services",
-    description: "Professional nursing care, physiotherapy, and elderly care in the comfort of your home. Post-operative care, wound management, medication administration, and rehabilitation services.",
+    description: "Professional nursing care, physiotherapy, and <strong>home healthcare</strong> in the comfort of your home. Post-operative care, wound management, medication administration, and rehabilitation services.",
     link: "/home-healthcare-services-uae/",
     linkText: "Explore Home Healthcare"
   },
   {
     icon: Users,
     title: "Event Medical Coverage",
-    description: "Comprehensive medical support for corporate events, sports events, concerts, exhibitions, and private functions. On-site paramedics and ambulance standby services for events of all sizes.",
+    description: "Comprehensive <strong>medical support</strong> for corporate events, sports events, concerts, exhibitions, and private functions. On-site paramedics and <strong>ambulance standby services</strong> for events of all sizes.",
     link: "/event-medical-services-uae/",
     linkText: "Get Event Coverage"
   },
@@ -72,9 +72,7 @@ const Services = () => {
                   {service.title}
                 </div>
 
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  {service.description}
-                </p>
+                <p className="text-muted-foreground leading-relaxed mb-4" dangerouslySetInnerHTML={{ __html: service.description }} />
 
                 <Link
                   to={service.link}
