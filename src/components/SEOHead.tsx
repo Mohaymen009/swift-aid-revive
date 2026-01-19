@@ -29,7 +29,7 @@ const SEOHead = ({
   canonical: customCanonical,
   type = "website",
   emirate,
-  image = "/emrs-ambulance-medical-services-dubai-logo.png",
+  image = "/site-logo.png",
   imageAlt = "EMRS 24/7 Ambulance & Medical Services in UAE",
   imageWidth = 1200,
   imageHeight = 630,
@@ -87,11 +87,11 @@ const SEOHead = ({
     "url": baseUrl,
     "logo": {
       "@type": "ImageObject",
-      "url": `${baseUrl}/emrs-licensed-medical-transport-logo.png`,
+      "url": `${baseUrl}/emrslogo.png`,
       "width": 512,
       "height": 512
     },
-    "image": `${baseUrl}/emrs-ambulance-medical-services-dubai-logo.png`,
+    "image": `${baseUrl}/site-logo.png`,
     "telephone": "+971554728133",
     "email": "info@emrs.ae",
     "foundingDate": "2020",
@@ -164,11 +164,11 @@ const SEOHead = ({
     "url": baseUrl,
     "logo": {
       "@type": "ImageObject",
-      "url": `${baseUrl}/emrs-licensed-medical-transport-logo.png`,
+      "url": `${baseUrl}/emrslogo.png`,
       "width": 512,
       "height": 512
     },
-    "image": `${baseUrl}/emrs-ambulance-medical-services-dubai-logo.png`,
+    "image": `${baseUrl}/site-logo.png`,
     "telephone": "+971554728133",
     "email": "info@emrs.ae",
     "priceRange": "$$",
@@ -294,7 +294,7 @@ const SEOHead = ({
       "name": siteName,
       "logo": {
         "@type": "ImageObject",
-        "url": `${baseUrl}/emrs-licensed-medical-transport-logo.png`
+        "url": `${baseUrl}/emrslogo.png`
       }
     },
     "datePublished": publishedTime,
@@ -357,7 +357,7 @@ const SEOHead = ({
       <meta name="msapplication-TileColor" content="#0066cc" />
       <meta name="apple-mobile-web-app-title" content={siteName} />
       <meta name="application-name" content={siteName} />
-      <link rel="apple-touch-icon" href={`${baseUrl}/emrs-ambulance-medical-services-dubai-logo.png`} />
+      <link rel="apple-touch-icon" href={`${baseUrl}/site-logo.png`} />
       <link rel="icon" type="image/png" sizes="32x32" href={`${baseUrl}/favicon.png`} />
 
       {/* Structured Data - Organization for entity recognition */}

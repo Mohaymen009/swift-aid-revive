@@ -40,8 +40,8 @@ const Footer = () => {
             <div className="flex items-center gap-2 mb-4">
               <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-transparent">
                 <picture>
-                  <source srcSet="/emrs-ambulance-medical-services-dubai-logo.webp" type="image/webp" />
-                  <img src="/emrs-ambulance-medical-services-dubai-logo.png" alt="EMRS 24/7 Logo" width={40} height={40} className="w-6 h-6" itemProp="logo" loading="lazy" />
+                  <source srcSet="/site-logo.webp" type="image/webp" />
+                  <img src="/site-logo.png" alt="EMRS 24/7 Logo" width={40} height={40} className="w-6 h-6" itemProp="logo" loading="lazy" />
                 </picture>
               </div>
               <span className="font-bold text-xl" itemProp="name">EMRS 24/7</span>
@@ -65,6 +65,18 @@ const Footer = () => {
               <div className="flex items-center gap-3 text-white/90">
                 <Clock className="w-5 h-5 text-accent flex-shrink-0" />
                 <span>24/7 Availability</span>
+              </div>
+              <div className="flex items-center gap-3 text-white/90">
+                <a href="https://wa.me/971554728133" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-accent transition-colors">
+                  <img
+                    src="/whatsapp.svg"
+                    alt="WhatsApp"
+                    width={24}
+                    height={24}
+                    className="w-6 h-6 object-contain"
+                  />
+                  <span>WhatsApp Us</span>
+                </a>
               </div>
             </div>
           </div>

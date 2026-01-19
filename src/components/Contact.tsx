@@ -89,9 +89,7 @@ const Contact = () => {
                 )}
 
                 <p className="text-sm text-primary/70">
-                  {method.description.includes('ambulance') ? (
-                    <span dangerouslySetInnerHTML={{ __html: method.description.replace(/ambulance/g, '<strong>ambulance</strong>') }} />
-                  ) : method.description}
+                  {method.description}
                 </p>
               </Card>
             ))}

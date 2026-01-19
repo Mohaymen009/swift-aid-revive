@@ -72,7 +72,9 @@ const Services = () => {
                   {service.title}
                 </div>
 
-                <p className="text-muted-foreground leading-relaxed mb-4" dangerouslySetInnerHTML={{ __html: service.description }} />
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  {service.description}
+                </p>
 
                 <Link
                   to={service.link}

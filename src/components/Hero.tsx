@@ -16,11 +16,10 @@ const Hero = () => {
           <div className="mb-8">
             <div className="inline-flex items-center justify-center w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-2xl">
               <picture>
-                <source srcSet="/emrs-ambulance-medical-services-dubai-logo.webp" type="image/webp" />
+                <source srcSet="/site-logo.webp" type="image/webp" />
                 <img
-                  src="/emrs-ambulance-medical-services-dubai-logo.png"
+                  src="/site-logo.png"
                   alt="EMRS 24/7 - Professional Ambulance Services UAE"
-                  title="EMRS Ambulance Services & Medical Transport"
                   width={140}
                   height={140}
                   className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 aspect-square object-contain"
