@@ -7,7 +7,7 @@ const services = [
   {
     icon: Ambulance,
     title: "Ambulance Transfer Services",
-    description: "Professional patient transfer and <strong>medical transport</strong> with trained paramedics. Hospital-to-hospital transfers, patient discharge transport, and inter-facility transfers available 24/7 across all UAE emirates.",
+    description: "Professional patient transfer and medical transport with trained paramedics. Hospital-to-hospital transfers, patient discharge transport, and inter-facility transfers available 24/7 across all UAE emirates.",
     link: "/ambulance-services-uae/",
     linkText: "Explore Ambulance Services"
   },
