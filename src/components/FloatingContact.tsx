@@ -4,12 +4,6 @@ import { useState, useEffect } from "react";
 const FloatingContact = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  const trackConversion = () => {
-    // Call the global function defined in index.html
-    if (typeof window !== 'undefined' && (window as any).trackContactConversion) {
-      (window as any).trackContactConversion();
-    }
-  };
 
   useEffect(() => {
     const handleScroll = () => {

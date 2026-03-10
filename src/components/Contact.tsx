@@ -33,12 +33,6 @@ const contactMethods = [
 ];
 
 const Contact = () => {
-  const trackConversion = () => {
-    // Call the global function defined in index.html
-    if (typeof window !== 'undefined' && window.trackContactConversion) {
-      window.trackContactConversion();
-    }
-  };
 
   return (
     <section id="contact" className="py-20 bg-gradient-to-b from-background to-blue-light">
