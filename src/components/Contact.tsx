@@ -137,7 +137,7 @@ const Contact = () => {
                     className="bg-white hover:bg-white/90 text-[#A83300] font-bold px-8 shadow-lg"
                     asChild
                   >
-                    <a href="tel:+971554728133" className="flex items-center gap-2" onClick={trackConversion}>
+                    <a href="tel:+971554728133" className="flex items-center gap-2">
                       <Phone className="w-5 h-5" />
                       Call +971 55 472 8133
                     </a>
