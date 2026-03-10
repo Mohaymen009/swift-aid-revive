@@ -1,0 +1,16 @@
+
+# EMRS - Emergency Medical Response Services
+# Robots.txt configuration
+
+Sitemap: https://emrs.ae/sitemap.xml
+
+User-agent: *
+Allow: /
+
+Disallow: /assets/errors
+Disallow: /assets/inc
+Disallow: /extras
+
+# https://platform.openai.com/docs/gptbot
+User-agent: GPTBot
+Disallow: /
