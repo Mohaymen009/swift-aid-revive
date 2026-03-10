@@ -74,7 +74,7 @@ const Contact = () => {
                     className="text-[#A83300] font-semibold hover:underline block mb-1"
                     target={method.link.startsWith('http') ? '_blank' : undefined}
                     rel={method.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-                    onClick={trackConversion}
+                  
                   >
                     {method.detail}
                   </a>
