@@ -24,7 +24,7 @@ const FloatingContact = () => {
         rel="noopener noreferrer nofollow"
         className="flex items-center justify-center w-14 h-14 bg-[#11632B] hover:bg-[#0D4D21] text-white rounded-full shadow-lg transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#11632B]"
         aria-label="Contact us on WhatsApp"
-        onClick={trackConversion}
+      
       >
         <img
           src="/whatsapp.svg"
