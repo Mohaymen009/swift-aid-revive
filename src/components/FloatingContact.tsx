@@ -4,12 +4,6 @@ import { useState, useEffect } from "react";
 const FloatingContact = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  const trackConversion = () => {
-    // Call the global function defined in index.html
-    if (typeof window !== 'undefined' && (window as any).trackContactConversion) {
-      (window as any).trackContactConversion();
-    }
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,7 +24,7 @@ const FloatingContact = () => {
         rel="noopener noreferrer nofollow"
         className="flex items-center justify-center w-14 h-14 bg-[#11632B] hover:bg-[#0D4D21] text-white rounded-full shadow-lg transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#11632B]"
         aria-label="Contact us on WhatsApp"
-        onClick={trackConversion}
+      
       >
         <img
           src="/whatsapp.svg"
@@ -44,7 +38,7 @@ const FloatingContact = () => {
         href="tel:+971554728133"
         className="flex items-center justify-center w-[60px] h-[60px] bg-green-500 hover:bg-green-600 text-white rounded-full shadow-green-glow hover:shadow-elevated transition-all duration-300 hover:scale-110"
         aria-label="Call Us"
-        onClick={trackConversion}
+        
       >
         <Phone className="w-6 h-6" aria-hidden="true" />
       </a>
