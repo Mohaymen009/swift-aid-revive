@@ -1,6 +1,6 @@
 declare global {
   interface Window {
-    trackContactConversion: () => void;
+    gtag_report_conversion: (url?: string) => boolean;
   }
 }
 
