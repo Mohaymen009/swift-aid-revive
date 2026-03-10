@@ -38,7 +38,7 @@ const FloatingContact = () => {
         href="tel:+971554728133"
         className="flex items-center justify-center w-[60px] h-[60px] bg-green-500 hover:bg-green-600 text-white rounded-full shadow-green-glow hover:shadow-elevated transition-all duration-300 hover:scale-110"
         aria-label="Call Us"
-        onClick={trackConversion}
+        
       >
         <Phone className="w-6 h-6" aria-hidden="true" />
       </a>
