@@ -1,3 +1,4 @@
+import { useRef, useEffect } from "react";
 import { Phone, Mail, MapPin, MessageCircle, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -46,8 +47,28 @@ const Contact = () => {
     }
   };
 
+  // Fire "Contact (1)" conversion once when contact section becomes visible
+  const sectionRef = useRef<HTMLElement>(null);
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
+            (window as any).gtag('event', 'conversion', { 'send_to': 'AW-17821448268/rQNcCJaE9IUcEMzw9rFC' });
+          }
+          observer.disconnect(); // fire only once
+        }
+      },
+      { threshold: 0.3 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section id="contact" className="py-20 bg-gradient-to-b from-background to-blue-light">
+    <section ref={sectionRef} id="contact" className="py-20 bg-gradient-to-b from-background to-blue-light">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
