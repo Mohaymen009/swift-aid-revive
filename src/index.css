@@ -2,67 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    /* Medical theme colors */
-    --background: 0 0% 100%;
-    --foreground: 215 25% 15%;
+    --background: 220 20% 97%;
+    --foreground: 220 25% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 15%;
+    --card-foreground: 220 25% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 15%;
+    --popover-foreground: 220 25% 10%;
 
-    /* Navy blue primary */
-    --primary: 215 45% 25%;
+    /* Deep navy primary */
+    --primary: 220 50% 15%;
     --primary-foreground: 0 0% 100%;
 
-    /* Light blue secondary */
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 215 45% 25%;
+    --secondary: 220 30% 95%;
+    --secondary-foreground: 220 50% 15%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 25% 35%;
+    --muted: 220 20% 94%;
+    --muted-foreground: 220 15% 40%;
 
-    /* Orange accent for action - darkened for AA/AAA contrast */
-    --accent: 25 100% 35%;
+    /* Premium orange accent - AA compliant */
+    --accent: 20 100% 40%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 25 100% 35%;
+    --border: 220 20% 90%;
+    --input: 220 20% 90%;
+    --ring: 20 100% 40%;
 
     --radius: 0.75rem;
 
-    /* Custom medical theme colors */
-    --navy: 215 45% 25%;
-    --navy-light: 215 40% 35%;
-    --navy-dark: 215 50% 18%;
-    --orange: 25 100% 35%;
-    --orange-light: 25 95% 53%;
+    /* Extended palette */
+    --navy: 220 50% 15%;
+    --navy-light: 220 40% 25%;
+    --navy-dark: 220 55% 8%;
+    --orange: 20 100% 40%;
+    --orange-light: 20 95% 55%;
     --orange-premium: 16 100% 45%;
-    /* Darker orange */
     --orange-premium-hover: 16 100% 48%;
-    --blue-light: 210 100% 97%;
+    --blue-light: 220 40% 97%;
+    --gold: 38 70% 55%;
+    --gold-light: 38 60% 70%;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(215 45% 25%) 0%, hsl(215 50% 18%) 50%, hsl(215 55% 10%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 40% 98%) 100%);
-    --gradient-hero-overlay: radial-gradient(circle at center, hsl(215 45% 25% / 0.1) 0%, transparent 70%);
+    --gradient-hero: linear-gradient(135deg, hsl(220 55% 8%) 0%, hsl(220 50% 15%) 50%, hsl(220 45% 20%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 30% 98%) 100%);
+    --gradient-hero-overlay: radial-gradient(circle at center, hsl(220 50% 15% / 0.1) 0%, transparent 70%);
+    --gradient-premium: linear-gradient(135deg, hsl(20 100% 40%) 0%, hsl(38 70% 55%) 100%);
 
     /* Shadows */
-    --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --shadow-elevated: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    --shadow-glow: 0 0 40px hsl(25 95% 53% / 0.3);
-    --shadow-green-glow: 0 0 40px hsl(142 76% 36% / 0.4);
+    --shadow-card: 0 1px 3px rgb(0 0 0 / 0.06), 0 1px 2px rgb(0 0 0 / 0.04);
+    --shadow-elevated: 0 10px 25px -5px rgb(0 0 0 / 0.08), 0 8px 10px -6px rgb(0 0 0 / 0.04);
+    --shadow-glow: 0 0 40px hsl(20 100% 50% / 0.2);
+    --shadow-green-glow: 0 0 40px hsl(142 76% 36% / 0.3);
+    --shadow-premium: 0 20px 50px -12px rgb(0 0 0 / 0.15);
   }
 }
 
@@ -74,19 +71,16 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   html {
     scroll-behavior: smooth;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply font-bold;
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
   }
 }
 
@@ -97,6 +91,10 @@ All colors MUST be HSL.
 
   .gradient-card {
     background: var(--gradient-card);
+  }
+
+  .gradient-premium {
+    background: var(--gradient-premium);
   }
 
   .shadow-card {
@@ -115,46 +113,24 @@ All colors MUST be HSL.
     box-shadow: var(--shadow-green-glow);
   }
 
-  .logo-pulse {
-    animation: pulse 2s ease-in-out infinite;
-  }
-
-  @keyframes pulse {
-
-    0%,
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-
-    50% {
-      opacity: 0.9;
-      transform: scale(1.05);
-    }
-  }
-
-  @keyframes pulse-subtle {
-
-    0%,
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-
-    50% {
-      opacity: 0.95;
-      transform: scale(1.02);
-    }
-  }
-
-  .animate-pulse-subtle {
-    animation: pulse-subtle 2s ease-in-out infinite;
+  .shadow-premium {
+    box-shadow: var(--shadow-premium);
   }
 
   .hero-radial-gradient {
     pointer-events: none;
-    background-image: radial-gradient(circle at 25% 25%, hsl(215 45% 25% / 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 75% 75%, hsl(215 45% 25% / 0.1) 0%, transparent 50%);
+    background-image: radial-gradient(circle at 25% 25%, hsl(220 50% 20% / 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, hsl(20 100% 40% / 0.1) 0%, transparent 50%);
+  }
+
+  .section-divider {
+    @apply relative;
+  }
+
+  .section-divider::after {
+    content: '';
+    @apply absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-1 rounded-full;
+    background: var(--gradient-premium);
   }
 }
 
@@ -169,7 +145,7 @@ a:focus-visible {
   @apply ring-2 ring-accent ring-offset-2;
 }
 
-/* Trustmary Widget Overrides & Accessibility */
+/* Trustmary Widget Overrides */
 .trustmary-widget {
   min-height: 600px;
   overflow: hidden;
@@ -181,11 +157,9 @@ a:focus-visible {
   margin: 0 auto;
 }
 
-/* High Contrast Fixes for Trustmary - WCAG 2 AA compliance */
 [data-trustmary-widget] .tm-overall-cta-button,
 .tm-overall-cta-button {
   background-color: #A83300 !important;
-  /* Deep Premium Orange */
   color: #FFFFFF !important;
   opacity: 1 !important;
 }
@@ -194,7 +168,6 @@ a:focus-visible {
 [data-trustmary-widget] .tm-reviewer-name,
 .tm-reviewer-name {
   color: #001a33 !important;
-  /* Near-Black Navy */
   font-weight: 800 !important;
 }
 
@@ -203,19 +176,16 @@ a:focus-visible {
 [data-trustmary-widget] .tm-card span,
 [data-trustmary-widget] .tm-card p {
   color: #1a1a1a !important;
-  /* High contrast text */
 }
 
 [data-trustmary-widget] .tm-card a,
 [data-trustmary-widget] .tm-show-more,
 .tm-show-more {
   color: #0000CC !important;
-  /* High contrast Blue */
   text-decoration: underline !important;
   font-weight: 600 !important;
 }
 
-/* Specific targeted fixes for failing elements reported in audit */
 [data-trustmary-widget] .tm-card .go3046547012,
 [data-trustmary-widget] div[class*="go"] {
   color: #1a1a1a !important;
@@ -228,10 +198,8 @@ a:focus-visible {
 
 [data-trustmary-widget] .tm-time {
   color: #4a4a4a !important;
-  /* Minimum contrast for timestamp */
 }
 
-/* Ensure widget doesn't overlap header */
 .trustmary-widget-wrapper {
   z-index: 10 !important;
 }
