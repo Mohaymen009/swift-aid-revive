@@ -1,81 +1,84 @@
-import { Shield, Zap, Award, MapPin } from "lucide-react";
+import { Shield, Zap, Award, MapPin, Clock, HeartPulse } from "lucide-react";
 
 const features = [
   {
-    icon: MapPin,
-    title: "Nationwide Coverage",
-    description: "Comprehensive services across all seven Emirates.",
-  },
-  {
-    icon: Zap,
-    title: "Advanced Technology",
-    description: "State-of-the-art medical equipment for superior care.",
-  },
-  {
-    icon: Award,
-    title: "Expert Team",
-    description: "Experienced medical professionals ensuring top-quality care.",
+    icon: Clock,
+    title: "Rapid Response",
+    description: "Fast dispatch and response times across all emirates. Our team mobilizes within minutes of your call.",
   },
   {
     icon: Shield,
     title: "Licensed & Certified",
-    description: "Fully licensed and compliant with UAE healthcare standards.",
+    description: "Fully licensed by DHA & DoH. All staff hold valid UAE healthcare professional licenses.",
+  },
+  {
+    icon: Award,
+    title: "Expert Medical Team",
+    description: "BLS, ACLS, and PALS certified paramedics with advanced life support training.",
+  },
+  {
+    icon: MapPin,
+    title: "UAE-Wide Coverage",
+    description: "Comprehensive ambulance services across all seven Emirates with local teams everywhere.",
+  },
+  {
+    icon: HeartPulse,
+    title: "Advanced Equipment",
+    description: "State-of-the-art medical equipment including cardiac monitors, ventilators, and defibrillators.",
+  },
+  {
+    icon: Zap,
+    title: "24/7 Availability",
+    description: "Round-the-clock ambulance services and medical transport. We never close.",
   },
 ];
 
 const WhyChooseUs = () => {
   return (
-    <section id="why-choose" className="py-20 bg-gradient-to-b from-blue-light to-background">
+    <section id="why-choose" className="py-24 lg:py-32 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-accent font-bold text-sm uppercase tracking-wide">Why Choose EMRS</span>
-            <h2 className="text-4xl sm:text-5xl font-bold text-primary mt-4 mb-6">
-              Why EMRS is Your Trusted Healthcare Partner in UAE
+            <span className="text-accent font-bold text-xs uppercase tracking-[0.2em]">Why Choose EMRS</span>
+            <h2 className="text-4xl sm:text-5xl font-black text-primary mt-3 mb-6">
+              Why EMRS is Your Trusted Healthcare Partner
             </h2>
-            <p className="text-lg text-muted-foreground">
-              We combine experience, technology, and dedication to deliver exceptional medical services across the UAE.
+            <p className="text-muted-foreground text-lg">
+              We combine experience, technology, and dedication to deliver exceptional <strong>ambulance services</strong> across the UAE.
             </p>
           </div>
 
           {/* Features Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div
-                key={index}
-                className="text-center group"
-              >
-                <div className="mb-6 inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl group-hover:from-accent/20 group-hover:to-accent/10 transition-all duration-300 group-hover:scale-110">
-                  <feature.icon className="w-10 h-10 text-accent" />
+              <div key={index} className="group text-center p-8 rounded-2xl hover:bg-secondary transition-all duration-300">
+                <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-accent/10 group-hover:bg-accent transition-all duration-300">
+                  <feature.icon className="w-8 h-8 text-accent group-hover:text-white transition-colors" />
                 </div>
 
-                <div className="text-xl font-bold text-primary mb-3">
-                  {feature.title}
-                </div>
+                <h3 className="text-lg font-bold text-primary mb-3">{feature.title}</h3>
 
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   {feature.description}
                 </p>
               </div>
             ))}
           </div>
 
-          {/* Trust indicators */}
-          <div className="mt-20 bg-white rounded-2xl shadow-card p-8 sm:p-12">
-            <div className="grid sm:grid-cols-3 gap-8 text-center">
-              <div>
-                <div className="text-4xl font-bold text-primary mb-2">Fast</div>
-                <div className="text-muted-foreground">Response Time</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-primary mb-2">Professional</div>
-                <div className="text-muted-foreground">Medical Staff</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-primary mb-2">Reliable</div>
-                <div className="text-muted-foreground">Service Delivery</div>
-              </div>
+          {/* Trust bar */}
+          <div className="mt-20 bg-primary rounded-2xl p-10 sm:p-14">
+            <div className="grid sm:grid-cols-3 gap-10 text-center">
+              {[
+                { value: "Fast", sub: "Response Time" },
+                { value: "Professional", sub: "Medical Staff" },
+                { value: "Reliable", sub: "Service Delivery" },
+              ].map((item) => (
+                <div key={item.value}>
+                  <h3 className="text-3xl sm:text-4xl font-black text-accent mb-2">{item.value}</h3>
+                  <div className="text-white/60 text-sm font-medium">{item.sub}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

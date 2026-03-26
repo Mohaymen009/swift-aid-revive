@@ -1,69 +1,61 @@
-import { Phone, MapPin, Clock, Shield } from "lucide-react";
+import { Phone, MapPin, Clock, Shield, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import heroImage from "@/assets/hero-ambulance.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-slate-900 px-4 sm:px-6 lg:px-8 pt-20" aria-labelledby="hero-heading">
-      {/* Background gradient and pattern */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-950 to-black"></div>
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 hero-radial-gradient"></div>
+    <section className="relative min-h-screen flex items-center overflow-hidden" aria-labelledby="hero-heading">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img
+          src={heroImage}
+          alt="EMRS 24/7 - Professional Ambulance Services UAE"
+          className="w-full h-full object-cover"
+          width={1920}
+          height={1080}
+          loading="eager"
+          fetchPriority="high"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-primary/30" />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Logo/Icon */}
-          <div className="mb-8">
-            <div className="inline-flex items-center justify-center w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-2xl">
-              <picture>
-                <source srcSet="/site-logo.webp" type="image/webp" />
-                <img
-                  src="/site-logo.png"
-                  alt="EMRS 24/7 - Professional Ambulance Services UAE"
-                  width={140}
-                  height={140}
-                  className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 aspect-square object-contain"
-                  loading="eager"
-                  fetchPriority="high"
-                />
-              </picture>
-            </div>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-28 pb-20">
+        <div className="max-w-3xl">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 border border-accent/30 text-accent mb-8">
+            <span className="w-2 h-2 rounded-full bg-accent animate-pulse-subtle" />
+            <span className="text-sm font-semibold tracking-wide">Available 24/7 Across UAE</span>
           </div>
 
-          {/* Main heading - Single H1 for SEO */}
-          <h1 id="hero-heading" className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-8 leading-tight">
+          {/* Main heading */}
+          <h1 id="hero-heading" className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[1.1]">
             Licensed Medical Transport & Patient Transfer Services
           </h1>
 
-          <p className="text-xl sm:text-2xl lg:text-3xl text-white font-semibold mb-6">
-            EMRS 24/7: Professional Medical Transport Across All Seven Emirates
-          </p>
-
-          <p className="text-base sm:text-lg lg:text-xl text-blue-100/95 max-w-3xl mx-auto mb-10">
-            Whether you need a scheduled hospital transfer, patient discharge transport, or urgent medical escort, our licensed paramedics are ready to help. We serve families, hospitals, and healthcare facilities throughout the UAE with compassion and professionalism.
+          <p className="text-lg sm:text-xl text-white/80 max-w-2xl mb-8 leading-relaxed">
+            Whether you need a scheduled hospital transfer, patient discharge transport, or urgent medical escort — our licensed paramedics are ready to help across all seven Emirates.
           </p>
 
           {/* Trust indicators */}
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-10">
-            <div className="flex items-center gap-2 text-blue-100/90">
-              <Clock className="w-5 h-5 text-accent" aria-hidden="true" />
-              <span className="text-sm sm:text-base">24/7 Available</span>
-            </div>
-            <div className="flex items-center gap-2 text-blue-100/90">
-              <MapPin className="w-5 h-5 text-accent" aria-hidden="true" />
-              <span className="text-sm sm:text-base">All 7 Emirates</span>
-            </div>
-            <div className="flex items-center gap-2 text-blue-100/90">
-              <Shield className="w-5 h-5 text-accent" aria-hidden="true" />
-              <span className="text-sm sm:text-base">Professional Staff</span>
-            </div>
+          <div className="flex flex-wrap gap-6 mb-10">
+            {[
+              { icon: Clock, text: "24/7 Dispatch" },
+              { icon: MapPin, text: "All 7 Emirates" },
+              { icon: Shield, text: "DHA Licensed" },
+            ].map((item) => (
+              <div key={item.text} className="flex items-center gap-2 text-white/70">
+                <item.icon className="w-4 h-4 text-accent" aria-hidden="true" />
+                <span className="text-sm font-medium">{item.text}</span>
+              </div>
+            ))}
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4">
             <Button
               size="lg"
-              className="bg-[#A83300] hover:bg-[#8A2A00] text-white font-bold px-6 py-4 text-lg sm:text-xl sm:px-8 sm:py-6 rounded-xl shadow-elevated transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+              className="bg-accent hover:bg-accent/90 text-white font-bold px-8 py-6 text-lg rounded-xl shadow-glow transition-all duration-300 hover:shadow-elevated"
               asChild
             >
               <a href="tel:+971554728133" className="flex items-center justify-center gap-3">
@@ -74,7 +66,7 @@ const Hero = () => {
 
             <Button
               size="lg"
-              className="bg-[#11632B] hover:bg-[#0D4D21] text-white font-bold px-6 py-4 text-lg sm:text-xl sm:px-8 sm:py-6 rounded-xl shadow-elevated transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+              className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-bold px-8 py-6 text-lg rounded-xl border border-white/20 transition-all duration-300"
               asChild
             >
               <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer nofollow" className="flex items-center justify-center gap-3">
@@ -89,6 +81,25 @@ const Hero = () => {
                 <span>WhatsApp Us</span>
               </a>
             </Button>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom stats bar */}
+      <div className="absolute bottom-0 left-0 right-0 bg-white/5 backdrop-blur-md border-t border-white/10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap justify-center sm:justify-between items-center py-4 gap-6 sm:gap-0">
+            {[
+              { value: "50+", label: "Years Combined Experience" },
+              { value: "7", label: "Emirates Covered" },
+              { value: "24/7", label: "Always Available" },
+              { value: "100%", label: "Licensed Staff" },
+            ].map((stat) => (
+              <div key={stat.label} className="text-center px-4">
+                <div className="text-2xl sm:text-3xl font-black text-accent">{stat.value}</div>
+                <div className="text-xs text-white/60 font-medium">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
