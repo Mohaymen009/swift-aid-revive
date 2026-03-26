@@ -45,46 +45,52 @@ const HomeFAQ = () => {
   };
 
   return (
-    <section id="faq" className="py-20 lg:py-24 bg-gray-50">
+    <section id="faq" className="py-24 lg:py-32 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-12">
-            <span className="text-accent font-bold text-sm uppercase tracking-wide">Common Questions</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-primary mt-4 mb-4">
+          <div className="text-center mb-14">
+            <span className="text-accent font-bold text-xs uppercase tracking-[0.2em]">Common Questions</span>
+            <h2 className="text-3xl sm:text-4xl font-black text-primary mt-3 mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-muted-foreground text-lg">
               Everything you need to know about our medical transport services
             </p>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-3">
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden"
+                className={`rounded-xl border transition-all duration-200 ${
+                  openIndex === index
+                    ? "bg-secondary border-accent/20 shadow-card"
+                    : "bg-white border-border hover:border-accent/10"
+                }`}
               >
                 <button
-                  className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
+                  className="w-full px-6 py-5 text-left flex items-center justify-between gap-4"
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
                   aria-expanded={openIndex === index}
                   aria-controls={`faq-answer-${index}`}
                 >
-                  <h3 className="text-lg font-semibold text-gray-900 text-left">
+                  <h3 className="text-base font-semibold text-primary text-left">
                     {faq.question}
                   </h3>
                   <ChevronDown
-                    className={`w-5 h-5 text-gray-500 flex-shrink-0 transition-transform duration-200 ${openIndex === index ? 'rotate-180' : ''
-                      }`}
+                    className={`w-5 h-5 text-accent flex-shrink-0 transition-transform duration-200 ${
+                      openIndex === index ? 'rotate-180' : ''
+                    }`}
                     aria-hidden="true"
                   />
                 </button>
                 <div
                   id={`faq-answer-${index}`}
-                  className={`overflow-hidden transition-all duration-200 ${openIndex === index ? 'max-h-96' : 'max-h-0'
-                    }`}
+                  className={`overflow-hidden transition-all duration-200 ${
+                    openIndex === index ? 'max-h-96' : 'max-h-0'
+                  }`}
                 >
-                  <p className="px-6 pb-5 text-gray-600 leading-relaxed">
+                  <p className="px-6 pb-5 text-muted-foreground text-sm leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>
@@ -94,7 +100,6 @@ const HomeFAQ = () => {
         </div>
       </div>
 
-      {/* FAQ Schema for rich results */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
