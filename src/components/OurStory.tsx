@@ -1,83 +1,75 @@
+import teamImage from "@/assets/team-ambulance.jpg";
+
 const OurStory = () => {
   return (
-    <section id="story" className="py-28 lg:py-32 bg-gradient-to-b from-background to-blue-light">
+    <section id="story" className="py-24 lg:py-32 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Content */}
-            <div className="space-y-6">
-              <div className="inline-block">
-                <span className="text-accent font-bold text-sm uppercase tracking-wide">About EMRS</span>
+            <div className="space-y-8">
+              <div>
+                <span className="text-accent font-bold text-xs uppercase tracking-[0.2em]">About EMRS</span>
+                <h2 className="text-4xl sm:text-5xl font-black text-primary mt-3 leading-tight">
+                  A Team You Can Count On When It Matters Most
+                </h2>
               </div>
 
-              <h2 className="text-4xl sm:text-5xl font-bold text-primary">
-                A Team You Can Count On When It Matters Most
-              </h2>
-
-              <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
+              <div className="space-y-5 text-muted-foreground text-base leading-relaxed">
                 <p>
-                  <span className="text-primary font-bold">EMRS</span> was founded with a simple mission: to make medical transport less stressful for patients and their families. We understand that needing an ambulance—even for a routine hospital visit—can be overwhelming.
+                  <strong className="text-primary">EMRS</strong> was founded with a simple mission: to make medical transport less stressful for patients and families. We understand that needing an <strong>ambulance</strong>—even for a routine hospital visit—can be overwhelming.
                 </p>
                 <p>
-                  That's why we focus on what matters most: <strong>safety, comfort, and reliability</strong>. Our team includes:
+                  That's why we focus on <strong>safety, comfort, and reliability</strong>. Our team includes:
                 </p>
-                <ul className="list-disc pl-5 space-y-2">
-                  <li>Licensed paramedics and EMTs with DHA/HAAD credentials</li>
-                  <li>Trained nurses for specialized patient care</li>
-                  <li>Experienced drivers who know the UAE inside and out</li>
+                <ul className="space-y-3 pl-1">
+                  {[
+                    "Licensed paramedics and EMTs with DHA/HAAD credentials",
+                    "Trained nurses for specialized patient care",
+                    "Experienced drivers who know the UAE inside and out",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
                 </ul>
 
-                <p className="pt-2">
-                  With over <span className="text-primary font-semibold">50 years of combined experience</span>, we've helped thousands of patients get where they need to be—whether that's a hospital transfer, dialysis appointment, or a comfortable ride home after surgery.
-                </p>
-
                 <p>
-                  What we do:
-                </p>
-                <ul className="list-disc pl-5 space-y-2">
-                  <li><strong>Hospital Transfers:</strong> Moving patients safely between facilities.</li>
-                  <li><strong>Discharge Transport:</strong> Taking patients home with care.</li>
-                  <li><strong>Scheduled Appointments:</strong> Dialysis, check-ups, and follow-ups.</li>
-                  <li><strong>Medical Escorts:</strong> Continuous care for long-distance trips.</li>
-                </ul>
-
-                <p className="pt-2">
-                  We're available 24/7 because medical needs don't follow a schedule. When you call EMRS, you're not just getting a ride—you're getting a team that genuinely cares.
+                  With over <span className="text-primary font-semibold">50 years of combined experience</span>, we've helped thousands of patients—whether that's a hospital transfer, dialysis appointment, or a comfortable ride home after surgery.
                 </p>
               </div>
 
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-6 pt-8">
-                <div className="text-center">
-                  <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">50+</div>
-                  <div className="text-sm text-muted-foreground">Years Combined Experience</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">24/7</div>
-                  <div className="text-sm text-muted-foreground">Always Available</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">7</div>
-                  <div className="text-sm text-muted-foreground">Emirates Covered</div>
-                </div>
+              <div className="grid grid-cols-3 gap-8 pt-6 border-t border-border">
+                {[
+                  { value: "50+", label: "Years Experience" },
+                  { value: "24/7", label: "Always Available" },
+                  { value: "7", label: "Emirates" },
+                ].map((stat) => (
+                  <div key={stat.label} className="text-center">
+                    <div className="text-3xl sm:text-4xl font-black text-accent">{stat.value}</div>
+                    <div className="text-xs text-muted-foreground mt-1 font-medium">{stat.label}</div>
+                  </div>
+                ))}
               </div>
             </div>
 
             {/* Image */}
             <div className="relative">
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-elevated">
+              <div className="aspect-square rounded-2xl overflow-hidden shadow-premium">
                 <img
-                  src="https://plus.unsplash.com/premium_photo-1661775601929-8c775187bea6?q=80&w=800&auto=format&q=75"
-                  alt="EMRS Professional Ambulance Team"
+                  src={teamImage}
+                  alt="EMRS Professional Ambulance Team Dubai UAE"
+                  title="EMRS ambulance services team"
                   className="w-full h-full object-cover"
                   loading="lazy"
-                  width={621}
-                  height={414}
+                  width={1024}
+                  height={1024}
                 />
               </div>
-              {/* Decorative element */}
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-accent/10 rounded-2xl -z-10" />
-              <div className="absolute -top-6 -left-6 w-32 h-32 bg-primary/10 rounded-2xl -z-10" />
+              {/* Accent decoration */}
+              <div className="absolute -bottom-4 -right-4 w-full h-full rounded-2xl border-2 border-accent/20 -z-10" />
             </div>
           </div>
         </div>

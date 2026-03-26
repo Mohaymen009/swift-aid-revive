@@ -1,6 +1,5 @@
 import { ArrowRight, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 
 const emirateServices = [
@@ -8,117 +7,109 @@ const emirateServices = [
     emirate: "Dubai",
     title: "Ambulance Services Dubai",
     url: "/dubai-ambulance-services/",
-    description: "Professional ambulance and patient transport services across Dubai including Dubai Marina, Downtown, JBR, Business Bay, Palm Jumeirah, and all areas. 24/7 availability."
+    description: "Professional ambulance and patient transport across Dubai Marina, Downtown, JBR, Business Bay, Palm Jumeirah. 24/7 availability.",
   },
   {
     emirate: "Abu Dhabi",
     title: "Ambulance Services Abu Dhabi",
     url: "/abu-dhabi-ambulance-services/",
-    description: "Comprehensive medical transport in Abu Dhabi city, Yas Island, Saadiyat Island, Al Reem Island, Khalifa City, and surrounding areas. Hospital transfers and patient transport."
+    description: "Medical transport in Abu Dhabi city, Yas Island, Saadiyat, Al Reem, Khalifa City. Hospital transfers and patient transport.",
   },
   {
     emirate: "Sharjah",
     title: "Ambulance Services Sharjah",
     url: "/sharjah-ambulance-services/",
-    description: "Reliable ambulance services throughout Sharjah including Al Nahda, Al Majaz, Al Qasimia, and industrial areas. Inter-emirate transfers to Dubai and other emirates available."
+    description: "Reliable ambulance services throughout Sharjah including Al Nahda, Al Majaz, Al Qasimia. Inter-emirate transfers available.",
   },
   {
     emirate: "Ajman",
     title: "Ambulance Services Ajman",
     url: "/ajman-ambulance-services/",
-    description: "Medical transport services in Ajman covering Al Nuaimiya, Al Rashidiya, Al Jurf, and Ajman Industrial areas. Fast response times and professional care."
+    description: "Medical transport in Ajman covering Al Nuaimiya, Al Rashidiya, Al Jurf, and industrial areas. Fast response times.",
   },
   {
     emirate: "Ras Al Khaimah",
-    title: "Ambulance Services Ras Al Khaimah",
+    title: "Ambulance Services RAK",
     url: "/ras-al-khaimah-ambulance-services/",
-    description: "Patient transfer and ambulance services in RAK including Al Hamra, Khuzam, Al Nakheel, and northern areas. Long-distance medical escorts available."
+    description: "Patient transfer and ambulance services in RAK including Al Hamra, Khuzam, Al Nakheel. Long-distance escorts available.",
   },
   {
     emirate: "Fujairah",
     title: "Ambulance Services Fujairah",
     url: "/fujairah-ambulance-services/",
-    description: "Professional medical transport in Fujairah covering the city center, Dibba, Masafi, and coastal areas. Cross-emirate hospital transfers available."
+    description: "Professional medical transport in Fujairah covering city center, Dibba, Masafi. Cross-emirate transfers available.",
   },
   {
     emirate: "Al Ain",
     title: "Ambulance Services Al Ain",
     url: "/al-ain-ambulance-services/",
-    description: "24/7 ambulance and patient transport services throughout Al Ain city and surrounding regions. Fast response times for emergency and non-emergency needs."
+    description: "24/7 ambulance and patient transport throughout Al Ain city and surrounding regions. Emergency and non-emergency.",
   },
   {
     emirate: "Umm Al Quwain",
-    title: "Ambulance Services Umm Al Quwain",
+    title: "Ambulance Services UAQ",
     url: "/umm-al-quwain-ambulance-services/",
-    description: "Ambulance and patient transport services in UAQ covering the city, industrial zones, and surrounding areas. Seamless transfers to other emirates."
-  }
+    description: "Ambulance and patient transport in UAQ covering the city, industrial zones. Seamless transfers to other emirates.",
+  },
 ];
 
 const EmirateServices = () => {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-24 lg:py-32 bg-primary">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-accent font-bold text-sm uppercase tracking-wide">Serving the Entire UAE</span>
-            <h2 className="text-4xl sm:text-5xl font-bold text-primary mt-4 mb-6">
+            <span className="text-accent font-bold text-xs uppercase tracking-[0.2em]">Serving the Entire UAE</span>
+            <h2 className="text-4xl sm:text-5xl font-black text-white mt-3 mb-6">
               Find Your Local Service
             </h2>
-            <p className="text-lg text-muted-foreground">
-              We operate across all seven emirates. Select your location to learn more about local response times, coverage areas, and available services. Inter-emirate transfers are also available.
+            <p className="text-white/60 text-lg">
+              We operate across all seven emirates with local teams and rapid response. Inter-emirate transfers are also available.
             </p>
           </div>
 
-          {/* Service Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          {/* Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {emirateServices.map((emirate, index) => (
-              <Card key={index} className="group relative overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div className="p-6 lg:p-8">
-                  <div className="flex items-center gap-2 mb-3">
-                    <MapPin className="w-5 h-5 text-accent" />
-                    <span className="text-sm font-medium text-accent">{emirate.emirate}</span>
-                  </div>
-
-                  <div className="text-xl lg:text-2xl font-bold text-primary mb-3 lg:mb-4 group-hover:text-accent transition-colors">
-                    {emirate.title}
-                  </div>
-
-                  <p className="text-muted-foreground leading-relaxed mb-4 lg:mb-6 text-sm lg:text-base">
-                    {emirate.description}
-                  </p>
-
-                  <Button
-                    variant="outline"
-                    className="group hover:bg-accent hover:text-white border-accent/20 hover:border-accent font-semibold w-full sm:w-auto"
-                    asChild
-                  >
-                    <Link
-                      to={emirate.url}
-                      className="flex items-center justify-center gap-2"
-                      onClick={() => window.scrollTo(0, 0)}
-                    >
-                      {emirate.emirate} Services
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                  </Button>
+              <Link
+                key={index}
+                to={emirate.url}
+                onClick={() => window.scrollTo(0, 0)}
+                className="group relative bg-white/5 hover:bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-accent/40 transition-all duration-300"
+              >
+                <div className="flex items-center gap-2 mb-3">
+                  <MapPin className="w-4 h-4 text-accent" />
+                  <span className="text-accent text-sm font-semibold">{emirate.emirate}</span>
                 </div>
-              </Card>
+
+                <h3 className="text-white font-bold text-base mb-2 group-hover:text-accent transition-colors">
+                  {emirate.title}
+                </h3>
+
+                <p className="text-white/50 text-sm leading-relaxed mb-4">
+                  {emirate.description}
+                </p>
+
+                <span className="text-accent text-sm font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                  View Details <ArrowRight className="w-3 h-3" />
+                </span>
+              </Link>
             ))}
           </div>
 
           {/* Bottom CTA */}
-          <div className="mt-12 text-center">
-            <p className="text-lg text-muted-foreground mb-6">
-              Need medical transport between emirates? EMRS offers seamless inter-emirate transfers across all of the UAE.
+          <div className="mt-16 text-center">
+            <p className="text-white/50 mb-6">
+              Need <strong className="text-white/80">medical transport between emirates</strong>? We offer seamless inter-emirate transfers.
             </p>
             <Button
               size="lg"
-              className="bg-accent hover:bg-accent/90 text-white font-bold"
+              className="bg-accent hover:bg-accent/90 text-white font-bold rounded-xl"
               asChild
             >
               <a href="tel:+971554728133" className="flex items-center gap-2">
-                24/7 Emergency Medical Response - Call Now
+                Call for Inter-Emirate Transfer
                 <ArrowRight className="w-5 h-5" />
               </a>
             </Button>

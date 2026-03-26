@@ -1,14 +1,16 @@
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 
+const EXTERNAL_URL = "https://homehealthcare.emrs.ae/";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const serviceLinks = [
     { name: "Private Ambulance UAE", url: "/ambulance-services-uae/" },
     { name: "Patient Transport Services", url: "/non-emergency-medical-transport-uae/" },
-    { name: "Doctor Home Visit UAE", url: "/doctor-on-call-uae/" },
-    { name: "Nursing & Home Care", url: "/home-healthcare-services-uae/" },
+    { name: "Doctor Home Visit UAE", url: EXTERNAL_URL, external: true },
+    { name: "Nursing & Home Care", url: EXTERNAL_URL, external: true },
   ];
 
   const emirateLinks = [
@@ -25,45 +27,40 @@ const Footer = () => {
     { name: "Contact Us", url: "/#contact" },
   ];
 
-  const blogLinks = [
-    { name: "Choosing Ambulance Service", url: "/blog/how-to-choose-ambulance-service/" },
-    { name: "Private Ambulance in UAE", url: "/blog/private-ambulance-services-across-uae/" },
-    { name: "Emergency Transfers", url: "/blog/emergency-patient-transfers-uae/" },
-  ];
-
   return (
     <footer role="contentinfo" className="bg-primary text-white" itemScope itemType="https://schema.org/LocalBusiness">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
-          {/* Brand & NAP */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+          {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-transparent">
-                <picture>
-                  <source srcSet="/site-logo.webp" type="image/webp" />
-                  <img src="/site-logo.png" alt="EMRS 24/7 Logo" width={40} height={40} className="w-6 h-6" itemProp="logo" loading="lazy" />
-                </picture>
+            <div className="flex items-center gap-3 mb-6">
+              <picture>
+                <source srcSet="/site-logo.webp" type="image/webp" />
+                <img src="/site-logo.png" alt="EMRS 24/7 Logo" width={36} height={36} className="w-9 h-9" itemProp="logo" loading="lazy" />
+              </picture>
+              <div>
+                <span className="font-black text-xl" itemProp="name">EMRS</span>
+                <span className="block text-[10px] font-semibold uppercase tracking-[0.2em] text-accent -mt-1">24/7 Medical</span>
               </div>
-              <span className="font-bold text-xl" itemProp="name">EMRS 24/7</span>
             </div>
-            <p className="text-white/90 leading-relaxed mb-4" itemProp="description">
-              Professional ambulance and medical transport services across all seven emirates of the UAE. Available 24/7 for patient transfers, medical escorts, and home healthcare.
+            <p className="text-white/60 text-sm leading-relaxed mb-6" itemProp="description">
+              Professional ambulance and medical transport services across all seven emirates. Available 24/7 for patient transfers, medical escorts, and home healthcare.
             </p>
-            <div className="space-y-3">
-              <div className="flex items-start gap-3 text-white/90" itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
-                <MapPin className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
+            <div className="space-y-3 text-sm">
+              <div className="flex items-start gap-3 text-white/60" itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
+                <MapPin className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
                 <span itemProp="streetAddress">Al Qusais Industrial Area, Dubai, UAE</span>
               </div>
-              <div className="flex items-center gap-3 text-white/90">
-                <Phone className="w-5 h-5 text-accent flex-shrink-0" />
+              <div className="flex items-center gap-3 text-white/60">
+                <Phone className="w-4 h-4 text-accent flex-shrink-0" />
                 <a href="tel:+971554728133" className="hover:text-accent transition-colors" itemProp="telephone">+971 55 472 8133</a>
               </div>
-              <div className="flex items-center gap-3 text-white/90">
-                <Mail className="w-5 h-5 text-accent flex-shrink-0" />
+              <div className="flex items-center gap-3 text-white/60">
+                <Mail className="w-4 h-4 text-accent flex-shrink-0" />
                 <a href="mailto:info@emrs.ae" className="hover:text-accent transition-colors" itemProp="email">info@emrs.ae</a>
               </div>
-              <div className="flex items-center gap-3 text-white/90">
-                <Clock className="w-5 h-5 text-accent flex-shrink-0" />
+              <div className="flex items-center gap-3 text-white/60">
+                <Clock className="w-4 h-4 text-accent flex-shrink-0" />
                 <span>24/7 Availability</span>
               </div>
             </div>
@@ -71,13 +68,19 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="font-bold text-lg mb-6 pt-2">Our Services</h3>
-            <ul className="space-y-4">
+            <h3 className="font-bold text-sm uppercase tracking-wider mb-6 text-white/80">Our Services</h3>
+            <ul className="space-y-3">
               {serviceLinks.map((link) => (
                 <li key={link.name}>
-                  <Link to={link.url} className="text-white/85 hover:text-accent transition-colors">
-                    {link.name}
-                  </Link>
+                  {link.external ? (
+                    <a href={link.url} target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-accent transition-colors text-sm">
+                      {link.name}
+                    </a>
+                  ) : (
+                    <Link to={link.url} className="text-white/50 hover:text-accent transition-colors text-sm">
+                      {link.name}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -85,11 +88,11 @@ const Footer = () => {
 
           {/* Emirates */}
           <div>
-            <h3 className="font-bold text-lg mb-6 pt-2">Locations</h3>
-            <ul className="space-y-4">
+            <h3 className="font-bold text-sm uppercase tracking-wider mb-6 text-white/80">Locations</h3>
+            <ul className="space-y-3">
               {emirateLinks.map((link) => (
                 <li key={link.name}>
-                  <Link to={link.url} className="text-white/85 hover:text-accent transition-colors">
+                  <Link to={link.url} className="text-white/50 hover:text-accent transition-colors text-sm">
                     {link.name} Ambulance
                   </Link>
                 </li>
@@ -99,16 +102,16 @@ const Footer = () => {
 
           {/* Company */}
           <div>
-            <h3 className="font-bold text-lg mb-6 pt-2">Company</h3>
-            <ul className="space-y-4">
+            <h3 className="font-bold text-sm uppercase tracking-wider mb-6 text-white/80">Company</h3>
+            <ul className="space-y-3">
               {companyLinks.map((link) => (
                 <li key={link.name}>
                   {link.url.startsWith('/#') ? (
-                    <a href={link.url} className="text-white/85 hover:text-accent transition-colors">
+                    <a href={link.url} className="text-white/50 hover:text-accent transition-colors text-sm">
                       {link.name}
                     </a>
                   ) : (
-                    <Link to={link.url} className="text-white/85 hover:text-accent transition-colors">
+                    <Link to={link.url} className="text-white/50 hover:text-accent transition-colors text-sm">
                       {link.name}
                     </Link>
                   )}
@@ -118,20 +121,20 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="mt-16 pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-center gap-4 text-white/90 text-sm">
-          <p>
+        {/* Bottom */}
+        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+          <p className="text-white/40">
             &copy; {currentYear} E M R S AMBULANCE SERVICES L.L.C &mdash; All rights reserved.
           </p>
           <div className="flex gap-6">
-            <Link to="/licensing/" className="hover:text-accent transition-colors text-white font-medium">Regulatory Licensing</Link>
-            <Link to="/medical-oversight/" className="hover:text-accent transition-colors text-white font-medium">Medical Oversight</Link>
+            <Link to="/licensing/" className="hover:text-accent transition-colors text-white/60 font-medium">Licensing</Link>
+            <Link to="/medical-oversight/" className="hover:text-accent transition-colors text-white/60 font-medium">Medical Oversight</Link>
           </div>
         </div>
         <div className="mt-4 text-center">
-          <p className="text-xs text-white/80 max-w-2xl mx-auto">
-            Fully licensed ambulance & medical transport provider in the UAE. Committed to clinical excellence and patient safety across all operations.
-            <Link to="/licensing/" className="underline ml-1 font-medium text-white">View our licensing & regulatory compliance</Link>.
+          <p className="text-xs text-white/30 max-w-2xl mx-auto">
+            Fully licensed ambulance & medical transport provider in the UAE. Committed to clinical excellence and patient safety.
+            <Link to="/licensing/" className="underline ml-1 text-white/50">View our licensing & regulatory compliance</Link>.
           </p>
         </div>
       </div>
