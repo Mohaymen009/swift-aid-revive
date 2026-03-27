@@ -6,6 +6,7 @@ interface SEOHeadProps {
   canonical?: string;
   type?: string;
   emirate?: string;
+  service?: string;
 }
 
 const SEOHead = ({ 
@@ -13,7 +14,8 @@ const SEOHead = ({
   description = "EMRS offers licensed 24/7 ambulance services across all UAE emirates including Dubai, Abu Dhabi, Sharjah, Ajman, RAK, Fujairah & UAQ. Call now for emergency or patient transfers.",
   canonical = "https://emrs.ae",
   type = "website",
-  emirate
+  emirate,
+  service
 }: SEOHeadProps) => {
   useEffect(() => {
     // Update document title
@@ -95,7 +97,7 @@ const SEOHead = ({
     favicon16.href = "https://emrs.ae/favicon.ico";
     
     // Update structured data
-    const structuredData = {
+    const structuredData: any = {
       "@context": "https://schema.org",
       "@type": "MedicalBusiness",
       "name": "EMRS 24/7",
@@ -143,6 +145,32 @@ const SEOHead = ({
     if (emirate) {
       structuredData.areaServed = [emirate];
       structuredData.description = `Professional ambulance services in ${emirate} with 24/7 availability`;
+    }
+
+    if (service) {
+      const serviceSchema = {
+        "@type": "Service",
+        "name": service,
+        "description": description,
+        "provider": {
+          "@type": "MedicalBusiness",
+          "name": "EMRS 24/7"
+        },
+        "areaServed": structuredData.areaServed
+      };
+      
+      // If it's a specific service page, we can provide both or nest them
+      // Common pattern is an array of schemas
+      const mainSchema = [structuredData, serviceSchema];
+      
+      let structuredDataScript = document.querySelector('script[type="application/ld+json"]') as HTMLScriptElement | null;
+      if (!structuredDataScript) {
+        structuredDataScript = document.createElement('script');
+        structuredDataScript.type = 'application/ld+json';
+        document.head.appendChild(structuredDataScript);
+      }
+      structuredDataScript.textContent = JSON.stringify(mainSchema);
+      return;
     }
 
     // Update or create structured data script

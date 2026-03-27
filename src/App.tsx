@@ -19,6 +19,11 @@ import WellnessDiagnosticServicesUAE from "./pages/WellnessDiagnosticServicesUAE
 import BlogHowToChooseAmbulance from "./pages/BlogHowToChooseAmbulance";
 import BlogPrivateAmbulanceAcrossUAE from "./pages/BlogPrivateAmbulanceAcrossUAE";
 import BlogEmergencyPatientTransfersUAE from "./pages/BlogEmergencyPatientTransfersUAE";
+import PrivateAmbulanceUAE from "./pages/PrivateAmbulanceUAE";
+import ICUAmbulanceDubai from "./pages/ICUAmbulanceDubai";
+import PatientTransferServicesUAE from "./pages/PatientTransferServicesUAE";
+import EmergencyAmbulanceDubai from "./pages/EmergencyAmbulanceDubai";
+import HomeHealthcareServicesDubai from "./pages/HomeHealthcareServicesDubai";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -49,6 +54,14 @@ const App = () => (
           <Route path="/blog/how-to-choose-ambulance-service" element={<BlogHowToChooseAmbulance />} />
           <Route path="/blog/private-ambulance-services-across-uae" element={<BlogPrivateAmbulanceAcrossUAE />} />
           <Route path="/blog/emergency-patient-transfers-uae" element={<BlogEmergencyPatientTransfersUAE />} />
+          
+          {/* New High-Intent Service Pages */}
+          <Route path="/private-ambulance-uae" element={<PrivateAmbulanceUAE />} />
+          <Route path="/icu-ambulance-dubai" element={<ICUAmbulanceDubai />} />
+          <Route path="/patient-transfer-services-uae" element={<PatientTransferServicesUAE />} />
+          <Route path="/emergency-ambulance-dubai" element={<EmergencyAmbulanceDubai />} />
+          <Route path="/home-healthcare-services-dubai" element={<HomeHealthcareServicesDubai />} />
+
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

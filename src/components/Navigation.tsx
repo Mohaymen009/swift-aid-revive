@@ -1,6 +1,12 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Phone, MessageCircle } from "lucide-react";
+import { Menu, X, Phone, MessageCircle, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import logo from "../images/logo.png";
 
 const Navigation = () => {
@@ -18,7 +24,18 @@ const Navigation = () => {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Our Story", href: "/#story" },
-    { name: "Services", href: "/#services" },
+    { 
+      name: "Services", 
+      href: "/#services",
+      dropdown: [
+        { name: "Private Ambulance UAE", href: "/private-ambulance-uae" },
+        { name: "ICU Ambulance Dubai", href: "/icu-ambulance-dubai" },
+        { name: "Patient Transfer Services", href: "/patient-transfer-services-uae" },
+        { name: "Emergency Ambulance Dubai", href: "/emergency-ambulance-dubai" },
+        { name: "Home Healthcare Dubai", href: "/home-healthcare-services-dubai" },
+        { name: "Doctor On Call", href: "/doctor-on-call-uae" },
+      ]
+    },
     { name: "Why Choose Us", href: "/#why-choose" },
     { name: "Contact", href: "/#contact" },
   ];
@@ -43,15 +60,38 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className={`font-medium transition-colors hover:text-accent ${
-                  isScrolled ? "text-foreground" : "text-white"
-                }`}
-              >
-                {link.name}
-              </a>
+              link.dropdown ? (
+                <DropdownMenu key={link.name}>
+                  <DropdownMenuTrigger className={`flex items-center gap-1 font-medium transition-colors hover:text-accent outline-none ${
+                    isScrolled ? "text-foreground" : "text-white"
+                  }`}>
+                    {link.name}
+                    <ChevronDown className="w-4 h-4" />
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="start" className="w-64 p-2 bg-white rounded-xl shadow-xl border-gray-100">
+                    {link.dropdown.map((sublink) => (
+                      <DropdownMenuItem key={sublink.name} asChild>
+                        <a 
+                          href={sublink.href}
+                          className="w-full px-4 py-3 text-sm font-medium text-primary hover:bg-gray-50 hover:text-accent rounded-lg transition-colors cursor-pointer block"
+                        >
+                          {sublink.name}
+                        </a>
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              ) : (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className={`font-medium transition-colors hover:text-accent ${
+                    isScrolled ? "text-foreground" : "text-white"
+                  }`}
+                >
+                  {link.name}
+                </a>
+              )
             ))}
           </div>
 
@@ -98,16 +138,33 @@ const Navigation = () => {
           <div className="lg:hidden mt-4 pb-4 border-t border-white/10">
             <div className="flex flex-col gap-4 mt-4">
               {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`font-medium transition-colors ${
-                    isScrolled ? "text-foreground hover:text-accent" : "text-white hover:text-blue-100"
-                  }`}
-                >
-                  {link.name}
-                </a>
+                <div key={link.name} className="flex flex-col gap-2">
+                  <a
+                    href={link.href}
+                    onClick={() => !link.dropdown && setIsMobileMenuOpen(false)}
+                    className={`font-bold text-lg transition-colors ${
+                      isScrolled ? "text-foreground hover:text-accent" : "text-white hover:text-blue-100"
+                    }`}
+                  >
+                    {link.name}
+                  </a>
+                  {link.dropdown && (
+                    <div className="flex flex-col gap-3 pl-4 mt-1 mb-2 border-l-2 border-accent/20">
+                      {link.dropdown.map((sublink) => (
+                        <a
+                          key={sublink.name}
+                          href={sublink.href}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className={`text-base font-medium transition-colors ${
+                            isScrolled ? "text-muted-foreground hover:text-accent" : "text-white/80 hover:text-white"
+                          }`}
+                        >
+                          {sublink.name}
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
               <div className="flex flex-col gap-3 mt-2 pt-4 border-t border-white/10">
                 <a 

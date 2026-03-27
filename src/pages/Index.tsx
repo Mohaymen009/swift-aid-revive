@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
+import TrustSignals from "@/components/TrustSignals";
 import OurStory from "@/components/OurStory";
 import Services from "@/components/Services";
 import EmirateServices from "@/components/EmirateServices";
@@ -15,6 +16,7 @@ const Index = () => {
       <SEOHead />
       <Navigation />
       <Hero />
+      <TrustSignals />
       <OurStory />
       <Services />
       <EmirateServices />
