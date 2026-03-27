@@ -7,10 +7,15 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const serviceLinks = [
-    { name: "Private Ambulance UAE", url: "/ambulance-services-uae/" },
-    { name: "Patient Transport Services", url: "/non-emergency-medical-transport-uae/" },
-    { name: "Doctor Home Visit UAE", url: EXTERNAL_URL, external: true },
-    { name: "Nursing & Home Care", url: EXTERNAL_URL, external: true },
+    { name: "Private Ambulance UAE", url: "/private-ambulance-uae/" },
+    { name: "ICU Ambulance Dubai", url: "/icu-ambulance-dubai/" },
+    { name: "Patient Transfer Dubai", url: "/patient-transfer-service-dubai/" },
+    { name: "Book Ambulance Dubai", url: "/book-ambulance-dubai/" },
+    { name: "Ambulance Services UAE", url: "/ambulance-services-uae/" },
+    { name: "Patient Transport (NEMT)", url: "/non-emergency-medical-transport-uae/" },
+    { name: "Event Medical Coverage", url: "/event-medical-services-uae/" },
+    { name: "Doctor Home Visit", url: EXTERNAL_URL, external: true },
+    { name: "Home Healthcare", url: EXTERNAL_URL, external: true },
   ];
 
   const emirateLinks = [
@@ -18,6 +23,10 @@ const Footer = () => {
     { name: "Abu Dhabi", url: "/abu-dhabi-ambulance-services/" },
     { name: "Sharjah", url: "/sharjah-ambulance-services/" },
     { name: "Ajman", url: "/ajman-ambulance-services/" },
+    { name: "RAK", url: "/ras-al-khaimah-ambulance-services/" },
+    { name: "Fujairah", url: "/fujairah-ambulance-services/" },
+    { name: "UAQ", url: "/umm-al-quwain-ambulance-services/" },
+    { name: "Al Ain", url: "/al-ain-ambulance-services/" },
   ];
 
   const companyLinks = [
