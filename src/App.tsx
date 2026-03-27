@@ -26,6 +26,10 @@ const Licensing = lazy(() => import("./pages/Licensing"));
 const MedicalOversight = lazy(() => import("./pages/MedicalOversight"));
 const AboutUs = lazy(() => import("./pages/AboutUs"));
 const EventMedicalCoverage = lazy(() => import("./pages/EventMedicalCoverage"));
+const PrivateAmbulanceUAE = lazy(() => import("./pages/PrivateAmbulanceUAE"));
+const ICUAmbulanceDubai = lazy(() => import("./pages/ICUAmbulanceDubai"));
+const PatientTransferServiceDubai = lazy(() => import("./pages/PatientTransferServiceDubai"));
+const BookAmbulanceDubai = lazy(() => import("./pages/BookAmbulanceDubai"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -60,6 +64,11 @@ const App = () => (
             <Route path="/umm-al-quwain-ambulance-services/" element={<UmmAlQuwainAmbulanceServices />} />
             <Route path="/al-ain-ambulance-services/" element={<AlAinAmbulanceServices />} />
             <Route path="/event-medical-services-uae/" element={<EventMedicalCoverage />} />
+            {/* High-Intent SEO Pages */}
+            <Route path="/private-ambulance-uae/" element={<PrivateAmbulanceUAE />} />
+            <Route path="/icu-ambulance-dubai/" element={<ICUAmbulanceDubai />} />
+            <Route path="/patient-transfer-service-dubai/" element={<PatientTransferServiceDubai />} />
+            <Route path="/book-ambulance-dubai/" element={<BookAmbulanceDubai />} />
             {/* Blog Posts */}
             <Route path="/blog/how-to-choose-ambulance-service/" element={<BlogHowToChooseAmbulance />} />
 
