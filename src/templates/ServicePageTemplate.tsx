@@ -67,6 +67,8 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
 
   const defaultRelated: Array<{ label: string; to: string; external?: boolean }> = [
     { label: 'Ambulance Services', to: '/ambulance-services-uae/' },
+    { label: 'Private Ambulance UAE', to: '/private-ambulance-uae/' },
+    { label: 'Patient Transfer Dubai', to: '/patient-transfer-service-dubai/' },
     { label: 'Doctor on Call', to: EXTERNAL_URL, external: true },
     { label: 'Home Healthcare', to: EXTERNAL_URL, external: true },
     { label: 'Patient Transport (NEMT)', to: '/non-emergency-medical-transport-uae/' },
@@ -87,69 +89,119 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
 
       <Navigation />
 
-      <main id="main-content" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16">
-        {updates.length > 0 && (
-          <ContentUpdate date={lastUpdated} updates={updates} className="mb-8" />
-        )}
+      {/* Full-width children area for hero sections */}
+      {hideHeader && children && (
+        <div className="pt-16">
+          {children}
+        </div>
+      )}
 
-        {!hideHeader && (
+      {!hideHeader && (
+        <main id="main-content" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16">
+          {updates.length > 0 && (
+            <ContentUpdate date={lastUpdated} updates={updates} className="mb-8" />
+          )}
+
           <header className="text-center mb-14">
             <h1 className="text-4xl sm:text-5xl font-black text-primary mb-4">{title}</h1>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">{description}</p>
           </header>
-        )}
 
-        <article className="prose max-w-none">
-          {children}
+          <article className="prose max-w-none">
+            {children}
+            <LastUpdated date={lastUpdated} className="mt-8 text-sm text-muted-foreground" />
+          </article>
+
+          <aside className="mt-16 space-y-6 max-w-3xl mx-auto">
+            <div className="bg-primary rounded-2xl p-8 text-center">
+              <h3 className="text-xl font-bold text-white mb-3">Need Help?</h3>
+              <p className="text-white/60 mb-6">Our team is available 24/7 to assist you with urgent medical needs and patient transfers.</p>
+              <CallButton phoneNumber={phoneNumber} className="w-full justify-center bg-accent hover:bg-accent/90 text-white font-bold rounded-xl">
+                Call Now
+              </CallButton>
+            </div>
+
+            <div className="overflow-hidden rounded-2xl shadow-card">
+              <OptimizedImage
+                src={imageUrl}
+                alt={imageAlt}
+                width={400}
+                height={300}
+                className="w-full h-auto"
+              />
+            </div>
+
+            <div className="bg-white p-8 rounded-2xl shadow-card">
+              <h4 className="text-base font-bold text-primary mb-4">Related Services</h4>
+              <ul className="space-y-3">
+                {links.map((l) => (
+                  <li key={l.to + l.label}>
+                    {l.external ? (
+                      <a href={l.to} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline text-sm font-medium">
+                        {l.label}
+                      </a>
+                    ) : (
+                      <Link to={l.to} className="text-accent hover:underline text-sm font-medium">
+                        {l.label}
+                      </Link>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </aside>
+
+          {faqs.length > 0 && (
+            <section className="mt-20">
+              <h2 className="text-2xl font-black text-primary mb-8">{emirate} Ambulance Service FAQs</h2>
+              <FAQSection faqs={faqs} />
+            </section>
+          )}
+        </main>
+      )}
+
+      {/* For hideHeader pages, show sidebar + FAQs after children */}
+      {hideHeader && (
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
           <LastUpdated date={lastUpdated} className="mt-8 text-sm text-muted-foreground" />
-        </article>
 
-        <aside className="mt-16 space-y-6 max-w-3xl mx-auto">
-          <div className="bg-primary rounded-2xl p-8 text-center">
-            <h3 className="text-xl font-bold text-white mb-3">Need Help?</h3>
-            <p className="text-white/60 mb-6">Our team is available 24/7 to assist you with urgent medical needs and patient transfers.</p>
-            <CallButton phoneNumber={phoneNumber} className="w-full justify-center bg-accent hover:bg-accent/90 text-white font-bold rounded-xl">
-              Call Now
-            </CallButton>
-          </div>
+          <aside className="mt-16 space-y-6 max-w-3xl mx-auto">
+            <div className="bg-primary rounded-2xl p-8 text-center">
+              <h3 className="text-xl font-bold text-white mb-3">Need Help?</h3>
+              <p className="text-white/60 mb-6">Our team is available 24/7 to assist you with medical needs and patient transfers.</p>
+              <CallButton phoneNumber={phoneNumber} className="w-full justify-center bg-accent hover:bg-accent/90 text-white font-bold rounded-xl">
+                Call Now
+              </CallButton>
+            </div>
 
-          <div className="overflow-hidden rounded-2xl shadow-card">
-            <OptimizedImage
-              src={imageUrl}
-              alt={imageAlt}
-              width={400}
-              height={300}
-              className="w-full h-auto"
-            />
-          </div>
+            <div className="bg-white p-8 rounded-2xl shadow-card">
+              <h4 className="text-base font-bold text-primary mb-4">Related Services</h4>
+              <ul className="space-y-3">
+                {links.map((l) => (
+                  <li key={l.to + l.label}>
+                    {l.external ? (
+                      <a href={l.to} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline text-sm font-medium">
+                        {l.label}
+                      </a>
+                    ) : (
+                      <Link to={l.to} className="text-accent hover:underline text-sm font-medium">
+                        {l.label}
+                      </Link>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </aside>
 
-          <div className="bg-white p-8 rounded-2xl shadow-card">
-            <h4 className="text-base font-bold text-primary mb-4">Related Services</h4>
-            <ul className="space-y-3">
-              {links.map((l) => (
-                <li key={l.to + l.label}>
-                  {l.external ? (
-                    <a href={l.to} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline text-sm font-medium">
-                      {l.label}
-                    </a>
-                  ) : (
-                    <Link to={l.to} className="text-accent hover:underline text-sm font-medium">
-                      {l.label}
-                    </Link>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </aside>
-
-        {faqs.length > 0 && (
-          <section className="mt-20">
-            <h2 className="text-2xl font-black text-primary mb-8">{emirate} Ambulance Service FAQs</h2>
-            <FAQSection faqs={faqs} />
-          </section>
-        )}
-      </main>
+          {faqs.length > 0 && (
+            <section className="mt-20">
+              <h2 className="text-2xl font-black text-primary mb-8">{emirate} Ambulance Service FAQs</h2>
+              <FAQSection faqs={faqs} />
+            </section>
+          )}
+        </div>
+      )}
     </div>
   );
 };
