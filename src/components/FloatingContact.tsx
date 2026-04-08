@@ -16,12 +16,12 @@ const FloatingContact = () => {
 
   return (
     <>
-      <div className={`fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3 transition-all duration-300 ${
+      <div className={`fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex flex-col items-end gap-2 sm:gap-3 transition-all duration-300 ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
       }`}>
         <button
           onClick={() => setIsTabbyOpen(true)}
-          className="flex items-center justify-center w-14 h-14 bg-white hover:bg-gray-50 rounded-full shadow-elevated transition-all duration-300 hover:scale-110"
+          className="flex items-center justify-center w-11 h-11 sm:w-14 sm:h-14 bg-white hover:bg-gray-50 rounded-full shadow-elevated transition-all duration-300 hover:scale-110"
           aria-label="Tabby payment options"
         >
           <img
@@ -29,14 +29,14 @@ const FloatingContact = () => {
             alt="Tabby - Pay in 4 interest-free instalments"
             width={32}
             height={32}
-            className="w-8 h-8 rounded-md object-contain"
+            className="w-6 h-6 sm:w-8 sm:h-8 rounded-md object-contain"
           />
         </button>
         <a
           href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services."
           target="_blank"
           rel="noopener noreferrer nofollow"
-          className="flex items-center justify-center w-14 h-14 bg-[#11632B] hover:bg-[#0D4D21] text-white rounded-full shadow-elevated transition-all duration-300 hover:scale-110"
+          className="flex items-center justify-center w-11 h-11 sm:w-14 sm:h-14 bg-[#11632B] hover:bg-[#0D4D21] text-white rounded-full shadow-elevated transition-all duration-300 hover:scale-110"
           aria-label="Contact us on WhatsApp"
         >
           <img
@@ -44,15 +44,15 @@ const FloatingContact = () => {
             alt="Contact 24/7 Private Ambulance Service on WhatsApp UAE"
             width={28}
             height={28}
-            className="w-7 h-7 object-contain"
+            className="w-5 h-5 sm:w-7 sm:h-7 object-contain"
           />
         </a>
         <a
           href="tel:+971554728133"
-          className="flex items-center justify-center w-14 h-14 bg-accent hover:bg-accent/90 text-white rounded-full shadow-glow hover:shadow-elevated transition-all duration-300 hover:scale-110"
+          className="flex items-center justify-center w-11 h-11 sm:w-14 sm:h-14 bg-accent hover:bg-accent/90 text-white rounded-full shadow-glow hover:shadow-elevated transition-all duration-300 hover:scale-110"
           aria-label="Call Us"
         >
-          <Phone className="w-6 h-6" aria-hidden="true" />
+          <Phone className="w-5 h-5 sm:w-6 sm:h-6" aria-hidden="true" />
         </a>
       </div>
 
