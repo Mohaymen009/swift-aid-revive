@@ -1,6 +1,7 @@
 import { Phone, MapPin, Clock, Shield, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-ambulance.jpg";
+import TabbyBadge from "@/components/TabbyBadge";
 
 const Hero = () => {
   return (
@@ -79,8 +80,13 @@ const Hero = () => {
                   loading="lazy"
                 />
                 <span>WhatsApp Us</span>
-              </a>
+          </a>
             </Button>
+          </div>
+
+          {/* Tabby Payment Badge */}
+          <div className="mt-4">
+            <TabbyBadge />
           </div>
         </div>
       </div>
