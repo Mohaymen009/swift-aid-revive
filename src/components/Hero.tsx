@@ -80,8 +80,13 @@ const Hero = () => {
                   loading="lazy"
                 />
                 <span>WhatsApp Us</span>
-              </a>
+          </a>
             </Button>
+          </div>
+
+          {/* Tabby Payment Badge */}
+          <div className="mt-4">
+            <TabbyBadge />
           </div>
         </div>
       </div>
