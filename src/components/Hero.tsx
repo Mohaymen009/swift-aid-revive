@@ -1,6 +1,7 @@
 import { Phone, MapPin, Clock, Shield, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-ambulance.jpg";
+import TabbyBadge from "@/components/TabbyBadge";
 
 const Hero = () => {
   return (
