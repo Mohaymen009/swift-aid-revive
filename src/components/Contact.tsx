@@ -5,15 +5,15 @@ const contactMethods = [
   {
     icon: Phone,
     title: "Phone",
-    detail: "+971 50 379 0382",
-    link: "tel:+971503790382",
+    detail: "+971 55 472 8133",
+    link: "tel:+971554728133",
     description: "24/7 Available",
   },
   {
     icon: MessageCircle,
     title: "WhatsApp",
     detail: "Chat with us",
-    link: "https://wa.me/971503790382?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services.",
+    link: "https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services.",
     description: "Quick messaging support",
     isWhatsApp: true,
   },
@@ -106,9 +106,9 @@ const Contact = () => {
                     className="bg-accent hover:bg-accent/90 text-white font-bold px-10 py-6 text-lg rounded-xl shadow-glow"
                     asChild
                   >
-                    <a href="tel:+971503790382" className="flex items-center gap-2">
+                    <a href="tel:+971554728133" className="flex items-center gap-2">
                       <Phone className="w-5 h-5" />
-                      Call +971 50 379 0382
+                      Call +971 55 472 8133
                     </a>
                   </Button>
 
@@ -118,7 +118,7 @@ const Contact = () => {
                     asChild
                   >
                     <a
-                      href="https://wa.me/971503790382?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services."
+                      href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services."
                       target="_blank"
                       rel="noopener noreferrer nofollow"
                       className="flex items-center gap-2"

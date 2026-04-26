@@ -16,7 +16,7 @@ const AlAinAmbulanceServices = () => {
         },
         {
             question: "How can I book an ambulance?",
-            answer: "Booking is easy. Call us at +971 50 379 0382. You can also message us on WhatsApp. We respond immediately."
+            answer: "Booking is easy. Call us at +971 55 472 8133. You can also message us on WhatsApp. We respond immediately."
         },
         {
             question: "Do you offer non-emergency transport?",

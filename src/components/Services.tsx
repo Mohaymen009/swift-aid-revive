@@ -119,7 +119,7 @@ const Services = () => {
               className="bg-accent hover:bg-accent/90 text-white font-bold px-10 py-6 text-lg rounded-xl shadow-glow"
               asChild
             >
-              <a href="tel:+971503790382" className="flex items-center gap-3">
+              <a href="tel:+971554728133" className="flex items-center gap-3">
                 Need <strong>ambulance services</strong> now? Call Dispatch
                 <ArrowRight className="w-5 h-5" />
               </a>

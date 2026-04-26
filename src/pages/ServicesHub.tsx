@@ -107,13 +107,13 @@ const ServicesHub = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-accent hover:bg-accent/90 text-white font-bold h-14 px-10 rounded-xl shadow-glow" asChild>
-              <a href="tel:+971503790382" className="flex items-center gap-2">
+              <a href="tel:+971554728133" className="flex items-center gap-2">
                 <Phone className="w-5 h-5" />
-                Call +971 50 379 0382
+                Call +971 55 472 8133
               </a>
             </Button>
             <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white font-bold h-14 px-10 rounded-xl" asChild>
-              <a href="https://wa.me/971503790382" target="_blank" rel="noopener noreferrer nofollow" className="flex items-center gap-2">
+              <a href="https://wa.me/971554728133" target="_blank" rel="noopener noreferrer nofollow" className="flex items-center gap-2">
                 WhatsApp Us
               </a>
             </Button>

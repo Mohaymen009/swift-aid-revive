@@ -155,7 +155,7 @@ const AmbulanceServicesUAE = () => {
       imageAlt="Ambulance Services in UAE by EMRS"
       lastUpdated="2026-01-01"
       faqs={faqs}
-      phoneNumber={"+971 50 379 0382"}
+      phoneNumber={"+971 55 472 8133"}
       relatedLinks={[
         { label: 'Non-Emergency Transport', to: '/non-emergency-medical-transport-uae' },
         { label: 'Doctor on Call', to: '/doctor-on-call-uae' },
@@ -185,9 +185,9 @@ const AmbulanceServicesUAE = () => {
                 className="bg-[#A83300] hover:bg-[#8A2A00] text-white font-bold text-lg px-8 py-6"
                 asChild
               >
-                <a href="tel:+971503790382" className="flex items-center gap-2">
+                <a href="tel:+971554728133" className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />
-                  Call +971 50 379 0382
+                  Call +971 55 472 8133
                 </a>
               </Button>
               <Button
@@ -195,7 +195,7 @@ const AmbulanceServicesUAE = () => {
                 className="bg-[#11632B] hover:bg-[#0D4D21] text-white font-bold text-lg px-8 py-6"
                 asChild
               >
-                <a href="https://wa.me/971503790382" target="_blank" rel="noopener noreferrer nofollow" className="flex items-center gap-2">
+                <a href="https://wa.me/971554728133" target="_blank" rel="noopener noreferrer nofollow" className="flex items-center gap-2">
                   <img src="/whatsapp.svg" alt="WhatsApp Support" width={20} height={20} className="w-5 h-5" />
                   WhatsApp
                 </a>

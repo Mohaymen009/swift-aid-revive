@@ -56,9 +56,9 @@ const NotFound = () => {
           <div className="pt-4 border-t border-border">
             <p className="text-sm text-muted-foreground mb-4 font-medium uppercase tracking-wider">Need Urgent Help?</p>
             <Button asChild variant="outline" className="w-full border-2 border-primary text-primary hover:bg-primary hover:text-white font-bold py-6 rounded-xl transition-all">
-              <a href="tel:+971503790382" className="flex items-center justify-center gap-2">
+              <a href="tel:+971554728133" className="flex items-center justify-center gap-2">
                 <Phone className="w-5 h-5" />
-                <span>Call +971 50 379 0382</span>
+                <span>Call +971 55 472 8133</span>
               </a>
             </Button>
           </div>
