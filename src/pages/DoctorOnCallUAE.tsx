@@ -104,13 +104,13 @@ const DoctorOnCallUAE = () => {
   return (
     <ServicePageTemplate
       title="Doctor on Call UAE | Licensed Home & Hotel Doctor Visits 24/7"
-      description="24/7 Doctor on Call in Dubai & UAE. Home doctor visits, hotel doctor service, VIP medical care. Licensed physicians available anytime. Call +971 55 472 8133"
+      description="24/7 Doctor on Call in Dubai & UAE. Home doctor visits, hotel doctor service, VIP medical care. Licensed physicians available anytime. Call +971 50 379 0382"
       canonical="https://emrs.ae/doctor-on-call-uae/"
 
       imageAlt="Doctor on Call in UAE by EMRS"
       lastUpdated="2026-01-01"
       faqs={faqs}
-      phoneNumber={"+971 55 472 8133"}
+      phoneNumber={"+971 50 379 0382"}
       relatedLinks={[
         { label: 'Ambulance Services', to: '/ambulance-services-uae' },
         { label: 'Home Healthcare', to: '/home-healthcare-services-uae' },
@@ -138,7 +138,7 @@ const DoctorOnCallUAE = () => {
                 className="bg-[#A83300] hover:bg-[#8A2A00] text-white font-bold text-lg px-8 py-6"
                 asChild
               >
-                <a href="tel:+971554728133" className="flex items-center gap-2">
+                <a href="tel:+971503790382" className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />
                   Call Now
                 </a>
@@ -148,7 +148,7 @@ const DoctorOnCallUAE = () => {
                 className="bg-[#11632B] hover:bg-[#0D4D21] text-white font-bold text-lg px-8 py-6"
                 asChild
               >
-                <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20Doctor%20on%20Call%20service." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                <a href="https://wa.me/971503790382?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20Doctor%20on%20Call%20service." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                   <img src="/whatsapp.svg" alt="WhatsApp Support" width={20} height={20} className="w-5 h-5" />
                   WhatsApp
                 </a>
@@ -227,7 +227,7 @@ const DoctorOnCallUAE = () => {
               className="bg-accent hover:bg-accent/90 text-white font-bold text-lg px-8 py-6"
               asChild
             >
-              <a href="tel:+971554728133" className="flex items-center gap-2">
+              <a href="tel:+971503790382" className="flex items-center gap-2">
                 <Phone className="w-5 h-5" />
                 Request Hotel Doctor
               </a>
@@ -329,9 +329,9 @@ const DoctorOnCallUAE = () => {
               className="bg-accent hover:bg-accent/90 text-white font-bold text-lg px-8 py-6"
               asChild
             >
-              <a href="tel:+971554728133" className="flex items-center gap-2">
+              <a href="tel:+971503790382" className="flex items-center gap-2">
                 <Phone className="w-5 h-5" />
-                Call +971 55 472 8133
+                Call +971 50 379 0382
               </a>
             </Button>
             <Button
@@ -340,7 +340,7 @@ const DoctorOnCallUAE = () => {
               className="border-white text-white hover:bg-white/10 font-bold text-lg px-8 py-6"
               asChild
             >
-              <a href="https://wa.me/971554728133" target="_blank" rel="noopener noreferrer nofollow" className="flex items-center gap-2">
+              <a href="https://wa.me/971503790382" target="_blank" rel="noopener noreferrer nofollow" className="flex items-center gap-2">
                 <MessageCircle className="w-5 h-5" />
                 WhatsApp Us
               </a>

@@ -41,7 +41,7 @@ const EventMedicalCoverage = () => {
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Button size="lg" className="bg-accent hover:bg-accent/90 text-white font-bold h-14 px-8 rounded-full text-lg shadow-lg hover:shadow-xl transition-all" asChild>
-                                <a href="tel:+971554728133">Request Event Quotation</a>
+                                <a href="tel:+971503790382">Request Event Quotation</a>
                             </Button>
                         </div>
                     </div>
@@ -112,12 +112,12 @@ const EventMedicalCoverage = () => {
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <Button className="bg-[#11632B] hover:bg-[#0D4D21] text-white h-12 px-8 rounded-xl font-bold flex items-center gap-2" asChild>
-                                    <a href="https://wa.me/971554728133" target="_blank" rel="noopener noreferrer">
+                                    <a href="https://wa.me/971503790382" target="_blank" rel="noopener noreferrer">
                                         WhatsApp Us
                                     </a>
                                 </Button>
                                 <Button variant="outline" className="border-primary text-primary hover:bg-primary/5 h-12 px-8 rounded-xl font-bold flex items-center gap-2" asChild>
-                                    <a href="tel:+971554728133">
+                                    <a href="tel:+971503790382">
                                         <Phone className="w-4 h-4" /> Call 24/7 Dispatch
                                     </a>
                                 </Button>

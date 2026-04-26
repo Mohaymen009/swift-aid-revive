@@ -108,7 +108,7 @@ const EmirateServices = () => {
               className="bg-accent hover:bg-accent/90 text-white font-bold rounded-xl"
               asChild
             >
-              <a href="tel:+971554728133" className="flex items-center gap-2">
+              <a href="tel:+971503790382" className="flex items-center gap-2">
                 Call for Inter-Emirate Transfer
                 <ArrowRight className="w-5 h-5" />
               </a>

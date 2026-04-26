@@ -156,10 +156,10 @@ const AboutUs = () => {
               Contact us today to discuss your medical transport or healthcare needs. Our team is available 24/7.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+971554728133" className="inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent/90 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
-                Call: +971 55 472 8133
+              <a href="tel:+971503790382" className="inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent/90 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                Call: +971 50 379 0382
               </a>
-              <a href="https://wa.me/971554728133" target="_blank" rel="noopener noreferrer nofollow" className="inline-flex items-center justify-center gap-2 bg-[#11632B] hover:bg-[#0D4D21] text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+              <a href="https://wa.me/971503790382" target="_blank" rel="noopener noreferrer nofollow" className="inline-flex items-center justify-center gap-2 bg-[#11632B] hover:bg-[#0D4D21] text-white px-6 py-3 rounded-lg font-semibold transition-colors">
                 <img src="/whatsapp.svg" alt="WhatsApp EMRS" width={20} height={20} className="w-5 h-5" />
                 WhatsApp Us
               </a>

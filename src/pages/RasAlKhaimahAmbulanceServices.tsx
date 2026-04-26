@@ -60,12 +60,12 @@ const RasAlKhaimahAmbulanceServices = () => {
   return (
     <ServicePageTemplate
       title="Professional Ambulance Service in Ras Al Khaimah | EMRS"
-      description="EMRS provides professional ambulance services in Ras Al Khaimah. Reliable patient transport and inter-emirate medical transfers in RAK. Call +971 55 472 8133"
+      description="EMRS provides professional ambulance services in Ras Al Khaimah. Reliable patient transport and inter-emirate medical transfers in RAK. Call +971 50 379 0382"
       canonical="https://emrs.ae/ras-al-khaimah-ambulance-services/"
       imageAlt="Ambulance Services in Ras Al Khaimah by EMRS"
       lastUpdated="2026-01-01"
       faqs={faqs}
-      phoneNumber={"+971 55 472 8133"}
+      phoneNumber={"+971 50 379 0382"}
       hideHeader={true}
     >
       <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-white relative">
@@ -77,10 +77,10 @@ const RasAlKhaimahAmbulanceServices = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-accent hover:bg-accent/90 font-bold" asChild>
-              <a href="tel:+971554728133">Call +971 55 472 8133</a>
+              <a href="tel:+971503790382">Call +971 50 379 0382</a>
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 font-bold" asChild>
-              <a href="https://wa.me/971554728133" target="_blank" rel="noopener noreferrer nofollow">WhatsApp Us</a>
+              <a href="https://wa.me/971503790382" target="_blank" rel="noopener noreferrer nofollow">WhatsApp Us</a>
             </Button>
           </div>
         </div>

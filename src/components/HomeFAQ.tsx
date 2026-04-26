@@ -4,7 +4,7 @@ import { ChevronDown } from 'lucide-react';
 const faqs = [
   {
     question: "How do I book an ambulance with EMRS?",
-    answer: "You can call us directly at +971 55 472 8133 or send a WhatsApp message. For non-urgent transfers, we recommend booking 2-4 hours in advance. For urgent needs, we respond immediately."
+    answer: "You can call us directly at +971 50 379 0382 or send a WhatsApp message. For non-urgent transfers, we recommend booking 2-4 hours in advance. For urgent needs, we respond immediately."
   },
   {
     question: "What areas do you serve in the UAE?",

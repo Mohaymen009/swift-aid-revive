@@ -59,9 +59,9 @@ const Hero = () => {
               className="bg-accent hover:bg-accent/90 text-white font-bold px-8 py-6 text-lg rounded-xl shadow-glow transition-all duration-300 hover:shadow-elevated"
               asChild
             >
-              <a href="tel:+971554728133" className="flex items-center justify-center gap-3">
+              <a href="tel:+971503790382" className="flex items-center justify-center gap-3">
                 <Phone className="w-5 h-5 flex-shrink-0" />
-                <span>Call +971 55 472 8133</span>
+                <span>Call +971 50 379 0382</span>
               </a>
             </Button>
 
@@ -70,7 +70,7 @@ const Hero = () => {
               className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-bold px-8 py-6 text-lg rounded-xl border border-white/20 transition-all duration-300"
               asChild
             >
-              <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer nofollow" className="flex items-center justify-center gap-3">
+              <a href="https://wa.me/971503790382?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer nofollow" className="flex items-center justify-center gap-3">
                 <img
                   src="/whatsapp.svg"
                   alt="Contact EMRS 24/7 Professional Medical Transport on WhatsApp"
