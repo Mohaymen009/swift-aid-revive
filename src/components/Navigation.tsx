@@ -86,20 +86,20 @@ const Navigation = ({ forceDark }: NavigationProps = {}) => {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-3">
-            <a href="tel:+971554728133" className={`flex items-center gap-2 font-bold text-sm transition-colors ${
+            <a href="tel:+971503790382" className={`flex items-center gap-2 font-bold text-sm transition-colors ${
               showDark ? "text-primary" : "text-white"
             }`}>
               <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center">
                 <Phone className="w-4 h-4 text-accent" aria-hidden="true" />
               </div>
-              <span className="hidden xl:inline">+971 55 472 8133</span>
+              <span className="hidden xl:inline">+971 50 379 0382</span>
             </a>
             <Button
               size="sm"
               className="bg-[#11632B] hover:bg-[#0D4D21] text-white font-semibold shadow-md rounded-lg h-9"
               asChild
             >
-              <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+              <a href="https://wa.me/971503790382?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                 <img src="/whatsapp.svg" alt="Instant WhatsApp Help UAE" width={18} height={18} className="w-[18px] h-[18px]" />
                 <span className="hidden xl:inline">WhatsApp</span>
               </a>
@@ -143,17 +143,17 @@ const Navigation = ({ forceDark }: NavigationProps = {}) => {
               ))}
               <li className="flex flex-col gap-3 mt-4 pt-4 border-t border-border">
                 <a
-                  href="tel:+971554728133"
+                  href="tel:+971503790382"
                   className="flex items-center gap-2 px-4 py-3 font-semibold rounded-lg text-primary bg-secondary"
                 >
                   <Phone className="w-4 h-4" aria-hidden="true" />
-                  +971 55 472 8133
+                  +971 50 379 0382
                 </a>
                 <Button
                   className="bg-[#11632B] hover:bg-[#0D4D21] text-white font-semibold w-full h-12"
                   asChild
                 >
-                  <a href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer nofollow" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
+                  <a href="https://wa.me/971503790382?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer nofollow" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
                     <img src="/whatsapp.svg" alt="WhatsApp Help UAE" width={20} height={20} className="w-5 h-5" />
                     Chat on WhatsApp
                   </a>

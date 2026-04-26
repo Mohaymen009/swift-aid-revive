@@ -33,7 +33,7 @@ const FloatingContact = () => {
           />
         </button>
         <a
-          href="https://wa.me/971554728133?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services."
+          href="https://wa.me/971503790382?text=Hi%20%F0%9F%91%8B%2C%20I%E2%80%99m%20interested%20in%20your%20services."
           target="_blank"
           rel="noopener noreferrer nofollow"
           className="flex items-center justify-center w-11 h-11 sm:w-14 sm:h-14 bg-[#11632B] hover:bg-[#0D4D21] text-white rounded-full shadow-elevated transition-all duration-300 hover:scale-110"
@@ -48,7 +48,7 @@ const FloatingContact = () => {
           />
         </a>
         <a
-          href="tel:+971554728133"
+          href="tel:+971503790382"
           className="flex items-center justify-center w-11 h-11 sm:w-14 sm:h-14 bg-accent hover:bg-accent/90 text-white rounded-full shadow-glow hover:shadow-elevated transition-all duration-300 hover:scale-110"
           aria-label="Call Us"
         >

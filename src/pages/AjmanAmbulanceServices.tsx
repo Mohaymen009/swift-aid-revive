@@ -77,13 +77,13 @@ const AjmanAmbulanceServices = () => {
   return (
     <ServicePageTemplate
       title="Non-Emergency Ambulance Service in Ajman | Trusted Private Ambulance"
-      description="Professional ambulance services in Ajman with trained paramedics. Rapid response, patient transport, and medical escorts across all areas of Ajman. Call +971 55 472 8133"
+      description="Professional ambulance services in Ajman with trained paramedics. Rapid response, patient transport, and medical escorts across all areas of Ajman. Call +971 50 379 0382"
       canonical="https://emrs.ae/ajman-ambulance-services/"
 
       imageAlt="Non-emergency ambulance service in Ajman"
       lastUpdated="2026-01-01"
       faqs={faqs}
-      phoneNumber={"+971 55 472 8133"}
+      phoneNumber={"+971 50 379 0382"}
       relatedLinks={[
         { label: 'Dubai Ambulance Services', to: '/dubai-ambulance-services' },
         { label: 'Sharjah Ambulance Services', to: '/sharjah-ambulance-services' },
@@ -111,9 +111,9 @@ const AjmanAmbulanceServices = () => {
                 className="bg-accent hover:bg-accent/90 text-white font-bold text-lg px-8 py-6"
                 asChild
               >
-                <a href="tel:+971554728133" className="flex items-center gap-2">
+                <a href="tel:+971503790382" className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />
-                  Call +971 55 472 8133
+                  Call +971 50 379 0382
                 </a>
               </Button>
               <Button
@@ -122,7 +122,7 @@ const AjmanAmbulanceServices = () => {
                 className="border-white text-white hover:bg-white hover:text-primary font-bold text-lg px-8 py-6"
                 asChild
               >
-                <a href="https://wa.me/971554728133" target="_blank" rel="noopener noreferrer nofollow" className="flex items-center gap-2">
+                <a href="https://wa.me/971503790382" target="_blank" rel="noopener noreferrer nofollow" className="flex items-center gap-2">
                   <MessageCircle className="w-5 h-5" />
                   WhatsApp Us
                 </a>
@@ -239,9 +239,9 @@ const AjmanAmbulanceServices = () => {
                 className="bg-accent hover:bg-accent/90 text-white font-bold text-lg px-8 py-6"
                 asChild
               >
-                <a href="tel:+971554728133" className="flex items-center gap-2">
+                <a href="tel:+971503790382" className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />
-                  Call: +971 55 472 8133
+                  Call: +971 50 379 0382
                 </a>
               </Button>
               <Button
@@ -250,7 +250,7 @@ const AjmanAmbulanceServices = () => {
                 className="border-white text-white hover:bg-white/10 font-bold text-lg px-8 py-6"
                 asChild
               >
-                <a href="https://wa.me/971554728133" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                <a href="https://wa.me/971503790382" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                   <MessageCircle className="w-5 h-5" />
                   Chat on WhatsApp
                 </a>

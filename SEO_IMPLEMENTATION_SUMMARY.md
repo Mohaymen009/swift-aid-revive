@@ -46,7 +46,7 @@
 - ✅ Added comprehensive structured data including:
   - Business name, description, URL
   - Logo: https://emrs.ae/assets/logo-IoYxzFod.png
-  - Telephone: +971554728133
+  - Telephone: +971503790382
   - Service types
   - Coverage areas for all 7 emirates
   - 24/7 operating hours
