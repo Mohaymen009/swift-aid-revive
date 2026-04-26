@@ -7,7 +7,7 @@ import FloatingContact from "@/components/FloatingContact";
 
 const PatientTransferServiceDubai = () => {
   const faqs = [
-    { question: "How do I book a patient transfer in Dubai?", answer: "Call +971 50 379 0382 or WhatsApp us. We can arrange same-day transfers or schedule in advance. Our dispatch team will confirm vehicle type, timing, and pricing." },
+    { question: "How do I book a patient transfer in Dubai?", answer: "Call +971 55 472 8133 or WhatsApp us. We can arrange same-day transfers or schedule in advance. Our dispatch team will confirm vehicle type, timing, and pricing." },
     { question: "What types of patient transfers do you handle?", answer: "We handle hospital-to-hospital transfers, hospital-to-home discharges, clinic-to-hospital, airport medical transfers, and long-distance inter-emirate patient transfers." },
     { question: "Can you transfer a patient on a ventilator?", answer: "Yes. Our ICU ambulances are equipped with ventilators and staffed by ICU-trained nurses for ventilated patient transfers." },
     { question: "Do you provide stretcher and wheelchair transport?", answer: "Yes. We offer both stretcher ambulances and wheelchair-accessible vehicles depending on the patient's needs." },
@@ -24,7 +24,7 @@ const PatientTransferServiceDubai = () => {
       imageAlt="Patient transfer service Dubai - EMRS medical transport"
       lastUpdated="2026-03-27"
       faqs={faqs}
-      phoneNumber="+971 50 379 0382"
+      phoneNumber="+971 55 472 8133"
       relatedLinks={[
         { label: 'Private Ambulance UAE', to: '/private-ambulance-uae/' },
         { label: 'ICU Ambulance Dubai', to: '/icu-ambulance-dubai/' },
@@ -48,10 +48,10 @@ const PatientTransferServiceDubai = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-accent hover:bg-accent/90 text-white font-bold text-lg px-8 py-6" asChild>
-                <a href="tel:+971503790382" className="flex items-center gap-2"><Phone className="w-5 h-5" /> Call +971 50 379 0382</a>
+                <a href="tel:+971554728133" className="flex items-center gap-2"><Phone className="w-5 h-5" /> Call +971 55 472 8133</a>
               </Button>
               <Button size="lg" className="bg-white/10 hover:bg-white/20 text-white font-bold text-lg px-8 py-6 border border-white/20" asChild>
-                <a href="https://wa.me/971503790382?text=Hi%2C%20I%20need%20a%20patient%20transfer" target="_blank" rel="noopener noreferrer nofollow" className="flex items-center gap-2">
+                <a href="https://wa.me/971554728133?text=Hi%2C%20I%20need%20a%20patient%20transfer" target="_blank" rel="noopener noreferrer nofollow" className="flex items-center gap-2">
                   <img src="/whatsapp.svg" alt="WhatsApp patient transfer booking" width={20} height={20} className="w-5 h-5" /> WhatsApp Us
                 </a>
               </Button>
@@ -94,7 +94,7 @@ const PatientTransferServiceDubai = () => {
             <h2 className="text-3xl font-black text-primary mb-8 text-center">How to Book a Patient Transfer</h2>
             <div className="space-y-6">
               {[
-                { step: "1", title: "Contact Us", desc: "Call +971 50 379 0382 or WhatsApp us with patient details, pick-up location, and destination." },
+                { step: "1", title: "Contact Us", desc: "Call +971 55 472 8133 or WhatsApp us with patient details, pick-up location, and destination." },
                 { step: "2", title: "We Confirm Details", desc: "Our dispatch team confirms the vehicle type, medical staff, timing, and provides a transparent price quote." },
                 { step: "3", title: "We Pick Up", desc: "Our ambulance arrives on time with trained paramedics. We coordinate with hospital staff for safe patient handover." },
                 { step: "4", title: "Safe Transfer", desc: "Patient is monitored throughout the journey. We deliver safely to the destination and hand over to receiving medical team." },
@@ -134,7 +134,7 @@ const PatientTransferServiceDubai = () => {
           <h2 className="text-3xl font-black text-primary mb-4">Arrange a Patient Transfer Now</h2>
           <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">Available 24/7. Same-day transfers and scheduled bookings.</p>
           <Button size="lg" className="bg-accent hover:bg-accent/90 text-white font-bold text-lg px-10 py-6" asChild>
-            <a href="tel:+971503790382" className="flex items-center gap-2"><Phone className="w-5 h-5" /> Call +971 50 379 0382</a>
+            <a href="tel:+971554728133" className="flex items-center gap-2"><Phone className="w-5 h-5" /> Call +971 55 472 8133</a>
           </Button>
         </div>
       </section>

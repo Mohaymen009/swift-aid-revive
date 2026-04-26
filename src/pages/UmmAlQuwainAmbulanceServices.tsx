@@ -60,12 +60,12 @@ const UmmAlQuwainAmbulanceServices = () => {
   return (
     <ServicePageTemplate
       title="Professional Ambulance Services in Umm Al Quwain | EMRS"
-      description="EMRS provides professional ambulance services in Umm Al Quwain. 24/7 patient transport and medical transfers in UAQ. Call +971 50 379 0382"
+      description="EMRS provides professional ambulance services in Umm Al Quwain. 24/7 patient transport and medical transfers in UAQ. Call +971 55 472 8133"
       canonical="https://emrs.ae/umm-al-quwain-ambulance-services/"
       imageAlt="Ambulance Services in Umm Al Quwain by EMRS"
       lastUpdated="2026-01-01"
       faqs={faqs}
-      phoneNumber={"+971 50 379 0382"}
+      phoneNumber={"+971 55 472 8133"}
       hideHeader={true}
     >
       <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-white relative">
@@ -77,10 +77,10 @@ const UmmAlQuwainAmbulanceServices = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-accent hover:bg-accent/90 font-bold" asChild>
-              <a href="tel:+971503790382">Call +971 50 379 0382</a>
+              <a href="tel:+971554728133">Call +971 55 472 8133</a>
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 font-bold" asChild>
-              <a href="https://wa.me/971503790382" target="_blank" rel="noopener noreferrer nofollow" className="flex items-center gap-2">WhatsApp Us</a>
+              <a href="https://wa.me/971554728133" target="_blank" rel="noopener noreferrer nofollow" className="flex items-center gap-2">WhatsApp Us</a>
             </Button>
           </div>
         </div>

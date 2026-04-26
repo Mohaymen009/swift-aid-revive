@@ -79,7 +79,7 @@ const AbuDhabiAmbulanceServices = () => {
       imageAlt="Non-emergency ambulance service in Abu Dhabi"
       lastUpdated="2026-01-01"
       faqs={faqs}
-      phoneNumber={"+971 50 379 0382"}
+      phoneNumber={"+971 55 472 8133"}
       relatedLinks={[
         { label: 'Dubai Ambulance Services', to: '/dubai-ambulance-services' },
         { label: 'Sharjah Ambulance Services', to: '/sharjah-ambulance-services' },
@@ -107,9 +107,9 @@ const AbuDhabiAmbulanceServices = () => {
                 className="bg-accent hover:bg-accent/90 text-white font-bold text-lg px-8 py-6"
                 asChild
               >
-                <a href="tel:+971503790382" className="flex items-center gap-2">
+                <a href="tel:+971554728133" className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />
-                  Call +971 50 379 0382
+                  Call +971 55 472 8133
                 </a>
               </Button>
               <Button
@@ -118,7 +118,7 @@ const AbuDhabiAmbulanceServices = () => {
                 className="border-white text-white hover:bg-white hover:text-primary font-bold text-lg px-8 py-6"
                 asChild
               >
-                <a href="https://wa.me/971503790382" target="_blank" rel="noopener noreferrer nofollow" className="flex items-center gap-2">
+                <a href="https://wa.me/971554728133" target="_blank" rel="noopener noreferrer nofollow" className="flex items-center gap-2">
                   <MessageCircle className="w-5 h-5" />
                   WhatsApp Us
                 </a>
@@ -235,9 +235,9 @@ const AbuDhabiAmbulanceServices = () => {
                 className="bg-accent hover:bg-accent/90 text-white font-bold text-lg px-8 py-6"
                 asChild
               >
-                <a href="tel:+971503790382" className="flex items-center gap-2">
+                <a href="tel:+971554728133" className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />
-                  Call: +971 50 379 0382
+                  Call: +971 55 472 8133
                 </a>
               </Button>
               <Button
@@ -246,7 +246,7 @@ const AbuDhabiAmbulanceServices = () => {
                 className="border-white text-white hover:bg-white/10 font-bold text-lg px-8 py-6"
                 asChild
               >
-                <a href="https://wa.me/971503790382" target="_blank" rel="noopener noreferrer nofollow" className="flex items-center gap-2">
+                <a href="https://wa.me/971554728133" target="_blank" rel="noopener noreferrer nofollow" className="flex items-center gap-2">
                   <MessageCircle className="w-5 h-5" />
                   Chat on WhatsApp
                 </a>

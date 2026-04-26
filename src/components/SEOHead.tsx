@@ -92,7 +92,7 @@ const SEOHead = ({
       "height": 512
     },
     "image": `${baseUrl}/site-logo.png`,
-    "telephone": "+971503790382",
+    "telephone": "+971554728133",
     "email": "info@emrs.ae",
     "foundingDate": "2020",
     "numberOfEmployees": {
@@ -132,7 +132,7 @@ const SEOHead = ({
     "contactPoint": [
       {
         "@type": "ContactPoint",
-        "telephone": "+971503790382",
+        "telephone": "+971554728133",
         "contactType": "customer service",
         "areaServed": "AE",
         "availableLanguage": ["English", "Arabic", "Hindi", "Urdu"],
@@ -145,7 +145,7 @@ const SEOHead = ({
       },
       {
         "@type": "ContactPoint",
-        "telephone": "+971503790382",
+        "telephone": "+971554728133",
         "contactType": "emergency",
         "areaServed": "AE",
         "availableLanguage": ["English", "Arabic"]
@@ -169,7 +169,7 @@ const SEOHead = ({
       "height": 512
     },
     "image": `${baseUrl}/site-logo.png`,
-    "telephone": "+971503790382",
+    "telephone": "+971554728133",
     "email": "info@emrs.ae",
     "priceRange": "$$",
     "currenciesAccepted": "AED",

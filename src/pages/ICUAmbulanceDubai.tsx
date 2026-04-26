@@ -23,7 +23,7 @@ const ICUAmbulanceDubai = () => {
       imageAlt="ICU ambulance service Dubai - EMRS critical care transport"
       lastUpdated="2026-03-27"
       faqs={faqs}
-      phoneNumber="+971 50 379 0382"
+      phoneNumber="+971 55 472 8133"
       relatedLinks={[
         { label: 'Private Ambulance UAE', to: '/private-ambulance-uae/' },
         { label: 'Patient Transfer Dubai', to: '/patient-transfer-service-dubai/' },
@@ -46,10 +46,10 @@ const ICUAmbulanceDubai = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-accent hover:bg-accent/90 text-white font-bold text-lg px-8 py-6" asChild>
-                <a href="tel:+971503790382" className="flex items-center gap-2"><Phone className="w-5 h-5" /> Call +971 50 379 0382</a>
+                <a href="tel:+971554728133" className="flex items-center gap-2"><Phone className="w-5 h-5" /> Call +971 55 472 8133</a>
               </Button>
               <Button size="lg" className="bg-white/10 hover:bg-white/20 text-white font-bold text-lg px-8 py-6 border border-white/20" asChild>
-                <a href="https://wa.me/971503790382?text=Hi%2C%20I%20need%20an%20ICU%20ambulance" target="_blank" rel="noopener noreferrer nofollow" className="flex items-center gap-2">
+                <a href="https://wa.me/971554728133?text=Hi%2C%20I%20need%20an%20ICU%20ambulance" target="_blank" rel="noopener noreferrer nofollow" className="flex items-center gap-2">
                   <img src="/whatsapp.svg" alt="WhatsApp ICU ambulance Dubai" width={20} height={20} className="w-5 h-5" /> WhatsApp Us
                 </a>
               </Button>
@@ -129,7 +129,7 @@ const ICUAmbulanceDubai = () => {
           <h2 className="text-3xl font-black text-primary mb-4">Need an ICU Ambulance in Dubai?</h2>
           <p className="text-muted-foreground text-lg mb-8">Our critical care team is on standby 24/7. Call now for immediate dispatch.</p>
           <Button size="lg" className="bg-accent hover:bg-accent/90 text-white font-bold text-lg px-10 py-6" asChild>
-            <a href="tel:+971503790382" className="flex items-center gap-2"><Phone className="w-5 h-5" /> Call +971 50 379 0382</a>
+            <a href="tel:+971554728133" className="flex items-center gap-2"><Phone className="w-5 h-5" /> Call +971 55 472 8133</a>
           </Button>
         </div>
       </section>
