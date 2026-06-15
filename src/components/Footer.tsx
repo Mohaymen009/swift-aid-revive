@@ -6,7 +6,7 @@ const EXTERNAL_URL = "https://homehealthcare.emrs.ae/";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  const serviceLinks = [
+  const serviceLinks: { name: string; url: string; external?: boolean }[] = [
     { name: "Home Healthcare", url: "/home-healthcare-services-uae/" },
     { name: "Event Medical Coverage", url: "/event-medical-services-uae/" },
     { name: "Doctor on Call", url: "/doctor-on-call-uae/" },
