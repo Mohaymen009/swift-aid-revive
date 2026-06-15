@@ -6,16 +6,17 @@ const EXTERNAL_URL = "https://homehealthcare.emrs.ae/";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  const serviceLinks = [
+  const serviceLinks: { name: string; url: string; external?: boolean }[] = [
+    { name: "Home Healthcare", url: "/home-healthcare-services-uae/" },
+    { name: "Event Medical Coverage", url: "/event-medical-services-uae/" },
+    { name: "Doctor on Call", url: "/doctor-on-call-uae/" },
+    { name: "Wellness & Diagnostics", url: "/wellness-diagnostic-services-uae/" },
+    { name: "Ambulance Services UAE", url: "/ambulance-services-uae/" },
     { name: "Private Ambulance UAE", url: "/private-ambulance-uae/" },
     { name: "ICU Ambulance Dubai", url: "/icu-ambulance-dubai/" },
     { name: "Patient Transfer Dubai", url: "/patient-transfer-service-dubai/" },
-    { name: "Book Ambulance Dubai", url: "/book-ambulance-dubai/" },
-    { name: "Ambulance Services UAE", url: "/ambulance-services-uae/" },
     { name: "Patient Transport (NEMT)", url: "/non-emergency-medical-transport-uae/" },
-    { name: "Event Medical Coverage", url: "/event-medical-services-uae/" },
-    { name: "Doctor Home Visit", url: EXTERNAL_URL, external: true },
-    { name: "Home Healthcare", url: EXTERNAL_URL, external: true },
+    { name: "Book Ambulance Dubai", url: "/book-ambulance-dubai/" },
   ];
 
   const emirateLinks = [

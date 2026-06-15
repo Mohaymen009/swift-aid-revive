@@ -61,6 +61,11 @@ export default {
           light: "hsl(var(--gold-light))",
         },
         "blue-light": "hsl(var(--blue-light))",
+        surface: {
+          DEFAULT: "hsl(var(--surface))",
+          muted: "hsl(var(--surface-muted))",
+        },
+        hairline: "hsl(var(--hairline))",
       },
       borderRadius: {
         lg: "var(--radius)",
