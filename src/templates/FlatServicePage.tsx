@@ -1,13 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Phone, ArrowRight, Check } from "lucide-react";
+import { Phone, ArrowRight, Check, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import FAQSection from "@/components/FAQSection";
 import LastUpdated from "@/components/LastUpdated";
 
 export interface FlatFAQ { question: string; answer: string | React.ReactNode }
@@ -227,7 +226,7 @@ const FlatServicePage: React.FC<FlatServicePageProps> = ({
               <h2 className="text-2xl sm:text-3xl font-black text-foreground mt-2">Frequently asked questions</h2>
             </div>
             <div className="max-w-3xl">
-              <FAQSection faqs={faqs} />
+              <FlatFAQList faqs={faqs} />
             </div>
           </div>
         </section>
@@ -292,3 +291,39 @@ const FlatServicePage: React.FC<FlatServicePageProps> = ({
 };
 
 export default FlatServicePage;
+
+const FlatFAQList: React.FC<{ faqs: FlatFAQ[] }> = ({ faqs }) => {
+  const [open, setOpen] = useState<number | null>(0);
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map(f => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: typeof f.answer === "string" ? f.answer : "" },
+    })),
+  };
+  return (
+    <div className="divide-y divide-hairline border-y border-hairline">
+      {faqs.map((f, i) => (
+        <div key={i} itemScope itemType="https://schema.org/Question">
+          <button
+            type="button"
+            onClick={() => setOpen(open === i ? null : i)}
+            className="w-full flex items-center justify-between gap-4 py-5 text-left"
+            aria-expanded={open === i}
+          >
+            <h3 className="text-base sm:text-lg font-semibold text-foreground" itemProp="name">{f.question}</h3>
+            <ChevronDown className={`w-5 h-5 text-accent flex-shrink-0 transition-transform ${open === i ? "rotate-180" : ""}`} aria-hidden="true" />
+          </button>
+          {open === i && (
+            <div className="pb-5 text-sm text-muted-foreground leading-relaxed" itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+              <div itemProp="text">{f.answer}</div>
+            </div>
+          )}
+        </div>
+      ))}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+    </div>
+  );
+};
