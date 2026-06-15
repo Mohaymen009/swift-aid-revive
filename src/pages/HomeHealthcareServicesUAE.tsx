@@ -38,33 +38,6 @@ const HomeHealthcareServicesUAE = () => {
   ];
 
   const faqs = [
-    {
-      question: "What types of nurses provide home healthcare?",
-      answer: "We provide Registered Nurses (RN), Licensed Practical Nurses (LPN), and Certified Nursing Assistants (CNA) depending on the level of care required. All our nurses are licensed by UAE health authorities."
-    },
-    {
-      question: "How do I know if home healthcare is right for my family member?",
-      answer: "Home healthcare is ideal for patients recovering from surgery, those with chronic conditions, elderly individuals needing assistance, or anyone who prefers receiving care at home rather than in a facility."
-    },
-    {
-      question: "Can home nurses administer IV medications?",
-      answer: "Yes, our registered nurses are trained and licensed to administer IV medications, infusions, and other treatments as prescribed by physicians."
-    },
-    {
-      question: "Do you provide care for patients with dementia or Alzheimer's?",
-      answer: "Yes, we have specialized caregivers trained in dementia and Alzheimer's care, providing safe, compassionate support while maintaining the patient's dignity."
-    },
-    {
-      question: "What are the costs of home healthcare services?",
-      answer: "Costs vary based on the type of care needed and duration. Many insurance plans cover home healthcare services. Contact us for a personalized quote and insurance verification."
-    },
-    {
-      question: "Can you provide care on weekends and holidays?",
-      answer: "Yes, we provide home healthcare services 24/7, including weekends and public holidays. We understand healthcare needs don't follow a schedule."
-    }
-  ];
-
-  const faqs = [
     { question: "What types of nurses provide home healthcare?", answer: "We provide Registered Nurses (RN), Licensed Practical Nurses (LPN), and Certified Nursing Assistants (CNA) depending on the level of care required. All our nurses are licensed by UAE health authorities." },
     { question: "How do I know if home healthcare is right for my family member?", answer: "Home healthcare is ideal for patients recovering from surgery, those with chronic conditions, elderly individuals needing assistance, or anyone who prefers receiving care at home rather than in a facility." },
     { question: "Can home nurses administer IV medications?", answer: "Yes, our registered nurses are trained and licensed to administer IV medications, infusions, and other treatments as prescribed by physicians." },
