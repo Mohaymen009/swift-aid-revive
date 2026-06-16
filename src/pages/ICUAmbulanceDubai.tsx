@@ -77,7 +77,7 @@ const ICUAmbulanceDubai = () => {
                 "Emergency medication kit",
                 "Spinal immobilization equipment",
               ].map((item, i) => (
-                <div key={i} className="flex items-center gap-3 bg-white rounded-xl p-4 shadow-card">
+                <div key={i} className="flex items-center gap-3 bg-white rounded-xl p-4">
                   <Check className="w-5 h-5 text-accent flex-shrink-0" />
                   <span className="text-foreground text-sm font-medium">{item}</span>
                 </div>
@@ -99,7 +99,7 @@ const ICUAmbulanceDubai = () => {
                 { title: "Cardiac Patient Transfers", desc: "Patients with acute cardiac conditions requiring continuous cardiac monitoring and defibrillator standby." },
                 { title: "Neonatal & Pediatric Transfers", desc: "Specialized transport for critically ill neonates and children with appropriate pediatric equipment." },
               ].map((item, i) => (
-                <div key={i} className="bg-white rounded-2xl p-6 shadow-card">
+                <div key={i} className="bg-white rounded-2xl p-6">
                   <h3 className="text-lg font-bold text-primary mb-2">{item.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
                 </div>

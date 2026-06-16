@@ -48,7 +48,7 @@ const ServicesHub = () => {
                   href={s.to}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col h-full p-8 rounded-2xl bg-white shadow-card hover:shadow-premium transition-all duration-500 hover:-translate-y-1 group border border-transparent hover:border-accent/10"
+                  className="flex flex-col h-full p-8 rounded-2xl bg-white hover:border-accent transition-all duration-500 group border border-transparent hover:border-accent/10"
                 >
                   <h2 className="text-xl font-bold text-primary mb-4 group-hover:text-accent transition-colors">{s.title}</h2>
                   <p className="text-muted-foreground text-sm mb-6 flex-grow leading-relaxed">{s.desc}</p>
@@ -61,7 +61,7 @@ const ServicesHub = () => {
                   key={s.title}
                   to={s.to}
                   onClick={() => window.scrollTo(0, 0)}
-                  className="flex flex-col h-full p-8 rounded-2xl bg-white shadow-card hover:shadow-premium transition-all duration-500 hover:-translate-y-1 group border border-transparent hover:border-accent/10"
+                  className="flex flex-col h-full p-8 rounded-2xl bg-white hover:border-accent transition-all duration-500 group border border-transparent hover:border-accent/10"
                 >
                   <h2 className="text-xl font-bold text-primary mb-4 group-hover:text-accent transition-colors">{s.title}</h2>
                   <p className="text-muted-foreground text-sm mb-6 flex-grow leading-relaxed">{s.desc}</p>
@@ -106,7 +106,7 @@ const ServicesHub = () => {
             Our dispatch team is ready to assist you. Contact us now for immediate booking.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-accent hover:bg-accent/90 text-white font-bold h-14 px-10 rounded-xl shadow-glow" asChild>
+            <Button size="lg" className="bg-accent hover:bg-accent/90 text-white font-bold h-14 px-10 rounded-xl" asChild>
               <a href="tel:+971554728133" className="flex items-center gap-2">
                 <Phone className="w-5 h-5" />
                 Call +971 55 472 8133

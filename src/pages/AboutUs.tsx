@@ -61,7 +61,7 @@ const AboutUs = () => {
                 { icon: Clock, title: "Reliability", description: "Punctual service you can count on for scheduled appointments and transfers." },
                 { icon: Award, title: "Professionalism", description: "Licensed staff, maintained vehicles, and transparent communication." },
               ].map((value, index) => (
-                <div key={index} className="text-center bg-white border border-border rounded-xl p-6 shadow-card">
+                <div key={index} className="text-center bg-white border border-border rounded-xl p-6">
                   <div className="w-14 h-14 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <value.icon className="w-7 h-7 text-accent" />
                   </div>
@@ -84,7 +84,7 @@ const AboutUs = () => {
                 { icon: Award, title: "Private Ambulance", description: "Dedicated private ambulance hire with ICU capability, airport medical escorts, and international repatriation coordination.", link: "/private-ambulance-uae/" },
                 { icon: Users, title: "Event Medical Coverage", description: "On-site paramedics and ambulance standby for corporate events, sports, concerts, and private functions.", link: "/event-medical-services-uae/" },
               ].map((service, index) => (
-                <div key={index} className="flex flex-col gap-4 bg-white rounded-lg p-6 shadow-card border border-border hover:shadow-elevated transition-shadow">
+                <div key={index} className="flex flex-col gap-4 bg-white rounded-lg p-6 border border-border hover:shadow-elevated transition-shadow">
                   <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
                     <service.icon className="w-6 h-6 text-accent" />
                   </div>
