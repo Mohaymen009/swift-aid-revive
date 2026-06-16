@@ -34,7 +34,7 @@ const BlogEmergencyPatientTransfersUAE = () => {
               <p className="text-gray-700 mb-4">
                 Emergency patient transfers are critical medical services that transport patients requiring
                 immediate medical attention from one location to another. Whether it's from home to hospital,
-                between medical facilities, or from accident scenes, these <a href="/ambulance-services-uae" className="text-accent hover:underline">critical medical transport services</a> are vital across all
+                between medical facilities, or from accident scenes, these <a href="/ambulance-services-uae/" className="text-accent hover:underline">critical medical transport services</a> are vital across all
                 UAE emirates including Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Fujairah, and Umm Al Quwain.
               </p>
             </section>
@@ -70,7 +70,7 @@ const BlogEmergencyPatientTransfersUAE = () => {
               <h3 className="text-xl font-semibold text-primary mt-6 mb-3">Dubai Emergency Services</h3>
               <p className="text-gray-700 mb-4">
                 Dubai's dense urban environment requires sophisticated emergency response systems.
-                <a href="/dubai-ambulance-services" className="text-accent hover:underline">Ambulance services in Dubai</a> must navigate traffic while maintaining rapid response times,
+                <a href="/dubai-ambulance-services/" className="text-accent hover:underline">Ambulance services in Dubai</a> must navigate traffic while maintaining rapid response times,
                 making efficient route planning and communication systems essential.
               </p>
 
@@ -125,13 +125,13 @@ const BlogEmergencyPatientTransfersUAE = () => {
             <section className="bg-blue-50 p-6 rounded-lg mb-8">
               <h3 className="text-xl font-semibold text-primary mb-3">Emergency Services by Emirate</h3>
               <ul className="space-y-2">
-                <li><a href="/dubai-ambulance-services" className="text-accent hover:underline">Dubai Emergency Ambulance Services</a></li>
-                <li><a href="/abu-dhabi-ambulance-services" className="text-accent hover:underline">Abu Dhabi Emergency Medical Transport</a></li>
-                <li><a href="/sharjah-ambulance-services" className="text-accent hover:underline">Sharjah Emergency Patient Transfers</a></li>
-                <li><a href="/ajman-ambulance-services" className="text-accent hover:underline">Ajman Emergency Ambulance Services</a></li>
-                <li><a href="/ras-al-khaimah-ambulance-services" className="text-accent hover:underline">Ras Al Khaimah Emergency Transfers</a></li>
-                <li><a href="/fujairah-ambulance-services" className="text-accent hover:underline">Fujairah Emergency Medical Transport</a></li>
-                <li><a href="/umm-al-quwain-ambulance-services" className="text-accent hover:underline">Umm Al Quwain Emergency Services</a></li>
+                <li><a href="/dubai-ambulance-services/" className="text-accent hover:underline">Dubai Emergency Ambulance Services</a></li>
+                <li><a href="/abu-dhabi-ambulance-services/" className="text-accent hover:underline">Abu Dhabi Emergency Medical Transport</a></li>
+                <li><a href="/sharjah-ambulance-services/" className="text-accent hover:underline">Sharjah Emergency Patient Transfers</a></li>
+                <li><a href="/ajman-ambulance-services/" className="text-accent hover:underline">Ajman Emergency Ambulance Services</a></li>
+                <li><a href="/ras-al-khaimah-ambulance-services/" className="text-accent hover:underline">Ras Al Khaimah Emergency Transfers</a></li>
+                <li><a href="/fujairah-ambulance-services/" className="text-accent hover:underline">Fujairah Emergency Medical Transport</a></li>
+                <li><a href="/umm-al-quwain-ambulance-services/" className="text-accent hover:underline">Umm Al Quwain Emergency Services</a></li>
               </ul>
             </section>
           </div>

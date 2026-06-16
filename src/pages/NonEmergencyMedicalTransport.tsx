@@ -278,17 +278,17 @@ const NonEmergencyMedicalTransport = () => {
               <h2 className="text-3xl font-bold text-primary mb-8">Related Healthcare Services</h2>
               <div className="flex flex-wrap gap-4 justify-center">
                 <Button variant="outline" asChild>
-                  <Link to="/ambulance-services-uae" className="flex items-center gap-2">
+                  <Link to="/ambulance-services-uae/" className="flex items-center gap-2">
                     Ambulance Services <ArrowRight className="w-4 h-4" />
                   </Link>
                 </Button>
                 <Button variant="outline" asChild>
-                  <Link to="/home-healthcare-services-uae" className="flex items-center gap-2">
+                  <Link to="/home-healthcare-services-uae/" className="flex items-center gap-2">
                     Home Healthcare <ArrowRight className="w-4 h-4" />
                   </Link>
                 </Button>
                 <Button variant="outline" asChild>
-                  <Link to="/doctor-on-call-uae" className="flex items-center gap-2">
+                  <Link to="/doctor-on-call-uae/" className="flex items-center gap-2">
                     Doctor on Call <ArrowRight className="w-4 h-4" />
                   </Link>
                 </Button>
