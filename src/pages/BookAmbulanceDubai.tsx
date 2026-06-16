@@ -48,7 +48,7 @@ const BookAmbulanceDubai = () => {
             </p>
 
             {/* Big CTA */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 max-w-xl mx-auto mb-8">
+            <div className="bg-white/5 rounded-2xl p-8 border border-white/20 max-w-xl mx-auto mb-8">
               <p className="text-white/80 text-sm mb-4">Call our 24/7 dispatch line:</p>
               <a href="tel:+971554728133" className="text-4xl sm:text-5xl font-black text-accent hover:text-accent/80 transition-colors block mb-4">
                 +971 55 472 8133
@@ -79,7 +79,7 @@ const BookAmbulanceDubai = () => {
                 { step: "2", title: "Get a Quote", desc: "We provide an instant, transparent price with no hidden charges." },
                 { step: "3", title: "Ambulance Dispatched", desc: "Our nearest ambulance with trained paramedics is dispatched to your location." },
               ].map((s, i) => (
-                <div key={i} className="bg-white rounded-2xl p-6 shadow-card text-center">
+                <div key={i} className="bg-white rounded-2xl p-6 text-center">
                   <div className="w-14 h-14 rounded-full bg-accent mx-auto mb-4 flex items-center justify-center">
                     <span className="text-white font-black text-xl">{s.step}</span>
                   </div>
@@ -108,7 +108,7 @@ const BookAmbulanceDubai = () => {
                 "Long-distance inter-emirate transfer",
                 "Scheduled recurring transport (dialysis, chemo)",
               ].map((item, i) => (
-                <div key={i} className="flex items-center gap-3 bg-white rounded-xl p-4 shadow-card">
+                <div key={i} className="flex items-center gap-3 bg-white rounded-xl p-4">
                   <Check className="w-5 h-5 text-accent flex-shrink-0" />
                   <span className="text-foreground text-sm">{item}</span>
                 </div>

@@ -16,7 +16,7 @@ const Licensing = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900">
+      <section className="py-16 sm:py-20 lg:py-24 bg-primary">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full mb-6">

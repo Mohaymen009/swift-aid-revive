@@ -113,15 +113,15 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
           </article>
 
           <aside className="mt-16 space-y-6 max-w-3xl mx-auto">
-            <div className="bg-primary rounded-2xl p-8 text-center">
+            <div className="bg-primary p-8 text-center border border-hairline">
               <h3 className="text-xl font-bold text-white mb-3">Need Help?</h3>
-              <p className="text-white/60 mb-6">Our team is available 24/7 to assist you with urgent medical needs and patient transfers.</p>
-              <CallButton phoneNumber={phoneNumber} className="w-full justify-center bg-accent hover:bg-accent/90 text-white font-bold rounded-xl">
+              <p className="text-white/70 mb-6">Our team is available 24/7 to assist you with medical needs and patient transfers.</p>
+              <CallButton phoneNumber={phoneNumber} className="w-full justify-center bg-accent hover:bg-accent/90 text-white font-bold rounded-md">
                 Call Now
               </CallButton>
             </div>
 
-            <div className="overflow-hidden rounded-2xl shadow-card">
+            <div className="overflow-hidden border border-hairline">
               <OptimizedImage
                 src={imageUrl}
                 alt={imageAlt}
@@ -131,7 +131,7 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
               />
             </div>
 
-            <div className="bg-white p-8 rounded-2xl shadow-card">
+            <div className="bg-card p-8 border border-hairline">
               <h4 className="text-base font-bold text-primary mb-4">Related Services</h4>
               <ul className="space-y-3">
                 {links.map((l) => (
@@ -166,15 +166,15 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
           <LastUpdated date={lastUpdated} className="mt-8 text-sm text-muted-foreground" />
 
           <aside className="mt-16 space-y-6 max-w-3xl mx-auto">
-            <div className="bg-primary rounded-2xl p-8 text-center">
+            <div className="bg-primary p-8 text-center border border-hairline">
               <h3 className="text-xl font-bold text-white mb-3">Need Help?</h3>
-              <p className="text-white/60 mb-6">Our team is available 24/7 to assist you with medical needs and patient transfers.</p>
-              <CallButton phoneNumber={phoneNumber} className="w-full justify-center bg-accent hover:bg-accent/90 text-white font-bold rounded-xl">
+              <p className="text-white/70 mb-6">Our team is available 24/7 to assist you with medical needs and patient transfers.</p>
+              <CallButton phoneNumber={phoneNumber} className="w-full justify-center bg-accent hover:bg-accent/90 text-white font-bold rounded-md">
                 Call Now
               </CallButton>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl shadow-card">
+            <div className="bg-card p-8 border border-hairline">
               <h4 className="text-base font-bold text-primary mb-4">Related Services</h4>
               <ul className="space-y-3">
                 {links.map((l) => (

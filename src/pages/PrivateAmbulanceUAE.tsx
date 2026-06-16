@@ -63,7 +63,7 @@ const PrivateAmbulanceUAE = () => {
                   <Phone className="w-5 h-5" /> Call +971 55 472 8133
                 </a>
               </Button>
-              <Button size="lg" className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-bold text-lg px-8 py-6 border border-white/20" asChild>
+              <Button size="lg" className="bg-transparent hover:bg-white/10 text-white font-bold text-lg px-8 py-6 border border-white/20" asChild>
                 <a href="https://wa.me/971554728133?text=Hi%2C%20I%20need%20a%20private%20ambulance" target="_blank" rel="noopener noreferrer nofollow" className="flex items-center gap-2">
                   <img src="/whatsapp.svg" alt="WhatsApp EMRS for private ambulance" width={20} height={20} className="w-5 h-5" />
                   WhatsApp Us
@@ -99,7 +99,7 @@ const PrivateAmbulanceUAE = () => {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {services.map((s, i) => (
-                <div key={i} className="bg-white rounded-2xl p-6 shadow-card hover:shadow-premium transition-all border border-transparent hover:border-accent/10">
+                <div key={i} className="bg-white rounded-2xl p-6 hover:border-accent transition-all border border-transparent hover:border-accent/10">
                   <div className="mb-4 w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
                     <s.icon className="w-6 h-6 text-accent" />
                   </div>
@@ -128,7 +128,7 @@ const PrivateAmbulanceUAE = () => {
                 "Hotels and resorts needing medical transport for guests",
                 "Event organizers requiring medical standby ambulances",
               ].map((item, i) => (
-                <div key={i} className="flex items-start gap-3 bg-white rounded-xl p-4 shadow-card">
+                <div key={i} className="flex items-start gap-3 bg-white rounded-xl p-4">
                   <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
                   <span className="text-foreground text-sm">{item}</span>
                 </div>

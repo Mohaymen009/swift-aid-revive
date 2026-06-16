@@ -74,7 +74,7 @@ const PatientTransferServiceDubai = () => {
                 { icon: MapPin, title: "Airport Medical Transfer", desc: "Patient pick-up and drop-off at Dubai airports with medical clearance and flight coordination." },
                 { icon: Users, title: "Long-Distance Transfer", desc: "Inter-emirate patient transfers — Dubai to Abu Dhabi, Sharjah, RAK, and across the UAE." },
               ].map((s, i) => (
-                <div key={i} className="bg-white rounded-2xl p-6 shadow-card hover:shadow-premium transition-all">
+                <div key={i} className="bg-white rounded-2xl p-6 hover:border-accent transition-all">
                   <div className="mb-4 w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
                     <s.icon className="w-6 h-6 text-accent" />
                   </div>
@@ -99,7 +99,7 @@ const PatientTransferServiceDubai = () => {
                 { step: "3", title: "We Pick Up", desc: "Our ambulance arrives on time with trained paramedics. We coordinate with hospital staff for safe patient handover." },
                 { step: "4", title: "Safe Transfer", desc: "Patient is monitored throughout the journey. We deliver safely to the destination and hand over to receiving medical team." },
               ].map((s, i) => (
-                <div key={i} className="flex items-start gap-6 bg-white rounded-2xl p-6 shadow-card">
+                <div key={i} className="flex items-start gap-6 bg-white rounded-2xl p-6">
                   <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
                     <span className="text-white font-black text-lg">{s.step}</span>
                   </div>
