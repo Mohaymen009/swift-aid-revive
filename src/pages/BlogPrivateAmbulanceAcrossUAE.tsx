@@ -33,7 +33,7 @@ const BlogPrivateAmbulanceAcrossUAE = () => {
               <h2 className="text-2xl font-bold text-primary mb-4">Understanding Private Ambulance Services</h2>
               <p className="text-gray-700 mb-4">
                 Private ambulance services across the UAE provide essential medical transport solutions for both
-                emergency and non-emergency situations. Unlike government services, <a href="/ambulance-services-uae" className="text-accent hover:underline">private ambulance providers in UAE</a> offer
+                emergency and non-emergency situations. Unlike government services, <a href="/ambulance-services-uae/" className="text-accent hover:underline">private ambulance providers in UAE</a> offer
                 flexible scheduling, specialized equipment, and personalized care throughout Dubai, Abu Dhabi,
                 Sharjah, and all other emirates.
               </p>
@@ -61,7 +61,7 @@ const BlogPrivateAmbulanceAcrossUAE = () => {
               <p className="text-gray-700 mb-4">
                 Specialized medical transport between hospitals across different emirates requires careful
                 coordination and professional medical staff. Private ambulance services excel in these
-                situations, ensuring seamless <a href="/abu-dhabi-ambulance-services" className="text-accent hover:underline">transfers from Dubai to Abu Dhabi</a>, Sharjah to Ras Al Khaimah,
+                situations, ensuring seamless <a href="/abu-dhabi-ambulance-services/" className="text-accent hover:underline">transfers from Dubai to Abu Dhabi</a>, Sharjah to Ras Al Khaimah,
                 or any other inter-emirate medical transport needs.
               </p>
             </section>
@@ -109,13 +109,13 @@ const BlogPrivateAmbulanceAcrossUAE = () => {
             <section className="bg-blue-50 p-6 rounded-lg mb-8">
               <h3 className="text-xl font-semibold text-primary mb-3">Explore Services by Emirate</h3>
               <ul className="space-y-2">
-                <li><a href="/dubai-ambulance-services" className="text-accent hover:underline">Dubai Ambulance Services</a></li>
-                <li><a href="/abu-dhabi-ambulance-services" className="text-accent hover:underline">Abu Dhabi Ambulance Services</a></li>
-                <li><a href="/sharjah-ambulance-services" className="text-accent hover:underline">Sharjah Ambulance Services</a></li>
-                <li><a href="/ajman-ambulance-services" className="text-accent hover:underline">Ajman Ambulance Services</a></li>
-                <li><a href="/ras-al-khaimah-ambulance-services" className="text-accent hover:underline">Ras Al Khaimah Ambulance Services</a></li>
-                <li><a href="/fujairah-ambulance-services" className="text-accent hover:underline">Fujairah Ambulance Services</a></li>
-                <li><a href="/umm-al-quwain-ambulance-services" className="text-accent hover:underline">Umm Al Quwain Ambulance Services</a></li>
+                <li><a href="/dubai-ambulance-services/" className="text-accent hover:underline">Dubai Ambulance Services</a></li>
+                <li><a href="/abu-dhabi-ambulance-services/" className="text-accent hover:underline">Abu Dhabi Ambulance Services</a></li>
+                <li><a href="/sharjah-ambulance-services/" className="text-accent hover:underline">Sharjah Ambulance Services</a></li>
+                <li><a href="/ajman-ambulance-services/" className="text-accent hover:underline">Ajman Ambulance Services</a></li>
+                <li><a href="/ras-al-khaimah-ambulance-services/" className="text-accent hover:underline">Ras Al Khaimah Ambulance Services</a></li>
+                <li><a href="/fujairah-ambulance-services/" className="text-accent hover:underline">Fujairah Ambulance Services</a></li>
+                <li><a href="/umm-al-quwain-ambulance-services/" className="text-accent hover:underline">Umm Al Quwain Ambulance Services</a></li>
               </ul>
             </section>
           </div>

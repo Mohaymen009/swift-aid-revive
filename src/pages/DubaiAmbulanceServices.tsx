@@ -101,7 +101,7 @@ const DubaiAmbulanceServices = () => {
               Reliable Private Ambulance Services in Dubai
             </h1>
             <p className="text-xl sm:text-2xl text-white/90 mb-8 leading-relaxed">
-              Professional medical transport across all areas of Dubai. Urgent care support, inter-hospital transfers, and non-emergency patient transport. Our services operate under full <Link to="/licensing" className="underline hover:text-accent">DHA licensing</Link> with continuous <Link to="/medical-oversight" className="underline hover:text-accent">medical oversight</Link>.
+              Professional medical transport across all areas of Dubai. Urgent care support, inter-hospital transfers, and non-emergency patient transport. Our services operate under full <Link to="/licensing/" className="underline hover:text-accent">DHA licensing</Link> with continuous <Link to="/medical-oversight/" className="underline hover:text-accent">medical oversight</Link>.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
