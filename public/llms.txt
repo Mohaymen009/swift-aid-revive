@@ -1,0 +1,40 @@
+# EMRS 24/7 — Medical Response Services UAE
+
+> Licensed 24/7 private ambulance, patient transfer, and medical transport across all seven UAE emirates.
+
+EMRS - Medical Response Services LLC operates licensed ambulances and medical transport throughout the UAE, with a focus on premium non-emergency patient transport, inter-hospital transfers, ICU transport, event medical coverage, and home healthcare. All clinical staff hold valid DHA/MOH licenses and BLS/ACLS certifications. Contact: +971 55 472 8133 · info@emrs.ae.
+
+## Pages
+
+- [Home](/): Overview of EMRS ambulance and medical transport services across the UAE.
+- [About EMRS](/about-us/): Company story, values, leadership, and clinical standards.
+- [Services Hub](/services/): Index of all EMRS medical services.
+- [Licensing & Compliance](/licensing/): DHA/MOH licensing, governance, and quality assurance.
+- [Medical Oversight](/medical-oversight/): Medical director, clinical protocols, and supervision.
+- [Ambulance Services UAE](/ambulance-services-uae/): Private ambulance and patient transport across the UAE.
+- [Non-Emergency Medical Transport](/non-emergency-medical-transport-uae/): Scheduled NEMT for dialysis, discharges, and appointments.
+- [Doctor on Call](/doctor-on-call-uae/): 24/7 home and hotel doctor visits.
+- [Home Healthcare](/home-healthcare-services-uae/): Nursing, physiotherapy, and elderly care at home.
+- [Wellness & Diagnostics](/wellness-diagnostic-services-uae/): At-home blood tests, IV therapy, and health checks.
+- [Event Medical Coverage](/event-medical-services-uae/): Paramedics and ambulance standby for events.
+- [Private Ambulance UAE](/private-ambulance-uae/): Dedicated private ambulance hire and medical escorts.
+- [ICU Ambulance Dubai](/icu-ambulance-dubai/): Critical-care ICU ambulance transport in Dubai.
+- [Patient Transfer Service Dubai](/patient-transfer-service-dubai/): Hospital-to-hospital and home transfers.
+- [Book Ambulance Dubai](/book-ambulance-dubai/): Booking page for ambulance services in Dubai.
+
+## Emirate pages
+
+- [Dubai](/dubai-ambulance-services/): Ambulance services in Dubai.
+- [Abu Dhabi](/abu-dhabi-ambulance-services/): Ambulance services in Abu Dhabi.
+- [Sharjah](/sharjah-ambulance-services/): Ambulance services in Sharjah.
+- [Ajman](/ajman-ambulance-services/): Ambulance services in Ajman.
+- [Ras Al Khaimah](/ras-al-khaimah-ambulance-services/): Ambulance services in Ras Al Khaimah.
+- [Fujairah](/fujairah-ambulance-services/): Ambulance services in Fujairah.
+- [Umm Al Quwain](/umm-al-quwain-ambulance-services/): Ambulance services in Umm Al Quwain.
+- [Al Ain](/al-ain-ambulance-services/): Ambulance services in Al Ain.
+
+## Blog
+
+- [How to choose an ambulance service](/blog/how-to-choose-ambulance-service/): Buyer's guide for selecting a UAE ambulance provider.
+- [Private ambulance services across the UAE](/blog/private-ambulance-services-across-uae/): Overview of private ambulance options nationwide.
+- [Emergency patient transfers UAE](/blog/emergency-patient-transfers-uae/): Guidance on urgent patient transfers.

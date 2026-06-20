@@ -9,7 +9,7 @@ const Licensing = () => {
     <div className="min-h-screen" id="home">
       <SEOHead
         title="Licensing & Regulatory Compliance | EMRS UAE"
-        description="EMRS is a fully licensed ambulance and medical transport provider in the UAE. Learn about our DHA and MOH compliance, medical governance, and professional standards."
+        description="EMRS is a fully licensed UAE ambulance and medical transport provider — DHA/MOH compliant with strict medical governance and standards."
         canonical="https://emrs.ae/licensing/"
         image="/site-logo.png"
       />

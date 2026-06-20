@@ -21,7 +21,7 @@ const ServicesHub = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="EMRS Medical Services UAE | Ambulance, Transport & Healthcare"
+        title="EMRS Medical Services | Ambulance & Healthcare UAE"
         description="Explore EMRS's comprehensive medical services: Ambulance Transport, Doctor on Call, Home Healthcare, NEMT, and Wellness Diagnostics across the UAE."
         canonical="https://emrs.ae/services/"
         imageAlt="EMRS Services in UAE"
