@@ -2,7 +2,7 @@ import React from 'react';
 
 interface OptimizedImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   src: string;
-  alt: string;
+  alt: string; // pass "" for decorative images
   width: number;
   height: number;
   className?: string;
@@ -20,8 +20,9 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   priority = false,
   ...props
 }) => {
-  // Extract image name for better alt text if not provided
-  const imageName = alt || src.split('/').pop()?.split('.')[0] || 'EMRS Medical Services';
+  // Respect empty alt strings so decorative images are correctly hidden
+  // from assistive tech. Never fall back to a filename.
+  const altText = alt;
 
   // Generate source type for better browser compatibility
   const getSourceType = (path: string) => {
@@ -56,7 +57,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       />
       <img
         src={src}
-        alt={imageName}
+        alt={altText}
         width={width}
         height={height}
         loading={loading}

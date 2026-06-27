@@ -30,7 +30,7 @@ const PrivateAmbulanceUAE = () => {
     <ServicePageTemplate
       title="Private Ambulance Services UAE"
       seoTitle="Private Ambulance UAE | 24/7 Licensed Medical Transport"
-      description="Book a private ambulance anywhere in the UAE. Licensed paramedics, ICU-equipped vehicles, and 24/7 dispatch for hospital transfers, patient transport, and medical escorts."
+      description="Book a private ambulance anywhere in the UAE. Licensed paramedics, ICU-equipped vehicles, 24/7 dispatch for transfers and escorts."
       canonical="https://emrs.ae/private-ambulance-uae/"
       imageAlt="Private ambulance service UAE - EMRS 24/7 medical transport"
       lastUpdated="2026-03-27"
