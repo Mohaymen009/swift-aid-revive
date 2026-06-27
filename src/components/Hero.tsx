@@ -1,6 +1,7 @@
 import { Phone, MapPin, Clock, Shield, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-ambulance.jpg";
+import heroImage from "@/assets/hero-ambulance.webp";
+import heroImageMobile from "@/assets/hero-ambulance-800.webp";
 import TabbyBadge from "@/components/TabbyBadge";
 
 const Hero = () => {
@@ -8,15 +9,20 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center overflow-hidden" aria-labelledby="hero-heading">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img
-          src={heroImage}
-          alt="EMRS 24/7 - Professional Ambulance Services UAE"
-          className="w-full h-full object-cover"
-          width={1920}
-          height={1080}
-          loading="eager"
-          fetchPriority="high"
-        />
+        <picture>
+          <source media="(max-width: 900px)" srcSet={heroImageMobile} type="image/webp" />
+          <source media="(min-width: 901px)" srcSet={heroImage} type="image/webp" />
+          <img
+            src={heroImage}
+            alt="EMRS 24/7 - Professional Ambulance Services UAE"
+            className="w-full h-full object-cover"
+            width={1290}
+            height={945}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+          />
+        </picture>
         <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/40" />
         <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-primary/30" />
       </div>
