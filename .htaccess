@@ -6,6 +6,11 @@
   RewriteCond %{HTTP_HOST} ^www\.emrs\.ae [NC]
   RewriteRule ^(.*)$ https://emrs.ae/$1 [L,R=301]
 
+  # Enforce trailing slash on non-file, non-directory URLs (canonicalization)
+  RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]+|/)$
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(.*)$ /$1/ [L,R=301]
+
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
